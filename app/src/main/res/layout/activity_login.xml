@@ -65,21 +65,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="7dp"
         android:background="@drawable/login_button"
         android:text="Login"
         android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:layout_marginTop="7dp"/>
+        android:textSize="17sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="3dp"
+        android:alpha="80"
         android:text="------------------------------------------------------"
-        android:textSize="20sp"
         android:textColor="@color/first"
-        android:alpha="80"/>
+        android:textSize="20sp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -88,5 +88,12 @@
         android:background="#ffffff"
         android:src="@drawable/kakaotalk_button" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp" />
 
 </LinearLayout>
