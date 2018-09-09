@@ -16,9 +16,9 @@ import com.example.user.coalert.Fragment.TimeLineFragment;
 import com.example.user.coalert.Fragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private MenuItem prevBottomNavigation;
-
-
+    public static final int SERACHID = 2131296279;
+    public static final int HOMEID = 2131296282;
+    public static final int TIMELINEID = 2131296281;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
