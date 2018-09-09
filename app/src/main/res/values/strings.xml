@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoAlert</string>
+    <string name="facebook_app_id">[APP_ID]</string>
+    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
 </resources>

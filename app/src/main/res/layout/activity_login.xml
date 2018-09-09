@@ -31,11 +31,11 @@
     <TextView
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:text="Member Login"
-        android:fontFamily="cursive"
-        android:textSize="30dp"
         android:layout_gravity="center"
-        android:gravity="center"/>
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="Member Login"
+        android:textSize="30dp" />
 
     <android.support.v4.widget.Space
         android:layout_width="300dp"
@@ -45,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/edit_text_background"
         android:ems="15"
         android:hint="이메일을 입력해주세요."
         android:inputType="textWebEmailAddress" />
@@ -54,13 +55,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/edit_text_background"
         android:ems="15"
         android:hint="비밀번호를 입력해주세요."
         android:inputType="textPassword" />
 
-    <android.support.v7.widget.AppCompatButton
-        android:layout_width="100dp"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="@drawable/login_button"
         android:text="Login"
-        android:layout_height="50dp" />
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:text="------------------------------------------------------"
+        android:textSize="20sp"
+        android:textColor="@color/first"
+        android:alpha="80"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#ffffff"
+        android:src="@drawable/kakaotalk_button" />
+
+
 </LinearLayout>
