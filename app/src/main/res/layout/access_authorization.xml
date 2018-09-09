@@ -11,7 +11,5 @@
     android:fontFamily="@font/nukim"
     android:gravity="center"
     android:textColor="@color/first"/>
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
+
 </LinearLayout>
