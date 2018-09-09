@@ -4,28 +4,19 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Fragment.SearchFragment">
-
-    <LinearLayout
+    <EditText
+        android:id="@+id/editSearch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <EditText
-            android:id="@+id/editSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/whiteBackground"
-            android:hint="검색어를 입력하세요."
-            android:textColor="@color/whiteBackground"
-            android:background="@drawable/search_edit_text"/>
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="#999999"
-            android:dividerHeight="1dp">
-        </ListView>
-    </LinearLayout>
+        android:layout_height="50dp"
+        android:textColorHint="@color/whiteBackground"
+        android:hint="@string/input_search_name"
+        android:textColor="@color/whiteBackground"
+        android:background="@drawable/search_edit_text"
+        android:inputType="" />
+    <FrameLayout
+        android:id="@+id/search_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </android.support.constraint.ConstraintLayout>
 
 
