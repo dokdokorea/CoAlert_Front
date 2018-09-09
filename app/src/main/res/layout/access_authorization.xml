@@ -203,4 +203,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </android.support.constraint.ConstraintLayout>
+=======
+    android:orientation="vertical"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CoAlert에서 사용하는 접근권한 안내"
+    android:fontFamily="@font/nukim"
+    android:gravity="center"
+    android:textColor="@color/first"/>
+>>>>>>> Stashed changes
 </LinearLayout>

@@ -4,4 +4,7 @@
     <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
 
 <string name="email_login_button">로그인</string>
+    <string name="search">검색</string>
+    <string name="home">홈</string>
+    <string name="timeline">타임라인</string>
 </resources>

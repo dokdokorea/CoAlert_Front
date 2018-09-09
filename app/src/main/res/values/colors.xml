@@ -3,7 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="bottom_navigation_select">#51032d</color>
+    <color name="bottom_navigation_Element">#CFD8DC</color>
     <color name="first">#572254</color>
     <color name="second">#553857</color>
     <color name="third">#6b4173</color>
@@ -15,3 +16,5 @@
     <color name="whiteBackground">#FFFFFF</color>
     <color name="explanationwords">#A4A4A4</color>
 </resources>
+
+
