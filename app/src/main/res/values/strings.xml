@@ -3,8 +3,12 @@
     <string name="facebook_app_id">[APP_ID]</string>
     <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
 
-<string name="email_login_button">로그인</string>
+    <string name="email_login_button">로그인</string>
     <string name="search">검색</string>
     <string name="home">홈</string>
     <string name="timeline">타임라인</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_search">hello_search</string>
 </resources>

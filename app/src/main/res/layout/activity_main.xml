@@ -15,5 +15,8 @@
         app:itemIconTint="@drawable/bottom_navigation_select"
         app:itemTextColor="@drawable/bottom_navigation_select"
         app:menu="@menu/bottom_navigation_main" />
-
+    <FrameLayout
+        android:id="@+id/content_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
