@@ -10,4 +10,7 @@
     <color name="fourth">#846090</color>
     <color name="fifth">#8c8e9a</color>
     <color name="sixth">#4b4f58</color>
+
+    <color name="divideLine">#D8D8D8</color>
+    <color name="whiteBackground">#FFFFFF</color>
 </resources>
