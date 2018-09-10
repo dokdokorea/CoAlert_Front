@@ -9,7 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="당신의 피부 타입은?" />
-    <!--피부타입 고려사항.. 못 정하겠어..-->
+        android:text="당신의 피부 타입은 무엇입니까?" />
 
+    <Spinner
+        android:id="@+id/spinner_skin_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/defaultFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/first"
+            android:text="확인"
+            android:textColor="@color/whiteBackground"
+            android:textStyle="bold" />
+    </RelativeLayout>
 </LinearLayout>
