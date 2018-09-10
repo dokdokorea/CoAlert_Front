@@ -26,7 +26,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="필수 접근권한"
+        android:text=" 필수 접근권한"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="3dp"
-        android:text="기기 및 앱 기록: 사용선 개선"
+        android:text=" 기기 및 앱 기록: 사용선 개선"
         android:textColor="@color/explanationwords" />
 
     <View
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="선택적 접근권한"
+        android:text=" 선택적 접근권한"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
