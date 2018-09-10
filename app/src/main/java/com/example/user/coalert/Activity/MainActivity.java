@@ -1,4 +1,4 @@
-package com.example.user.coalert;
+package com.example.user.coalert.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -14,6 +14,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.example.user.coalert.Fragment.HomeFragment;
 import com.example.user.coalert.Fragment.SearchFragment;
 import com.example.user.coalert.Fragment.TimeLineFragment;
+import com.example.user.coalert.R;
 
 
 public class MainActivity extends AppCompatActivity {
