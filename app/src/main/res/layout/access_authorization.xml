@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/yoon_gothic340"
         android:gravity="center"
         android:text="CoAlert에서 사용하는 접근권한 안내"
         android:textColor="@color/first"
@@ -195,7 +195,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/sixth"
+            android:background="@drawable/press_button"
             android:text="확인"
             android:textColor="@color/whiteBackground"
             android:textStyle="bold"
@@ -203,15 +203,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </android.support.constraint.ConstraintLayout>
-=======
-    android:orientation="vertical"
-    >
+
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="CoAlert에서 사용하는 접근권한 안내"
-    android:fontFamily="@font/nukim"
+    android:fontFamily="@font/yoon_gothic320"
     android:gravity="center"
     android:textColor="@color/first"/>
->>>>>>> Stashed changes
+
 </LinearLayout>

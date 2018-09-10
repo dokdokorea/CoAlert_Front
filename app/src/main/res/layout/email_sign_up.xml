@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="회원가입"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -42,8 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ems="13"
-                android:inputType="textWebEmailAddress"
-                android:hint="coalert@example.com"/>
+                android:hint="coalert@example.com"
+                android:inputType="textWebEmailAddress" />
 
         </TableRow>
 
@@ -62,8 +63,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ems="13"
-                android:inputType="textPassword"
-                android:hint="6~12자리 숫자 또는 문자"/>
+                android:hint="6~12자리 숫자 또는 문자"
+                android:inputType="textPassword" />
         </TableRow>
 
         <TableRow android:layout_marginTop="10dp">
@@ -126,43 +127,48 @@
                 android:layout_height="wrap_content" />
 
         </TableRow>
+
         <TableRow android:layout_marginTop="15dp">
+
             <TextView
-                android:text="성별"
                 style="@style/defaultFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
                 android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"/>
-            <RadioGroup
-                android:orientation="horizontal">
+                android:text="성별" />
+
+            <RadioGroup android:orientation="horizontal">
+
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="남"
                     style="@style/defaultFont"
-                    android:layout_marginRight="50dp"/>
-                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="여"
-                    style="@style/defaultFont"/>
+                    android:layout_marginRight="50dp"
+                    android:text="남" />
+
+                <RadioButton
+                    style="@style/defaultFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여" />
             </RadioGroup>
         </TableRow>
     </TableLayout>
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <Button
-        style="@style/defaultFont"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="확인"
-        android:textColor="@color/whiteBackground"
-        android:background="@color/first"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/defaultFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/press_button"
+            android:text="확인"
+            android:textColor="@color/whiteBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>
