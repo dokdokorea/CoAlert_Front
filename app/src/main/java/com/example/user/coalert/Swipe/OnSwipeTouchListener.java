@@ -1,4 +1,4 @@
-package com.example.user.coalert;
+package com.example.user.coalert.Swipe;
 import android.content.Context;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;

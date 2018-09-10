@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,13 +14,20 @@
         android:gravity="center"
         android:text="@string/app_name" />
 
+    <TextView
+        style="@style/defaultFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="회원가입"
+        android:textSize="20sp" />
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
-
-
-        <TableRow>
+        <TableRow android:layout_marginTop="10dp">
 
             <TextView
                 style="@style/defaultFont"
@@ -34,11 +42,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ems="13"
-                android:inputType="textWebEmailAddress" />
+                android:inputType="textWebEmailAddress"
+                android:hint="coalert@example.com"/>
 
         </TableRow>
 
-        <TableRow>
+        <TableRow android:layout_marginTop="10dp">
 
             <TextView
                 style="@style/defaultFont"
@@ -53,21 +62,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ems="13"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:hint="6~12자리 숫자 또는 문자"/>
         </TableRow>
-        <TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
             <TextView
-                android:text="비밀번호 확인"
                 style="@style/defaultFont"
+                android:layout_marginEnd="5dp"
                 android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"/>
+                android:text="비밀번호 확인" />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
         </TableRow>
-        <TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
 
             <TextView
                 style="@style/defaultFont"
@@ -84,7 +98,8 @@
                 android:ems="13"
                 android:inputType="text" />
         </TableRow>
-        <TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
 
             <TextView
                 style="@style/defaultFont"
@@ -98,24 +113,56 @@
                 android:id="@+id/spinner_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                 />
+                android:layout_weight="1" />
 
             <Spinner
                 android:id="@+id/spinner_month"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                 />
+                android:layout_height="wrap_content" />
 
             <Spinner
                 android:id="@+id/spinner_day"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                 />
+                android:layout_height="wrap_content" />
 
         </TableRow>
+        <TableRow android:layout_marginTop="15dp">
+            <TextView
+                android:text="성별"
+                style="@style/defaultFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="5dp"/>
+            <RadioGroup
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남"
+                    style="@style/defaultFont"
+                    android:layout_marginRight="50dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여"
+                    style="@style/defaultFont"/>
+            </RadioGroup>
+        </TableRow>
     </TableLayout>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+    <Button
+        style="@style/defaultFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:textColor="@color/whiteBackground"
+        android:background="@color/first"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
 </LinearLayout>

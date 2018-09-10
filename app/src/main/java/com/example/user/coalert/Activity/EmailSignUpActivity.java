@@ -1,10 +1,12 @@
-package com.example.user.coalert;
+package com.example.user.coalert.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import com.example.user.coalert.R;
 
 public class EmailSignUpActivity extends AppCompatActivity{
     @Override
