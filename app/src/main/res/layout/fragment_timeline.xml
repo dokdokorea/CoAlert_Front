@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Fragment.TimeLineFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/timeline" />
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/timeline_recycler"></android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

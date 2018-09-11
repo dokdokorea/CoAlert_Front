@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_search_name">검색어를 입력하세요.</string>
+    <string name="popular_search_name">인기 검색어</string>
+    <string name="king">king</string>
+    <string name="kind_cosmetic">화장품 종류</string>
+    <string name="popular_search">인기 검색</string>
+    <string name="popular_youtube">인기있는 영상</string>
+    <string name="first_rank">1등:이사베</string>
+    <string name="second_rank">2등:선케어</string>
+    <string name="third_rank">3등:슬기</string>
+    <string name="suncare">선케어</string>
+    <string name="poundation">파운데이션</string>
+    <string name="tint">틴트</string>
+    <string name="eye_linear">아이라이너</string>
+    <string name="skin">스킨</string>
+    <string name="consiler">컨실러</string>
+    <string name="lotion">로션</string>
+    <string name="libStick">립스틱</string>
+    <string name="mist">미스트</string>
+    <string name="popularPoutch">인기있는 파우치</string>
+
+</resources>
