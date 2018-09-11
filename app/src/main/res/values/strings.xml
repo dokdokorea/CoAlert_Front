@@ -2,6 +2,7 @@
     <string name="app_name">COALERT</string>
     <string name="facebook_app_id">[APP_ID]</string>
     <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
+    <string name="confirm_button">확인</string>
 
     <string name="email_login_button">로그인</string>
     <string name="search">검색</string>

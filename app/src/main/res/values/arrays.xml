@@ -110,4 +110,13 @@
         <item>30</item>
         <item>31</item>
     </string-array>
+
+    <string-array name="skin_type">
+        <item>지성</item>
+        <item>건성</item>
+        <item>중성</item>
+        <item>복합성</item>
+        <item>민감성</item>
+        <item>정확하지 않습니다.</item>
+    </string-array>
 </resources>
