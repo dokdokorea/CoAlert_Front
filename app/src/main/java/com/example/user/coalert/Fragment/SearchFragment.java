@@ -43,7 +43,7 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         edit = v.findViewById(R.id.editSearch);
-        linearLayout = v.findViewById(R.id.search_fragment_layout);
+        linearLayout = v.findViewById(R.id.search_bar_notfocusing);
         imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         linearLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -51,7 +51,6 @@ public class SearchFragment extends Fragment {
                 Log.e("touch: ","my body");
                 edit.clearFocus();
                 imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
-
                 return true;
             }
         });
