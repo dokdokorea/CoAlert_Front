@@ -1,6 +1,8 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -13,23 +15,26 @@ import android.widget.Button;
 import com.example.user.coalert.R;
 
 public class LoginActivity extends AppCompatActivity {
+    Button login_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        permissonCheck();
-        Button login_button = findViewById(R.id.email_login);
+        login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
+        permissonCheck();
     }
-    Button.OnClickListener loginClickListener = new View.OnClickListener(){
+
+    Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(mainActivity);
+          Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
+            startActivity(accessActivity);
             finish();
         }
     };
+
 
     void permissonCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
