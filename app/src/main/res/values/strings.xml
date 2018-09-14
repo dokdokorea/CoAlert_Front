@@ -9,6 +9,7 @@
     <string name="home">홈</string>
     <string name="timeline">타임라인</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="main_user_name">사용자</string>
+
 
 </resources>

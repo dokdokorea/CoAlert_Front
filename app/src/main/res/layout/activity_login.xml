@@ -103,6 +103,7 @@
         />
 
         <ImageView
+            android:id="@+id/fake_facebook"
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:src="@drawable/fb_login_button"

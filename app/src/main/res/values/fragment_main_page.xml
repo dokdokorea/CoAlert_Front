@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hot_youtuber">지금 핫한 유투버의 동영상!</string>
+    <style name="main_bad_element_font">
+        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="point_font">
+        <item name="android:fontFamily">@font/web_kid9</item>
+        <item name="android:textColor">#FA5882</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,26 +1,23 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
-import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.OvalShape;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.user.coalert.R;
 import com.facebook.login.widget.LoginButton;
 
 public class LoginActivity extends AppCompatActivity {
     Button login_button;
+    ImageView fakeFacebook;
+    LoginButton facebookLoginBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +27,22 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener(loginClickListener);
         permissonCheck();
 
+        /*facebook button syncrhonize with real fb button*/
+        fakeFacebook = (ImageView) findViewById(R.id.fake_facebook);
+        facebookLoginBtn = (LoginButton) findViewById(R.id.fb_login_button);
+        fakeFacebook.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                facebookLoginBtn.performClick();
+            }
+        });
     }
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-          Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
+            Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
             startActivity(accessActivity);
             finish();
         }
