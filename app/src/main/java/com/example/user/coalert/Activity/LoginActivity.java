@@ -5,14 +5,19 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.user.coalert.R;
+import com.facebook.login.widget.LoginButton;
 
 public class LoginActivity extends AppCompatActivity {
     Button login_button;
@@ -24,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
         permissonCheck();
+
     }
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {

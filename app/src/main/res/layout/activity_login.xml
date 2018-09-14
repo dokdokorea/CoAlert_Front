@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradation_background"
     android:orientation="vertical"
     tools:context=".Activity.LoginActivity">
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        android:layout_height="70dp" />
 
     <TextView
+        style="@style/logoStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/logoStyle"
         android:gravity="center"
         android:text="@string/app_name"
-        android:textColor="@color/first"
-        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <android.support.v4.widget.Space
@@ -31,7 +32,8 @@
         android:layout_gravity="center"
         android:fontFamily="cursive"
         android:gravity="center"
-        android:text="Member Login"
+        android:text="Login to your account"
+        android:textColor="@android:color/white"
         android:textSize="30sp" />
 
     <android.support.v4.widget.Space
@@ -52,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/edit_text_background"
         android:ems="15"
         android:hint="비밀번호를 입력해주세요."
@@ -63,33 +65,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/login_button"
         android:text="@string/email_login_button"
-        android:textColor="@color/whiteBackground"
+        android:textColor="@color/fifth"
         android:textSize="17sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/divideLine" />
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/whiteBackground" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:id="@+id/kakao_login_button"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_gravity="center"
-        android:background="@color/whiteBackground"
-        android:scaleType="center"
-        android:src="@drawable/kakaotalk_button" />
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/kakaotalk_button"
+        android:background="#00ffffff"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
-        android:layout_width="300dp"
+        android:id="@+id/fb_login_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        />
 
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fb_login_button"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+    </FrameLayout>
 </LinearLayout>
