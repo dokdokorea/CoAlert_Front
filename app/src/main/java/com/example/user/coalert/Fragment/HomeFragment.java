@@ -3,17 +3,16 @@ package com.example.user.coalert.Fragment;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
+import android.text.Html;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.user.coalert.R;
 
 public class HomeFragment extends Fragment {
-    public HomeFragment(){
-
+    public HomeFragment() {
     }
 
     @Nullable
