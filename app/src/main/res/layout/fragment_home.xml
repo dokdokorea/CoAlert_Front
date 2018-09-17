@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteBackground"
     android:orientation="vertical"
     tools:context=".Fragment.HomeFragment">
 
@@ -51,6 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -118,11 +123,57 @@
                 android:layout_height="1.5dp"
                 android:background="@color/divideLine" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
             <TextView
                 style="@style/point_font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:text="당신의 피부를 아름답게 만들어줄 추천 화장품!"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/recommendation_product_list"
+                        android:text="립" />
+
+                    <TextView
+                        style="@style/recommendation_product_list"
+                        android:text="바디" />
+
+                    <TextView
+                        style="@style/recommendation_product_list"
+                        android:text="아이셰도우" />
+
+                    <TextView
+                        style="@style/recommendation_product_list"
+                        android:text="선크림" />
+
+                    <TextView
+                        style="@style/recommendation_product_list"
+                        android:text="파운데이션" />
+
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                style="@style/point_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/hot_youtuber" />
 
             <android.support.v4.widget.NestedScrollView
@@ -165,11 +216,14 @@
                 </LinearLayout>
             </android.support.v4.widget.NestedScrollView>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
             <TextView
                 style="@style/point_font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:text="HOT REVIEW!!" />
 
             <android.support.v4.widget.NestedScrollView
@@ -202,47 +256,10 @@
                                 style="@style/defaultFont"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:text="지금 핫한 버터플라이를 보시라 !" />
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-            </android.support.v4.widget.NestedScrollView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="신상!!"
-                style="@style/point_font"
-                android:layout_marginTop="10dp"/>
-
-            <android.support.v4.widget.NestedScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fillViewport="true">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="50dp"
-                                android:maxHeight="50dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/egg"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="화장품 이름"/>
-                        </LinearLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </android.support.v4.widget.NestedScrollView>
@@ -251,12 +268,49 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
 
-            <TableLayout
+            <TextView
+                style="@style/point_font"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp">
+                android:text="신상!!" />
 
-            </TableLayout>
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:maxHeight="50dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/egg" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="화장품 이름" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
