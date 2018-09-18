@@ -22,7 +22,7 @@ public class LeftNavigationContentActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.left_navigation_content);
 
-        ArrayAdapter adapter=new ArrayAdapter(this, R.layout.company_list_item,COMPANY_LIST);
+        ArrayAdapter adapter=new ArrayAdapter(this, android.R.layout.simple_list_item_1,COMPANY_LIST);
 
         ListView listView=(ListView)findViewById(R.id.company_listview);
         listView.setAdapter(adapter);

@@ -55,7 +55,10 @@
             <ListView
                 android:id="@+id/company_listview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:divider="@color/divideLine"
+                android:dividerHeight="1.5dp"
+                android:choiceMode="singleChoice"/>
 
 
         </LinearLayout>
