@@ -31,27 +31,31 @@
                     android:id="@+id/navigation_profile_pic"
                     android:layout_width="130dp"
                     android:layout_height="110dp"
-                    android:maxWidth="130dp"
-                    android:maxHeight="110dp"
                     android:clickable="true"
-                    android:src="@drawable/cardview1"
-                    />
+                    android:maxHeight="110dp"
+                    android:maxWidth="130dp"
+                    android:src="@drawable/cardview1" />
 
                 <ImageView
                     android:layout_width="50dp"
-                    android:maxWidth="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="30dp"
-                    android:src="@drawable/notification"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/notification" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.3dp"
-                android:background="@color/divideLine"/>
+                android:background="@color/divideLine" />
+
+            <ListView
+                android:id="@+id/company_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>
