@@ -2,19 +2,36 @@
 <resources>
     <string name="hot_youtuber">지금 핫한 유투버의 동영상!</string>
     <string name="for_more_information"><u>유해정보 더보기-></u></string>
+    <string name="user_nm">사용자</string>
+    <string name="bad_element1">유해성분1</string>
+    <string name="bad_element2">유해성분2</string>
+    <string name="cosmetic_recommendation">당신의 피부를 아름답게 만들어줄 추천 화장품!</string>
+    <string name="new_product">신상품!!</string>
+    <string name="hot_review">HOT REVIEW!!</string>
+
+    <string name="lip_sec">LIP</string>
+    <string name="body_sec">BODY</string>
+    <string name="eye_shadow_sec">EYE SHADOW</string>
+    <string name="suncream_sec">SUNCREAM</string>
+    <string name="foundation_sec">FOUNDATION</string>
+
     <style name="more_information_font">
         <item name="android:fontFamily">@font/web_kid9</item>
         <item name="android:textSize">16sp</item>
     </style>
+
     <style name="main_bad_element_font">
-        <item name="android:fontFamily">@font/yoon_gothic320</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/yoon_gothic330</item>
+        <item name="android:textSize">17sp</item>
     </style>
+
     <style name="point_font">
         <item name="android:fontFamily">@font/web_kid9</item>
         <item name="android:textColor">#FA5882</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
     </style>
+
     <style name="recommendation_product_list">
         <item name="android:padding">10dp</item>
         <item name="android:layout_width">wrap_content</item>
@@ -24,5 +41,22 @@
         <item name="android:gravity">center</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="image_format">
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="image_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="android:layout_marginTop">4dp</item>
     </style>
 </resources>
