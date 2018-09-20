@@ -1,12 +1,15 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.user.coalert.Popup.BreakPopup;
 import com.example.user.coalert.R;
 
 public class EditprofileActivity extends AppCompatActivity{
@@ -22,4 +25,10 @@ public class EditprofileActivity extends AppCompatActivity{
         Button broke=findViewById(R.id.broke);
         Button accept=findViewById(R.id.editbtn);
     }
+
+    public void FloatingPopup(View v){
+        Intent intent=new Intent(this, BreakPopup.class);
+        startActivity(intent);
+    }
+
 }
