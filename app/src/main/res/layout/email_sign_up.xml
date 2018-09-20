@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Space
@@ -20,7 +20,6 @@
                 android:layout_height="30dp" />
 
             <TextView
-                android:id="@+id/textView4"
                 style="@style/logoStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,6 +135,7 @@
                         android:gravity="center_vertical"/>
 
                     <EditText
+                        android:id="@+id/input_email"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -162,6 +162,7 @@
                         android:gravity="center_vertical"/>
 
                     <EditText
+                        android:id="@+id/input_password"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -185,6 +186,7 @@
                         android:gravity="center_vertical"/>
 
                     <EditText
+                        android:id="@+id/password_certification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -198,6 +200,7 @@
                 <TableRow android:layout_marginTop="10dp">
 
                     <TextView
+                        android:id="@+id/user_name"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -215,74 +218,6 @@
                         android:inputType="text" />
                 </TableRow>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <TableRow android:layout_marginTop="10dp">
-
-                    <TextView
-                        style="@style/defaultFont"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="3dp"
-                        android:text="생년월일"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
-
-                    <Spinner
-                        android:id="@+id/spinner_year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Spinner
-                        android:id="@+id/spinner_month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <Spinner
-                        android:id="@+id/spinner_day"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </TableRow>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp" />
-
-                <TableRow android:layout_marginTop="15dp">
-
-                    <TextView
-                        style="@style/defaultFont"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="3dp"
-                        android:text="성별"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
-
-                    <RadioGroup android:orientation="horizontal">
-
-                        <RadioButton
-                            style="@style/defaultFont"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="50dp"
-                            android:text="남"
-                            android:textStyle="bold" />
-
-                        <RadioButton
-                            style="@style/defaultFont"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="여"
-                            android:textStyle="bold" />
-                    </RadioGroup>
-                </TableRow>
             </TableLayout>
 
         </LinearLayout>
@@ -298,7 +233,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@drawable/press_button"
-            android:text="@string/confirm_button"
+            android:text="다음"
             android:textColor="@color/whiteBackground" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

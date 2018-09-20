@@ -9,5 +9,6 @@
     <string name="home">홈</string>
     <string name="timeline">타임라인</string>
 
+    <string name="user_name">사용자</string>
 
 </resources>
