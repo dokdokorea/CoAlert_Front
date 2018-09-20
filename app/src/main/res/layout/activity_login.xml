@@ -108,7 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            />
 
         <ImageView
             android:id="@+id/fake_facebook"

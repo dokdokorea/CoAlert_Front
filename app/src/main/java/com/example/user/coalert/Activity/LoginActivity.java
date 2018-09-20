@@ -1,6 +1,7 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -9,8 +10,10 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.user.coalert.Loading1Activity;
 import com.example.user.coalert.R;
 import com.facebook.login.widget.LoginButton;
 
@@ -18,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     Button login_button;
     ImageView fakeFacebook;
     LoginButton facebookLoginBtn;
+    ImageButton kakao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
+        kakao=findViewById(R.id.kakao_login_button);
         permissonCheck();
 
         /*facebook button syncrhonize with real fb button*/
@@ -37,6 +42,16 @@ public class LoginActivity extends AppCompatActivity {
                 facebookLoginBtn.performClick();
             }
         });
+
+        kakao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this,Loading1Activity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
