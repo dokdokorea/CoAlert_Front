@@ -1,4 +1,4 @@
-package com.example.user.coalert;
+package com.example.user.coalert.Loading;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.user.coalert.Activity.MainActivity;
+import com.example.user.coalert.R;
 
 public class Loading1Activity extends AppCompatActivity {
     private ImageView loadingImg;

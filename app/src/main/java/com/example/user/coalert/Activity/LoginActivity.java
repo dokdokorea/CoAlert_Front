@@ -1,7 +1,6 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -13,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.user.coalert.Loading1Activity;
+import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
 import com.facebook.login.widget.LoginButton;
 
