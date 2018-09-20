@@ -15,17 +15,12 @@ import com.example.user.coalert.R;
 import java.util.List;
 
 public class LeftNavigationContentActivity extends AppCompatActivity{
-    static final String[] COMPANY_LIST={"innisfree","아리따움","LUSH","THE FACE SHOP"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.left_navigation_content);
 
-        ArrayAdapter adapter=new ArrayAdapter(this, android.R.layout.simple_list_item_1,COMPANY_LIST);
-
-        ListView listView=(ListView)findViewById(R.id.company_listview);
-        listView.setAdapter(adapter);
     }
 }
 
