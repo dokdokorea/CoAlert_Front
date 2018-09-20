@@ -23,7 +23,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:scaleType="gr"
+                android:scaleType="centerInside"
                 app:srcCompat="@drawable/cardview1" />
 
             <TextView
