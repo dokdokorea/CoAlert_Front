@@ -78,7 +78,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="@string/sign_up"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:contextClickable="true"/>
 
     <View
         android:layout_width="match_parent"
