@@ -57,9 +57,6 @@
         <activity android:name=".Loading1Activity">
 
         </activity>
-        <activity android:name=".MainPage">
-
-        </activity>
 
 
     </application>

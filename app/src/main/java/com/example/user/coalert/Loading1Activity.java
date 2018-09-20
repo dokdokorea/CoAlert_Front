@@ -8,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.user.coalert.Activity.MainActivity;
+
 public class Loading1Activity extends AppCompatActivity {
     private ImageView loadingImg;
     private Animation anim;
@@ -21,13 +23,13 @@ public class Loading1Activity extends AppCompatActivity {
         Handler handler=new Handler(){
             public void handleMessage(Message msg){
                 super.handleMessage(msg);
-                startActivity(new Intent(Loading1Activity.this,MainPage.class));
+                startActivity(new Intent(Loading1Activity.this,MainActivity.class));
                 finish();
             }
         };
         handler.sendEmptyMessageDelayed(0,3000);
-
     }
+
     private void initView(){
         loadingImg = (ImageView) findViewById(R.id.icon);
         anim = AnimationUtils.loadAnimation(this, R.anim.loading);
