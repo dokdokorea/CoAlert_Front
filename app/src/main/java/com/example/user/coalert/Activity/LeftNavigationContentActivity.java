@@ -16,17 +16,10 @@ import java.util.ArrayList;
 
 
 public class LeftNavigationContentActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<MyData> myDataset;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.left_navigation_content);
-
-
     }
 
     @Override

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/action_one"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_menu_search"
-        android:title="@string/search" />
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_two"
-        app:showAsAction="ifRoom"
         android:icon="@drawable/home"
-        android:title="@string/home" />
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_three"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_menu_upload_you_tube"
-        android:title="@string/timeline" />
+        android:title="@string/timeline"
+        app:showAsAction="ifRoom" />
+
 </menu>

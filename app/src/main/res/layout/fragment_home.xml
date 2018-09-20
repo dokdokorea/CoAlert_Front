@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
     android:background="@color/whiteBackground"
     android:orientation="vertical"
-    android:layout_alignParentBottom="true"
     tools:context=".Fragment.HomeFragment">
 
     <LinearLayout
@@ -146,43 +146,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cosmetic_recommendation"
                 android:textStyle="bold" />
-
-            <TableLayout
+            <!--화장품 추천 횟수 제한걸기-->
+            <Button
+                style="@style/defaultFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/lip_section"
-                        style="@style/recommendation_product_list"
-                        android:text="@string/lip_sec" />
-
-                    <TextView
-                        android:id="@+id/body_section"
-                        style="@style/recommendation_product_list"
-                        android:text="@string/body_sec" />
-
-                    <TextView
-                        android:id="@+id/eyeshadow_section"
-                        style="@style/recommendation_product_list"
-                        android:text="@string/eye_shadow_sec" />
-
-                    <TextView
-                        android:id="@+id/suncream_section"
-                        style="@style/recommendation_product_list"
-                        android:text="@string/suncream_sec" />
-
-                    <TextView
-                        android:id="@+id/foundation_section"
-                        style="@style/recommendation_product_list"
-                        android:text="@string/foundation_sec" />
-
-                </TableRow>
-            </TableLayout>
+                android:layout_margin="5dp"
+                android:background="@color/whiteBackground"
+                android:text="화장품 추천"
+                android:textSize="20sp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -323,8 +295,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            >
+                            android:orientation="vertical">
 
                             <ImageButton
                                 style="@style/image_format"
@@ -337,6 +308,7 @@
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </android.support.v4.widget.NestedScrollView>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
