@@ -39,6 +39,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
@@ -56,11 +61,10 @@
 
         <activity android:name=".Activity.MypageActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".Activity.EditprofileActivity">
+
 
         </activity>
 

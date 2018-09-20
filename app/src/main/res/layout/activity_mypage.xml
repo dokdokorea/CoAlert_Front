@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#D8D8D8"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".Activity.MypageActivity">
-
 
     <TextView
         android:layout_width="match_parent"
@@ -23,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="3dp" />
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -33,7 +31,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,11 +39,10 @@
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile"
+                    android:id="@+id/profile_pic"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="30dp"
-
+                    android:layout_marginTop="50dp"
                     android:src="@drawable/seul" />
 
                 <TextView
@@ -72,8 +68,9 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/btnstyle1"
-                    android:text="회원정보 변경"
                     android:fontFamily="@font/yoon_gothic330"
+                    android:id="@+id/edit_personal_info"
+                    android:text="회원정보 변경"
                     android:textColor="#fff" />
 
                 <android.support.v4.widget.Space
@@ -97,8 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="내가 사용한 화장품"
                     android:fontFamily="@font/yoon_gothic330"
+                    android:text="내가 사용한 화장품"
                     android:textSize="20dp" />
 
                 <LinearLayout
@@ -119,29 +116,24 @@
                 </LinearLayout>
 
 
-                    <LinearLayout
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
 
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/recyclerview"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal"/>
-
-
-                    </LinearLayout>
-
+                </LinearLayout>
 
             </LinearLayout>
 
-
         </LinearLayout>
 
-
     </ScrollView>
-
 
 </LinearLayout>

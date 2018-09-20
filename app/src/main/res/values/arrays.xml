@@ -119,4 +119,9 @@
         <item>민감성</item>
         <item>정확하지 않습니다.</item>
     </string-array>
+
+    <string-array name="sex">
+        <item>남자</item>
+        <item>여자</item>
+    </string-array>
 </resources>

@@ -22,8 +22,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:scaleType="centerInside"
-                    android:id="@+id/cosphoto"
-                    android:src="@drawable/face1" />
+                    android:id="@+id/cosphoto" />
 
                 <TextView
                     android:id="@+id/Name"
