@@ -52,15 +52,13 @@
                 android:layout_height="1.3dp"
                 android:background="@color/divideLine" />
 
-            <ListView
-                android:id="@+id/company_listview"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/company_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:choiceMode="singleChoice"
                 android:divider="@color/divideLine"
-                android:dividerHeight="1.5dp"
-                android:choiceMode="singleChoice"/>
-
-
+                android:dividerHeight="1.5dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
