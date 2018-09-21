@@ -71,6 +71,7 @@
 
 
         </activity>
+        <activity android:name=".Activity.NotificationActivity" />
 
 
     </application>
