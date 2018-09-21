@@ -1,12 +1,17 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,6 +20,9 @@ import android.widget.ImageView;
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
 import com.facebook.login.widget.LoginButton;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class LoginActivity extends AppCompatActivity {
     Button login_button;
@@ -31,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         kakao=findViewById(R.id.kakao_login_button);
         permissonCheck();
 
-        /*facebook button syncrhonize with real fb button*/
+        /*facebook button synchronize with real fb button*/
         fakeFacebook = (ImageView) findViewById(R.id.fake_facebook);
         facebookLoginBtn = (LoginButton) findViewById(R.id.fb_login_button);
         fakeFacebook.setOnClickListener(new View.OnClickListener() {
@@ -78,4 +86,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
     }
+    /*카카오톡 연동하기(키해시 받아오기) 안돼*/
 }
