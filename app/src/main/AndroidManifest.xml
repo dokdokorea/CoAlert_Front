@@ -67,6 +67,7 @@
 
 
         </activity>
+        <activity android:name=".Activity.NotificationActivity" />
 
         <activity android:name=".Activity.MyprofileActivity">
 
