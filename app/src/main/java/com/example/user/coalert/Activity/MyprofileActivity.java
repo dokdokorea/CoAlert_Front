@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 
+import com.example.user.coalert.Adapter.MypageFollowerAdapter;
 import com.example.user.coalert.Adapter.MypageRecyclerViewAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.CosmeticList_mypage;
@@ -34,6 +35,7 @@ public class MyprofileActivity extends AppCompatActivity{
 
         cosmeticList.setHasFixedSize(true);
         cosmeticList.setLayoutManager(new GridLayoutManager(this, ColumNumber));
+        cosmeticList.setNestedScrollingEnabled(false);
 
 
         List<CosmeticList_mypage> items=new ArrayList<>();
@@ -46,7 +48,7 @@ public class MyprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<5;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_mypage));
+        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_mypage));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
@@ -60,6 +62,7 @@ public class MyprofileActivity extends AppCompatActivity{
         cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_mypage));
 
     }
+
 }
 
 

@@ -15,8 +15,6 @@ import android.widget.Toast;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.TimelineCardVIew;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRecyclerViewAdapter.ViewHolder>{
@@ -32,7 +30,7 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.timeline_item, null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_timeline, null);
         return new ViewHolder(v) ;
     }
 

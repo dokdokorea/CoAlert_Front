@@ -23,9 +23,10 @@
         android:layout_height="3dp" />
 
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -43,19 +44,18 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_margin="10dp"
                     android:layout_weight="0.4"
-                    android:gravity="center"
-                    android:layout_margin="10dp">
+                    android:gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_pic"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/seul"/>
+                        android:src="@drawable/seul" />
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -84,24 +84,66 @@
                         android:textSize="18dp" />
 
                     <Button
+                        android:id="@+id/edit_personal_info"
                         android:layout_width="100dp"
                         android:layout_height="25dp"
                         android:layout_marginTop="18dp"
                         android:background="@drawable/btnstyle1"
                         android:fontFamily="@font/yoon_gothic330"
-                        android:id="@+id/edit_personal_info"
                         android:text="회원정보 변경"
                         android:textColor="#fff" />
 
                 </LinearLayout>
 
 
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:text="유해성분 목록 보기" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.1"
+                        android:background="#fff"
+                        android:gravity="right"
+                        android:text=">"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-                <android.support.v4.widget.Space
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
 
             <LinearLayout
@@ -208,7 +250,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </LinearLayout>
