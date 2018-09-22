@@ -71,6 +71,12 @@
 
         <activity android:name=".Activity.MyprofileActivity">
 
+
+
+        </activity>
+
+        <activity android:name=".Activity.AnotherprofileActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
