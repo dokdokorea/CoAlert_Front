@@ -13,9 +13,7 @@ public class BreakPopup extends Activity{
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.break_popup);
-
-
-        //Intent intent;
+     //Intent intent;
     }
 
     public void mOnClose(View v){

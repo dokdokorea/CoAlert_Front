@@ -54,6 +54,7 @@
         android:layout_height="wrap_content">
         <Button
             android:text="확인"
+            android:id="@+id/confirmbtn"
             android:textSize="15sp"
             android:textColor="@color/fourth"
             android:padding="16dp"
