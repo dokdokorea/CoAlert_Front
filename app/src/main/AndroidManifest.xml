@@ -54,10 +54,6 @@
 
         </activity>
 
-        <activity android:name=".Activity.MypageActivity">
-
-        </activity>
-
         <activity android:name=".Activity.EditprofileActivity">
 
 
@@ -71,17 +67,18 @@
 
         <activity android:name=".Activity.MyprofileActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
 
         </activity>
 
         <activity android:name=".Activity.AnotherprofileActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 

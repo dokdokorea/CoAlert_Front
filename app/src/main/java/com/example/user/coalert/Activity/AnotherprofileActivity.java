@@ -46,7 +46,7 @@ public class AnotherprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<5;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_mypage));
+        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_anotherprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
@@ -57,7 +57,7 @@ public class AnotherprofileActivity extends AppCompatActivity{
         item[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
 
         for(int i=0;i<5;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_mypage));
+        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_anotherprofile));
 
     }
 

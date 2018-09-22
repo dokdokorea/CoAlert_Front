@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:background="#D8D8D8"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context=".Activity.MypageActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,11 +1,13 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Button;
 
 import com.example.user.coalert.Adapter.MypageFollowerAdapter;
@@ -48,7 +50,7 @@ public class MyprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<5;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_mypage));
+        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
@@ -59,7 +61,16 @@ public class MyprofileActivity extends AppCompatActivity{
         item[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
 
         for(int i=0;i<5;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_mypage));
+        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
+
+
+        Edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MyprofileActivity.this,EditprofileActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
