@@ -12,8 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.user.coalert.Adapter.MypageFollowerAdapter;
-import com.example.user.coalert.Adapter.MypageRecyclerViewAdapter;
+import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
+import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.CosmeticList_mypage;
 
@@ -62,7 +62,7 @@ public class AnotherprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<6;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_anotherprofile));
+        recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(),items,R.layout.activity_anotherprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
@@ -73,7 +73,7 @@ public class AnotherprofileActivity extends AppCompatActivity{
         cositem[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
 
         for(int i=0;i<5;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.activity_anotherprofile));
+        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.activity_anotherprofile));
 
 
         if(j==0)
@@ -98,6 +98,7 @@ public class AnotherprofileActivity extends AppCompatActivity{
 
             }
         });
+        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_anotherprofile));
 
     }
 

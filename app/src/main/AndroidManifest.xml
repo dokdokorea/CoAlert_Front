@@ -51,25 +51,19 @@
         </activity>
 
         <activity android:name=".Loading.Loading1Activity">
-
         </activity>
 
         <activity android:name=".Activity.EditprofileActivity">
-
-
         </activity>
 
         <activity android:name=".Popup.BreakPopup" android:theme="@android:style/Theme.Dialog">
+        </activity>
 
+        <activity android:name=".Activity.NotificationActivity" >
 
         </activity>
-        <activity android:name=".Activity.NotificationActivity" />
 
         <activity android:name=".Activity.MyprofileActivity">
-
-
-
-
         </activity>
 
         <activity android:name=".Activity.AnotherprofileActivity">

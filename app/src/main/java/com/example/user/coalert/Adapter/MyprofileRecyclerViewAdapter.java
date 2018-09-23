@@ -1,13 +1,6 @@
 package com.example.user.coalert.Adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -24,11 +17,11 @@ import com.example.user.coalert.item.CosmeticList_mypage;
 
 import java.util.List;
 
-public class MypageFollowerAdapter extends RecyclerView.Adapter<MypageFollowerAdapter.ViewHolder>{
+public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<MyprofileRecyclerViewAdapter.ViewHolder>{
     Context context;
     List <CosmeticList_mypage> list;
     int item_layout;
-    public MypageFollowerAdapter(Context context, List<CosmeticList_mypage> items, int item_layout){
+    public MyprofileRecyclerViewAdapter(Context context, List<CosmeticList_mypage> items, int item_layout){
         this.context = context;
         list = items;
         this.item_layout =item_layout;
@@ -37,7 +30,7 @@ public class MypageFollowerAdapter extends RecyclerView.Adapter<MypageFollowerAd
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_follower, null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mapage_cometics, null);
         return new ViewHolder(v) ;
     }
 
@@ -45,7 +38,7 @@ public class MypageFollowerAdapter extends RecyclerView.Adapter<MypageFollowerAd
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final CosmeticList_mypage item = list.get(position);
         Drawable drawable=context.getResources().getDrawable(item.getImage());
-        holder.image.setImageDrawable(drawable);
+        holder.image.setBackground(drawable);
         holder.name.setText(item.getTitle());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
