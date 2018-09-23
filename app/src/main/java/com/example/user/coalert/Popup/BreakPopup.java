@@ -3,9 +3,12 @@ package com.example.user.coalert.Popup;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
+
+import com.example.user.coalert.Activity.LoginActivity;
 import com.example.user.coalert.R;
 
 public class BreakPopup extends Activity{
@@ -18,11 +21,10 @@ public class BreakPopup extends Activity{
 
     public void mOnClose(View v){
         //데이터 전달하기
-        //Intent intent = new Intent();
-        //intent.putExtra("result", "Close Popup");
-       // setResult(RESULT_OK, intent);
-
-        //액티비티(팝업) 닫기
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("EXIT", true);
+        startActivity(intent);
         finish();
     }
 
@@ -35,10 +37,10 @@ public class BreakPopup extends Activity{
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
+  //  @Override
+//    public void onBackPressed() {
         //안드로이드 백버튼 막기
-        return;
-    }
+    //    return;
+   // }
 
 }
