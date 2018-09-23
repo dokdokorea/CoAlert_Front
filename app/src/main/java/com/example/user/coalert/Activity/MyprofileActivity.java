@@ -53,15 +53,17 @@ public class MyprofileActivity extends AppCompatActivity{
         recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
-        CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
-        item[0]=new CosmeticList_mypage(R.drawable.cardview1,"슬기1");
-        item[1]=new CosmeticList_mypage(R.drawable.cardview2,"슬기2");
-        item[2]=new CosmeticList_mypage(R.drawable.cardview3,"슬기3");
-        item[3]=new CosmeticList_mypage(R.drawable.cardview4,"슬기4");
-        item[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
+        CosmeticList_mypage[] cositem=new CosmeticList_mypage[6];
+        cositem[0]=new CosmeticList_mypage(R.drawable.cardview1,"슬기1");
+        cositem[1]=new CosmeticList_mypage(R.drawable.cardview2,"슬기2");
+        cositem[2]=new CosmeticList_mypage(R.drawable.cardview3,"슬기3");
+        cositem[3]=new CosmeticList_mypage(R.drawable.cardview4,"슬기4");
+        cositem[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
+        cositem[5]=new CosmeticList_mypage(R.drawable.irin,"irin");
 
-        for(int i=0;i<5;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
+
+        for(int i=0;i<6;i++) cositems.add(cositem[i]);
+        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.activity_myprofile));
 
 
         Edit.setOnClickListener(new View.OnClickListener() {
