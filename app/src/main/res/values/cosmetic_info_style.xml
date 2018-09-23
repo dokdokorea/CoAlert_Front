@@ -2,10 +2,11 @@
 <resources>
     <string name="write_revw">후기작성</string>
     <string name="see_cosmetic_element">화장품 성분 보기</string>
+    <string name="cosmetic_pd_name">화장품 이름</string>
+<string name="company_name">회사 이름</string>
 
     <style name="cosmetic_prod_title">
         <item name="android:fontFamily">@font/yoon_gothic330</item>
-        <item name="android:text">화장품 이름</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_gravity">center</item>
@@ -14,7 +15,6 @@
 
     <style name="company_nm">
         <item name="android:fontFamily">@font/yoon_gothic320</item>
-        <item name="text">회사이름</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_gravity">center</item>

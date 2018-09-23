@@ -10,8 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.user.coalert.Adapter.MypageFollowerAdapter;
-import com.example.user.coalert.Adapter.MypageRecyclerViewAdapter;
+import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
+import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.CosmeticList_mypage;
 
@@ -50,7 +50,7 @@ public class MyprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<5;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MypageFollowerAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
+        recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[5];
@@ -61,7 +61,7 @@ public class MyprofileActivity extends AppCompatActivity{
         item[4]=new CosmeticList_mypage(R.drawable.cardview5,"슬기5");
 
         for(int i=0;i<5;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MypageRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
+        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
 
 
         Edit.setOnClickListener(new View.OnClickListener() {

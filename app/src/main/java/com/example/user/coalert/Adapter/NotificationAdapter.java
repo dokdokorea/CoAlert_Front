@@ -2,37 +2,40 @@ package com.example.user.coalert.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
+import com.example.user.coalert.item.NotificationCard;
 
 import java.util.ArrayList;
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {
-    private ArrayList<MyData> mDataSet;
+    private ArrayList<NotificationCard> mDataSet;
 
+    class ViewHolder extends RecyclerView.ViewHolder {
+        private ImageView mImageView;
+        private TextView mTextView;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView mImageView;
-        public TextView mTextView;
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
-            mImageView=(ImageView) mImageView.findViewById(R.id.notification_card_image);
-            mTextView=(TextView) mTextView.findViewById(R.id.notification_card_text);
+            mImageView = (ImageView) itemView.findViewById(R.id.notification_card_image);
+            mTextView = (TextView) itemView.findViewById(R.id.notification_card_text);
         }
     }
 
-    public NotificationAdapter(ArrayList<MyData> myDataset){
-        mDataSet=myDataset;
+    public NotificationAdapter(ArrayList<NotificationCard> myDataset) {
+        mDataSet = myDataset;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.notification_card, null);
+        return new ViewHolder(v);
     }
 
     @Override
@@ -45,9 +48,4 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     public int getItemCount() {
         return mDataSet.size();
     }
-}
-
-class MyData{
-    public String text;
-    public int img;
 }

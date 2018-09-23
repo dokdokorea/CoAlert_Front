@@ -51,29 +51,22 @@
         </activity>
 
         <activity android:name=".Loading.Loading1Activity">
-
         </activity>
 
         <activity android:name=".Activity.EditprofileActivity">
-
-
         </activity>
 
         <activity android:name=".Popup.BreakPopup" android:theme="@android:style/Theme.Dialog">
-
-
         </activity>
-        <activity android:name=".Activity.NotificationActivity" />
-
-        <activity android:name=".Activity.MyprofileActivity">
-
+        <activity android:name=".Activity.NotificationActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
 
-
+        <activity android:name=".Activity.MyprofileActivity">
         </activity>
 
         <activity android:name=".Activity.AnotherprofileActivity">
