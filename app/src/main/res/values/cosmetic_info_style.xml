@@ -3,7 +3,9 @@
     <string name="write_revw">후기작성</string>
     <string name="see_cosmetic_element">화장품 성분 보기</string>
     <string name="cosmetic_pd_name">화장품 이름</string>
-<string name="company_name">회사 이름</string>
+    <string name="company_name">회사 이름</string>
+    <string name="simple_review">간단리뷰</string>
+    <string name="detail_review">자세한 리뷰</string>
 
     <style name="cosmetic_prod_title">
         <item name="android:fontFamily">@font/yoon_gothic330</item>
@@ -20,4 +22,14 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
     </style>
+
+    <style name="menu_font">
+        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>
