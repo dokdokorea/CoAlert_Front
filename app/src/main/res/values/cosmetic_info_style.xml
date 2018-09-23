@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="write_revw">후기작성</string>
+    <string name="see_cosmetic_element">화장품 성분 보기</string>
+
+    <style name="cosmetic_prod_title">
+        <item name="android:fontFamily">@font/yoon_gothic330</item>
+        <item name="android:text">화장품 이름</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="company_nm">
+        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="text">회사이름</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>
