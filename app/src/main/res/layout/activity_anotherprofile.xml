@@ -86,9 +86,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
                         android:orientation="horizontal"
                         android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
                         android:weightSum="3.03">
 
                         <LinearLayout
@@ -98,11 +98,14 @@
                             android:orientation="vertical"
                             android:padding="8dp">
 
-                            <ImageButton
+                            <Button
+                                android:id="@+id/follower"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_margin="5dp"
-                                android:background="@drawable/follower" />
+                                android:background="#00ffffff"
+                                android:text="100"
+                                android:textSize="20sp" />
 
                             <TextView
                                 style="@style/editprofile"
@@ -127,11 +130,23 @@
                             android:orientation="vertical"
                             android:padding="8dp">
 
-                            <ImageButton
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:layout_margin="5dp"
-                                android:background="@drawable/danger" />
+                                android:layout_margin="5dp">
+
+                                <ImageButton
+                                    android:id="@+id/toxicList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="#00ffffff"
+                                    android:padding="2dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/danger" />
+
+
+                            </LinearLayout>
+
 
                             <TextView
                                 style="@style/editprofile"
@@ -157,11 +172,22 @@
                             android:orientation="vertical"
                             android:padding="8dp">
 
-                            <ImageButton
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:layout_margin="5dp"
-                                android:background="@drawable/emptyheart" />
+                                android:layout_margin="5dp">
+
+                                <ImageButton
+                                    android:id="@+id/following"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="#00ffffff"
+                                    android:padding="5dp"
+                                    android:scaleType="centerInside" />
+
+
+                            </LinearLayout>
+
 
                             <TextView
                                 style="@style/editprofile"
