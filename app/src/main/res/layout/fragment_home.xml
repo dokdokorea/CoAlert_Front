@@ -250,7 +250,7 @@
 
                             <ImageButton
                                 style="@style/image_format"
-                                android:src="@drawable/butterfly" />
+                                android:src="@drawable/cardview1" />
 
                             <TextView
                                 style="@style/image_title"
@@ -299,7 +299,7 @@
 
                             <ImageButton
                                 style="@style/image_format"
-                                android:src="@drawable/egg" />
+                                android:src="@drawable/cardview2" />
 
                             <TextView
                                 style="@style/image_title"
