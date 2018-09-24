@@ -11,12 +11,15 @@
     <color name="fourth">#846090</color>
     <color name="fifth">#8c8e9a</color>
     <color name="sixth">#4b4f58</color>
+    <color name="emptyBackground">#00ffffff</color>
 
     <color name="mypageback">#E6E6E6</color>
 
     <color name="divideLine">#D8D8D8</color>
     <color name="whiteBackground">#FFFFFF</color>
     <color name="explanationwords">#A4A4A4</color>
+
+
 </resources>
 
 
