@@ -7,15 +7,37 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#ffffff"
-        android:fontFamily="@font/yoon_gothic340"
-        android:gravity="center"
-        android:text="MyPage"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        >
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/yoon_gothic340"
+            android:gravity="center"
+            android:text="MyPage"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:id="@+id/backbtn"
+            android:padding="5dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_btn"
+            android:background="@color/whiteBackground"/>
+
+
+    </RelativeLayout>
+
+
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"

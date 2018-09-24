@@ -89,6 +89,7 @@
         android:layout_marginTop="20dp"
         android:background="@color/whiteBackground" />
 
+
     <ImageButton
         android:id="@+id/kakao_login_button"
         android:layout_width="300dp"
@@ -98,6 +99,7 @@
         android:background="#00ffffff"
         android:scaleType="centerCrop"
         android:src="@drawable/kakaotalk_button" />
+
 
     <FrameLayout
         android:layout_width="match_parent"

@@ -16,9 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--android:name=".Autehntification.GlobalApplication"-->
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.kakao.sdk.Appkey"
+            android:value="@string/kakao_app_key"/>
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -64,6 +69,8 @@
         </activity>
 
         <activity android:name=".Activity.MyprofileActivity">
+
+
         </activity>
 
         <activity android:name=".Activity.AnotherprofileActivity">
@@ -73,6 +80,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
 

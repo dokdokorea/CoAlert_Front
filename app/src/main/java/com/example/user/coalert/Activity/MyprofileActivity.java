@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
@@ -21,12 +22,15 @@ import java.util.List;
 public class MyprofileActivity extends AppCompatActivity{
     List<String> list;
     Button Edit;
+    ImageButton Back;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myprofile);
 
         Edit=(Button)findViewById(R.id.edit_personal_info);
+        Back=(ImageButton)findViewById(R.id.backbtn);
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
         RecyclerView cosmeticList=(RecyclerView)findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
@@ -65,6 +69,12 @@ public class MyprofileActivity extends AppCompatActivity{
         for(int i=0;i<6;i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.activity_myprofile));
 
+        Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         Edit.setOnClickListener(new View.OnClickListener() {
             @Override

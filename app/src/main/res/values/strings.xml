@@ -2,6 +2,8 @@
     <string name="app_name">COALERT</string>
     <string name="facebook_app_id">2201785156731455</string>
     <string name="fb_login_protocol_scheme">fb2201785156731455</string>
+    <string name="kakao_app_key">031d8f317b94b235e7e7a0266e10f7f5</string>
+    <string name="kakao_app_key_scheme">kakao031d8f317b94b235e7e7a0266e10f7f5</string>
     <string name="confirm_button">확인</string>
 
     <string name="email_login_button">로그인</string>
