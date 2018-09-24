@@ -1,7 +1,6 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -39,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     ImageView fakeFacebook;
     LoginButton facebookLoginBtn;
     ImageButton kakao;
-   //SessionCallback callback;
+    SessionCallback callback;
     private static final String TAG = LoginActivity.class.getSimpleName();
 
 
@@ -49,10 +48,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
-        kakao=findViewById(R.id.kakao_login_button);
+        // kakao = findViewById(R.id.kakao_login_button);
 
-       // permissonCheck();
-       //Session.getCurrentSession().addCallback(callback);
+        // permissonCheck();
+        callback = new SessionCallback();
+        Session.getCurrentSession().addCallback(callback);
 
 
         /*facebook button synchronize with real fb button*/
@@ -66,18 +66,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        kakao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,Loading1Activity.class);
-                //getAppKeyHash();
-                getHashKey();
-                startActivity(intent);
-                finish();
-            }
-        });
-
-
+//        kakao.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
+//                //getAppKeyHash();
+//                getHashKey();
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
     }
 
@@ -109,13 +107,13 @@ public class LoginActivity extends AppCompatActivity {
     /*카카오톡 연동하기(키해시 받아오기) 안돼*/
 
 
-    private void getHashKey(){
+    private void getHashKey() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo("com.example.user.coalert", PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
-                Log.d("key_hash=",Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                Log.d("key_hash=", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -193,8 +191,7 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
-
-
 }
+
 
 
