@@ -8,8 +8,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.user.coalert.Activity.CommonSignUpActivity;
 import com.example.user.coalert.Activity.MainActivity;
 import com.example.user.coalert.R;
+import com.facebook.common.Common;
 
 public class Loading1Activity extends AppCompatActivity {
     private ImageView loadingImg;
@@ -24,11 +26,11 @@ public class Loading1Activity extends AppCompatActivity {
         Handler handler=new Handler(){
             public void handleMessage(Message msg){
                 super.handleMessage(msg);
-                startActivity(new Intent(Loading1Activity.this,MainActivity.class));
+                startActivity(new Intent(Loading1Activity.this,CommonSignUpActivity.class));
                 finish();
             }
         };
-        handler.sendEmptyMessageDelayed(0,3000);
+        handler.sendEmptyMessageDelayed(0,2000);
     }
 
     private void initView(){

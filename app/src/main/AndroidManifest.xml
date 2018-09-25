@@ -84,8 +84,9 @@
 
         <activity android:name=".Activity.AnotherprofileActivity">
 
+        </activity>
 
-
+        <activity android:name=".Activity.CommonSignUpActivity">
 
         </activity>
 

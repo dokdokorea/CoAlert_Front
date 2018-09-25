@@ -27,6 +27,7 @@ import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
+import com.kakao.util.helper.log.Logger;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -106,6 +107,19 @@ public class LoginActivity extends AppCompatActivity {
     }
     /*카카오톡 연동하기(키해시 받아오기) 안돼*/
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Session.getCurrentSession().removeCallback(callback);
+    }
+
 
     private void getHashKey() {
         try {
@@ -172,11 +186,13 @@ public class LoginActivity extends AppCompatActivity {
                     //로그인에 성공하면 로그인한 사용자의 일련번호, 닉네임, 이미지url등을 리턴합니다.
                     //사용자 ID는 보안상의 문제로 제공하지 않고 일련번호는 제공합니다.
 
-//                    Log.e("UserProfile", userProfile.toString());
-//                    Log.e("UserProfile", userProfile.getId() + "");
-
+                    //Log.e("UserProfile", userProfile.toString());
+                   // Log.e("UserProfile", userProfile.getId() + "");
 
                     long number = userProfile.getId();
+                    Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
+                    startActivity(intent);
+                    finish();
 
 
                 }
@@ -186,8 +202,11 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         public void onSessionOpenFailed(KakaoException exception) {
-            // 세션 연결이 실패했을때
-            // 어쩔때 실패되는지는 테스트를 안해보았음 ㅜㅜ
+            // 세션 연결이 실패했을 시 로그인화면 다시 불러옴
+            if (exception != null) {
+                Logger.e(exception);
+            }
+            setContentView(R.layout.activity_login);
 
         }
     }
