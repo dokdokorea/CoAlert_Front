@@ -51,6 +51,4 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     public int getItemCount() {
         return mDataset.size();
     }
-
-
 }
