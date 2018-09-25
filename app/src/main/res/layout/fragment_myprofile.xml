@@ -11,9 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#ffffff"
-        android:orientation="horizontal"
-        >
-
+        android:orientation="horizontal">
 
 
         <TextView
@@ -26,17 +24,16 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:layout_width="50dp"
             android:id="@+id/backbtn"
-            android:padding="5dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:background="@color/whiteBackground"
+            android:padding="5dp"
             android:scaleType="centerInside"
-            android:src="@drawable/left_btn"
-            android:background="@color/whiteBackground"/>
+            android:src="@drawable/left_btn" />
 
 
     </RelativeLayout>
-
 
 
     <android.support.v4.widget.Space
@@ -124,6 +121,7 @@
                 android:layout_height="10dp" />
 
             <LinearLayout
+                android:id="@+id/toxicList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
@@ -149,11 +147,53 @@
                         android:layout_weight="0.9" />
 
                     <ImageButton
-                        android:id="@+id/toxicList"
+
                         android:layout_width="14dp"
                         android:layout_height="14dp"
                         android:layout_gravity="center"
                         android:layout_marginRight="8dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/rightbtn" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/wish_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    android:text="찜목록" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9" />
+
+                    <ImageButton
+                        android:layout_width="1dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="0.1"
                         android:background="@drawable/rightbtn" />
 

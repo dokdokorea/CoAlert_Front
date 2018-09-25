@@ -38,7 +38,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="0.05"
-            android:background="#00ffffff"
+            android:background="@color/emptyBackground"
             android:scaleType="centerInside"
             android:src="@drawable/notification" />
 
@@ -114,9 +114,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/click_event_background"
-                android:clickable="true"
+                android:contextClickable="true"
                 android:gravity="end"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/for_more_information" />
 
             <Space
@@ -140,6 +140,7 @@
                 android:textStyle="bold" />
             <!--화장품 추천 횟수 제한걸기-->
             <Button
+                android:id="@+id/suggest_cosmetics"
                 style="@style/defaultFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
