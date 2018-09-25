@@ -2,15 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.v7.widget.CardView
         android:id="@+id/cardview"
-        card_view:cardCornerRadius="3dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="3dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -18,21 +19,21 @@
             android:orientation="vertical">
 
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:scaleType="centerInside"
-                    android:id="@+id/cosphoto" />
+            <ImageView
+                android:id="@+id/cosphoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerInside" />
 
-                <TextView
-                    android:id="@+id/Name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:textSize="20dp"
-                    android:text="ddd"
-                    tools:ignore="RtlHardcoded" />
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="ddd"
+                android:textSize="20dp"
+                tools:ignore="RtlHardcoded" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>

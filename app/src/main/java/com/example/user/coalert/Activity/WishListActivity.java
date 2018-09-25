@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.user.coalert.Adapter.WishListAdapter;
+import com.example.user.coalert.Adapter.MyprofileAdapter.WishListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.WishListCard;
 

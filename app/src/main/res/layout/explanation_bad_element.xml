@@ -3,9 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/bad_element_title"
-    style="@style/editprofile"/>
+
+    <TextView
+        style="@style/editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bad_element_title"
+        android:paddingTop="10dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/expl_bad_element_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

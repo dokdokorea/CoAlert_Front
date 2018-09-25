@@ -1,6 +1,7 @@
 package com.example.user.coalert.Fragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,7 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.user.coalert.Activity.ExplanationBadElementActivity;
+import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
@@ -23,7 +27,7 @@ public class HomeFragment extends Fragment {
     ArrayList<HotYoutuberCardView> youtuberArr;
     ArrayList<BestReviewCardView> bestReviewArr;
     ArrayList<NewProductCardView> newProduArr;
-
+    private TextView detailElementBtn;
     public HomeFragment() {
     }
 
@@ -31,6 +35,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+        detailElementBtn=(TextView)v.findViewById(R.id.detail_element_info_btn);
 
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
@@ -64,6 +69,13 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new NewProductCardView(R.drawable.cardview3, "신상품", "우리회사"));
         newProductRecyclerView.setAdapter(new NewProductAdapter(newProduArr));
 
+        detailElementBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ExplanationBadElementActivity.class);
+                startActivity(intent);
+            }
+        } );
         return v;
     }
 }

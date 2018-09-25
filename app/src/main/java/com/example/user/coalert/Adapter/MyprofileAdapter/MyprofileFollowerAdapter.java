@@ -1,4 +1,4 @@
-package com.example.user.coalert.Adapter;
+package com.example.user.coalert.Adapter.MyprofileAdapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -17,11 +17,11 @@ import com.example.user.coalert.item.CosmeticList_mypage;
 
 import java.util.List;
 
-public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<MyprofileRecyclerViewAdapter.ViewHolder>{
+public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFollowerAdapter.ViewHolder>{
     Context context;
     List <CosmeticList_mypage> list;
     int item_layout;
-    public MyprofileRecyclerViewAdapter(Context context, List<CosmeticList_mypage> items, int item_layout){
+    public MyprofileFollowerAdapter(Context context, List<CosmeticList_mypage> items, int item_layout){
         this.context = context;
         list = items;
         this.item_layout =item_layout;
@@ -30,7 +30,7 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_mapage_cometics, null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_follower, null);
         return new ViewHolder(v) ;
     }
 
@@ -38,7 +38,7 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final CosmeticList_mypage item = list.get(position);
         Drawable drawable=context.getResources().getDrawable(item.getImage());
-        holder.image.setBackground(drawable);
+        holder.image.setImageDrawable(drawable);
         holder.name.setText(item.getTitle());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override

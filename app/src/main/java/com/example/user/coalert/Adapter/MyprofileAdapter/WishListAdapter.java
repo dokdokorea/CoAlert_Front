@@ -1,4 +1,4 @@
-package com.example.user.coalert.Adapter;
+package com.example.user.coalert.Adapter.MyprofileAdapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

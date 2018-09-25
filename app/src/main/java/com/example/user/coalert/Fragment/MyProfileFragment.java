@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,13 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
 import com.example.user.coalert.Activity.WishListActivity;
-import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
-import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
+import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
+import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.CosmeticList_mypage;
 
