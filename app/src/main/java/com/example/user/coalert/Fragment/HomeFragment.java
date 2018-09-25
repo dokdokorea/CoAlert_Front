@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.HotYoutuberAdapter;
+import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.NewProductAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.BestReviewCardView;
@@ -22,6 +23,8 @@ import com.example.user.coalert.item.NewProductCardView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class HomeFragment extends Fragment {
     ArrayList<HotYoutuberCardView> youtuberArr;
