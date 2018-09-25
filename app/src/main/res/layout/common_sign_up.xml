@@ -99,6 +99,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:textSize="50dp"
+            android:text="name"/>
+
         <Button
             android:id="@+id/common_sign_up_confirmation_btn"
             style="@style/defaultFont"
@@ -110,4 +117,6 @@
             android:textColor="@color/whiteBackground"
             android:textStyle="bold" />
     </RelativeLayout>
+
+
 </LinearLayout>
