@@ -25,7 +25,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="@string/kakao_app_key"/>
+            android:value="@string/kakao_app_key" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -64,22 +64,15 @@
 
         </activity>
 
-        <activity android:name=".Loading.Loading1Activity">
-        </activity>
+        <activity android:name=".Loading.Loading1Activity"></activity>
 
-        <activity android:name=".Activity.EditprofileActivity">
-        </activity>
+        <activity android:name=".Activity.EditprofileActivity"></activity>
 
-        <activity android:name=".Popup.BreakPopup" android:theme="@android:style/Theme.Dialog">
-        </activity>
+        <activity
+            android:name=".Popup.BreakPopup"
+            android:theme="@android:style/Theme.Dialog"></activity>
 
-        <activity android:name=".Activity.NotificationActivity" >
-
-        </activity>
-
-        <activity android:name=".Activity.MyprofileActivity">
-
-
+        <activity android:name=".Activity.NotificationActivity">
         </activity>
 
         <activity android:name=".Activity.AnotherprofileActivity">
@@ -88,9 +81,8 @@
 
         <activity android:name=".Activity.CommonSignUpActivity">
 
+
         </activity>
 
-
     </application>
-
 </manifest>
