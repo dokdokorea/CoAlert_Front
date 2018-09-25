@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.CosmeticIngredientActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cosmetic_ingredient_pd_name"
+                style="@style/editprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/cosmetic_pd_name" />
+
+            <TabHost
+                android:id="@+id/tabHost1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 첫 번째 페이지. content1 -->
+                        <include
+                            android:id="@+id/content1"
+                            layout="@layout/tab_ingredient_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <!-- 두 번째 페이지. content2 -->
+                        <include
+                            android:id="@+id/content2"
+                            layout="@layout/tab_skintype"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

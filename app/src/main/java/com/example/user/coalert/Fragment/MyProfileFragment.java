@@ -19,7 +19,7 @@ import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.CosmeticList_mypage;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,26 +57,26 @@ public class MyProfileFragment extends Fragment {
         cosmeticList.setNestedScrollingEnabled(false);
 
 
-        List<CosmeticList_mypage> items = new ArrayList<>();
-        CosmeticList_mypage[] item = new CosmeticList_mypage[5];
-        item[0] = new CosmeticList_mypage(R.drawable.cardview1, "슬기1");
-        item[1] = new CosmeticList_mypage(R.drawable.cardview2, "슬기2");
-        item[2] = new CosmeticList_mypage(R.drawable.cardview3, "슬기3");
-        item[3] = new CosmeticList_mypage(R.drawable.cardview4, "슬기4");
-        item[4] = new CosmeticList_mypage(R.drawable.cardview5, "슬기5");
+        List<OneImgOneStringCardView> items = new ArrayList<>();
+        OneImgOneStringCardView[] item = new OneImgOneStringCardView[5];
+        item[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
+        item[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
+        item[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
+        item[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
+        item[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
 
         for (int i = 0; i < 5; i++) items.add(item[i]);
 
         recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(), items, R.layout.fragment_myprofile));
 
-        List<CosmeticList_mypage> cositems = new ArrayList<>();
-        CosmeticList_mypage[] cositem = new CosmeticList_mypage[6];
-        cositem[0] = new CosmeticList_mypage(R.drawable.cardview1, "슬기1");
-        cositem[1] = new CosmeticList_mypage(R.drawable.cardview2, "슬기2");
-        cositem[2] = new CosmeticList_mypage(R.drawable.cardview3, "슬기3");
-        cositem[3] = new CosmeticList_mypage(R.drawable.cardview4, "슬기4");
-        cositem[4] = new CosmeticList_mypage(R.drawable.cardview5, "슬기5");
-        cositem[5] = new CosmeticList_mypage(R.drawable.irin, "irin");
+        List<OneImgOneStringCardView> cositems = new ArrayList<>();
+        OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[6];
+        cositem[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
+        cositem[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
+        cositem[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
+        cositem[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
+        cositem[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
+        cositem[5] = new OneImgOneStringCardView(R.drawable.irin, "irin");
 
 
         for (int i = 0; i < 6; i++) cositems.add(cositem[i]);

@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.NewProductCardView;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
 public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.ViewHolder> {
-    private ArrayList<NewProductCardView> mDataset;
+    private ArrayList<OneImgTwoStringCardView> mDataset;
 
     class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
@@ -29,7 +29,7 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
         }
     }
 
-    public NewProductAdapter(ArrayList<NewProductCardView> myDataset) {
+    public NewProductAdapter(ArrayList<OneImgTwoStringCardView> myDataset) {
         mDataset = myDataset;
     }
 
@@ -43,8 +43,8 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull NewProductAdapter.ViewHolder holder, int position) {
         holder.imageView.setImageResource(mDataset.get(position).getImage());
-        holder.prodNameView.setText(mDataset.get(position).getTitle());
-        holder.companyView.setText(mDataset.get(position).getCompany());
+        holder.prodNameView.setText(mDataset.get(position).getText1());
+        holder.companyView.setText(mDataset.get(position).getText2());
     }
 
     @Override

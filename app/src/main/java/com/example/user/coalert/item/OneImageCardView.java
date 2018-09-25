@@ -1,7 +1,7 @@
 package com.example.user.coalert.item;
 
-public class WishListCard {
+public class OneImageCardView {
     int img;
     public int getImg() {return img;}
-    public WishListCard(int image){this.img=image;}
+    public OneImageCardView(int image){this.img=image;}
 }
