@@ -54,12 +54,16 @@
                         <!-- 첫 번째 페이지. content1 -->
                         <include
                             android:id="@+id/content1"
-                            layout="@layout/tab_ingredient_list" />
+                            layout="@layout/tab_ingredient_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
 
                         <!-- 두 번째 페이지. content2 -->
                         <include
                             android:id="@+id/content2"
-                            layout="@layout/tab_skintype" />
+                            layout="@layout/tab_skintype"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
                     </FrameLayout>
                 </LinearLayout>
             </TabHost>

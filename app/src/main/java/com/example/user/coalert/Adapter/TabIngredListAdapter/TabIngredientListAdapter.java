@@ -1,4 +1,4 @@
-package com.example.user.coalert.Adapter;
+package com.example.user.coalert.Adapter.TabIngredListAdapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredientListAdapter.ViewHolder> {
     private ArrayList<OneImgOneStringCardView> mDataset;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
         private TextView textView;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.item_ingredient_list_risk_level);
             textView = (TextView) itemView.findViewById(R.id.item_ingredient_list_ingredient_name);
@@ -34,7 +34,7 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.tab_ingredient_list, null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ingredient_list, null);
         return new ViewHolder(v);
     }
 
