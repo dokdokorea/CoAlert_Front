@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
@@ -31,6 +32,8 @@ import com.kakao.util.helper.log.Logger;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
@@ -189,8 +192,15 @@ public class LoginActivity extends AppCompatActivity {
                     //Log.e("UserProfile", userProfile.toString());
                    // Log.e("UserProfile", userProfile.getId() + "");
 
-                    long number = userProfile.getId();
+                    //long number = userProfile.getId();
+                    //Log.e("UserProfile", number + "");
+
+                    Toast.makeText(LoginActivity.this, String.valueOf(userProfile.getId()), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
+                    intent.putExtra("name",userProfile.getNickname().toString());
+                    intent.putExtra("id",String.valueOf(userProfile.getId()));
+                    intent.putExtra("image",userProfile.getProfileImagePath());
+
                     startActivity(intent);
                     finish();
 
@@ -210,6 +220,8 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
+
+
 }
 
 
