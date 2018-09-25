@@ -165,7 +165,7 @@
                 android:layout_height="10dp" />
 
             <LinearLayout
-                android:id="@+id/wish_btn"
+                android:id="@+id/wish_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
@@ -177,7 +177,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
                     android:padding="5dp"
-                    android:text="찜목록" />
+                    android:text="@string/wish_list" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -196,8 +196,6 @@
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0.1"
                         android:background="@drawable/rightbtn" />
-
-
                 </LinearLayout>
 
             </LinearLayout>

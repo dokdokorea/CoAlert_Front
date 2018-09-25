@@ -83,6 +83,7 @@
 
 
         </activity>
+        <activity android:name=".Activity.WishListActivity"/>
 
     </application>
 </manifest>

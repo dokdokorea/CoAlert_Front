@@ -5,26 +5,19 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.example.user.coalert.Adapter.BestReviewAdapter;
-import com.example.user.coalert.Adapter.HotYoutuberAdapter;
-import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
-import com.example.user.coalert.Adapter.NewProductAdapter;
+import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
+import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
+import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.BestReviewCardView;
 import com.example.user.coalert.item.HotYoutuberCardView;
 import com.example.user.coalert.item.NewProductCardView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class HomeFragment extends Fragment {
     ArrayList<HotYoutuberCardView> youtuberArr;
