@@ -17,12 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--android:name=".Autehntification.GlobalApplication"-->
+
+        <!-- android:name=".Autehntification.GlobalApplication" -->
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
@@ -45,46 +45,30 @@
                     tools:ignore="AppLinkUrlError" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".Activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".Activity.AccessAuthorizationActivity" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.EmailSignUpActivity"></activity>
+        <activity android:name=".Loading.Loading1Activity" />
+        <activity android:name=".Activity.EditprofileActivity" />
+        <activity
+            android:name=".Popup.BreakPopup"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".Activity.NotificationActivity" />
+        <activity android:name=".Activity.AnotherprofileActivity"></activity>
+        <activity android:name=".Activity.CommonSignUpActivity"></activity>
+        <activity android:name=".Activity.WishListActivity" />
+        <activity android:name=".Activity.CosmeticInformationActivity"></activity>
+        <activity android:name=".Activity.ExplanationBadElementActivity" />
+        <activity android:name=".Activity.CosmeticIngredientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.AccessAuthorizationActivity" />
-        <activity android:name=".Activity.MainActivity"/>
-        <activity android:name=".Activity.EmailSignUpActivity">
-
-        </activity>
-
-        <activity android:name=".Loading.Loading1Activity"></activity>
-
-        <activity android:name=".Activity.EditprofileActivity"></activity>
-
-        <activity
-            android:name=".Popup.BreakPopup"
-            android:theme="@android:style/Theme.Dialog"></activity>
-
-        <activity android:name=".Activity.NotificationActivity"></activity>
-
-        <activity android:name=".Activity.AnotherprofileActivity">
-
-        </activity>
-
-        <activity android:name=".Activity.CommonSignUpActivity">
-
-
-        </activity>
-        <activity android:name=".Activity.WishListActivity" />
-
-        <activity android:name=".Activity.CosmeticInformationActivity">
-
-
-        </activity>
-        <activity android:name=".Activity.ExplanationBadElementActivity" />
-
     </application>
+
 </manifest>
