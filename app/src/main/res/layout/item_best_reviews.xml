@@ -40,7 +40,7 @@
                     android:text="@string/user_name"
                     tools:ignore="RtlHardcoded" />
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/best_review_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
