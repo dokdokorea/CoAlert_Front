@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
+import com.example.user.coalert.Activity.ExplanationBadElementActivity;
 import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAdapter;
@@ -29,6 +30,7 @@ public class MyProfileFragment extends Fragment {
     List<String> list;
     Button Edit;
     LinearLayout wishBtn;
+    LinearLayout toxicListBtn;
 
     public MyProfileFragment() {
 
@@ -40,6 +42,8 @@ public class MyProfileFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_myprofile, container, false);
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
         wishBtn=(LinearLayout)v.findViewById(R.id.wish_button);
+        toxicListBtn=(LinearLayout)v.findViewById(R.id.toxicList);
+
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -90,6 +94,15 @@ public class MyProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), WishListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        toxicListBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ExplanationBadElementActivity.class);
                 startActivity(intent);
             }
         });
