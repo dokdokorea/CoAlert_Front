@@ -1,10 +1,13 @@
 package com.example.user.coalert.Activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,11 +21,18 @@ import com.kakao.util.helper.log.Logger;
 
 import org.w3c.dom.Text;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CommonSignUpActivity extends AppCompatActivity{
-    TextView tv1,tv2,tv3;
+    TextView tv1,tv2;
+    ImageView profile;
+    Bitmap bitmap;
     SessionCallback callback;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +40,7 @@ public class CommonSignUpActivity extends AppCompatActivity{
         setContentView(R.layout.common_sign_up);
         tv1=(TextView)findViewById(R.id.name);
         tv2=(TextView)findViewById(R.id.id);
-        tv3=(TextView)findViewById(R.id.image);
+        profile=(ImageView)findViewById(R.id.image);
         tv1.setText(" JAVA 32bit");
         Intent info=getIntent();
         final String name=info.getExtras().getString("name");
@@ -38,13 +48,39 @@ public class CommonSignUpActivity extends AppCompatActivity{
         final String image=info.getExtras().getString("image");
         tv1.setText(name);
         tv2.setText(id);
-        tv3.setText(image);
+
+        Thread mThread=new Thread(){
+            @Override
+            public void run() {
+                try{
+                    URL url=new URL(image);
+
+                    HttpURLConnection conn=(HttpURLConnection)url.openConnection();
+                    conn.setDoInput(true);
+                    conn.connect();
+
+                    InputStream is=conn.getInputStream();
+                    bitmap= BitmapFactory.decodeStream(is);
+
+                }catch(MalformedURLException e){
+                    e.printStackTrace();
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        mThread.start();
+        try{
+            mThread.join();
+            profile.setImageBitmap(bitmap);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
 
 
-        callback = new SessionCallback();
-        Session.getCurrentSession().addCallback(callback);
-
-
+        //callback = new SessionCallback();
+        //Session.getCurrentSession().addCallback(callback);
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
