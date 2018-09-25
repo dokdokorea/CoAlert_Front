@@ -13,8 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
+import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
@@ -28,6 +30,7 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 public class MyProfileFragment extends Fragment {
     List<String> list;
     Button Edit;
+    LinearLayout wishBtn;
 
     public MyProfileFragment() {
 
@@ -38,6 +41,7 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_myprofile, container, false);
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
+        wishBtn=(LinearLayout)v.findViewById(R.id.wish_button);
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -84,6 +88,13 @@ public class MyProfileFragment extends Fragment {
             }
         });
 
+        wishBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WishListActivity.class);
+                startActivity(intent);
+            }
+        });
         return v;
     }
 }

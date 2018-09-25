@@ -79,6 +79,7 @@
 
 
         </activity>
+        <activity android:name=".Activity.WishListActivity"/>
 
         <activity android:name=".Activity.CosmeticInformationActivity">
             <intent-filter>

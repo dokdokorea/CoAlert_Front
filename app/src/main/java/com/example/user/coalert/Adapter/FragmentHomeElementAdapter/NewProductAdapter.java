@@ -1,4 +1,4 @@
-package com.example.user.coalert.Adapter;
+package com.example.user.coalert.Adapter.FragmentHomeElementAdapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -51,6 +51,4 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     public int getItemCount() {
         return mDataset.size();
     }
-
-
 }

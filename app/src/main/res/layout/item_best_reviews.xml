@@ -45,7 +45,8 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="@string/context"
-                    android:maxLines="2"/>
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
             </LinearLayout>
 
         </LinearLayout>
