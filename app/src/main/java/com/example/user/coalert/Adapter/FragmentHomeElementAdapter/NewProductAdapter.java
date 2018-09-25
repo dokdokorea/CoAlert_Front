@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.NewProductCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;

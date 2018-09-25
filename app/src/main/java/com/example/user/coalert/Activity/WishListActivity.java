@@ -8,12 +8,12 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.WishListAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.WishListCard;
+import com.example.user.coalert.item.OneImageCardView;
 
 import java.util.ArrayList;
 
 public class WishListActivity extends Activity {
-    ArrayList<WishListCard> wishListArr;
+    ArrayList<OneImageCardView> wishListArr;
     private RecyclerView wishRecyclerView;
     private int COLUM = 3;
 
@@ -27,7 +27,7 @@ public class WishListActivity extends Activity {
         wishRecyclerView.setHasFixedSize(true);
         wishRecyclerView.setLayoutManager(new GridLayoutManager(this, COLUM));
         wishListArr = new ArrayList<>();
-        wishListArr.add(new WishListCard(R.drawable.cardview1));
+        wishListArr.add(new OneImageCardView(R.drawable.cardview1));
         wishRecyclerView.setAdapter(new WishListAdapter(wishListArr));
 
 

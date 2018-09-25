@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.NotificationCard;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.ArrayList;
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.ViewHolder> {
-    private ArrayList<NotificationCard> mDataSet;
+    private ArrayList<OneImgOneStringCardView> mDataSet;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView mImageView;
@@ -27,7 +27,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         }
     }
 
-    public NotificationAdapter(ArrayList<NotificationCard> myDataset) {
+    public NotificationAdapter(ArrayList<OneImgOneStringCardView> myDataset) {
         mDataSet = myDataset;
     }
 
@@ -40,8 +40,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.mTextView.setText(mDataSet.get(position).text);
-        holder.mImageView.setImageResource(mDataSet.get(position).img);
+        holder.mTextView.setText(mDataSet.get(position).getText());
+        holder.mImageView.setImageResource(mDataSet.get(position).getImage());
     }
 
     @Override

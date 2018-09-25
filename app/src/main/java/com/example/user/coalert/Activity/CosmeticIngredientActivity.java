@@ -8,14 +8,13 @@ import android.widget.TabHost;
 
 import com.example.user.coalert.Adapter.TabIngredientListAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.TabIngredientListCardView;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class CosmeticIngredientActivity extends AppCompatActivity {
     RecyclerView tabIngredientListRecyclerView;
-    ArrayList<TabIngredientListCardView> tabIngArr;
+    ArrayList<OneImgOneStringCardView> tabIngArr;
     TabHost tabHost1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +39,7 @@ public class CosmeticIngredientActivity extends AppCompatActivity {
         tabIngredientListRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         tabIngArr=new ArrayList<>();
-        tabIngArr.add(new TabIngredientListCardView(R.drawable.cardview1,"모두에게 행복을"));
+        tabIngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"모두에게 행복을"));
         tabIngredientListRecyclerView.setAdapter(new TabIngredientListAdapter(tabIngArr));
 
     }

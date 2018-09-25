@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.TabIngredientListCardView;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.ArrayList;
 
 public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredientListAdapter.ViewHolder> {
-    private ArrayList<TabIngredientListCardView> mDataset;
+    private ArrayList<OneImgOneStringCardView> mDataset;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
@@ -27,7 +27,7 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
         }
     }
 
-    public TabIngredientListAdapter(ArrayList<TabIngredientListCardView> myDataset) {
+    public TabIngredientListAdapter(ArrayList<OneImgOneStringCardView> myDataset) {
         mDataset = myDataset;
     }
 
@@ -40,7 +40,7 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(mDataset.get(position).getImg());
+        holder.imageView.setImageResource(mDataset.get(position).getImage());
         holder.textView.setText(mDataset.get(position).getText());
     }
 

@@ -13,15 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.TimelineCardVIew;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.List;
 
 public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRecyclerViewAdapter.ViewHolder>{
     Context context;
-    List <TimelineCardVIew> list;
+    List <OneImgTwoStringCardView> list;
     int item_layout;
-    public TimelineRecyclerViewAdapter(Context context, List<TimelineCardVIew> items, int item_layout){
+    public TimelineRecyclerViewAdapter(Context context, List<OneImgTwoStringCardView> items, int item_layout){
         this.context = context;
         list = items;
         this.item_layout =item_layout;
@@ -36,15 +36,15 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final TimelineCardVIew item = list.get(position);
+        final OneImgTwoStringCardView item = list.get(position);
         Drawable drawable=context.getResources().getDrawable(item.getImage());
         holder.image.setBackground(drawable);
-        holder.title.setText(item.getTitle());
-        holder.username.setText(item.getUsername());
+        holder.title.setText(item.getText1());
+        holder.username.setText(item.getText2());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,item.getTitle(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,item.getText1(),Toast.LENGTH_SHORT).show();
             }
         });
     }

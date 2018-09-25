@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.WishListCard;
+import com.example.user.coalert.item.OneImageCardView;
 
 import java.util.ArrayList;
 
 public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.ViewHolder> {
-private ArrayList<WishListCard> mDataset;
+private ArrayList<OneImageCardView> mDataset;
     public class ViewHolder extends RecyclerView.ViewHolder{
         private ImageView imageView;
         public ViewHolder(View itemView) {
@@ -21,7 +21,7 @@ private ArrayList<WishListCard> mDataset;
             imageView=(ImageView)itemView.findViewById(R.id.wish_card_photo);
         }
     }
-public WishListAdapter(ArrayList<WishListCard> myDataset){mDataset=myDataset;}
+public WishListAdapter(ArrayList<OneImageCardView> myDataset){mDataset=myDataset;}
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
