@@ -13,15 +13,15 @@ import com.example.user.coalert.item.NewProductCardView;
 
 import java.util.ArrayList;
 
-public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.ViewHodler> {
+public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.ViewHolder> {
     private ArrayList<NewProductCardView> mDataset;
 
-    class ViewHodler extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
         private TextView prodNameView;
         private TextView companyView;
 
-        ViewHodler(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.new_product_image);
             prodNameView = (TextView) itemView.findViewById(R.id.new_product_name);
@@ -35,13 +35,13 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
 
     @NonNull
     @Override
-    public ViewHodler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public NewProductAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_best_reviews, null);
-        return new ViewHodler(v);
+        return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHodler holder, int position) {
+    public void onBindViewHolder(@NonNull NewProductAdapter.ViewHolder holder, int position) {
         holder.imageView.setImageResource(mDataset.get(position).getImage());
         holder.prodNameView.setText(mDataset.get(position).getTitle());
         holder.companyView.setText(mDataset.get(position).getCompany());

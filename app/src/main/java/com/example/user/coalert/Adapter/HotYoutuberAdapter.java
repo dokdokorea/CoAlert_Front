@@ -14,23 +14,27 @@ import com.example.user.coalert.item.HotYoutuberCardView;
 import java.util.ArrayList;
 
 public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.ViewHolder> {
-private ArrayList<HotYoutuberCardView> mDataSet;
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    private ArrayList<HotYoutuberCardView> mDataSet;
+
+    class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
         private TextView textView;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
-            itemView=(ImageView)itemView.findViewById(R.id.youtube);
-            textView=(TextView)itemView.findViewById(R.id.youtube_title);
+            imageView = (ImageView) itemView.findViewById(R.id.youtube);
+            textView = (TextView) itemView.findViewById(R.id.youtube_title);
         }
     }
 
-    public HotYoutuberAdapter(ArrayList<HotYoutuberCardView> myDataset){mDataSet=myDataset;}
+    public HotYoutuberAdapter(ArrayList<HotYoutuberCardView> myDataset) {
+        mDataSet = myDataset;
+    }
+
     @NonNull
     @Override
     public HotYoutuberAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_youtube_view,null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_youtube_view, null);
         return new ViewHolder(v);
     }
 

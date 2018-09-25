@@ -52,20 +52,21 @@ public class HomeFragment extends Fragment {
         bestReviewArr = new ArrayList<>();
         newProduArr = new ArrayList<>();
 
-        youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(new ArrayList<HotYoutuberCardView>()));
+
         youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview1, "슬기짱!"));
         youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview2, "슬기님..."));
         youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview3, "사랑해요"));
+        youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(youtuberArr));
 
-        bestReviewRecyclerView.setAdapter(new BestReviewAdapter(new ArrayList<BestReviewCardView>()));
         bestReviewArr.add(new BestReviewCardView(R.drawable.cardview1, "uniqueBest", "내가 짱인디.."));
         bestReviewArr.add(new BestReviewCardView(R.drawable.cardview2, "pleaseee", "슬기님..."));
         bestReviewArr.add(new BestReviewCardView(R.drawable.cardview3, "badbot", "사랑해요"));
+        bestReviewRecyclerView.setAdapter(new BestReviewAdapter(bestReviewArr));
 
-        newProductRecyclerView.setAdapter(new NewProductAdapter(new ArrayList<NewProductCardView>()));
         newProduArr.add(new NewProductCardView(R.drawable.cardview1, "신상품", "내회사"));
         newProduArr.add(new NewProductCardView(R.drawable.cardview2, "신상품", "니회사"));
         newProduArr.add(new NewProductCardView(R.drawable.cardview3, "신상품", "우리회사"));
+        newProductRecyclerView.setAdapter(new NewProductAdapter(newProduArr));
 
         return v;
     }
