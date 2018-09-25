@@ -24,8 +24,9 @@ public class CosmeticIngredientActivity extends AppCompatActivity {
 
         TabHost.TabSpec ts2=tabHost1.newTabSpec("Tab Spec 2");
         ts2.setContent(R.id.content2);
-        ts2.setIndicator("피부타입");
+        ts2.setIndicator("");
         tabHost1.addTab(ts2);
+
 
 
     }

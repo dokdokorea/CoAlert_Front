@@ -6,51 +6,36 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.TabHost;
 
 import com.example.user.coalert.Adapter.cosmetic_information_tab.TabPageAdapter;
 import com.example.user.coalert.R;
 
 public class CosmeticInformationActivity extends AppCompatActivity{
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    TabHost tabHost1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cosmetic_information);
 
-        // Initializing the TabLayout
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Tab One"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Two"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab Three"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabHost1=(TabHost)findViewById(R.id.tabHost1);
+        tabHost1.setup();
 
-        // Initializing ViewPager
-        viewPager = (ViewPager) findViewById(R.id.pager);
+        TabHost.TabSpec ts1=tabHost1.newTabSpec("Tab Spec 1");
+        ts1.setContent(R.id.content1);
+        ts1.setIndicator("성분");
+        tabHost1.addTab(ts1);
 
-        // Creating TabPagerAdapter adapter
-        TabPageAdapter pagerAdapter = new TabPageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(pagerAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        TabHost.TabSpec ts2=tabHost1.newTabSpec("Tab Spec 2");
+        ts2.setContent(R.id.content2);
+        ts2.setIndicator("simle review");
+        tabHost1.addTab(ts2);
 
-        // Set TabSelectedListener
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+        TabHost.TabSpec ts3=tabHost1.newTabSpec("Tab Spec 3");
+        ts3.setContent(R.id.content3);
+        ts3.setIndicator("Detail review");
+        tabHost1.addTab(ts3);
 
     }
 }

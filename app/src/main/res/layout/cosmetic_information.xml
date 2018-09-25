@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/mypageback"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cosmetic_back_btn"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:contextClickable="true"
+            android:src="@drawable/left_btn" />
+
+        <TextView
+            android:id="@+id/cosmetic_prod_name"
+            style="@style/cosmetic_prod_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:paddingStart="60dp"
+            android:text="@string/cosmetic_pd_name"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/cosmetic_info_write_review"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#00ffffff"
+            android:fontFamily="@font/yoon_gothic320"
+            android:text="@string/write_revw" />
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -10,59 +52,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:weightSum="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.05"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/cosmetic_back_btn"
-                    android:layout_width="25dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:contextClickable="true"
-                    android:src="@drawable/left_btn" />
-
-                <TextView
-                    android:id="@+id/cosmetic_prod_name"
-                    style="@style/cosmetic_prod_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="7"
-                    android:paddingStart="60dp"
-                    android:text="@string/cosmetic_pd_name"
-                    android:textSize="21sp" />
-
-                <Button
-                    android:id="@+id/cosmetic_info_write_review"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:background="#00ffffff"
-                    android:fontFamily="@font/yoon_gothic320"
-                    android:text="@string/write_revw" />
-            </LinearLayout>
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/cosmetic_photo"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
                 android:contextClickable="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/cardview1" />
+
 
             <TextView
                 android:id="@+id/cosmetic_comp_name"
                 style="@style/company_nm"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.02"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/company_name" />
 
             <LinearLayout
@@ -100,119 +109,113 @@
             </LinearLayout>
 
 
+            <TabHost
+                android:id="@+id/tabHost1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imaafe">
 
-
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/tabLayout"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- TabWidget의 id값이 반드시 "tabs"로 지정되어야 함. -->
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!-- 첫 번째 페이지. content1 -->
+
+                        <LinearLayout
+                            android:id="@+id/content1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
 
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                            <ListView
+                                android:id="@+id/ingredient_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:choiceMode="singleChoice"
+                                android:divider="#ffcc22"
+                                android:dividerHeight="1.5dp" />
 
 
+                        </LinearLayout>
 
 
-<!--
+                        <LinearLayout
+                            android:id="@+id/content2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/cosmetic_element_menu"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.04"
-                android:clickable="true"
-                android:orientation="horizontal">
 
-                <TextView
-                    style="@style/menu_font"
-                    android:text="@string/see_cosmetic_element" />
+                        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="-30dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/right_btn" />
-            </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                        <LinearLayout
+                            android:id="@+id/content3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/simple_review_menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contextClickable="true"
-                android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-                <TextView
-                    style="@style/menu_font"
-                    android:text="@string/simple_review" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="-30dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/right_btn" />
-            </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/divideLine" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/simple_review_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="hello"
+                                android:textSize="30dp" />
 
-            <LinearLayout
-                android:id="@+id/detail_review_menu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contextClickable="true"
-                android:orientation="horizontal">
 
-                <TextView
-                    style="@style/menu_font"
-                    android:text="@string/detail_review" />
+                        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="-30dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/right_btn" />
-            </LinearLayout>
+                        <!-- 두 번째 페이지. content2 -->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/divideLine" />
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/detail_review_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-                -->
+
         </LinearLayout>
-
-
-
     </ScrollView>
 
 </LinearLayout>
