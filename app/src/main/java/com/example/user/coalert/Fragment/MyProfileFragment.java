@@ -1,5 +1,6 @@
-package com.example.user.coalert.Activity;
+package com.example.user.coalert.Fragment;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,10 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.user.coalert.Activity.EditprofileActivity;
 import com.example.user.coalert.Adapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileRecyclerViewAdapter;
 import com.example.user.coalert.R;
@@ -19,28 +23,29 @@ import com.example.user.coalert.item.CosmeticList_mypage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyprofileActivity extends AppCompatActivity{
+import static com.facebook.FacebookSdk.getApplicationContext;
+
+public class MyProfileFragment extends Fragment{
     List<String> list;
     Button Edit;
-    ImageButton Back;
+public MyProfileFragment(){
 
+}
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myprofile);
-
-        Edit=(Button)findViewById(R.id.edit_personal_info);
-        Back=(ImageButton)findViewById(R.id.backbtn);
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.recyclerview);
-        RecyclerView cosmeticList=(RecyclerView)findViewById(R.id.recyclerview2);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    View v=inflater.inflate(R.layout.fragment_myprofile,container,false);
+        Edit=(Button)v.findViewById(R.id.edit_personal_info);
+        RecyclerView recyclerView=(RecyclerView)v.findViewById(R.id.recyclerview);
+        RecyclerView cosmeticList=(RecyclerView)v.findViewById(R.id.recyclerview2);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
         int ColumNumber=3;
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
         cosmeticList.setHasFixedSize(true);
-        cosmeticList.setLayoutManager(new GridLayoutManager(this, ColumNumber));
+        cosmeticList.setLayoutManager(new GridLayoutManager(getContext(),ColumNumber));
         cosmeticList.setNestedScrollingEnabled(false);
 
 
@@ -54,7 +59,7 @@ public class MyprofileActivity extends AppCompatActivity{
 
         for(int i=0;i<5;i++) items.add(item[i]);
 
-        recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(),items,R.layout.activity_myprofile));
+        recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(),items,R.layout.fragment_myprofile));
 
         List<CosmeticList_mypage> cositems=new ArrayList<>();
         CosmeticList_mypage[] cositem=new CosmeticList_mypage[6];
@@ -67,25 +72,18 @@ public class MyprofileActivity extends AppCompatActivity{
 
 
         for(int i=0;i<6;i++) cositems.add(cositem[i]);
-        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.activity_myprofile));
-
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(),cositems,R.layout.fragment_myprofile));
 
         Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MyprofileActivity.this,EditprofileActivity.class);
+                Intent intent=new Intent(getActivity(),EditprofileActivity.class);
                 startActivity(intent);
             }
         });
 
+        return v;
     }
-
 }
 
 
