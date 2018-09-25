@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.HotYoutuberCardView;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.ArrayList;
 
 public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.ViewHolder> {
-    private ArrayList<HotYoutuberCardView> mDataSet;
+    private ArrayList<OneImgOneStringCardView> mDataSet;
 
     class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
@@ -27,7 +27,7 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
         }
     }
 
-    public HotYoutuberAdapter(ArrayList<HotYoutuberCardView> myDataset) {
+    public HotYoutuberAdapter(ArrayList<OneImgOneStringCardView> myDataset) {
         mDataSet = myDataset;
     }
 
@@ -41,7 +41,7 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
     @Override
     public void onBindViewHolder(@NonNull HotYoutuberAdapter.ViewHolder holder, int position) {
         holder.imageView.setImageResource(mDataSet.get(position).getImage());
-        holder.textView.setText(mDataSet.get(position).getTitle());
+        holder.textView.setText(mDataSet.get(position).getText());
     }
 
     @Override

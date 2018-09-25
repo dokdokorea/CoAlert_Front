@@ -17,6 +17,10 @@
     <string name="bad_element_rank">1</string>
 
     <string name="context">내가 낸대.\n 누가 머라해. \n 죽을래? \n 너도 나랑 같이 가자.</string>
-
+    <string name="oily_skin">지성</string>
+    <string name="normal_skin">중성</string>
+    <string name="dry_skin">건성</string>
+    <string name="combination_skin">복합성</string>
+    <string name="sensitive_skin">민감성</string>
 
 </resources>

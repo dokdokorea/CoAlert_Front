@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.ExplanationBadElementCardView;
+import com.example.user.coalert.item.TwoStringCardView;
 
 import java.util.ArrayList;
 
 public class ExplanationBadElementAdapter extends RecyclerView.Adapter<ExplanationBadElementAdapter.ViewHolder> {
-    private ArrayList<ExplanationBadElementCardView> mDataSet;
+    private ArrayList<TwoStringCardView> mDataSet;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView rank;
@@ -26,7 +26,7 @@ public class ExplanationBadElementAdapter extends RecyclerView.Adapter<Explanati
         }
     }
 
-    public ExplanationBadElementAdapter(ArrayList<ExplanationBadElementCardView> myDataset) {
+    public ExplanationBadElementAdapter(ArrayList<TwoStringCardView> myDataset) {
         mDataSet = myDataset;
     }
 
@@ -39,8 +39,8 @@ public class ExplanationBadElementAdapter extends RecyclerView.Adapter<Explanati
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.rank.setText(mDataSet.get(position).getRank());
-        holder.element_name.setText(mDataSet.get(position).getElement_name());
+        holder.rank.setText(mDataSet.get(position).getText1());
+        holder.element_name.setText(mDataSet.get(position).getText2());
 
     }
 

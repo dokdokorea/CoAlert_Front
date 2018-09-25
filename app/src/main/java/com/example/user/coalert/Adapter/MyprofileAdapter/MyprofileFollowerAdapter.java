@@ -13,15 +13,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.CosmeticList_mypage;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.List;
 
 public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFollowerAdapter.ViewHolder>{
     Context context;
-    List <CosmeticList_mypage> list;
+    List <OneImgOneStringCardView> list;
     int item_layout;
-    public MyprofileFollowerAdapter(Context context, List<CosmeticList_mypage> items, int item_layout){
+    public MyprofileFollowerAdapter(Context context, List<OneImgOneStringCardView> items, int item_layout){
         this.context = context;
         list = items;
         this.item_layout =item_layout;
@@ -36,14 +36,14 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final CosmeticList_mypage item = list.get(position);
+        final OneImgOneStringCardView item = list.get(position);
         Drawable drawable=context.getResources().getDrawable(item.getImage());
         holder.image.setImageDrawable(drawable);
-        holder.name.setText(item.getTitle());
+        holder.name.setText(item.getText());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,item.getTitle(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
             }
         });
     }

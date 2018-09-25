@@ -12,21 +12,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
-import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.BestReviewCardView;
-import com.example.user.coalert.item.HotYoutuberCardView;
-import com.example.user.coalert.item.NewProductCardView;
+import com.example.user.coalert.item.OneImgOneStringCardView;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-    ArrayList<HotYoutuberCardView> youtuberArr;
-    ArrayList<BestReviewCardView> bestReviewArr;
-    ArrayList<NewProductCardView> newProduArr;
+    ArrayList<OneImgOneStringCardView> youtuberArr;
+    ArrayList<OneImgTwoStringCardView> bestReviewArr;
+    ArrayList<OneImgTwoStringCardView> newProduArr;
     private TextView detailElementBtn;
     public HomeFragment() {
     }
@@ -54,19 +52,19 @@ public class HomeFragment extends Fragment {
         newProduArr = new ArrayList<>();
 
 
-        youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview1, "슬기짱!"));
-        youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview2, "슬기님..."));
-        youtuberArr.add(new HotYoutuberCardView(R.drawable.cardview3, "사랑해요"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview1, "슬기짱!"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview2, "슬기님..."));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview3, "사랑해요"));
         youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(youtuberArr));
 
-        bestReviewArr.add(new BestReviewCardView(R.drawable.cardview1, "uniqueBest", "내가 짱인디.."));
-        bestReviewArr.add(new BestReviewCardView(R.drawable.cardview2, "pleaseee", "슬기님..."));
-        bestReviewArr.add(new BestReviewCardView(R.drawable.cardview3, "badbot", "사랑해요"));
+        bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview1, "uniqueBest", "내가 짱인디.."));
+        bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "pleaseee", "슬기님..."));
+        bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "badbot", "사랑해요"));
         bestReviewRecyclerView.setAdapter(new BestReviewAdapter(bestReviewArr));
 
-        newProduArr.add(new NewProductCardView(R.drawable.cardview1, "신상품", "내회사"));
-        newProduArr.add(new NewProductCardView(R.drawable.cardview2, "신상품", "니회사"));
-        newProduArr.add(new NewProductCardView(R.drawable.cardview3, "신상품", "우리회사"));
+        newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview1, "신상품", "내회사"));
+        newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "신상품", "니회사"));
+        newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
         newProductRecyclerView.setAdapter(new NewProductAdapter(newProduArr));
 
         detailElementBtn.setOnClickListener(new View.OnClickListener(){

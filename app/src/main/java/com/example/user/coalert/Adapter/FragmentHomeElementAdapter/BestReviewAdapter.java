@@ -9,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.BestReviewCardView;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
 public class BestReviewAdapter extends RecyclerView.Adapter<BestReviewAdapter.ViewHolder> {
-private ArrayList<BestReviewCardView> mDataset;
+private ArrayList<OneImgTwoStringCardView> mDataset;
 
     class ViewHolder extends RecyclerView.ViewHolder{
         private ImageView imageView;
@@ -29,7 +29,7 @@ private ArrayList<BestReviewCardView> mDataset;
         }
     }
 
-    public BestReviewAdapter(ArrayList<BestReviewCardView> myDataset){mDataset=myDataset;}
+    public BestReviewAdapter(ArrayList<OneImgTwoStringCardView> myDataset){mDataset=myDataset;}
 
     @NonNull
     @Override
@@ -41,8 +41,8 @@ private ArrayList<BestReviewCardView> mDataset;
     @Override
     public void onBindViewHolder(@NonNull BestReviewAdapter.ViewHolder holder, int position) {
         holder.imageView.setImageResource(mDataset.get(position).getImage());
-        holder.idTextView.setText(mDataset.get(position).getId());
-        holder.contentView.setText(mDataset.get(position).getContent());
+        holder.idTextView.setText(mDataset.get(position).getText1());
+        holder.contentView.setText(mDataset.get(position).getText2());
     }
 
     @Override

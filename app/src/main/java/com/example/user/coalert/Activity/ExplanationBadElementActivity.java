@@ -8,12 +8,12 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.ExplanationBadElementAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.ExplanationBadElementCardView;
+import com.example.user.coalert.item.TwoStringCardView;
 
 import java.util.ArrayList;
 
 public class ExplanationBadElementActivity extends Activity {
-    ArrayList<ExplanationBadElementCardView> badElementArr;
+    ArrayList<TwoStringCardView> badElementArr;
     RecyclerView badRecyclerView;
 
     @Override
@@ -25,7 +25,7 @@ public class ExplanationBadElementActivity extends Activity {
         badRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         badElementArr = new ArrayList<>();
-        badElementArr.add(new ExplanationBadElementCardView("1", "내 사약 같은 맛"));
+        badElementArr.add(new TwoStringCardView("1", "내 사약 같은 맛"));
         badRecyclerView.setAdapter(new ExplanationBadElementAdapter(badElementArr));
     }
 }
