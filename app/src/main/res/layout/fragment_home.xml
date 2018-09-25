@@ -167,39 +167,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hot_youtuber" />
 
-            <android.support.v4.widget.NestedScrollView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hot_youtuber_recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fillViewport="true">
+                android:layout_height="wrap_content" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="5dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                android:id="@+id/imageButton"
-                                style="@style/image_format"
-                                android:src="@drawable/cardview1" />
-
-                            <TextView
-                                android:id="@+id/textView5"
-                                style="@style/image_title"
-                                android:text="슬기의 시크릿 파우치 공개!" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-            </android.support.v4.widget.NestedScrollView>
 
             <Space
                 android:layout_width="match_parent"
@@ -220,38 +192,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hot_review" />
 
-            <android.support.v4.widget.NestedScrollView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/best_review_recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fillViewport="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                style="@style/image_format"
-                                android:src="@drawable/cardview1" />
-
-                            <TextView
-                                style="@style/image_title"
-                                android:text="지금 핫한 버터플라이를 보시라 !" />
-                        </LinearLayout>
-
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-            </android.support.v4.widget.NestedScrollView>
+                android:layout_height="wrap_content" />
 
             <Space
                 android:layout_width="match_parent"
@@ -269,37 +213,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/new_product" />
 
-            <android.support.v4.widget.NestedScrollView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/new_product_recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fillViewport="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageButton
-                                style="@style/image_format"
-                                android:src="@drawable/cardview2" />
-
-                            <TextView
-                                style="@style/image_title"
-                                android:text="화장품 이름" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
-            </android.support.v4.widget.NestedScrollView>
+                android:layout_height="wrap_content" />
 
             <View
                 android:layout_width="match_parent"
