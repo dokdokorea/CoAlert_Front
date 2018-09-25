@@ -49,11 +49,7 @@
 
         <activity android:name=".Activity.LoginActivity">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
@@ -81,6 +77,15 @@
 
         <activity android:name=".Activity.CommonSignUpActivity">
 
+
+        </activity>
+
+        <activity android:name=".Activity.CosmeticInformationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
