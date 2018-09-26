@@ -43,6 +43,16 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
         edit = v.findViewById(R.id.editSearch);
+        edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean haveFocus) {
+                if (haveFocus){
+                    Log.e("True: ", "Focus");
+                }else{
+                    Log.e("False: ", "Focus");
+                }
+            }
+        });
         linearLayout = v.findViewById(R.id.search_bar_notfocusing);
         imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         linearLayout.setOnTouchListener(new View.OnTouchListener() {
