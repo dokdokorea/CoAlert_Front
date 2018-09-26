@@ -2,6 +2,7 @@ package com.example.user.coalert.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
@@ -9,7 +10,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +22,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Adapter.searchAdapter;
@@ -57,14 +61,15 @@ public class SearchFragment extends Fragment {
         edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean haveFocus) {
-        ListView listView = v.findViewById(R.id.search_list);
+                ListView listView = v.findViewById(R.id.search_list);
                 if (haveFocus){
                     viewFlipper.setDisplayedChild(1);
                     //List는 인터페이스이고
+                    //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
                     final List<String> list = new ArrayList<>();
                     settingList(list);
                     //ArrayList는 List를 상속받아서 구현하고 있다.
-                    //arrayList는
+                    //arrayList는 list의 데이터를 복사해서 갖고 있다.
                     final ArrayList<String> arrayList = new ArrayList<String>(list);
                     final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
                     listView.setAdapter(searchAdapter);
@@ -90,20 +95,22 @@ public class SearchFragment extends Fragment {
                 }
             }
         });
+// 화면 누르면  focus제거
+//        imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+//        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                Log.e("touch: ","my body");
+//                edit.clearFocus();
+//                imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
+//                return true;
+//            }
+//
+//        });
 
-        imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Log.e("touch: ","my body");
-                edit.clearFocus();
-                imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
-                return true;
-            }
-
-        });
         return v;
     }
+
 
     public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter){
         list.clear();
@@ -139,4 +146,29 @@ public class SearchFragment extends Fragment {
         list.add("허영지");
     }
 
+
+}
+//만든 이유
+//EditText 커스텀하여 뒤로가기 버튼을 눌렀을 때 editText의 focus제거 해준다. 
+class ExEditText extends android.support.v7.widget.AppCompatEditText {
+
+    public ExEditText(Context context) {
+        super(context);
+    }
+
+    public ExEditText(Context context, AttributeSet attributeSet){
+        super(context, attributeSet);
+    }
+
+    @Override
+    public boolean onKeyPreIme(int keyCode, KeyEvent event) {
+        if(event.getAction() == KeyEvent.ACTION_DOWN){
+            if(keyCode == KeyEvent.KEYCODE_BACK){
+                Log.e("asdasd", "Asdasdasd");
+                this.clearFocus();
+                return true;
+            }
+        }
+        return super.onKeyPreIme(keyCode, event);
+    }
 }

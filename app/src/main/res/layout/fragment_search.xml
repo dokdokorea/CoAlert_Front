@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".Fragment.SearchFragment">
 
-    <EditText
+    <com.example.user.coalert.Fragment.ExEditText
         android:id="@+id/editSearch"
         android:layout_width="match_parent"
         android:layout_height="50dp"
