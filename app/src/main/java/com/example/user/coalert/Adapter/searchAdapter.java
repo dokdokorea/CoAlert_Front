@@ -36,7 +36,8 @@ public class searchAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return 0;
     }
-
+//viewHolder 패턴
+    //궁금하시면 물어보세용
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         if(view == null){

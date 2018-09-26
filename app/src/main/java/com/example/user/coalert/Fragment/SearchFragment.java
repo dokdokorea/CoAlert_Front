@@ -51,14 +51,20 @@ public class SearchFragment extends Fragment {
         final View v = inflater.inflate(R.layout.fragment_search, container, false);
         final ViewFlipper viewFlipper = v.findViewById(R.id.viewFlipper);
         edit = v.findViewById(R.id.editSearch);
+        //edit Text 포커스가 있냐 없냐에 따라서
+        //이벤트 구분
+        //ViewFlipper를 통해서 구현
         edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean haveFocus) {
         ListView listView = v.findViewById(R.id.search_list);
                 if (haveFocus){
                     viewFlipper.setDisplayedChild(1);
+                    //List는 인터페이스이고
                     final List<String> list = new ArrayList<>();
                     settingList(list);
+                    //ArrayList는 List를 상속받아서 구현하고 있다.
+                    //arrayList는
                     final ArrayList<String> arrayList = new ArrayList<String>(list);
                     final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
                     listView.setAdapter(searchAdapter);
@@ -94,6 +100,7 @@ public class SearchFragment extends Fragment {
                 imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
                 return true;
             }
+
         });
         return v;
     }
