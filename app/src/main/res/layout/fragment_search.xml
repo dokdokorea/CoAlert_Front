@@ -18,14 +18,24 @@
         android:textColor="@color/whiteBackground"
         android:textColorHint="@color/whiteBackground" />
 
-
+<ViewFlipper
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewFlipper"
+    >
     <include
         android:id="@+id/search_bar_notfocusing"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         layout="@layout/search_not_focus_view"
         />
-
+    <include
+        android:id="@+id/search_bar_focusing"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/item_wish_card"
+        />
+</ViewFlipper>
 </LinearLayout>
 
 

@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ViewFlipper;
 
 import com.example.user.coalert.R;
 
@@ -42,20 +43,21 @@ public class SearchFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_search, container, false);
+        final ViewFlipper viewFlipper = v.findViewById(R.id.viewFlipper);
         edit = v.findViewById(R.id.editSearch);
         edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean haveFocus) {
                 if (haveFocus){
-                    Log.e("True: ", "Focus");
+                    viewFlipper.setDisplayedChild(1);
                 }else{
-                    Log.e("False: ", "Focus");
+                    viewFlipper.setDisplayedChild(0);
                 }
             }
         });
-        linearLayout = v.findViewById(R.id.search_bar_notfocusing);
+
         imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        linearLayout.setOnTouchListener(new View.OnTouchListener() {
+        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 Log.e("touch: ","my body");
