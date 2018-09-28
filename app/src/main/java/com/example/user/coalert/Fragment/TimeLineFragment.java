@@ -17,10 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TimeLineFragment extends Fragment {
-    List<String> list;
-    public TimeLineFragment(){
-
-    }
 
     @Nullable
     @Override

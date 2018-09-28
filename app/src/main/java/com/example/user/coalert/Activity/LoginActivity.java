@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener(loginClickListener);
         // kakao = findViewById(R.id.kakao_login_button);
 
-        // permissonCheck();
+        permissonCheck();
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
 

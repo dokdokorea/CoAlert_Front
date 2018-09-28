@@ -1,13 +1,22 @@
 package com.example.user.coalert.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -20,6 +29,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,6 +37,14 @@ import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Adapter.searchAdapter;
 import com.example.user.coalert.R;
+import com.googlecode.tesseract.android.TessBaseAPI;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,9 +52,14 @@ import java.util.List;
 public class SearchFragment extends Fragment {
     FragmentTransaction fragmentTransaction;
     EditText edit;
+    Boolean checkCameraSet = true;
     LinearLayout linearLayout;
     InputMethodManager imm;
-
+    Uri allUri;
+    int cameraRequest=10;
+    String datapath;
+    TessBaseAPI mTess;
+    Bitmap image;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -54,6 +77,13 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.fragment_search, container, false);
         final ViewFlipper viewFlipper = v.findViewById(R.id.viewFlipper);
+        ImageButton imageButton = v.findViewById(R.id.search_camera);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cameraView();
+            }
+        });
         edit = v.findViewById(R.id.editSearch);
         //edit Text 포커스가 있냐 없냐에 따라서
         //이벤트 구분
@@ -111,6 +141,94 @@ public class SearchFragment extends Fragment {
         return v;
     }
 
+    public void cameraView(){
+        Uri uri = FileProvider.getUriForFile(getActivity(), "com.bignerdranch.android.test.fileprovider",new File(Environment.getExternalStorageDirectory(), "tmp_contact_" + System.currentTimeMillis() + ".jpg"));
+        allUri = uri;
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, uri);
+        startActivityForResult(intent, cameraRequest);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == cameraRequest && resultCode == Activity.RESULT_OK) {
+            try {
+                image = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), allUri);
+                image = Bitmap.createScaledBitmap(image, image.getWidth()/3, image.getHeight()/3, true);
+                image = rotateBitmap(image);
+                Log.e("int ActivityResult:", "asdasd");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String langs[] = new String[2];
+            langs[0] = "kor";
+            langs[1] = "eng";
+            datapath = getActivity().getFilesDir().toString() + "/tesseract/";
+            for (int i = 0; i < langs.length; i++) {
+                checkFile(new File(datapath + "tessdata/"), langs[i]);
+            }
+            mTess = new TessBaseAPI();
+            mTess.init(datapath, "eng+kor");
+            mTess.setVariable(TessBaseAPI.VAR_CHAR_BLACKLIST, "!@#$%^&*()_=-[]}{;:'\"\\|~`,./<>?");
+            processImage();
+        }
+    }
+
+    Bitmap rotateBitmap(Bitmap bmp) {
+        int width = bmp.getWidth();
+        int height = bmp.getHeight();
+
+        Matrix matrix = new Matrix();
+        matrix.postRotate(90F);
+        Bitmap resizedBitmap = Bitmap.createBitmap(bmp, 0, 0, width, height, matrix, true);
+        bmp.recycle();
+
+        return resizedBitmap;
+    }
+
+
+    void checkFile(File dir, String lang) {
+        //directory does not exist, but we can successfully create it
+        if (!dir.exists()&& dir.mkdirs()){
+            copyFiles(lang);
+        }
+        //The directory exists, but there is no data file in it
+        if(dir.exists()) {
+            String datafilepath = datapath+ "/tessdata/"+lang+".traineddata";
+            File datafile =  new File(datafilepath);
+            if (!datafile.exists()) {
+                copyFiles(lang);
+            }
+        }
+    }
+    private void copyFiles(String lang) {
+        try{
+            String filepath = datapath + "/tessdata/"+lang+".traineddata";
+            AssetManager assetManager = getActivity().getAssets();
+            InputStream instream = assetManager.open("tessdata/"+lang+".traineddata");
+            OutputStream outstream = new FileOutputStream(filepath);
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = instream.read(buffer)) != -1) {
+                outstream.write(buffer, 0, read);
+            }
+            outstream.flush();
+            outstream.close();
+            instream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    void processImage(){
+        mTess.setImage(image);
+        String test = mTess.getUTF8Text();
+        Log.e("Result: ", test);
+        mTess.end();
+    }
 
     public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter){
         list.clear();
