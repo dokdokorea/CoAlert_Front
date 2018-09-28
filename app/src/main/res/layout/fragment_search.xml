@@ -28,7 +28,8 @@
         android:background="@drawable/search_edit_text"
         android:scaleType="fitXY"
         android:src="@drawable/searchcamera"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:id="@+id/search_camera"/>
 
 </LinearLayout>
 
