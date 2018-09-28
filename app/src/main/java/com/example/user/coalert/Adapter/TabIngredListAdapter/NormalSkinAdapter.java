@@ -21,15 +21,15 @@ public class NormalSkinAdapter extends RecyclerView.Adapter<NormalSkinAdapter.Vi
         private TextView textView;
         public ViewHolder(View itemView) {
             super(itemView);
-            imageView=(ImageView)itemView.findViewById(R.id.normal_skin_card_risk_level);
-            textView=(TextView)itemView.findViewById(R.id.normal_skin_card_ingred_name);
+            imageView=(ImageView)itemView.findViewById(R.id.skin_card_risk_level);
+            textView=(TextView)itemView.findViewById(R.id.skin_card_ingred_name);
         }
     }
     public NormalSkinAdapter(ArrayList<OneImgOneStringCardView> myDataset){mDataset=myDataset;}
     @NonNull
     @Override
     public NormalSkinAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_normal_skintype,null);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skintype,null);
         return new NormalSkinAdapter.ViewHolder(v);
     }
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Fragment.TimeLineFragment"
-    android:layout_above="@+id/bottom_navigation">
-    <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/timeline_recycler"></android.support.v7.widget.RecyclerView>
+    android:layout_above="@+id/bottom_navigation"
+    tools:context=".Fragment.TimeLineFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/timeline_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>
