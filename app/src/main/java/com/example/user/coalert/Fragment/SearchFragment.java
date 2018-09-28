@@ -149,7 +149,7 @@ public class SearchFragment extends Fragment {
 
 }
 //만든 이유
-//EditText 커스텀하여 뒤로가기 버튼을 눌렀을 때 editText의 focus제거 해준다. 
+//EditText 커스텀하여 뒤로가기 버튼을 눌렀을 때 editText의 focus제거 해준다.
 class ExEditText extends android.support.v7.widget.AppCompatEditText {
 
     public ExEditText(Context context) {
