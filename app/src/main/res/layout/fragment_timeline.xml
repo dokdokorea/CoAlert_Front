@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Fragment.TimeLineFragment">
+    tools:context=".Fragment.TimeLineFragment"
+    android:layout_above="@+id/bottom_navigation">
 <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
