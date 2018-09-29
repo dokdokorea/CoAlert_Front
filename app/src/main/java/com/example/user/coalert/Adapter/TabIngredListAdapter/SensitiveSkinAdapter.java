@@ -29,7 +29,8 @@ public class SensitiveSkinAdapter extends RecyclerView.Adapter<SensitiveSkinAdap
     @NonNull
     @Override
     public SensitiveSkinAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skintype,null);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skintype,null,false);
+        v.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT,RecyclerView.LayoutParams.WRAP_CONTENT));
         return new SensitiveSkinAdapter.ViewHolder(v);
     }
 
