@@ -1,13 +1,14 @@
 package com.example.user.coalert.item;
 
 public class OneImgThreeStringCardView {
-    int img;
+    int img1;
+    int img2;
     String text1;
     String text2;
-    String text3;
 
-    public int getImg() {
-        return img;
+
+    public int getImg1() {
+        return img1;
     }
 
     public String getText1() {
@@ -18,13 +19,13 @@ public class OneImgThreeStringCardView {
         return text2;
     }
 
-    public String getText3() {
-        return text3;
+    public int getImg2() {
+        return img2;
     }
-    public OneImgThreeStringCardView(int img,String t1,String t2,String t3){
-        this.img=img;
+    public OneImgThreeStringCardView(int img1,int img2,String t1,String t2){
+        this.img1=img1;
+        this.img2=img2;
         this.text1=t1;
         this.text2=t2;
-        this.text3=t3;
     }
 }
