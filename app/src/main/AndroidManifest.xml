@@ -55,12 +55,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.LoginActivity">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 68bc68ee87dc579e823ec7b059116a0071738323
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.EmailSignUpActivity" />
         <activity android:name=".Loading.Loading1Activity" />
-        <activity android:name=".Activity.EditprofileActivity" />
+        <activity android:name=".Activity.EditprofileActivity">
+
+        </activity>
         <activity
             android:name=".Popup.BreakPopup"
             android:theme="@android:style/Theme.Dialog" />
@@ -68,6 +74,7 @@
         <activity android:name=".Activity.AnotherprofileActivity" />
         <activity android:name=".Activity.CommonSignUpActivity" />
         <activity android:name=".Activity.WishListActivity" />
+<<<<<<< HEAD
         <activity android:name=".Activity.CosmeticInformationActivity"/>
         <activity android:name=".Activity.ExplanationBadElementActivity" />
         <activity android:name=".Activity.CosmeticIngredientActivity">
@@ -77,11 +84,24 @@
 
         </activity>
         <activity android:name=".Activity.WriteReviewActivity">
+=======
+        <activity android:name=".Activity.CosmeticInformationActivity">
+>>>>>>> 68bc68ee87dc579e823ec7b059116a0071738323
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
+=======
+        <activity android:name=".Activity.ExplanationBadElementActivity" />
+        <activity android:name=".Activity.CosmeticIngredientActivity">
+
+        </activity>
+        <activity android:name=".Activity.FollowingListActivity">
+
+        </activity>
+>>>>>>> 68bc68ee87dc579e823ec7b059116a0071738323
     </application>
 </manifest>
