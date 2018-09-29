@@ -11,7 +11,8 @@ public interface CoAlertService {
     @POST("login")
     Call<loginModel> loginCall(
             @Query("id") String id,
-            @Query("password") String password
+            @Query("password") String password,
+            @Query("imei")String imei
     );
     @POST("cosmetic")
     Call<cosmeticModel>  cosmeicCall(

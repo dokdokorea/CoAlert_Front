@@ -23,14 +23,8 @@ public class AccessAuthorizationActivity extends AppCompatActivity {
         setContentView(R.layout.access_authorization);
         accessBtn = findViewById(R.id.authorization_confirm_button);
         accessBtn.setOnClickListener(mainClickListener);
-        getUUID(getBaseContext());
     }
-    void getUUID(Context mContext) {
-        TelephonyManager mgr = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
-            @SuppressLint({"HardwareIds", "MissingPermission"}) String idByTelephonyManager = mgr.getDeviceId();
-            Log.e("UUID: ", idByTelephonyManager);
-            UUFiSingleton.getInstance().setIndependenceNum(idByTelephonyManager);
-    }
+
     Button.OnClickListener mainClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {

@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.Singleton.UUFiSingleton;
 import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
@@ -109,10 +110,12 @@ public class LoginActivity extends AppCompatActivity {
                         EditText loginPassword = findViewById(R.id.login_password);
                         String email = loginEmail.getText().toString();
                         String password = loginPassword.getText().toString();
+                        password = testSHA256(password);
+                        getUUID(getBaseContext());
                         Log.e("asdasd", email);
-                        Call call = ForRestSingleton.getInstance().loginCall(email, password);
+                        Call call = ForRestSingleton.getInstance().loginCall(email, password, UUFiSingleton.getInstance().getIndependenceNum());
                         Object result = call.execute().body();
-                        Log.e("result: ", result.);
+                        Log.e("result: ", result.toString());
                     }catch (Exception e){
                         e.printStackTrace();
                     }
@@ -120,6 +123,48 @@ public class LoginActivity extends AppCompatActivity {
             }).start();
         }
     };
+
+    void getUUID(Context mContext) {
+        TelephonyManager mgr = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        @SuppressLint({"HardwareIds", "MissingPermission"}) String idByTelephonyManager = mgr.getDeviceId();
+        Log.e("UUID: ", idByTelephonyManager);
+        UUFiSingleton.getInstance().setIndependenceNum(idByTelephonyManager);
+    }
+    public String testSHA256(String str){
+
+        String SHA = "";
+
+        try{
+
+            MessageDigest sh = MessageDigest.getInstance("SHA-256");
+
+            sh.update(str.getBytes());
+
+            byte byteData[] = sh.digest();
+
+            StringBuffer sb = new StringBuffer();
+
+            for(int i = 0 ; i < byteData.length ; i++){
+
+                sb.append(Integer.toString((byteData[i]&0xff) + 0x100, 16).substring(1));
+
+            }
+
+            SHA = sb.toString();
+
+
+
+        }catch(NoSuchAlgorithmException e){
+
+            e.printStackTrace();
+
+            SHA = null;
+
+        }
+
+        return SHA;
+
+    }
 
     void permissionCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);

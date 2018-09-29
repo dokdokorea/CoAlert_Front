@@ -20,8 +20,8 @@ public class loginModel {
         this.password = password;
     }
 
-//    @Override
-//    public String toString() {
-//        return "password: "+getPassword()+" id: "+getId();
-//    }
+    @Override
+    public String toString() {
+        return "{password: "+getPassword()+", id: "+getId()+"}";
+    }
 }
