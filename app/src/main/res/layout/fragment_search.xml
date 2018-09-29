@@ -7,16 +7,31 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".Fragment.SearchFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <com.example.user.coalert.Fragment.ExEditText
         android:id="@+id/editSearch"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@drawable/search_edit_text"
         android:hint="@string/input_search_name"
         android:inputType=""
         android:textColor="@color/whiteBackground"
-        android:textColorHint="@color/whiteBackground" />
+        android:textColorHint="@color/whiteBackground"
+        android:layout_weight="5"/>
+
+    <ImageButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/search_edit_text"
+        android:scaleType="fitXY"
+        android:src="@drawable/searchcamera"
+        android:layout_weight="1"
+        android:id="@+id/search_camera"/>
+
+</LinearLayout>
 
 <ViewFlipper
     android:layout_width="match_parent"

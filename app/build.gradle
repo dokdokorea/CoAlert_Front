@@ -34,10 +34,12 @@ dependencies {
     implementation 'com.android.support:cardview-v7:27.0.0'
     implementation files('libs/YouTubeAndroidPlayerApi-1.2.2.zip')
     implementation 'de.hdodenhof:circleimageview:2.0.0'
-
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     //카카오 로그인 sdk
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
-
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.rmtheis:tess-two:6.3.0'
     //카카오링크 sdk
     //implementation group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
 

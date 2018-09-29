@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.addItem(timeLineItem);
         bottomNavigation.addItem(myprofileItem);
 
-        bottomNavigation.setBehaviorTranslationEnabled(true);
+        bottomNavigation.setBehaviorTranslationEnabled(false);
         bottomNavigation.setAccentColor(Color.parseColor("#51032d"));
         bottomNavigation.setInactiveColor(R.color.bottom_navigation_select);
-
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
         fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.content_fragment_layout, new HomeFragment());
         fragmentTransaction.commit();
+        bottomNavigation.setNotification("3", 2);
         bottomNavigation.setCurrentItem(1);
         bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override

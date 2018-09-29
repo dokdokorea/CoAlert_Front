@@ -21,15 +21,15 @@ public class ViewHolder extends RecyclerView.ViewHolder{
     private TextView textView;
     public ViewHolder(View itemView) {
         super(itemView);
-        imageView=(ImageView)itemView.findViewById(R.id.combination_skin_card_risk_level);
-        textView=(TextView)itemView.findViewById(R.id.combination_skin_card_ingred_name);
+        imageView=(ImageView)itemView.findViewById(R.id.skin_card_risk_level);
+        textView=(TextView)itemView.findViewById(R.id.skin_card_ingred_name);
     }
 }
     public CombinationSkinAdapter(ArrayList<OneImgOneStringCardView> myDataset){mDataset=myDataset;}
     @NonNull
     @Override
     public CombinationSkinAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_combination_skintype,null);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_skintype,null);
         return new CombinationSkinAdapter.ViewHolder(v);
     }
 

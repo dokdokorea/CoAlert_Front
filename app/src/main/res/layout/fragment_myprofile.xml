@@ -40,7 +40,7 @@
         android:layout_height="3dp" />
 
 
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -112,7 +112,6 @@
 
                 </LinearLayout>
 
-
             </LinearLayout>
 
             <android.support.v4.widget.Space
@@ -152,7 +151,8 @@
                         android:layout_gravity="center"
                         android:layout_marginRight="8dp"
                         android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn" />
+                        android:background="@drawable/rightbtn"
+                        android:id="@+id/toxicList"/>
 
 
                 </LinearLayout>
@@ -194,7 +194,7 @@
                         android:layout_gravity="center"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn" />
+                        android:background="@drawable/rightbtn"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -210,14 +210,46 @@
                 android:background="#fff"
                 android:orientation="vertical">
 
-                <TextView
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/yoon_gothic330"
-                    android:text="팔로우 목록"
-                    android:textSize="20dp" />
+                    android:orientation="horizontal"
+                    android:id="@+id/following">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        style="@style/editprofile"
+                        android:text="팔로잉 목록"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1">
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9" />
+
+                        <ImageButton
+                            android:layout_width="1dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="0.1"
+                            android:background="@drawable/rightbtn"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -251,6 +283,62 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"
+                        android:layout_weight="0.98"
+                        android:background="#D8D8D8" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/follower">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        style="@style/editprofile"
+                        android:text="팔로워 목록"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1">
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9" />
+
+                        <ImageButton
+                            android:layout_width="1dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="0.1"
+                            android:background="@drawable/rightbtn"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <android.support.v4.widget.Space
@@ -265,13 +353,13 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/yoon_gothic330"
                     android:text="내가 사용한 화장품"
-                    android:textSize="20dp" />
+                    android:textSize="22dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -308,7 +396,7 @@
             </LinearLayout>
 
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
 
 
 </LinearLayout>
