@@ -14,7 +14,7 @@ import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
 import java.util.ArrayList;
 
-public class FollowingActivity extends AppCompatActivity {
+public class FollowingListActivity extends AppCompatActivity {
 ArrayList<TwoImgTwoStringCardView> followingArr;
 ImageView profilepic;
 ImageView followingBtn;

@@ -8,7 +8,7 @@
     tools:context=".Activity.CosmeticIngredientActivity"
     tools:showIn="@layout/activity_main">
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -55,17 +55,18 @@
                             android:id="@+id/content1"
                             layout="@layout/tab_ingredient_list"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
 
                         <!-- 두 번째 페이지. content2 -->
                         <include
                             android:id="@+id/content2"
                             layout="@layout/tab_skintype"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent"
+                            />
                     </FrameLayout>
                 </LinearLayout>
             </TabHost>
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>
