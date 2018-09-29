@@ -30,6 +30,11 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
             name = (TextView) itemView.findViewById(R.id.user_name);
             id = (TextView) itemView.findViewById(R.id.item_follower_email);
             follwerBtn = (ImageView) itemView.findViewById(R.id.item_follower_list_follower_btn);
+            if (j == 0)
+                follwerBtn.setImageResource(R.drawable.follow_btn);
+            else
+                /*DB 목록 갱신*/
+                follwerBtn.setImageResource(R.drawable.following_btn);
         }
     }
 
@@ -58,6 +63,7 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
                 if (j == 0)
                     holder.follwerBtn.setImageResource(R.drawable.follow_btn);
                 else
+                    /*DB 목록 갱신*/
                     holder.follwerBtn.setImageResource(R.drawable.following_btn);
             }
         });
