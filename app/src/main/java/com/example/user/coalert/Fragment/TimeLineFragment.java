@@ -3,6 +3,7 @@ package com.example.user.coalert.Fragment;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,8 +17,8 @@ import com.example.user.coalert.item.OneImgTwoStringCardView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimeLineFragment extends Fragment {
-
+public class TimeLineFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+    SwipeRefreshLayout swipeRefreshLayout;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class TimeLineFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         List<OneImgTwoStringCardView> list = new ArrayList<>();
         OneImgTwoStringCardView timelineItem[] = new OneImgTwoStringCardView[5];
+        swipeRefreshLayout = (SwipeRefreshLayout)v.findViewById(R.id.swipe_layout);
+        swipeRefreshLayout.setOnRefreshListener(this);
         timelineItem[0] = new OneImgTwoStringCardView(R.drawable.cardview1, "레드벨벳 슬기의 화장법 집중 탐구", "슬기");
         timelineItem[1] = new OneImgTwoStringCardView(R.drawable.cardview2, "티나지 않는 자연스러운 화장 비법", "슬기");
         timelineItem[2] = new OneImgTwoStringCardView(R.drawable.cardview3, "눈이 2배 커지는 화장 비법", "슬기");
@@ -38,4 +41,8 @@ public class TimeLineFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onRefresh() {
+        swipeRefreshLayout.setRefreshing(false);
+    }
 }
