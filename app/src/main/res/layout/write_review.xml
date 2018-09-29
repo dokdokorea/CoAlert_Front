@@ -4,67 +4,104 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/write_review_back_btn"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/left_btn" />
 
         <TextView
-            android:id="@+id/cosmetic_prod_name"
             style="@style/logoStyle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="13"
-            android:gravity="center"
+            android:layout_gravity="center"
             android:paddingTop="5dp"
-            android:text="@string/cosmetic_pd_name" />
+            android:text="리뷰 작성" />
+    </FrameLayout>
 
-
-    </LinearLayout>
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:isIndicator="false"
-        android:max="6"
-        android:numStars="5"
-        android:rating="1"
-        android:stepSize="1" />
-
-    <Space
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/content_edge"
-        android:ems="17"
-        android:hint="제목" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="30dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:layout_gravity="center"
-        android:background="@drawable/content_edge"
-        android:ems="17"
-        android:inputType="textMultiLine"
-        android:lineSpacingMultiplier="1.1"
-        android:lines="4" />
+            <ImageView
+                android:id="@+id/prod_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:maxHeight="200dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cardview1" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <TextView
+                android:id="@+id/cosmetic_prod_name"
+                style="@style/logoStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cosmetic_pd_name" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <RatingBar
+                android:id="@+id/write_review_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:max="6"
+                android:numStars="5"
+                android:rating="1"
+                android:stepSize="1" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:id="@+id/one_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/content_edge"
+                android:ems="17"
+                android:hint="100자 이내로 화장품의 평가를 적어주세요."
+                android:inputType="textMultiLine" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/write_review_lets_detail_write_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/default_button"
+                android:text="자세히 작성"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
