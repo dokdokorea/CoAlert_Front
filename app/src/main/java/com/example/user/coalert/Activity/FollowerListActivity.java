@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.FollowerListAdapter;
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.OneImgThreeStringCardView;
+import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
 import java.util.ArrayList;
 
 public class FollowerListActivity extends AppCompatActivity {
-    ArrayList<OneImgThreeStringCardView> follwerListArr;
+    ArrayList<TwoImgTwoStringCardView> follwerListArr;
 ImageView profilepic;
-ImageView followingBtn;
+ImageView followerBtn;
 TextView userName;
 TextView userId;
     @Override
@@ -26,7 +26,7 @@ TextView userId;
         setContentView(R.layout.follower_list);
 
         profilepic=(ImageView)findViewById(R.id.item_follower_list_circleimageview);
-        followingBtn=(ImageView)findViewById(R.id.item_follower_list_follower_btn);
+        followerBtn=(ImageView)findViewById(R.id.item_follower_list_follower_btn);
         userName=(TextView)findViewById(R.id.user_name);
         userId=(TextView)findViewById(R.id.item_follower_email);
 
@@ -34,11 +34,11 @@ TextView userId;
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        follwerListArr.add(new OneImgThreeStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new OneImgThreeStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new OneImgThreeStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new OneImgThreeStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new OneImgThreeStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
 
         recyclerView.setAdapter(new FollowerListAdapter(follwerListArr));
 

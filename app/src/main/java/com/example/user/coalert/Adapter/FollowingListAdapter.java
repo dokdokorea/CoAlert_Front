@@ -13,8 +13,8 @@ import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
 import java.util.ArrayList;
 
-public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapter.ViewHolder> {
-    private ArrayList<TwoImgTwoStringCardView> mDataSet;
+public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdapter.ViewHolder> {
+    private ArrayList<TwoImgTwoStringCardView> mDataset;
     private int j = 0;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -33,42 +33,40 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
         }
     }
 
-    public FollowerListAdapter(ArrayList<TwoImgTwoStringCardView> myDataset) {
-        mDataSet = myDataset;
+    public FollowingListAdapter(ArrayList<TwoImgTwoStringCardView> myDataset) {
+        mDataset = myDataset;
     }
 
     @NonNull
     @Override
-    public FollowerListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_follower_list, null);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final FollowerListAdapter.ViewHolder holder, int position) {
-        holder.imageView.setImageResource(mDataSet.get(position).getImg1());
-        holder.name.setText(mDataSet.get(position).getText1());
-        holder.id.setText(mDataSet.get(position).getText2());
-        holder.follwerBtn.setImageResource(mDataSet.get(position).getImg2());
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+        holder.imageView.setImageResource(mDataset.get(position).getImg1());
+        holder.name.setText(mDataset.get(position).getText1());
+        holder.id.setText(mDataset.get(position).getText2());
+        holder.follwerBtn.setImageResource(mDataset.get(position).getImg2());
         holder.follwerBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 j = 1 - j;
-
-                if (j == 0) {
+                if (j == 0)
                     holder.follwerBtn.setImageResource(R.drawable.follow_btn);
-                } else {
+                else
                     holder.follwerBtn.setImageResource(R.drawable.following_btn);
-                }
-
             }
         });
+
     }
 
     @Override
     public int getItemCount() {
-        return mDataSet.size();
+        return mDataset.size();
     }
 
 }

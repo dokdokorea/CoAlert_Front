@@ -75,6 +75,7 @@
         <activity android:name=".Activity.CosmeticInformationActivity" />
         <activity android:name=".Activity.ExplanationBadElementActivity" />
         <activity android:name=".Activity.CosmeticIngredientActivity"/>
+        <activity android:name=".Activity.FollowingActivity" />
 
     </application>
 </manifest>

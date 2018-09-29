@@ -1,6 +1,6 @@
 package com.example.user.coalert.item;
 
-public class OneImgThreeStringCardView {
+public class TwoImgTwoStringCardView {
     int img1;
     int img2;
     String text1;
@@ -22,7 +22,7 @@ public class OneImgThreeStringCardView {
     public int getImg2() {
         return img2;
     }
-    public OneImgThreeStringCardView(int img1,int img2,String t1,String t2){
+    public TwoImgTwoStringCardView(int img1, int img2, String t1, String t2){
         this.img1=img1;
         this.img2=img2;
         this.text1=t1;
