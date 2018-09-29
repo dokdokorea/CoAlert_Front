@@ -29,9 +29,9 @@ public class NotificationActivity extends Activity {
         myDataset = new ArrayList<>();
 
         mAdapter = new NotificationAdapter(myDataset);
-        mRecyclerView.setAdapter(mAdapter);
 
         myDataset.add(new OneImgOneStringCardView(R.drawable.cardview1,"#InsideOut"));
         myDataset.add(new OneImgOneStringCardView(R.drawable.cardview2,"Catch me if you can"));
+        mRecyclerView.setAdapter(mAdapter);
     }
 }
