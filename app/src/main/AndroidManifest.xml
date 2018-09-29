@@ -55,10 +55,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
         <activity android:name=".Activity.MainActivity" />
@@ -75,14 +71,17 @@
         <activity android:name=".Activity.CosmeticInformationActivity"/>
         <activity android:name=".Activity.ExplanationBadElementActivity" />
         <activity android:name=".Activity.CosmeticIngredientActivity">
+
+        </activity>
+        <activity android:name=".Activity.FollowingListActivity">
+
+        </activity>
+        <activity android:name=".Activity.WriteReviewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Activity.FollowingListActivity">
-
         </activity>
     </application>
 </manifest>

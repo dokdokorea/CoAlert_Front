@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/write_review_back_btn"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_btn" />
+
+        <TextView
+            android:id="@+id/cosmetic_prod_name"
+            style="@style/logoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="13"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="@string/cosmetic_pd_name" />
+
+
+    </LinearLayout>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:isIndicator="false"
+        android:max="6"
+        android:numStars="5"
+        android:rating="1"
+        android:stepSize="1" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/content_edge"
+        android:ems="17"
+        android:hint="제목" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="@drawable/content_edge"
+        android:ems="17"
+        android:inputType="textMultiLine"
+        android:lineSpacingMultiplier="1.1"
+        android:lines="4" />
+
+</LinearLayout>
