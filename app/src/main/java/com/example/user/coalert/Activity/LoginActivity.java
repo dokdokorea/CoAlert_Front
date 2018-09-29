@@ -17,12 +17,15 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.Singleton.UUFiSingleton;
 import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
@@ -34,11 +37,16 @@ import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
@@ -92,11 +100,71 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
-            startActivity(accessActivity);
-            finish();
+
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        EditText loginEmail = findViewById(R.id.login_email);
+                        EditText loginPassword = findViewById(R.id.login_password);
+                        String email = loginEmail.getText().toString();
+                        String password = loginPassword.getText().toString();
+                        password = testSHA256(password);
+                        getUUID(getBaseContext());
+                        Log.e("asdasd", email);
+                        Call call = ForRestSingleton.getInstance().loginCall(email, password, UUFiSingleton.getInstance().getIndependenceNum());
+                        Object result = call.execute().body();
+                        Log.e("result: ", result.toString());
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
         }
     };
 
+    void getUUID(Context mContext) {
+        TelephonyManager mgr = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
+        @SuppressLint({"HardwareIds", "MissingPermission"}) String idByTelephonyManager = mgr.getDeviceId();
+        Log.e("UUID: ", idByTelephonyManager);
+        UUFiSingleton.getInstance().setIndependenceNum(idByTelephonyManager);
+    }
+    public String testSHA256(String str){
+
+        String SHA = "";
+
+        try{
+
+            MessageDigest sh = MessageDigest.getInstance("SHA-256");
+
+            sh.update(str.getBytes());
+
+            byte byteData[] = sh.digest();
+
+            StringBuffer sb = new StringBuffer();
+
+            for(int i = 0 ; i < byteData.length ; i++){
+
+                sb.append(Integer.toString((byteData[i]&0xff) + 0x100, 16).substring(1));
+
+            }
+
+            SHA = sb.toString();
+
+
+
+        }catch(NoSuchAlgorithmException e){
+
+            e.printStackTrace();
+
+            SHA = null;
+
+        }
+
+        return SHA;
+
+    }
 
     void permissionCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
