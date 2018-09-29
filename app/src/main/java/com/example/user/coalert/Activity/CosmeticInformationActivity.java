@@ -7,16 +7,19 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TabHost;
 
+import com.example.user.coalert.Adapter.CosmeticInformationAdapter.SimpleReviewAdapter;
 import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
+import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
 
 import java.util.ArrayList;
 
 public class CosmeticInformationActivity extends AppCompatActivity{
     TabHost tabHost1;
-    RecyclerView ingredient;
+    RecyclerView ingredient, simple,detail;
     ArrayList<OneImgOneStringCardView> IngArr;
+    ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,5 +59,16 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic4"));
         IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic5"));
         ingredient.setAdapter(new TabIngredientListAdapter(IngArr));
+
+        simple=(RecyclerView)findViewById(R.id.tab_simple_review_recycler);
+        simple.setHasFixedSize(true);
+        simple.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        SimpleArr=new ArrayList<>();
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"sunstaaaick",4));
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"sunstick",3));
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"sunstick",5));
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"sunaaaastick",2));
+        simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
+
     }
 }

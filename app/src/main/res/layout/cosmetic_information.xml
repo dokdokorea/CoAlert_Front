@@ -151,7 +151,7 @@
 
                         <include
                             android:id="@+id/content2"
-                            layout="@layout/fragment_myprofile"
+                            layout="@layout/tab_simple_review_list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
 
