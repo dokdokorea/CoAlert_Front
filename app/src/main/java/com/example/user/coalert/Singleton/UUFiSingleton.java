@@ -1,10 +1,7 @@
 package com.example.user.coalert.Singleton;
 
-import android.telecom.TelecomManager;
-import android.util.Log;
-
-public class Singleton {
-    private static Singleton singleton = new Singleton();
+public class UUFiSingleton {
+    private static UUFiSingleton UUFiSingleton = new UUFiSingleton();
     private String IndependenceNum;
 
     public String getIndependenceNum() {
@@ -15,9 +12,9 @@ public class Singleton {
         IndependenceNum = independenceNum;
     }
 
-    private Singleton(){}
+    private UUFiSingleton(){}
 
-    public static Singleton getInstance(){
-        return singleton;
+    public static UUFiSingleton getInstance(){
+        return UUFiSingleton;
     }
 }

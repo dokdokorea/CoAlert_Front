@@ -17,12 +17,14 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
@@ -34,11 +36,16 @@ import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
@@ -92,11 +99,27 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
-            startActivity(accessActivity);
-            finish();
+
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        EditText loginEmail = findViewById(R.id.login_email);
+                        EditText loginPassword = findViewById(R.id.login_password);
+                        String email = loginEmail.getText().toString();
+                        String password = loginPassword.getText().toString();
+                        Log.e("asdasd", email);
+                        Call call = ForRestSingleton.getInstance().loginCall(email, password);
+                        Object result = call.execute().body();
+                        Log.e("result: ", result.);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
         }
     };
-
 
     void permissionCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);

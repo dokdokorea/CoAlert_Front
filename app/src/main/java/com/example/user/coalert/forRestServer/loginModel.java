@@ -19,4 +19,9 @@ public class loginModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
+//    @Override
+//    public String toString() {
+//        return "password: "+getPassword()+" id: "+getId();
+//    }
 }
