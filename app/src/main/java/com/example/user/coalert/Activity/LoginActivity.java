@@ -1,6 +1,8 @@
 package com.example.user.coalert.Activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -9,6 +11,8 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.telecom.TelecomManager;
+import android.telephony.TelephonyManager;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +38,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
@@ -54,10 +59,10 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener(loginClickListener);
         // kakao = findViewById(R.id.kakao_login_button);
 
-        permissonCheck();
+
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
-
+        permissionCheck();
 
         /*facebook button synchronize with real fb button*/
         fakeFacebook = (ImageView) findViewById(R.id.fake_facebook);
@@ -93,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
     };
 
 
-    void permissonCheck() {
+    void permissionCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         int ReadAudioPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
         int WriteStorage = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -103,11 +108,12 @@ public class LoginActivity extends AppCompatActivity {
 
             } else {
                 ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE},
                         1000);
             }
         }
     }
+    /*카카오톡 연동하기(키해
     /*카카오톡 연동하기(키해시 받아오기) 안돼*/
 
     @Override
