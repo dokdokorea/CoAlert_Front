@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
@@ -35,6 +36,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     ImageView imageView;
     TextView wordsNum;
     EditText editText;
+    RatingBar mratingBar;
     int previousLength = 0;
     @SuppressLint("SetTextI18n")
     @Override
@@ -42,6 +44,7 @@ public class WriteReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
         editText = (EditText)findViewById(R.id.one_line);
+
         editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
         wordsNum = findViewById(R.id.wordsNumber);
 
