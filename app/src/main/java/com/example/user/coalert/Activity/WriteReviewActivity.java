@@ -35,18 +35,20 @@ public class WriteReviewActivity extends AppCompatActivity {
     int previousLength = 0;
     Button letsDetailReview;
     SmileRating smileRating ;
+    int seeLimitNum = 100;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
         editText = (EditText)findViewById(R.id.one_line);
-        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
         wordsNum = findViewById(R.id.wordsNumber);
         smileRating = findViewById(R.id.smile_rating);
         imageView = findViewById(R.id.prod_image);
         letsDetailReview = findViewById(R.id.write_review_lets_detail_write_btn);
-
+        //처음에는 한줄작성
+        letsDetailReview.setText("자세히 작성");
+        wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,9 +62,15 @@ public class WriteReviewActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(letsDetailReview.getText() == "자세히 작성") {
                     letsDetailReview.setText("되돌리기");
+                    //자세히 작성
+                    wordsNum.setText("제한없음");
+                    editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1000000000)});
                 }
                 else {
                     letsDetailReview.setText("자세히 작성");
+                    editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
+                    //한줄평 작성 되면서 텍스트변화
+                    wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
                 }
             }
         });
@@ -102,7 +110,9 @@ public class WriteReviewActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                wordsNum.setText(editText.getText().length()+"/100");
+                if(letsDetailReview.getText() == "자세히 작성") { //한줄 작성에서 글자 수 늘어나면 텍스트 조절
+                    wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
+                }
                 if (previousLength != editText.getText().length()){
                     Log.e("words Change Number", String.valueOf(editText.getText()));
                     previousLength = editText.getText().length();
