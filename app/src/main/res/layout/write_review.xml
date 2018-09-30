@@ -70,18 +70,18 @@
                 android:id="@+id/ratingbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_gravity="center"
 
-                android:focusable="true"
                 hedgehog:clickable="true"
                 hedgehog:halfstart="true"
                 hedgehog:starCount="5"
-                hedgehog:starEmpty="@drawable/emptystar"
-                hedgehog:starFill="@drawable/fullstar"
+                hedgehog:starEmpty="@mipmap/star_empty"
+                hedgehog:starFill="@mipmap/star_full"
                 hedgehog:starHalf="@mipmap/star_half"
                 hedgehog:starImageHeight="90dp"
-                hedgehog:starImagePadding="20dp"
-                hedgehog:starImageWidth="70dp" />
+                hedgehog:starImageWidth="70dp"
+                hedgehog:starImagePadding="20dp"/>
 
             <Space
                 android:layout_width="match_parent"

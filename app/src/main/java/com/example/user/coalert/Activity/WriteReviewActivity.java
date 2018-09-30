@@ -36,7 +36,6 @@ public class WriteReviewActivity extends AppCompatActivity {
     ImageView imageView;
     TextView wordsNum;
     EditText editText;
-    RatingBar mratingBar;
     int previousLength = 0;
     @SuppressLint("SetTextI18n")
     @Override
@@ -44,7 +43,7 @@ public class WriteReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
         editText = (EditText)findViewById(R.id.one_line);
-
+        RatingBar mRatingBar = (RatingBar) findViewById(R.id.ratingbar);
         editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
         wordsNum = findViewById(R.id.wordsNumber);
 
