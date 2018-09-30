@@ -37,6 +37,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     //카카오 로그인 sdk
+    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'

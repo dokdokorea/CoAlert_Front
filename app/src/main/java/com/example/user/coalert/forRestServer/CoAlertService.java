@@ -31,7 +31,10 @@ public interface CoAlertService {
             @Query("ONELINE") String oneline, //한줄리뷰
             @Query("IMEI") String imei
     );
-
+    @GET("search")
+    Call<searchModel> searchCall(
+        @Query("text")String text
+    );
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://192.168.43.153:3000/")
             .addConverterFactory(GsonConverterFactory.create())

@@ -37,6 +37,8 @@ import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Adapter.searchAdapter;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.searchModel;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.io.File;
@@ -48,14 +50,18 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+
 
 public class SearchFragment extends Fragment {
     FragmentTransaction fragmentTransaction;
     EditText edit;
+    String text;
     Boolean checkCameraSet = true;
     LinearLayout linearLayout;
     InputMethodManager imm;
     Uri allUri;
+    int previousText = 0;
     int cameraRequest=10;
     String datapath;
     TessBaseAPI mTess;
@@ -113,11 +119,29 @@ public class SearchFragment extends Fragment {
                         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                         }
-
                         @Override
                         public void afterTextChanged(Editable editable) {
-                            String text = edit.getText().toString();
+                           text = edit.getText().toString();
                             search(text, list, arrayList, searchAdapter);
+                            if (previousText != text.length()) {
+
+                                    new Thread(){
+                                        @Override
+                                        public void run() {
+                                            try {
+                                                text = edit.getText().toString();
+                                                Log.e("전송 메세지: ", text.substring(0, previousText));
+                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1));
+                                                Object result = call.execute().body();
+                                                assert result != null;
+                                                Log.e("result", result.toString());
+                                            } catch (Exception e){
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                    }.start();
+                                    previousText = text.length();
+                            }
                         }
                     });
                 }else{
