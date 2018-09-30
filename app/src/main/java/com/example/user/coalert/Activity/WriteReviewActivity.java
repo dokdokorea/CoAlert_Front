@@ -2,36 +2,30 @@ package com.example.user.coalert.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.ContentUris;
 import android.content.Context;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.InputFilter;
-import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+
 
 public class WriteReviewActivity extends AppCompatActivity {
     private final int MaxLengthOfOneLineContent=100;
@@ -39,6 +33,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     TextView wordsNum;
     EditText editText;
     int previousLength = 0;
+    Button letsDetailReview;
     SmileRating smileRating ;
     @SuppressLint("SetTextI18n")
     @Override
@@ -50,6 +45,8 @@ public class WriteReviewActivity extends AppCompatActivity {
         wordsNum = findViewById(R.id.wordsNumber);
         smileRating = findViewById(R.id.smile_rating);
         imageView = findViewById(R.id.prod_image);
+        letsDetailReview = findViewById(R.id.write_review_lets_detail_write_btn);
+
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +54,19 @@ public class WriteReviewActivity extends AppCompatActivity {
                     startActivityForResult(intent, 1000);
             }
         });
+
+        letsDetailReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(letsDetailReview.getText() == "자세히 작성") {
+                    letsDetailReview.setText("되돌리기");
+                }
+                else {
+                    letsDetailReview.setText("자세히 작성");
+                }
+            }
+        });
+
 
         smileRating.setOnSmileySelectionListener(new SmileRating.OnSmileySelectionListener() {
             @Override
