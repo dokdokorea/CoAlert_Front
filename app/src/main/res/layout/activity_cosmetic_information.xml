@@ -82,6 +82,44 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="13"
+                android:background="@drawable/round_layout_border"
+                android:layout_margin="10dp"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="right"
+                    android:text="당신에게" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/matchingpercent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:text="50%"/>
+
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="left"
+                    android:text="적합합니다"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="end"
                 android:orientation="horizontal">
 
@@ -131,13 +169,14 @@
                     <TabWidget
                         android:id="@android:id/tabs"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
 
                     <!-- FrameLayout의 id값이 반드시 "tabcontent"로 지정되어야 함. -->
                     <FrameLayout
                         android:id="@android:id/tabcontent"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
                         >
 
                         <!-- 첫 번째 페이지. content1 -->
@@ -154,8 +193,6 @@
                             layout="@layout/tab_simple_review_list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
-
-
 
                         <LinearLayout
                             android:id="@+id/content3"
