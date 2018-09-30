@@ -91,9 +91,13 @@
                 android:hint="100자 이내로 화장품의 평가를 적어주세요."
                 android:inputType="textMultiLine" />
 
+            <TextView
+                android:id="@+id/wordsNumber"
+                android:layout_width="63dp"
+                android:layout_height="match_parent" />
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="30dp" />
 
             <Button
                 android:id="@+id/write_review_lets_detail_write_btn"

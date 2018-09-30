@@ -99,8 +99,9 @@ public class LoginActivity extends AppCompatActivity {
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
-
+            final Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
+            startActivity(accessActivity);
+            finish();
 
             new Thread(new Runnable() {
                 @Override
@@ -116,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                         Call call = ForRestSingleton.getInstance().loginCall(email, password, UUFiSingleton.getInstance().getIndependenceNum());
                         Object result = call.execute().body();
                         Log.e("result: ", result.toString());
+
                     }catch (Exception e){
                         e.printStackTrace();
                     }

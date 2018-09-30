@@ -1,5 +1,6 @@
 package com.example.user.coalert.Activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Context;
@@ -14,11 +15,15 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.user.coalert.R;
 
@@ -28,18 +33,44 @@ import java.util.ArrayList;
 public class WriteReviewActivity extends AppCompatActivity {
     private final int MaxLengthOfOneLineContent=100;
     ImageView imageView;
+    TextView wordsNum;
+    EditText editText;
+    int previousLength = 0;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
-        EditText editText=(EditText)findViewById(R.id.one_line);
+        editText = (EditText)findViewById(R.id.one_line);
         editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
+        wordsNum = findViewById(R.id.wordsNumber);
+
         imageView = findViewById(R.id.prod_image);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 1000);
+            }
+        });
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                wordsNum.setText(editText.getText().length()+"/100");
+                if (previousLength != editText.getText().length()){
+                    Log.e("words Change Number", String.valueOf(editText.getText()));
+                    previousLength = editText.getText().length();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
     }
