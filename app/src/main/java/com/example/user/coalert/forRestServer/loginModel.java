@@ -8,8 +8,8 @@ public class loginModel {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String id2) {
+        this.id = id2;
     }
 
     public String getPassword() {
@@ -22,6 +22,6 @@ public class loginModel {
 
     @Override
     public String toString() {
-        return "{password: "+getPassword()+", id: "+getId()+"}";
+        return "{password: "+getPassword()+", id: "+getId ()+"}";
     }
 }

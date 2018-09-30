@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -43,7 +45,8 @@
                 android:layout_gravity="center"
                 android:maxHeight="200dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/cardview1" />
+                android:src="@drawable/cardview1"
+                />
 
             <Space
                 android:layout_width="match_parent"
