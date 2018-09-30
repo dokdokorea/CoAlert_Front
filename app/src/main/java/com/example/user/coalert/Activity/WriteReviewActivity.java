@@ -27,6 +27,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.user.coalert.R;
+import com.hsalf.smilerating.BaseRating;
+import com.hsalf.smilerating.SmileRating;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -37,22 +39,49 @@ public class WriteReviewActivity extends AppCompatActivity {
     TextView wordsNum;
     EditText editText;
     int previousLength = 0;
+    SmileRating smileRating ;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
         editText = (EditText)findViewById(R.id.one_line);
-        RatingBar mRatingBar = (RatingBar) findViewById(R.id.ratingbar);
         editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
         wordsNum = findViewById(R.id.wordsNumber);
-
+        smileRating = findViewById(R.id.smile_rating);
         imageView = findViewById(R.id.prod_image);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                     startActivityForResult(intent, 1000);
+            }
+        });
+
+        smileRating.setOnSmileySelectionListener(new SmileRating.OnSmileySelectionListener() {
+            @Override
+            public void onSmileySelected(@BaseRating.Smiley int smiley, boolean reselected) {
+                // reselected is false when user selects different smiley that previously selected one
+                // true when the same smiley is selected.
+                // Except if it first time, then the value will be false.
+                int level = smileRating.getRating();
+                switch (smiley) {
+                    case SmileRating.BAD:
+                        Log.i("status: ", "Bad and level"+level);
+                        break;
+                    case SmileRating.GOOD:
+                        Log.i("status: ", "Good and level"+level);
+                        break;
+                    case SmileRating.GREAT:
+                        Log.i("status: ", "Great and level" + level);
+                        break;
+                    case SmileRating.OKAY:
+                        Log.i("status: ", "Okay and level" + level);
+                        break;
+                    case SmileRating.TERRIBLE:
+                        Log.i("status: ", "Terrible and level"+ level);
+                        break;
+                }
             }
         });
         editText.addTextChangedListener(new TextWatcher() {

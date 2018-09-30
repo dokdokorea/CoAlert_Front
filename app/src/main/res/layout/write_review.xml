@@ -66,22 +66,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
 
-            <com.hedgehog.ratingbar.RatingBar
-                android:id="@+id/ratingbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-
-                hedgehog:clickable="true"
-                hedgehog:halfstart="true"
-                hedgehog:starCount="5"
-                hedgehog:starEmpty="@mipmap/star_empty"
-                hedgehog:starFill="@mipmap/star_full"
-                hedgehog:starHalf="@mipmap/star_half"
-                hedgehog:starImageHeight="90dp"
-                hedgehog:starImageWidth="70dp"
-                hedgehog:starImagePadding="20dp"/>
+            <com.hsalf.smilerating.SmileRating
+                android:id="@+id/smile_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <Space
                 android:layout_width="match_parent"
