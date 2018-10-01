@@ -11,6 +11,14 @@ import android.widget.ListView;
 
 import com.example.user.coalert.Adapter.kindCosmeticAdapter;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.Singleton.UUFiSingleton;
+import com.example.user.coalert.forRestServer.getRecommendModel;
+
+import java.io.IOException;
+import java.util.List;
+
+import retrofit2.Call;
 
 
 public class WhatSelectKindCosmetic extends AppCompatActivity {
@@ -29,10 +37,25 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                 data);
         kindCosmeticListView.setAdapter(forAdapter);
         kindCosmeticListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @SuppressLint("LongLogTag")
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
-                    Log.e("Click Event: ", data[pos]);
-                    
+            public void onItemClick(AdapterView<?> adapterView, View view, final int pos, long l) {
+                new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        try{
+                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos,
+                                    UUFiSingleton.getInstance().getIndependenceNum(), "0");
+                            Object result = call.execute().body();
+                        } catch(
+                                IOException e)
+
+                        {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
             }
         });
     }

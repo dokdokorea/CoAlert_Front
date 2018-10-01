@@ -23,7 +23,7 @@ def get_recommaned_cosmetic(userId, kind_cosmetic="eyeShadow", type=0, cosmetic=
     prediction = making_predict_data(cosmetic_id, original_data)
     prediction['est'] = prediction['popId'].apply(lambda x: svd.predict(userId, x).est)
     prediction = prediction.sort_values('est', ascending=False)
-    return prediction
+    return prediction[:10]
 
 
 def get_id_purify_data(id_purify_data):
@@ -84,4 +84,3 @@ def making_predict_data(cosmetic_id, original_data):
     return predict_data.iloc[cosmetic_id]
 
 
-print(get_recommaned_cosmetic(400, type=0))

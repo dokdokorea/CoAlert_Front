@@ -1,18 +1,17 @@
-from flask import Flask
-
-from flask_restful import Resource, Api
+from flask import Flask, request
 
 app = Flask(__name__)
-api = Api(app)
 
 
-class GetRecommendCosmetic(Resource):
-    def get(self, data):
-        print(data)
-        return {'hi':'flask'}
+@app.route("/", methods=["GET", 'POST'])
+def root():
+    return "hi flask"
 
 
-api.add_resource(GetRecommendCosmetic, '/recommend')
+@app.route("/recommendCosmetic", methods=['POST'])
+def getRecommendCosmetic():
+    print(request.query_string)
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
