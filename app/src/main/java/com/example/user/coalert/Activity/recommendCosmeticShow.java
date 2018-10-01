@@ -37,6 +37,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
         for (int i = 0; i< 10; i++){
             String[] splitJson = beforeToJson[i].split(",");
             String cosmeticName = splitJson[0].substring(4);
+            cosmeticName = cosmeticName.replace(':', ' ');
             String estimate = splitJson[1].substring(10, splitJson[1].length()-1);
             setData(recommendCosmeticAdapter, cosmeticName, estimate);
         }
@@ -47,7 +48,6 @@ public class recommendCosmeticShow extends AppCompatActivity {
         RecommendCosmetic.setAdapter(adapter);
     }
     public String[] getDataAtJson(String recommendCosmetics){
-
         recommendCosmetics = recommendCosmetics.substring(1, recommendCosmetics.length() - 1);
         int comma = 0;
         StringBuilder recommendCosmeticsBuilder = new StringBuilder(recommendCosmetics);
