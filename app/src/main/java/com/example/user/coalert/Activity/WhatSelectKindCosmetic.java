@@ -48,6 +48,10 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                             Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos,
                                     UUFiSingleton.getInstance().getIndependenceNum(), "0");
                             Object result = call.execute().body();
+                            for(int i =0; i<10; i++){
+                                Log.e("result", ((List) result).get(i).toString());
+                            }
+
                         } catch(
                                 IOException e)
 

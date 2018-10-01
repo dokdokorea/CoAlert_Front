@@ -4,26 +4,46 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from surprise import Reader, Dataset, SVD, evaluate
 from sklearn.externals import joblib
+from konlpy.tag import Twitter
 
 
-def get_recommaned_cosmetic(userId, kind_cosmetic="eyeShadow", type=0, cosmetic="매트 아이 컬러"):
-    original_data = pd.read_csv('../model/'+kind_cosmetic+'.csv')
+def get_recommaned_cosmetic(userId, kind_cosmetic="eyeShadow", type=0):
+    original_data = pd.read_csv('RecommendSystem//data/'+kind_cosmetic+'.csv')
     change_type = {'건성': 0, '지성': 1, '중성': 2, '복합성': 3, '민감성': 4}
     original_data['type'] = original_data['type'].map(change_type)
     id_purify_data = get_id_purify_data(original_data)
     review_data = get_review_data(id_purify_data, type)
     name_to_id = name_2_id(original_data)
+    id_to_name = id_2_name(original_data)
     cosine_sim = review_to_vector(review_data)
-    cosmetic_id = name_to_id.loc[cosmetic, :]
+    best_cosmetic = get_best_cosmetic(original_data, type)
+    best_cosmetic = id_to_name.iloc[best_cosmetic]['name']
+    cosmetic_id = name_to_id.loc[best_cosmetic, :]
     sim_scores = list(enumerate(cosine_sim[int(cosmetic_id)]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1:26]
-    svd = joblib.load('./model/'+kind_cosmetic+'/'+kind_cosmetic+'_'+str(type)+'.pkl')
+    svd = joblib.load('RecommendSystem/model/'+kind_cosmetic+'/'+kind_cosmetic+'_'+str(type)+'.pkl')
     cosmetic_id = [i[0] for i in sim_scores]
     prediction = making_predict_data(cosmetic_id, original_data)
     prediction['est'] = prediction['popId'].apply(lambda x: svd.predict(userId, x).est)
     prediction = prediction.sort_values('est', ascending=False)
-    return prediction[:10]
+    return prediction.head(10)
+
+
+def get_best_cosmetic(original_data, type):
+    data_per_type = original_data.loc[original_data["type"] == type,:]
+    data_per_type = data_per_type.drop(['name', 'userId', 'review', 'type'], axis=1)
+    rating = [np.float64(0) for i in range(0, 100)]
+    cosmetic_per_popId = [np.float64(0) for i in range(0,100)]
+
+    for i, name in data_per_type.iterrows():
+        rating[int(name['popId'])] += name['rate']
+        cosmetic_per_popId[int(name['popId'])] += 1
+    rating = np.array(rating)
+    cosmetic_per_popId = np.array(cosmetic_per_popId)
+    result = rating/cosmetic_per_popId
+    result = np.nan_to_num(result, 0)
+    return result.argmax()
 
 
 def get_id_purify_data(id_purify_data):
@@ -64,7 +84,6 @@ def name_2_id(original_data):
 def making_evaluate_data(id_purify_data, type=0):
     evaluate_data = id_purify_data[id_purify_data["type"] == type]
     evaluate_data = evaluate_data.drop(columns=['name', 'review', 'type'], axis=1)
-    print(evaluate_data)
     reader = Reader()
     evaluate_data = Dataset.load_from_df(evaluate_data, reader)
     return evaluate_data

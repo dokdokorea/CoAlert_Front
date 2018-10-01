@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getRecommendModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WhatSelectKindCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WhatSelectKindCosmetic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/eyeShadow.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/foundation.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/libTint.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/sunblock.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommanedSystem/purifyData.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommanedSystem/purifyData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommanedSystem/purifyData.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/purifyData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_4.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_4.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_4.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_4.pkl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,21 +84,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="282" />
+          <entry key="py" value="741" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="282" />
+          <entry key="Python" value="741" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="csv" value="1" />
           <entry key="py" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSV" value="1" />
           <entry key="Python" value="3" />
         </counts>
       </usages-collector>
@@ -90,19 +111,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="361">
+              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecommanedSystem/purifyData.py">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/purifyData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="6" />
+            <state relative-caret-position="456">
+              <caret line="24" column="86" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="86" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/sunblock.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -117,6 +149,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>purify</find>
+      <find>print</find>
+      <find>review_type</find>
+      <find>str</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,6 +161,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RecommanedSystem/purifyData.py" />
+        <option value="$PROJECT_DIR$/RecommendSystem/purifyData.py" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -172,6 +208,23 @@
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -187,7 +240,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dl579\OneDrive\desktop\CoAlert_Front1\flasktestServer\RecommanedSystem" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dl579\OneDrive\desktop\CoAlert_Front1\flasktestServer\RecommanedSystem\data" />
       <recent name="C:\Users\dl579\PycharmProjects\flasktestServer" />
       <recent name="C:\Users\dl579\PycharmProjects\flasktestServer\RecommanedSystem" />
     </key>
@@ -212,7 +269,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -229,7 +286,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="C:\Users\dl579\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -264,11 +321,11 @@
     <frame x="-908" y="69" width="916" height="1576" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32126167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32126167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296322" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5163081" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -278,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32893825" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32893825" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3296322" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -310,17 +367,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommanedSystem/purifyData.py">
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/sunblock.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/purifyData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="6" />
+        <state relative-caret-position="456">
+          <caret line="24" column="86" selection-start-line="24" selection-start-column="83" selection-end-line="24" selection-end-column="86" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="361">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
