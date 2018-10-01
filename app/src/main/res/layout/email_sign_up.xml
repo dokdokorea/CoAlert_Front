@@ -51,14 +51,14 @@
                     android:layout_height="40dp"
                     android:layout_weight="0.3"
                     android:padding="3dp"
-                    android:src="@drawable/flower" />
+                    android:src="@drawable/fullstar" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="0.33"
                     android:padding="3dp"
-                    android:src="@drawable/flower" />
+                    android:src="@drawable/fullstar" />
             </LinearLayout>
 
             <LinearLayout

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
@@ -24,11 +25,16 @@ import com.example.user.coalert.Adapter.kindCosmeticAdapter;
 
 import java.util.ArrayList;
 
+import retrofit2.http.HEAD;
+
 public class HomeFragment extends Fragment {
     ArrayList<OneImgOneStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
     private TextView detailElementBtn;
+    private ImageView searchIcon;
+    public HomeFragment() {
+    }
     Button suggestCosmetic;
 
     @Nullable
@@ -36,6 +42,16 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         detailElementBtn=(TextView)v.findViewById(R.id.detail_element_info_btn);
+        searchIcon=(ImageView)v.findViewById(R.id.fragment_home_search_btn);
+
+        searchIcon.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),SearchFragment.class);
+                startActivity(intent);
+            }
+        });
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
@@ -84,6 +100,7 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         } );
+
         return v;
     }
 }
