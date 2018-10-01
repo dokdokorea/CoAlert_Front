@@ -3,6 +3,9 @@ package com.example.user.coalert.Activity;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -25,5 +28,12 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                 R.layout.activity_what_select_kind_cosmetic_item,
                 data);
         kindCosmeticListView.setAdapter(forAdapter);
+        kindCosmeticListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
+                    Log.e("Click Event: ", data[pos]);
+                    
+            }
+        });
     }
 }
