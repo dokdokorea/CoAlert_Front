@@ -12,6 +12,11 @@
         android:gravity="center|top"
         android:textSize="20sp"
         android:paddingTop="10dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:background="#572254" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
