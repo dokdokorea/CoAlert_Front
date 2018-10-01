@@ -6,6 +6,15 @@
     tools:context=".Activity.WhatSelectKindCosmetic"
     android:orientation="vertical">
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/first"
+        android:textSize="30sp" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/kindSelectCosmetic"
