@@ -55,15 +55,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.LoginActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.EmailSignUpActivity" />
         <activity android:name=".Loading.Loading1Activity" />
-        <activity android:name=".Activity.EditprofileActivity">
-
-        </activity>
+        <activity android:name=".Activity.EditprofileActivity"/>
         <activity
             android:name=".Popup.BreakPopup"
             android:theme="@android:style/Theme.Dialog" />
@@ -72,10 +73,7 @@
         <activity android:name=".Activity.CommonSignUpActivity" />
         <activity android:name=".Activity.WishListActivity" />
         <activity android:name=".Activity.CosmeticInformationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".Activity.ExplanationBadElementActivity" />
         <activity android:name=".Activity.CosmeticIngredientActivity">
@@ -85,7 +83,6 @@
 
         </activity>
         <activity android:name=".Activity.WriteReviewActivity">
-
 
         </activity>
     </application>

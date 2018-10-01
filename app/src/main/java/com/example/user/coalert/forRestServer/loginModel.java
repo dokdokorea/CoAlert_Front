@@ -8,8 +8,8 @@ public class loginModel {
         return id;
     }
 
-    public void setId(String id2) {
-        this.id = id2;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getPassword() {
