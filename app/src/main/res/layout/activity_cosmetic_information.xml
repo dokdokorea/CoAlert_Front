@@ -99,11 +99,10 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/matchingpercent"
+                    android:id="@+id/matching_percent"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="40sp"
-                    android:text="50%"/>
+                    android:textSize="40sp"/>
 
                 <TextView
                     style="@style/editprofile"
@@ -194,52 +193,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
 
-                        <LinearLayout
+                        <include
                             android:id="@+id/content3"
+                            layout="@layout/tab_detail_review_list"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_height="match_parent"/>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="hello"
-                                android:textSize="30dp" />
-
-
-                        </LinearLayout>
-
-                        <!-- 두 번째 페이지. content2 -->
 
                     </FrameLayout>
                 </LinearLayout>

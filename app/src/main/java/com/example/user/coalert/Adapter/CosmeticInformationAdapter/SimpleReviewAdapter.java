@@ -34,11 +34,11 @@ public class SimpleReviewAdapter extends RecyclerView.Adapter<SimpleReviewAdapte
             three=(ImageView)itemView.findViewById(R.id.third);
             four=(ImageView)itemView.findViewById(R.id.fourth);
             five=(ImageView)itemView.findViewById(R.id.fifth);
-            one.setImageResource(R.drawable.emptystar);
-            two.setImageResource(R.drawable.emptystar);
-            three.setImageResource(R.drawable.emptystar);
-            four.setImageResource(R.drawable.emptystar);
-            five.setImageResource(R.drawable.emptystar);
+//            one.setImageResource(R.drawable.emptystar);
+//            two.setImageResource(R.drawable.emptystar);
+//            three.setImageResource(R.drawable.emptystar);
+//            four.setImageResource(R.drawable.emptystar);
+//            five.setImageResource(R.drawable.emptystar);
         }
     }
 

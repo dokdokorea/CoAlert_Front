@@ -151,8 +151,7 @@
                         android:layout_gravity="center"
                         android:layout_marginRight="8dp"
                         android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn"
-                        android:id="@+id/toxicList"/>
+                        android:background="@drawable/rightbtn" />
 
 
                 </LinearLayout>
@@ -194,7 +193,7 @@
                         android:layout_gravity="center"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn"/>
+                        android:background="@drawable/rightbtn" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -212,19 +211,19 @@
 
 
                 <LinearLayout
+                    android:id="@+id/following"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:id="@+id/following">
+                    android:orientation="horizontal">
 
                     <TextView
+                        style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        style="@style/editprofile"
-                        android:text="팔로잉 목록"/>
+                        android:text="팔로잉 목록" />
 
 
                     <LinearLayout
@@ -244,11 +243,10 @@
                             android:layout_marginBottom="6dp"
                             android:layout_marginRight="5dp"
                             android:layout_weight="0.1"
-                            android:background="@drawable/rightbtn"/>
+                            android:background="@drawable/rightbtn" />
                     </LinearLayout>
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
@@ -301,21 +299,21 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/follower"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="5dp"
-                    android:id="@+id/follower">
+                    android:orientation="horizontal">
 
                     <TextView
+                        style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:gravity="center"
-                        style="@style/editprofile"
-                        android:text="팔로워 목록"/>
+                        android:text="팔로워 목록" />
 
 
                     <LinearLayout
@@ -334,7 +332,7 @@
                             android:layout_gravity="center"
                             android:layout_marginEnd="8dp"
                             android:layout_weight="0.1"
-                            android:background="@drawable/rightbtn"/>
+                            android:background="@drawable/rightbtn" />
                     </LinearLayout>
 
                 </LinearLayout>
