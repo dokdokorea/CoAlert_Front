@@ -81,6 +81,7 @@
         android:background="?attr/selectableItemBackground"
         android:text="@string/sign_up"
         android:textSize="15sp"
+        android:clickable="true"
         android:contextClickable="true"/>
 
     <View

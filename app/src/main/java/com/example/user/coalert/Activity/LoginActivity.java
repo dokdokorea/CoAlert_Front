@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Loading.Loading1Activity;
@@ -56,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
     LoginButton facebookLoginBtn;
     ImageButton kakao;
     SessionCallback callback;
+    TextView textView;
+    Intent itent;
     private static final String TAG = LoginActivity.class.getSimpleName();
 
 
@@ -65,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
+        textView = findViewById(R.id.signup);
         // kakao = findViewById(R.id.kakao_login_button);
 
 
@@ -94,7 +98,17 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 
+        textView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, EmailSignUpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
+
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
