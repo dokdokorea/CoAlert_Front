@@ -20,6 +20,7 @@ import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAda
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
+import com.example.user.coalert.Adapter.kindCosmeticAdapter;
 
 import java.util.ArrayList;
 
