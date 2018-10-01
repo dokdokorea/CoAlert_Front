@@ -17,21 +17,21 @@ public interface CoAlertService {
 
     @POST("cosmetic")
     Call<cosmeticModel> cosmeicCall(
-            @Query("COMPANY") String company,
-            @Query("CNAME") String cname,
-            @Query("INGR") String ingr,
-            @Query("CATEGORY") String category
+            @Query("company") String company,
+            @Query("cname") String cname,
+            @Query("ingr") String ingr,
+            @Query("category") String category
     );
 
     @POST("review")
     Call<ReviewModel> reviewCall(
-            @Query("COMPANY") String company,
-            @Query("CNAME") String cname,
-            @Query("INGR") String ingr, //성분
-            @Query("CONTENT") String content, //자세한 리뷰
-            @Query("CATEGORY") String category,
-            @Query("ONELINE") String oneline, //한줄리뷰
-            @Query("IMEI") String imei
+            @Query("company") String company,
+            @Query("cname") String cname,
+            @Query("ingr") String ingr, //성분
+            @Query("content") String content, //자세한 리뷰
+            @Query("category") String category,
+            @Query("oneline") String oneline, //한줄리뷰
+            @Query("imei") String imei
     );
 
     @GET("search")
