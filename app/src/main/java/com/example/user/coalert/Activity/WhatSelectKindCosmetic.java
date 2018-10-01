@@ -2,6 +2,7 @@ package com.example.user.coalert.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.example.user.coalert.forRestServer.getRecommendModel;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -49,10 +51,11 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                         try{
                             Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos,
                                     UUFiSingleton.getInstance().getIndependenceNum(), "0");
-                            Object result = call.execute().body();
+                            List<getRecommendModel> result = call.execute().body();
+                            String moveRecommendCosmetic = result.toString();
                             Intent recommendPage = new Intent(getBaseContext(), recommendCosmeticShow.class);
                             recommendPage.putExtra("cname", data[pos]);
-                            recommendPage.putExtra("recommendData", (ArrayList)result);
+                            recommendPage.putExtra("recommendData", moveRecommendCosmetic);
                             startActivity(recommendPage);
                             finish();
                         } catch(
