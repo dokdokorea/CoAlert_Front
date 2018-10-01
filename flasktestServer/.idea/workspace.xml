@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/eyeShadow.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/foundation.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/libTint.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/data/sunblock.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommanedSystem/purifyData.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/purifyData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_0.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_1.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_2.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_3.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/eyeShadow/eyeShadow_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/eyeShadow/eyeShadow_4.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_0.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_1.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_2.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_3.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/foundation/foundation_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/foundation/foundation_4.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_0.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_1.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_2.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_3.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/libTint/libTint_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/libTint/libTint_4.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_0.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_1.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_2.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_3.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sunblock/sunblock_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/model/sunblock/sunblock_4.pkl" afterDir="false" />
-    </list>
+    <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +55,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="741" />
+          <entry key="py" value="778" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="741" />
+          <entry key="Python" value="778" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -111,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="323">
+              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -318,7 +289,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-908" y="69" width="916" height="1576" extended-state="6" />
+    <frame x="-908" y="69" width="916" height="1576" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32126167" />
@@ -382,8 +353,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="323">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
