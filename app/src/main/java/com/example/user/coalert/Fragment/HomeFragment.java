@@ -9,10 +9,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
+import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
@@ -22,6 +24,8 @@ import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
+import retrofit2.http.HEAD;
+
 public class HomeFragment extends Fragment {
     ArrayList<OneImgOneStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
@@ -30,6 +34,7 @@ public class HomeFragment extends Fragment {
     private ImageView searchIcon;
     public HomeFragment() {
     }
+    Button suggestCosmetic;
 
     @Nullable
     @Override
@@ -46,6 +51,7 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
         RecyclerView newProductRecyclerView = (RecyclerView) v.findViewById(R.id.new_product_recyclerview);
@@ -77,6 +83,14 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "신상품", "니회사"));
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
         newProductRecyclerView.setAdapter(new NewProductAdapter(newProduArr));
+
+        suggestCosmetic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent kindSelectCosmeticActivity = new Intent(getActivity(), WhatSelectKindCosmetic.class);
+                startActivity(kindSelectCosmeticActivity);
+            }
+        });
 
         detailElementBtn.setOnClickListener(new View.OnClickListener(){
             @Override

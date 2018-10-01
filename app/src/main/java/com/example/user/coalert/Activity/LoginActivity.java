@@ -146,6 +146,7 @@ public class LoginActivity extends AppCompatActivity {
         Log.e("UUID: ", idByTelephonyManager);
         UUFiSingleton.getInstance().setIndependenceNum(idByTelephonyManager);
     }
+
     public String testSHA256(String str){
 
         String SHA = "";
