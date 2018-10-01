@@ -14,7 +14,7 @@
         android:paddingTop="10dp"/>
     <View
         android:layout_width="wrap_content"
-        android:layout_height="5dp"
+        android:layout_height="9dp"
         android:background="#572254" />
 
     <ListView
