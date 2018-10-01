@@ -28,7 +28,7 @@ import retrofit2.Call;
 public class WhatSelectKindCosmetic extends AppCompatActivity {
     kindCosmeticAdapter kindCosmeticAdapter;
     ListView kindCosmeticListView;
-    String[] data = {"립틴트", "선블락", "아이쉐도우", "파운데이션"};
+    String[] data = {"선블락", "아이쉐도우", "파운데이션", "립틴트"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +49,7 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                     public void run() {
                         super.run();
                         try{
-                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos,
+                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos+1,
                                     UUFiSingleton.getInstance().getIndependenceNum(), "0");
                             List<getRecommendModel> result = call.execute().body();
                             String moveRecommendCosmetic = result.toString();

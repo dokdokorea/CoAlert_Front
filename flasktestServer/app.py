@@ -13,9 +13,11 @@ def root():
 
 @app.route("/recommendCosmetic", methods=['POST'])
 def getRecommendCosmetic():
+    kindCosmetic = {1:'sunblock', 2:'eyeShadow', 3:'foundation', 4:'libTint'}
     id = request.args.get('id')
     type = request.args.get('persontype')
-    recommend_cosmetic = get_recommaned_cosmetic(int(id), type=int(type))
+    kindCosmeticNum = request.args.get('cosmetictype')
+    recommend_cosmetic = get_recommaned_cosmetic(int(id), type=int(type), kind_cosmetic=kindCosmetic[int(kindCosmeticNum)])
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)
