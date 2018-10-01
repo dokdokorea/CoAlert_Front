@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:name=".Autehntification.GlobalApplication"
         android:allowBackup="true"
@@ -57,6 +58,7 @@
         <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -64,7 +66,7 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.EmailSignUpActivity" />
         <activity android:name=".Loading.Loading1Activity" />
-        <activity android:name=".Activity.EditprofileActivity"/>
+        <activity android:name=".Activity.EditprofileActivity" />
         <activity
             android:name=".Popup.BreakPopup"
             android:theme="@android:style/Theme.Dialog" />
@@ -72,18 +74,12 @@
         <activity android:name=".Activity.AnotherprofileActivity" />
         <activity android:name=".Activity.CommonSignUpActivity" />
         <activity android:name=".Activity.WishListActivity" />
-        <activity android:name=".Activity.CosmeticInformationActivity">
-
-        </activity>
+        <activity android:name=".Activity.CosmeticInformationActivity"></activity>
         <activity android:name=".Activity.ExplanationBadElementActivity" />
-        <activity android:name=".Activity.CosmeticIngredientActivity">
-
-        </activity>
-        <activity android:name=".Activity.FollowingListActivity">
-
-        </activity>
-        <activity android:name=".Activity.WriteReviewActivity">
-
-        </activity>
+        <activity android:name=".Activity.CosmeticIngredientActivity"></activity>
+        <activity android:name=".Activity.FollowingListActivity"></activity>
+        <activity android:name=".Activity.WriteReviewActivity"></activity>
+        <activity android:name=".Activity.WhatSelectKindCosmetic"></activity>
     </application>
+
 </manifest>
