@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
                         password = testSHA256(password);
                         getUUID(getBaseContext());
                         Log.e("asdasd", email);
-                        Call call = ForRestSingleton.getInstance().loginCall(email, password, UUFiSingleton.getInstance().getIndependenceNum());
+                        Call call = ForRestSingleton.getInstance().loginCall(email, password);
                         Object result = call.execute().body();
                         Log.e("result: ", result.toString());
 
