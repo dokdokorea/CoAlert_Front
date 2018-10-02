@@ -49,15 +49,12 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.write_review, null);
-
-
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_personal_prod_pic, null);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
     }
 
 //        OneImageCardView item = arrayList.get(position);

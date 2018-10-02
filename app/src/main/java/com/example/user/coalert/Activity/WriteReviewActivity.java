@@ -182,7 +182,7 @@ public class WriteReviewActivity extends AppCompatActivity {
             }
         });
 
-        personalPicRecyclerview=(RecyclerView)findViewById(R.id.personal_prod_pic);
+        personalPicRecyclerview=findViewById(R.id.personal_prod_pic);
         personalPicRecyclerview.setHasFixedSize(true);
         personalPicRecyclerview.setLayoutManager(new LinearLayoutManager(this));
         recyclerArr=new ArrayList<>();
