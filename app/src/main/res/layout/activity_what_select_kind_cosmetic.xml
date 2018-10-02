@@ -28,7 +28,15 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:id="@+id/selectKindCosmetic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="@string/what_select_kind_bottom_textView"
+        android:gravity="center|top"
+        android:textSize="20sp"
+        android:paddingTop="10dp"/>
+
 </LinearLayout>

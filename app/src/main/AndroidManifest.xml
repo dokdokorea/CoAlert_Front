@@ -74,14 +74,22 @@
         <activity android:name=".Activity.WishListActivity" />
         <activity android:name=".Activity.CosmeticInformationActivity" />
         <activity android:name=".Activity.ExplanationBadElementActivity" />
-        <activity android:name=".Activity.CosmeticIngredientActivity" />
-        <activity android:name=".Activity.FollowingListActivity" />
-        <activity android:name=".Activity.WriteReviewActivity" >
+        <activity android:name=".Activity.CosmeticIngredientActivity">
+
+        </activity>
+        <activity android:name=".Activity.FollowingListActivity">
+
+        </activity>
+        <activity android:name=".Activity.WriteReviewActivity">
+
+        </activity>
+        <activity android:name=".Activity.ViewDetailActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".Activity.WhatSelectKindCosmetic" />
         <activity android:name=".Activity.recommendCosmeticShow"></activity>
