@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical">
 
     <ScrollView
@@ -17,7 +19,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="10dp" />
 
             <TextView
                 style="@style/logoStyle"
@@ -31,123 +33,72 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="43dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_weight="0.34"
-                    android:src="@drawable/left_butterfly" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:padding="3dp"
-                    android:src="@drawable/fullstar" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.33"
-                    android:padding="3dp"
-                    android:src="@drawable/fullstar" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_weight="0.34"
-                    android:text="회원가입"
-                    style="@style/defaultFont"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textColor="@color/first"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.3"
-                    android:padding="3dp"
-                    android:text="피부 타입 설정"
-                    style="@style/defaultFont"
-                    android:textStyle="bold"
-                    android:gravity="center"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="0.33"
-                    android:padding="3dp"
-                    android:text="가입완료"
-                    android:gravity="center"
-                    style="@style/defaultFont"
-                    android:textStyle="bold"/>
-            </LinearLayout>
+                android:layout_height="10dp" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="6dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="2dp"
                 android:alpha="88"
                 android:background="@color/first" />
 
             <TextView
                 style="@style/defaultFont"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:text="회원가입"
-                android:textSize="20sp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TableLayout
-                android:layout_width="384dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-                <TableRow android:layout_marginTop="10dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp">
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="-60dp">
 
                     <TextView
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
                         android:layout_marginStart="3dp"
+                        android:gravity="center_vertical"
                         android:text="이메일"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/input_email"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:ems="13"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
                         android:hint="coalert@example.com"
                         android:inputType="textWebEmailAddress" />
+
+                    <Button
+                        android:id="@+id/email_redundancy_check_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/default_button"
+                        android:text="중복확인"
+                        android:textColor="@android:color/white" />
 
                 </TableRow>
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="10dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
@@ -157,15 +108,15 @@
                         android:layout_height="match_parent"
                         android:layout_marginEnd="5dp"
                         android:layout_marginStart="3dp"
+                        android:gravity="center_vertical"
                         android:text="비밀번호"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/input_password"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:ems="13"
                         android:hint="6~12자리 숫자 또는 문자"
                         android:inputType="textPassword" />
@@ -173,7 +124,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="10dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
@@ -181,9 +132,9 @@
                         style="@style/defaultFont"
                         android:layout_marginEnd="5dp"
                         android:layout_marginStart="3dp"
+                        android:gravity="center_vertical"
                         android:text="비밀번호 확인"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/password_certification"
@@ -195,7 +146,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="10dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
@@ -206,9 +157,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_marginStart="3dp"
+                        android:gravity="center_vertical"
                         android:text="이름"
-                        android:textStyle="bold"
-                        android:gravity="center_vertical"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         style="@style/defaultFont"
@@ -220,12 +171,21 @@
 
             </TableLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
         </LinearLayout>
     </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             style="@style/defaultFont"
@@ -234,6 +194,7 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/press_button"
             android:text="다음"
+            android:id="@+id/lastSignUpButton"
             android:textColor="@color/whiteBackground" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

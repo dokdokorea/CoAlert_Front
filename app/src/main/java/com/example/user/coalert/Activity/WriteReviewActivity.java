@@ -17,6 +17,8 @@ import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
@@ -27,19 +29,25 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.coalert.Adapter.WriteReviewAdapter;
 import com.example.user.coalert.R;
+import com.example.user.coalert.item.OneImageCardView;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class WriteReviewActivity extends AppCompatActivity {
     private final int MaxLengthOfOneLineContent = 100;
+    private RecyclerView personalPicRecyclerview;
+    private ArrayList<OneImageCardView> recyclerArr;
     ImageView imageView;
     TextView wordsNum;
     EditText editText;
+    RecyclerView userImageRecyclerView;
     int previousLength = 0;
     Button letsDetailReview;
     SmileRating smileRating;
@@ -47,24 +55,26 @@ public class WriteReviewActivity extends AppCompatActivity {
     private static final int CAMERA_REQUEST = 100;
     private static final int ALBUM_REQUEST = 1000;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "CutPasteId"})
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
-        editText = (EditText) findViewById(R.id.one_line);
+
+        editText = findViewById(R.id.one_line);
         wordsNum = findViewById(R.id.wordsNumber);
         smileRating = findViewById(R.id.smile_rating);
-        imageView = findViewById(R.id.prod_image);
         letsDetailReview = findViewById(R.id.write_review_lets_detail_write_btn);
+        userImageRecyclerView = findViewById(R.id.personal_prod_pic);
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
         final Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        userImageRecyclerView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                Log.e("asdasd", "asdasd");
                 new AlertDialog.Builder(WriteReviewActivity.this)
                         .setTitle("업로드할 이미지 선택")
                         .setPositiveButton("사진 촬영", cameraListener)
@@ -72,7 +82,6 @@ public class WriteReviewActivity extends AppCompatActivity {
                         .setNegativeButton("취소", cancelListener)
                         .show();
             }
-
             DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -91,7 +100,6 @@ public class WriteReviewActivity extends AppCompatActivity {
                         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                         intent.setAction(Intent.ACTION_GET_CONTENT);
                         startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST);
-
                     }
                 }
             };
@@ -103,6 +111,8 @@ public class WriteReviewActivity extends AppCompatActivity {
                 }
             };
         });
+
+
 
 
         letsDetailReview.setOnClickListener(new View.OnClickListener() {
@@ -171,6 +181,13 @@ public class WriteReviewActivity extends AppCompatActivity {
 
             }
         });
+
+        personalPicRecyclerview=(RecyclerView)findViewById(R.id.personal_prod_pic);
+        personalPicRecyclerview.setHasFixedSize(true);
+        personalPicRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+        recyclerArr=new ArrayList<>();
+        recyclerArr.add(new OneImageCardView(R.drawable.irin));
+        personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
     }
 
     @Override

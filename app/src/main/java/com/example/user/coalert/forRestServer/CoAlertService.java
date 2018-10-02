@@ -7,6 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface CoAlertService {
@@ -41,7 +42,7 @@ public interface CoAlertService {
             @Query("text") String text
     );
 
-    @POST("signin")
+    @POST("signup")
     Call<signInModel> signInCall(
             @Query("id") String id,
             @Query("password") String password,
@@ -52,6 +53,12 @@ public interface CoAlertService {
             @Query("sex")String sex,
             @Query("access")String access
     );
+
+    @POST("emailCheck")
+    Call<emailRedundancyCheckModel> emailCheck(
+      @Query("eamil") String email
+    );
+
     @POST("recommendCosmetic")
     Call<List<getRecommendModel>> recommendCall(
             @Query("persontype") int personType,
@@ -62,7 +69,7 @@ public interface CoAlertService {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.43.153:5000/")
+            .baseUrl("http://192.168.1.19:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }
