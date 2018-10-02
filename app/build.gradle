@@ -36,6 +36,7 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi-1.2.2.zip')
     implementation 'de.hdodenhof:circleimageview:2.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     //카카오 로그인 sdk
     implementation 'com.github.sujithkanna:smileyrating:1.6.8'
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION

@@ -75,10 +75,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     wishbtn.setImageResource(R.drawable.fullheart);
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
-
 
         tabHost1=(TabHost)findViewById(R.id.tabHost1);
         tabHost1.setup();
@@ -130,7 +128,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         DetailArr=new ArrayList<>();
         DetailArr.add(new TwoImgTwoStringCardView(R.drawable.irin,R.drawable.seul,"명탐정코난","언니의 잇템!"));
         DetailArr.add(new TwoImgTwoStringCardView(R.drawable.seul,R.drawable.irin,"루루고양이","선크림 후기 이퀄리티 실화냐?!?"));
-        DetailArr.add(new TwoImgTwoStringCardView(R.drawable.cardview1,R.drawable.sun1,"즐거운핫산","100% 리얼한 선크림후기!"));
+        DetailArr.add(new TwoImgTwoStringCardView(R.drawable.iu1,R.drawable.sun1,"즐거운핫산","100% 리얼한 선크림후기!"));
         detail.setAdapter(new DetailReviewAdapter(DetailArr));
 
     }
