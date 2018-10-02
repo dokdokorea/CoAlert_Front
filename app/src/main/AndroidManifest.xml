@@ -57,11 +57,12 @@
         </activity>
         <activity android:name=".Activity.LoginActivity">
 
-
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" />
         <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.EmailSignUpActivity" />
+        <activity android:name=".Activity.EmailSignUpActivity" >
+
+        </activity>
         <activity android:name=".Loading.Loading1Activity" />
         <activity android:name=".Activity.EditprofileActivity" />
         <activity
@@ -90,7 +91,6 @@
             </intent-filter>
 
         </activity>
-
         <activity android:name=".Activity.WhatSelectKindCosmetic" />
         <activity android:name=".Activity.recommendCosmeticShow"></activity>
     </application>
