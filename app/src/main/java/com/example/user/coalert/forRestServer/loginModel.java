@@ -2,7 +2,7 @@ package com.example.user.coalert.forRestServer;
 
 public class loginModel {
     String id;
-    String password;
+    String session;
 
     public String getId() {
         return id;
@@ -12,16 +12,16 @@ public class loginModel {
         this.id = id;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSession() {
+        return session;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSession(String session) {
+        this.session = session;
     }
 
     @Override
     public String toString() {
-        return "{password: "+getPassword()+", id: "+getId ()+"}";
+        return "{password: "+getSession()+", id: "+getId ()+"}";
     }
 }
