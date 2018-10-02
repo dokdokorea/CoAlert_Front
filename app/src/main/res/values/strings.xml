@@ -26,4 +26,6 @@
 
     <string name="email">chunsadel@naver.com</string>
     <string name="detailReviewButton">자세히 작성</string>
+    <string name="kindSelectCosmetic">추천받을 화장품을 골라주세요!!</string>
+    <string name="what_select_kind_bottom_textView">다른 화장품은 아직 개발중이에여 조금만 기다려주세요!!</string>
 </resources>

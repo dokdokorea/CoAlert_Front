@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WhatSelectKindCosmetic"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/first"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/kindSelectCosmetic"
+        android:gravity="center|top"
+        android:textSize="20sp"
+        android:paddingTop="10dp"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="9dp"
+        android:background="#572254" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/selectKindCosmetic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="@string/what_select_kind_bottom_textView"
+        android:gravity="center|top"
+        android:textSize="20sp"
+        android:paddingTop="10dp"/>
+
+</LinearLayout>

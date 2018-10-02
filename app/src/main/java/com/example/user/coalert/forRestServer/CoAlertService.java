@@ -1,5 +1,7 @@
 package com.example.user.coalert.forRestServer;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -50,9 +52,17 @@ public interface CoAlertService {
             @Query("sex")String sex,
             @Query("access")String access
     );
+    @POST("recommendCosmetic")
+    Call<List<getRecommendModel>> recommendCall(
+            @Query("persontype") int personType,
+            @Query("cosmetictype") int cosmeticType,
+            @Query("imei") String imei,
+            @Query("id") String id
+    );
+
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.43.153:3000/")
+            .baseUrl("http://192.168.1.19:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }
