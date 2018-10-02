@@ -1,6 +1,7 @@
 package com.example.user.coalert.Activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,18 @@ import android.widget.TextView;
 import com.example.user.coalert.Adapter.DetailReviewSliderAdapter;
 import com.example.user.coalert.R;
 
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class ViewDetailActivity extends AppCompatActivity {
+
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static final Integer[] ImageList={R.drawable.iu1,R.drawable.iu2,R.drawable.iu7,R.drawable.iu3jpg,R.drawable.iu4,R.drawable.iu5};
+    private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
 
     DetailReviewSliderAdapter adapter;
     ViewPager viewPager;
@@ -113,21 +125,43 @@ public class ViewDetailActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_detail_review);
+        init();
 
         PostContext = (TextView) findViewById(R.id.detail_context);
         CreatorPicture = (ImageView) findViewById(R.id.user_profile);
         CreatorId = (TextView) findViewById(R.id.user_id);
         PostTitle = (TextView) findViewById(R.id.post_title);
-
-        viewPager = (ViewPager) findViewById(R.id.view);
-        adapter = new DetailReviewSliderAdapter(this);
-        viewPager.setAdapter(adapter);
-
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
         PostContext.setText(Context);
+    }
 
+    private void init() {
+        for(int i=0;i<ImageList.length;i++)
+            ImageArr.add(ImageList[i]);
 
+        mPager = (ViewPager) findViewById(R.id.view);
+        mPager.setAdapter(new DetailReviewSliderAdapter(ViewDetailActivity.this,ImageArr));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == ImageList.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 2500, 2500);
     }
 }

@@ -96,7 +96,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/mypageback">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/view"
@@ -104,20 +105,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="30dp"/>
 
-                <com.viewpagerindicator.CirclePageIndicator
+                <me.relex.circleindicator.CircleIndicator
                     android:id="@+id/indicator"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="bottom"
-                    android:padding="10dip"
-                    app:centered="true"
-                    app:fillColor="#df0623"
-                    app:pageColor="#fff"
-                    app:snap="false" />
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"/>
 
             </LinearLayout>
 
