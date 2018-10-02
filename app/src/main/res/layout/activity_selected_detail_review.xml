@@ -133,10 +133,23 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이 제품에대한 더많은 리뷰를 보고싶다면?"
+                android:layout_marginTop="20dp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerInside"
+                android:id="@+id/more_review"
+                android:layout_gravity="center"
+                android:background="@drawable/irin"/>
+
         </LinearLayout>
 
-
     </ScrollView>
-
 
 </LinearLayout>

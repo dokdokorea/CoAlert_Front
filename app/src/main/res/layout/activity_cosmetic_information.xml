@@ -195,7 +195,7 @@
 
                         <include
                             android:id="@+id/content3"
-                            layout="@layout/tab_detail_review_list"
+                            layout="@layout/tab_detail_review_preview_list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"/>
 
