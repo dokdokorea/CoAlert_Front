@@ -22,6 +22,7 @@
 
     <color name="icon_background">#8c6961</color>
     <color name="pressed_icon_background"></color>
+    <color name="lightbeige">#FACC2E</color>
 
 </resources>
 
