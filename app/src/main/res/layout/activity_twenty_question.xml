@@ -21,9 +21,11 @@
         android:text="CoAlert" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:background="@drawable/twenty_question_border"
         android:gravity="center"
         android:orientation="vertical"
@@ -31,11 +33,11 @@
         android:id="@+id/container">
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/question_page">
@@ -52,7 +54,7 @@
                 android:textSize="30dp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
@@ -62,7 +64,7 @@
                     android:id="@+id/nobtn"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:text="NO" />
+                    android:text="아니오" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="30dp"
@@ -72,7 +74,7 @@
                     android:id="@+id/sosobtn"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:text="Soso" />
+                    android:text="모름" />
 
                 <android.support.v4.widget.Space
                     android:layout_width="30dp"
@@ -82,7 +84,7 @@
                     android:id="@+id/yesbtn"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
-                    android:text="YES" />
+                    android:text="네" />
 
             </LinearLayout>
 
@@ -93,9 +95,11 @@
                 android:layout_height="wrap_content"
                 android:text="Insert type here"
                 android:layout_gravity="center"
+                android:gravity="center"
                 style="@style/detailreviewTitle"
                 android:id="@+id/skin_type_result"
-                android:textSize="30dp"
+                android:textSize="50dp"
+                android:textColor="#0B0B61"
                 android:visibility="gone"/>
 
         </FrameLayout>
