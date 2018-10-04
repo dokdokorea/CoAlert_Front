@@ -4,7 +4,25 @@ public class cosmeticModel {
     String company;
     String cname;
     String ingr;
-    String category;
+
+    String rank;
+    String error;
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
 
     public String getCompany() {
         return company;
@@ -30,17 +48,10 @@ public class cosmeticModel {
         this.ingr = ingr;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
 
     @Override
     public String toString() {
-        return "입력된 화장품 정보: "+"화장품 이름: "+getCname()+" 화장품 회사"+getCompany()
-                +"화장품 성분: "+getIngr()+" category: "+getCategory();
+        return "{cname: "+getCname()+", company:"+getCompany()
+                +"ingr: "+getIngr()+", rank: "+getRank()+ ", error: "+getError()+"}";
     }
 }
