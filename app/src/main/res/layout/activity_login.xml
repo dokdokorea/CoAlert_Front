@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
     android:focusable="true"
+    android:background="@drawable/login_background"
     android:focusableInTouchMode="true"
     tools:context=".Activity.LoginActivity">
 
@@ -13,7 +13,7 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="131dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="144dp"
         android:src="@drawable/coalert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,11 +24,18 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <LinearLayout
+            android:id="@+id/login_conetent_linearlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -37,7 +44,7 @@
 
             <EditText
                 android:id="@+id/login_email"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:background="@drawable/edit_text_background"
@@ -47,7 +54,7 @@
 
             <EditText
                 android:id="@+id/login_password"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginTop="15dp"
@@ -59,7 +66,7 @@
 
         <Button
             android:id="@+id/email_login"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
             android:layout_marginStart="10dp"
@@ -74,55 +81,63 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <com.kakao.usermgmt.LoginButton
-        android:id="@+id/loginButton"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <FrameLayout
+        android:id="@+id/kakao_frameLayout"
+        android:layout_width="310dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/emptyBackground"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-    <!--
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <ImageButton
-        android:id="@+id/kakao_login_button"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:background="#00ffffff"
-        android:scaleType="centerCrop"
-        android:src="@drawable/kakaotalk_button" />
+        <com.kakao.usermgmt.LoginButton
+            android:id="@+id/loginButton"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/emptyBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-        -->
+        <ImageButton
+            android:id="@+id/kakao_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="10dp"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            android:src="@drawable/kakaotalk_button" />
+    </FrameLayout>
+
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton">
+        app:layout_constraintTop_toBottomOf="@+id/kakao_frameLayout">
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/fb_login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp" />
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
 
         <ImageView
             android:id="@+id/fake_facebook"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/fb_login_button" />
     </FrameLayout>
 
@@ -130,11 +145,11 @@
     <TextView
         android:id="@+id/signup"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_background"
         android:clickable="true"
         android:fontFamily="@font/head_eb"
@@ -146,5 +161,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
         app:layout_constraintVertical_bias="0.031" />
-
 </android.support.constraint.ConstraintLayout>
