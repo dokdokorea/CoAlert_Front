@@ -5,7 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="bottom_navigation_select">#51032d</color>
     <color name="bottom_navigation_Element">#CFD8DC</color>
-    <color name="first">#572254</color>
+    <color name="light_gray">#BDBDBD</color>
+    <color name="first">#FF9C9F</color>
     <color name="second">#553857</color>
     <color name="third">#6b4173</color>
     <color name="fourth">#846090</color>
@@ -21,6 +22,7 @@
 
     <color name="icon_background">#8c6961</color>
     <color name="pressed_icon_background"></color>
+    <color name="lightbeige">#FACC2E</color>
 
 </resources>
 

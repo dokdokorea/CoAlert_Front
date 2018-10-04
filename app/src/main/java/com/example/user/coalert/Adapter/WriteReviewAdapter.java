@@ -52,11 +52,15 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_personal_prod_pic, null);
+<<<<<<< HEAD
         mcontext = parent.getContext();
         intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+=======
+>>>>>>> b28f1442ae8bbeb0bdccc38b03ccbc6b46c6c073
         return new ViewHolder(v);
     }
     @Override
+<<<<<<< HEAD
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.e("어댑터안에서 바꾼 후 ", String.valueOf(arrayList.get(position)));
         holder.imageView.setImageBitmap(arrayList.get(position).getBitmapImg());
@@ -100,6 +104,9 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, uri);
         ((Activity) mcontext).startActivityForResult(intent, CAMERA_REQUEST+position);
+=======
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+>>>>>>> b28f1442ae8bbeb0bdccc38b03ccbc6b46c6c073
     }
 
     @Override
