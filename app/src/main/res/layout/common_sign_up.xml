@@ -59,7 +59,8 @@
                 android:text="성별"
                 android:textStyle="bold" />
 
-            <RadioGroup android:orientation="horizontal">
+            <RadioGroup android:orientation="horizontal"
+                android:id="@+id/sexRadioGroup">
 
                 <RadioButton
                     style="@style/defaultFont"
@@ -67,6 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="50dp"
                     android:text="남"
+                    android:id="@+id/man"
                     android:textStyle="bold" />
 
                 <RadioButton
@@ -74,6 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="여"
+                    android:id="@+id/woman"
                     android:textStyle="bold" />
             </RadioGroup>
         </TableRow>

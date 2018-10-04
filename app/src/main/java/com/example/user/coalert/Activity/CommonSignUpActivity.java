@@ -7,103 +7,192 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Autehntification.SessionCallback;
 import com.example.user.coalert.R;
-import com.kakao.auth.Session;
-import com.kakao.network.ErrorResult;
-import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.response.model.UserProfile;
-import com.kakao.util.helper.log.Logger;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.signUpModel;
 
-import org.w3c.dom.Text;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
+
+import retrofit2.Call;
 
 public class CommonSignUpActivity extends AppCompatActivity{
     TextView tv1,tv2;
     ImageView profile;
     Bitmap bitmap;
     SessionCallback callback;
-
+    Button lastButton;
+    String completeYear, completeMonth, completeDay, selectedSkinType;
+    Integer selectedDay, selectedMonth, selectedSex;
+    String email, name, password;
+    Intent beforePageInfo;
+    RadioGroup sexRadioGroup;
+    RadioButton anyone;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_sign_up);
-        tv1=(TextView)findViewById(R.id.name);
-        tv2=(TextView)findViewById(R.id.id);
-        profile=(ImageView)findViewById(R.id.image);
+        tv1=findViewById(R.id.name);
+        tv2=findViewById(R.id.id);
+        profile=findViewById(R.id.image);
+        lastButton = findViewById(R.id.common_sign_up_confirmation_btn);
+        sexRadioGroup = findViewById(R.id.sexRadioGroup);
+        beforePageInfo = getIntent();
+        name = beforePageInfo.getStringExtra("name");
+        email = beforePageInfo.getStringExtra("email");
+        password = beforePageInfo.getStringExtra("password");
         tv1.setText(" JAVA 32bit");
-        Intent info=getIntent();
-        final String name=info.getExtras().getString("name");
-        final String id=info.getExtras().getString("id");
-        final String image=info.getExtras().getString("image");
-        tv1.setText(name);
-        tv2.setText(id);
+        Log.e("email", email);
+        Log.e("password", password);
+        Log.e("name", name);
 
-        Thread mThread=new Thread(){
-            @Override
-            public void run() {
-                try{
-                    URL url=new URL(image);
-
-                    HttpURLConnection conn=(HttpURLConnection)url.openConnection();
-                    conn.setDoInput(true);
-                    conn.connect();
-
-                    InputStream is=conn.getInputStream();
-                    bitmap= BitmapFactory.decodeStream(is);
-
-                }catch(MalformedURLException e){
-                    e.printStackTrace();
-                }catch(IOException e){
-                    e.printStackTrace();
-                }
-            }
-        };
-
-        mThread.start();
-        try{
-            mThread.join();
-            profile.setImageBitmap(bitmap);
-        }catch(InterruptedException e){
-            e.printStackTrace();
-        }
+//        final String name=info.getExtras().getString("name");
+//        final String id=info.getExtras().getString("id");
+//        final String image=info.getExtras().getString("image");
+//        tv1.setText(name);
+//        tv2.setText(id);
+//
+//        Thread mThread=new Thread(){
+//            @Override
+//            public void run() {
+//                try{
+//                    URL url=new URL(image);
+//
+//                    HttpURLConnection conn=(HttpURLConnection)url.openConnection();
+//                    conn.setDoInput(true);
+//                    conn.connect();
+//
+//                    InputStream is=conn.getInputStream();
+//                    bitmap= BitmapFactory.decodeStream(is);
+//
+//                }catch(MalformedURLException e){
+//                    e.printStackTrace();
+//                }catch(IOException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        };
+//        mThread.start();
+//        try{
+//            mThread.join();
+//            profile.setImageBitmap(bitmap);
+//        }catch(InterruptedException e){
+//            e.printStackTrace();
+//        }
 
 
         //callback = new SessionCallback();
         //Session.getCurrentSession().addCallback(callback);
 
         //YearSpinner
-        Spinner yearSpinner=(Spinner)findViewById(R.id.spinner_year);
+        final Spinner yearSpinner=(Spinner)findViewById(R.id.spinner_year);
         ArrayAdapter yearAdapter=ArrayAdapter.createFromResource(this,
                 R.array.date_year,android.R.layout.simple_spinner_item);
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);
 
         //MonthSpinner
-        Spinner monthSpinner=(Spinner)findViewById(R.id.spinner_month);
+        final Spinner monthSpinner=(Spinner)findViewById(R.id.spinner_month);
         ArrayAdapter monthAdapter=ArrayAdapter.createFromResource(this,
                 R.array.date_month,android.R.layout.simple_spinner_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         monthSpinner.setAdapter(monthAdapter);
 
         //DaySpinner
-        Spinner daySpinner=(Spinner)findViewById(R.id.spinner_day);
+        final Spinner daySpinner=(Spinner)findViewById(R.id.spinner_day);
         ArrayAdapter dayAdapter=ArrayAdapter.createFromResource(this,
                 R.array.date_day,android.R.layout.simple_spinner_item);
         dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         daySpinner.setAdapter(dayAdapter);
+
+        final Spinner skinTypeSpinner = findViewById(R.id.spinner_skin_type);
+        ArrayAdapter sexAdapter = ArrayAdapter.createFromResource(this,
+                R.array.skin_type, android.R.layout.simple_spinner_dropdown_item);
+        skinTypeSpinner.setAdapter(sexAdapter);
+
+        yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                completeYear = (String) yearSpinner.getSelectedItem();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        monthSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedMonth = Integer.parseInt(String.valueOf(monthSpinner.getSelectedItem()));
+                if(selectedMonth < 10)
+                    completeMonth = String.valueOf("0"+selectedMonth);
+                else
+                    completeMonth = String.valueOf(selectedMonth);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        daySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                selectedDay = Integer.parseInt(String.valueOf(daySpinner.getSelectedItem()));
+                if (selectedDay < 10)
+                    completeDay = String.valueOf("0"+selectedDay);
+                else
+                    completeMonth = String.valueOf(selectedMonth);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        skinTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                selectedSkinType = (String)skinTypeSpinner.getSelectedItem();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+        lastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Thread(){
+                    @Override
+                    public void run() {
+                        super.run();
+                        try {
+                            anyone = findViewById(sexRadioGroup.getCheckedRadioButtonId());
+                        String fullBirth = completeYear+"-"+completeMonth+"-"+completeDay;
+                        Log.e("skitType", selectedSkinType+anyone.getText());
+                        Call<signUpModel> call = ForRestSingleton.getInstance().signUpCall(email, password, name, email, selectedSkinType, fullBirth, anyone.getText(), 0);
+                        signUpModel result = call.execute().body();
+                        Log.e("signUpmodel Result: ", result.toString());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

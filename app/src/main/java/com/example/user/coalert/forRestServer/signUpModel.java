@@ -1,6 +1,6 @@
 package com.example.user.coalert.forRestServer;
 
-public class signInModel {
+public class signUpModel {
     String id, error;
 
     public String getId() {

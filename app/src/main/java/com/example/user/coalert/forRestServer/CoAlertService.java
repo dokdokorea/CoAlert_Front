@@ -53,15 +53,15 @@ public interface CoAlertService {
     );
 
     @POST("signup")
-    Call<signInModel> signUpCall(
+    Call<signUpModel> signUpCall(
             @Query("id") String id,
             @Query("password") String password,
             @Query("name") String name,
             @Query("email") String email,
             @Query("type") String type,
             @Query("birth") String birth,
-            @Query("sex") String sex,
-            @Query("access") String access
+            @Query("sex") CharSequence sex,
+            @Query("access") int access
     );
 
     @POST("idcheck")
