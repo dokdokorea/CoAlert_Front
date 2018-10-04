@@ -1,6 +1,8 @@
 package com.example.user.coalert.Fragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,6 +33,8 @@ public class HomeFragment extends Fragment {
     ArrayList<OneImgOneStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
+    SearchFragment searchFragment;
+    FragmentManager fragmentManager;
     private TextView detailElementBtn;
     private ImageView searchIcon;
     public HomeFragment() {
@@ -41,15 +45,17 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        detailElementBtn=(TextView)v.findViewById(R.id.detail_element_info_btn);
-        searchIcon=(ImageView)v.findViewById(R.id.fragment_home_search_btn);
-
+        detailElementBtn=v.findViewById(R.id.detail_element_info_btn);
+        searchIcon=v.findViewById(R.id.fragment_home_search_btn);
+        searchFragment = new SearchFragment();
+        fragmentManager = getFragmentManager();
         searchIcon.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),SearchFragment.class);
-                startActivity(intent);
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
+                fragmentTransaction.commit();
             }
         });
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
