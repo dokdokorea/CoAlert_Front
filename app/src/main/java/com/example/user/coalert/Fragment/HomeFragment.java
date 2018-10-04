@@ -28,6 +28,7 @@ import com.example.user.coalert.item.OneImageCardView;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 import com.example.user.coalert.Adapter.kindCosmeticAdapter;
+import com.example.user.coalert.item.OneIntImageCardView;
 
 import java.util.ArrayList;
 
@@ -35,6 +36,7 @@ import retrofit2.http.HEAD;
 
 public class HomeFragment extends Fragment {
     kindCosmeticAdapter kindCosmeticAdapter;
+    ArrayList<OneIntImageCardView> arrList;
     ArrayList<OneImgOneStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
@@ -54,8 +56,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         kindCosmeticAdapter = new kindCosmeticAdapter();
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-<<<<<<< HEAD
-        ArrayList<OneImageCardView> arrList = new ArrayList<>();
+        arrList = new ArrayList<>();
         detailElementBtn = (TextView) v.findViewById(R.id.detail_element_info_btn);
         searchIcon = (ImageView) v.findViewById(R.id.fragment_home_search_btn);
 
@@ -65,21 +66,22 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), SearchFragment.class);
                 startActivity(intent);
-=======
-        detailElementBtn=v.findViewById(R.id.detail_element_info_btn);
-        searchIcon=v.findViewById(R.id.fragment_home_search_btn);
-        searchFragment = new SearchFragment();
-        fragmentManager = getFragmentManager();
-        searchIcon.setOnClickListener(new View.OnClickListener(){
+                detailElementBtn = v.findViewById(R.id.detail_element_info_btn);
+                searchIcon = v.findViewById(R.id.fragment_home_search_btn);
+                searchFragment = new SearchFragment();
+                fragmentManager = getFragmentManager();
+                searchIcon.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
-                fragmentTransaction.commit();
->>>>>>> 6fb1a7ee9c5f60c0084c1cfaa831c7e1edd7e78a
+                    @Override
+                    public void onClick(View v) {
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
+                        fragmentTransaction.commit();
+                    }
+                });
             }
         });
+
         RecyclerView categoryRecyclerView = (RecyclerView) v.findViewById(R.id.home_category_recyclerview);
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
@@ -99,14 +101,10 @@ public class HomeFragment extends Fragment {
         bestReviewArr = new ArrayList<>();
         newProduArr = new ArrayList<>();
 
-        arrList.add(new OneImageCardView(R.drawable.iu1));
-        arrList.add(new OneImageCardView(R.drawable.iu2));
-        arrList.add(new OneImageCardView(R.drawable.iu3jpg));
-        arrList.add(new OneImageCardView(R.drawable.iu4));
-        categoryRecyclerView.setAdapter(new CategoryAdapter(arrList));
-
-        arrList.add(new OneImageCardView(R.drawable.iu1));
-        arrList.add(new OneImageCardView(R.drawable.iu2));
+        arrList.add(new OneIntImageCardView(R.drawable.iu1));
+        arrList.add(new OneIntImageCardView(R.drawable.iu2));
+        arrList.add(new OneIntImageCardView(R.drawable.iu3jpg));
+        arrList.add(new OneIntImageCardView(R.drawable.iu4));
         categoryRecyclerView.setAdapter(new CategoryAdapter(arrList));
 
         youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview1, "슬기짱!"));

@@ -14,6 +14,7 @@ import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.Singleton.UUFiSingleton;
 import com.example.user.coalert.forRestServer.getRecommendModel;
 import com.example.user.coalert.item.OneImageCardView;
+import com.example.user.coalert.item.OneIntImageCardView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    private ArrayList<OneImageCardView> mDataSet;
+    private ArrayList<OneIntImageCardView> mDataSet;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private CircleImageView circleImageView;
@@ -34,7 +35,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         }
     }
 
-    public CategoryAdapter(ArrayList<OneImageCardView> myDataset) {
+    public CategoryAdapter(ArrayList<OneIntImageCardView> myDataset) {
         mDataSet = myDataset;
     }
 
