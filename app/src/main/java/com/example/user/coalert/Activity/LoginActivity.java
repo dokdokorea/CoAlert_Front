@@ -31,6 +31,7 @@ import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
+
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.MeResponseCallback;
@@ -55,7 +56,8 @@ public class LoginActivity extends AppCompatActivity {
     Button login_button;
     ImageView fakeFacebook;
     LoginButton facebookLoginBtn;
-    ImageButton kakao;
+    com.kakao.usermgmt.LoginButton kakaoLoginBtn;
+    ImageButton fakekakao;
     SessionCallback callback;
     TextView textView;
     Intent itent;
@@ -75,6 +77,16 @@ public class LoginActivity extends AppCompatActivity {
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
         permissionCheck();
+
+        /*kakaotalk button syncrhonize with real kakao button*/
+        fakekakao = findViewById(R.id.kakao_login_button);
+        kakaoLoginBtn = findViewById(R.id.loginButton);
+        fakekakao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                kakaoLoginBtn.performClick();
+            }
+        });
 
         /*facebook button synchronize with real fb button*/
         fakeFacebook = (ImageView) findViewById(R.id.fake_facebook);
@@ -98,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 
-        textView.setOnClickListener(new View.OnClickListener(){
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, EmailSignUpActivity.class);
@@ -106,8 +118,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
@@ -132,7 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                         Object result = call.execute().body();
                         Log.e("result: ", result.toString());
 
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -147,11 +157,11 @@ public class LoginActivity extends AppCompatActivity {
         UUFiSingleton.getInstance().setIndependenceNum(idByTelephonyManager);
     }
 
-    public String testSHA256(String str){
+    public String testSHA256(String str) {
 
         String SHA = "";
 
-        try{
+        try {
 
             MessageDigest sh = MessageDigest.getInstance("SHA-256");
 
@@ -161,17 +171,16 @@ public class LoginActivity extends AppCompatActivity {
 
             StringBuffer sb = new StringBuffer();
 
-            for(int i = 0 ; i < byteData.length ; i++){
+            for (int i = 0; i < byteData.length; i++) {
 
-                sb.append(Integer.toString((byteData[i]&0xff) + 0x100, 16).substring(1));
+                sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
 
             }
 
             SHA = sb.toString();
 
 
-
-        }catch(NoSuchAlgorithmException e){
+        } catch (NoSuchAlgorithmException e) {
 
             e.printStackTrace();
 
@@ -281,16 +290,16 @@ public class LoginActivity extends AppCompatActivity {
                     //사용자 ID는 보안상의 문제로 제공하지 않고 일련번호는 제공합니다.
 
                     //Log.e("UserProfile", userProfile.toString());
-                   // Log.e("UserProfile", userProfile.getId() + "");
+                    // Log.e("UserProfile", userProfile.getId() + "");
 
                     //long number = userProfile.getId();
                     //Log.e("UserProfile", number + "");
 
                     Toast.makeText(LoginActivity.this, String.valueOf(userProfile.getId()), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
-                    intent.putExtra("name",userProfile.getNickname().toString());
-                    intent.putExtra("id",String.valueOf(userProfile.getId()));
-                    intent.putExtra("image",userProfile.getProfileImagePath());
+                    intent.putExtra("name", userProfile.getNickname().toString());
+                    intent.putExtra("id", String.valueOf(userProfile.getId()));
+                    intent.putExtra("image", userProfile.getProfileImagePath());
 
                     startActivity(intent);
                     finish();
