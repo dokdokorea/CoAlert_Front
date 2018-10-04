@@ -5,9 +5,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface CoAlertService {
@@ -17,23 +15,27 @@ public interface CoAlertService {
             @Query("password") String password
     );
 
-    @POST("cosmetic")
+    @POST("cosmetic_info")
     Call<cosmeticModel> cosmeicCall(
-            @Query("company") String company,
+            @Query("search") String search,
+            @Query("id") String id,
+            @Query("session") String session1
+            );
+
+    @POST("get_simple")
+    Call<SimpleReviewModel> simpleReviewCall(
+            @Query("id") String id,
             @Query("cname") String cname,
-            @Query("ingr") String ingr,
-            @Query("category") String category
+            @Query("session") String session,
+            @Query("start") int start
     );
 
-    @POST("review")
-    Call<ReviewModel> reviewCall(
-            @Query("company") String company,
+    @POST("get_detailed")
+    Call<SimpleReviewModel> detailReviewCall(
+            @Query("id") String id,
             @Query("cname") String cname,
-            @Query("ingr") String ingr, //성분
-            @Query("content") String content, //자세한 리뷰
-            @Query("category") String category,
-            @Query("oneline") String oneline, //한줄리뷰
-            @Query("imei") String imei
+            @Query("session") String session,
+            @Query("start") int start
     );
 
     @POST("search_bar")
@@ -43,8 +45,15 @@ public interface CoAlertService {
             @Query("session") String session
     );
 
+    @POST("get_user")
+    Call<GetUserModel> getUserCall(
+            @Query("search") String text,
+            @Query("id") String id,
+            @Query("session") String session
+    );
+
     @POST("signup")
-    Call<signInModel> signInCall(
+    Call<signInModel> signUpCall(
             @Query("id") String id,
             @Query("password") String password,
             @Query("name") String name,
@@ -70,7 +79,7 @@ public interface CoAlertService {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.43.153:5000/")
+            .baseUrl("http://172.30.1.17:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

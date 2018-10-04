@@ -2,6 +2,7 @@ package com.example.user.coalert.Activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,18 +10,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.emailRedundancyCheckModel;
 import com.google.gson.JsonObject;
 
+import java.util.regex.Pattern;
+
 import retrofit2.Call;
 
 public class EmailSignUpActivity extends AppCompatActivity {
     Button emailRedundancyCheckBtn;
     EditText inputEmail;
+    EditText password;
+    EditText confirmPassword;
+    EditText name;
     Button lastButton;
+    Intent nextPageIntent;
     AlertDialog.Builder alertDialogBuilder;
     static final String TRUE = "True";
     static final String FALSE = "False";
@@ -28,11 +36,17 @@ public class EmailSignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.email_sign_up);
         emailRedundancyCheckBtn = (Button) findViewById(R.id.email_redundancy_check_btn);
+        confirmPassword = findViewById(R.id.password_certification);
+        password = findViewById(R.id.input_password);
+        name = findViewById(R.id.emailSignUpInputname);
         inputEmail = findViewById(R.id.input_email);
         lastButton = findViewById(R.id.lastSignUpButton);
-        final Context context=this;
+        lastButton.setClickable(false);
+        nextPageIntent = new Intent(this, CommonSignUpActivity.class);
+        final Context context = this;
         emailRedundancyCheckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +60,13 @@ public class EmailSignUpActivity extends AppCompatActivity {
                             assert result != null;
                             if (result.isEmailCheck()) {
                                 Log.e("Asdasd", "True");
+                                lastButton.setClickable(true);
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(getApplicationContext(), "사용 가능한 아이디입니다.", Toast.LENGTH_LONG).show();
+                                    }
+                                });
                             } else {
                                 lastButton.setClickable(false);
                                 runOnUiThread(new Runnable() {
@@ -92,5 +113,32 @@ public class EmailSignUpActivity extends AppCompatActivity {
                 }.start();
             }
         });
+        lastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!password.getText().equals("") && !name.getText().equals("") && !confirmPassword.getText().equals("") && isEmail(String.valueOf(name.getText()))) {
+                    if (String.valueOf(password.getText()).equals(String.valueOf(confirmPassword.getText()))) {
+                        nextPageIntent.putExtra("name", name.getText());
+                        nextPageIntent.putExtra("email", inputEmail.getText());
+                        nextPageIntent.putExtra("password", password.getText());
+                        startActivity(nextPageIntent);
+                    }else{
+                        Log.e("lastButton ClickEvent4", "false");
+                        Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호, 이름을 확인해주세요", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Log.e("lastButton ClickEvent4", "false");
+                    Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호, 이름을 확인해주세요", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+    }
+    public static boolean isEmail(String email) {
+        if (email==null) return false;
+        boolean b = Pattern.matches(
+                "[\\w\\~\\-\\.]+@[\\w\\~\\-]+(\\.[\\w\\~\\-]+)+",
+                email.trim());
+        return b;
     }
 }

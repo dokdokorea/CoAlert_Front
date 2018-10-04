@@ -27,11 +27,11 @@ def getRecommendCosmetic():
     return json.dumps(returnList)
 
 
-@app.route("/emailCheck", methods=['POST'])
+@app.route("/idcheck", methods=['POST'])
 def integrity():
     id = request.args.get('email')
     print(id)
-    return json.dumps({'emailCheck': False})
+    return json.dumps({'emailCheck': True})
 
 @app.route("/login", methods=['POST'])
 def login():

@@ -165,6 +165,7 @@
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/emailSignUpInputname"
                         android:ems="13"
                         android:inputType="text" />
                 </TableRow>

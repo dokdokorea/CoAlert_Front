@@ -1,9 +1,19 @@
 package com.example.user.coalert.forRestServer;
 
-public class ReviewModel {
+public class SimpleReviewModel {
     String cname;
     String content;
     String oneline;
+    String rate;
+    String error;
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
 
     public String getCname() {
         return cname;
@@ -29,8 +39,16 @@ public class ReviewModel {
         this.oneline = oneline;
     }
 
+    public String getRate() {
+        return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
+    }
+
     @Override
     public String toString() {
-        return "입력된 리뷰: "+"화장품: "+getCname()+" 한줄평 "+getOneline()+" 상세 리뷰: "+getContent();
+        return "{cname:" + getCname() + ", content: " + getContent() + ", oneline: " + getOneline() + ", rate:" + getRate()+"error:"+getError()+"}";
     }
 }
