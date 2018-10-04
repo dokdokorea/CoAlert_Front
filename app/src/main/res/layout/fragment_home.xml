@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
     android:background="@color/whiteBackground"
-    tools:context=".Fragment.HomeFragment">
+    tools:context=".Fragment.HomeFragment"
+    android:id="@+id/home_fragment">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/youngwoobabo"

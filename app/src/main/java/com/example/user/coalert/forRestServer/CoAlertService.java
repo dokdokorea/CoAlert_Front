@@ -36,9 +36,11 @@ public interface CoAlertService {
             @Query("imei") String imei
     );
 
-    @GET("search")
+    @POST("search_bar")
     Call<searchModel> searchCall(
-            @Query("text") String text
+            @Query("search") String text,
+            @Query("id") String id,
+            @Query("session") String session
     );
 
     @POST("signup")
@@ -47,15 +49,15 @@ public interface CoAlertService {
             @Query("password") String password,
             @Query("name") String name,
             @Query("email") String email,
-            @Query("type")String type,
-            @Query("birth")String birth,
-            @Query("sex")String sex,
-            @Query("access")String access
+            @Query("type") String type,
+            @Query("birth") String birth,
+            @Query("sex") String sex,
+            @Query("access") String access
     );
 
-    @POST("emailCheck")
+    @POST("idcheck")
     Call<emailRedundancyCheckModel> emailCheck(
-      @Query("eamil") String email
+            @Query("eamil") String email
     );
 
     @POST("recommendCosmetic")

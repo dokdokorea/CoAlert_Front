@@ -26,12 +26,11 @@ import java.io.File;
 import java.io.IOException;
 
 public class WriteReviewCardActivity extends AppCompatActivity {
-
+    private static final int CAMERA_REQUEST = 100;
+    private static final int ALBUM_REQUEST = 1000;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_personal_prod_pic);
-
-
     }
 }

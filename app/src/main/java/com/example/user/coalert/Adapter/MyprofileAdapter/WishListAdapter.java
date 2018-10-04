@@ -31,7 +31,7 @@ public WishListAdapter(ArrayList<OneImageCardView> myDataset){mDataset=myDataset
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(mDataset.get(position).getImg());
+        holder.imageView.setImageBitmap(mDataset.get(position).getBitmapImg());
 
     }
 

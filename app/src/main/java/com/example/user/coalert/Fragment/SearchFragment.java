@@ -131,7 +131,7 @@ public class SearchFragment extends Fragment {
                                             try {
                                                 text = edit.getText().toString();
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
-                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1));
+                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
                                                 Object result = call.execute().body();
                                                 assert result != null;
                                                 Log.e("result", result.toString());

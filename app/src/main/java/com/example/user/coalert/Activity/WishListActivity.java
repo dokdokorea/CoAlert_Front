@@ -1,6 +1,8 @@
 package com.example.user.coalert.Activity;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
@@ -27,7 +29,9 @@ public class WishListActivity extends Activity {
         wishRecyclerView.setHasFixedSize(true);
         wishRecyclerView.setLayoutManager(new GridLayoutManager(this, COLUM));
         wishListArr = new ArrayList<>();
-        wishListArr.add(new OneImageCardView(R.drawable.cardview1));
+        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                R.drawable.cardview1);
+        wishListArr.add(new OneImageCardView(icon));
         wishRecyclerView.setAdapter(new WishListAdapter(wishListArr));
 
 
