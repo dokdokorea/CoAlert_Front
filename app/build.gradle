@@ -40,6 +40,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.7.0'
     implementation 'me.relex:circleindicator:1.2.2@aar'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    implementation "com.andkulikov:transitionseverywhere:1.8.0"
+
     //카카오 로그인 sdk
     implementation 'com.github.sujithkanna:smileyrating:1.6.8'
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
