@@ -53,7 +53,7 @@ public interface CoAlertService {
     );
 
     @POST("signup")
-    Call<signInModel> signInCall(
+    Call<signInModel> signUpCall(
             @Query("id") String id,
             @Query("password") String password,
             @Query("name") String name,
@@ -79,7 +79,7 @@ public interface CoAlertService {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.43.153:5000/")
+            .baseUrl("http://172.30.1.17:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }
