@@ -1,90 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/first"
     android:gravity="center"
     android:orientation="vertical">
 
 
-
     <ImageView
+        android:id="@+id/icon"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/coalert_logo"
-        android:id="@+id/icon"
-        />
+        android:src="@drawable/coalert_logo" />
 
     <TextView
+        style="@style/detailreviewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CoAlert"
-        style="@style/detailreviewTitle"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="30dp"
+        android:text="CoAlert" />
 
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:background="@drawable/twenty_question_border"
-       android:gravity="center"
-       android:padding="20dp"
-       android:id="@+id/center_question"
-       android:layout_marginBottom="100dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/twenty_question_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:id="@+id/container">
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:gravity="center"
-           android:text="Question"
-           android:id="@+id/question"
-           android:textColor="#0B0B61"
-           android:textSize="40dp"
-           style="@style/detailreviewTitle"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/question_page">
 
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal"
-           android:gravity="center"
-           android:layout_marginTop="30dp">
+            <TextView
+                android:id="@+id/question"
+                style="@style/detailreviewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Question"
+                android:textColor="#0B0B61"
+                android:textSize="30dp" />
 
-           <Button
-               android:layout_width="80dp"
-               android:layout_height="50dp"
-               android:id="@+id/nobtn"
-               android:text="NO"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-           <android.support.v4.widget.Space
-               android:layout_width="30dp"
-               android:layout_height="50dp"/>
+                <Button
+                    android:id="@+id/nobtn"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="아니오" />
 
-           <Button
-               android:layout_width="80dp"
-               android:layout_height="50dp"
-               android:id="@+id/sosobtn"
-               android:text="Soso"/>
+                <android.support.v4.widget.Space
+                    android:layout_width="30dp"
+                    android:layout_height="50dp" />
 
-           <android.support.v4.widget.Space
-               android:layout_width="30dp"
-               android:layout_height="50dp"/>
+                <Button
+                    android:id="@+id/sosobtn"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="모름" />
 
-           <Button
-               android:layout_width="80dp"
-               android:layout_height="50dp"
-               android:id="@+id/yesbtn"
-               android:text="YES"/>
+                <android.support.v4.widget.Space
+                    android:layout_width="30dp"
+                    android:layout_height="50dp" />
 
-       </LinearLayout>
+                <Button
+                    android:id="@+id/yesbtn"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="네" />
 
-   </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert type here"
+                android:layout_gravity="center"
+                android:gravity="center"
+                style="@style/detailreviewTitle"
+                android:id="@+id/skin_type_result"
+                android:textSize="50dp"
+                android:textColor="#0B0B61"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Copyright by CoAlert"
-        android:textSize="15dp"/>
+        android:textSize="15dp" />
 
 
 </LinearLayout>

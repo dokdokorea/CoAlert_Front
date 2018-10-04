@@ -1,6 +1,8 @@
 package com.example.user.coalert.Fragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -36,6 +38,8 @@ public class HomeFragment extends Fragment {
     ArrayList<OneImgOneStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
+    SearchFragment searchFragment;
+    FragmentManager fragmentManager;
     private TextView detailElementBtn;
     private ImageView searchIcon;
 
@@ -50,6 +54,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         kindCosmeticAdapter = new kindCosmeticAdapter();
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+<<<<<<< HEAD
         ArrayList<OneImageCardView> arrList = new ArrayList<>();
         detailElementBtn = (TextView) v.findViewById(R.id.detail_element_info_btn);
         searchIcon = (ImageView) v.findViewById(R.id.fragment_home_search_btn);
@@ -60,6 +65,19 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), SearchFragment.class);
                 startActivity(intent);
+=======
+        detailElementBtn=v.findViewById(R.id.detail_element_info_btn);
+        searchIcon=v.findViewById(R.id.fragment_home_search_btn);
+        searchFragment = new SearchFragment();
+        fragmentManager = getFragmentManager();
+        searchIcon.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
+                fragmentTransaction.commit();
+>>>>>>> 6fb1a7ee9c5f60c0084c1cfaa831c7e1edd7e78a
             }
         });
         RecyclerView categoryRecyclerView = (RecyclerView) v.findViewById(R.id.home_category_recyclerview);

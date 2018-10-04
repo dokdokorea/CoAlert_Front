@@ -1,7 +1,9 @@
 package com.example.user.coalert.item;
 
+import android.graphics.Bitmap;
+
 public class OneImageCardView {
-    int img;
-    public int getImg() {return img;}
-    public OneImageCardView(int image){this.img=image;}
+    Bitmap bitmapImg;
+    public Bitmap getBitmapImg(){return bitmapImg;}
+    public OneImageCardView(Bitmap image){this.bitmapImg=image;}
 }

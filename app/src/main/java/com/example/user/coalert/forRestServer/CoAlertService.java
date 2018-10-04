@@ -5,9 +5,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface CoAlertService {
@@ -17,45 +15,58 @@ public interface CoAlertService {
             @Query("password") String password
     );
 
-    @POST("cosmetic")
+    @POST("cosmetic_info")
     Call<cosmeticModel> cosmeicCall(
-            @Query("company") String company,
+            @Query("search") String search,
+            @Query("id") String id,
+            @Query("session") String session1
+            );
+
+    @POST("get_simple")
+    Call<SimpleReviewModel> simpleReviewCall(
+            @Query("id") String id,
             @Query("cname") String cname,
-            @Query("ingr") String ingr,
-            @Query("category") String category
+            @Query("session") String session,
+            @Query("start") int start
     );
 
-    @POST("review")
-    Call<ReviewModel> reviewCall(
-            @Query("company") String company,
+    @POST("get_detailed")
+    Call<SimpleReviewModel> detailReviewCall(
+            @Query("id") String id,
             @Query("cname") String cname,
-            @Query("ingr") String ingr, //성분
-            @Query("content") String content, //자세한 리뷰
-            @Query("category") String category,
-            @Query("oneline") String oneline, //한줄리뷰
-            @Query("imei") String imei
+            @Query("session") String session,
+            @Query("start") int start
     );
 
-    @GET("search")
+    @POST("search_bar")
     Call<searchModel> searchCall(
-            @Query("text") String text
+            @Query("search") String text,
+            @Query("id") String id,
+            @Query("session") String session
+    );
+
+    @POST("get_user")
+    Call<GetUserModel> getUserCall(
+            @Query("search") String text,
+            @Query("id") String id,
+            @Query("session") String session
     );
 
     @POST("signup")
-    Call<signInModel> signInCall(
+    Call<signInModel> signUpCall(
             @Query("id") String id,
             @Query("password") String password,
             @Query("name") String name,
             @Query("email") String email,
-            @Query("type")String type,
-            @Query("birth")String birth,
-            @Query("sex")String sex,
-            @Query("access")String access
+            @Query("type") String type,
+            @Query("birth") String birth,
+            @Query("sex") String sex,
+            @Query("access") String access
     );
 
-    @POST("emailCheck")
+    @POST("idcheck")
     Call<emailRedundancyCheckModel> emailCheck(
-      @Query("eamil") String email
+            @Query("eamil") String email
     );
 
     @POST("recommendCosmetic")
@@ -68,7 +79,7 @@ public interface CoAlertService {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://192.168.43.153:5000/")
+            .baseUrl("http://172.30.1.17:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }
