@@ -38,6 +38,7 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
+
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.item_personal_prod_pic_imageview);
@@ -52,15 +53,13 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_personal_prod_pic, null);
-<<<<<<< HEAD
+
         mcontext = parent.getContext();
         intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-=======
->>>>>>> b28f1442ae8bbeb0bdccc38b03ccbc6b46c6c073
         return new ViewHolder(v);
     }
+
     @Override
-<<<<<<< HEAD
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.e("어댑터안에서 바꾼 후 ", String.valueOf(arrayList.get(position)));
         holder.imageView.setImageBitmap(arrayList.get(position).getBitmapImg());
@@ -74,6 +73,7 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
                         .setNegativeButton("취소", cancelListener)
                         .show();
             }
+
             DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -84,8 +84,8 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
             DialogInterface.OnClickListener albumListener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                        Log.e("asdasd", String.valueOf(position));
-                    ((Activity) mcontext).startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST+position);
+                    Log.e("asdasd", String.valueOf(position));
+                    ((Activity) mcontext).startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST + position);
                 }
             };
 
@@ -103,10 +103,6 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
         allUri = uri;
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, uri);
-        ((Activity) mcontext).startActivityForResult(intent, CAMERA_REQUEST+position);
-=======
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
->>>>>>> b28f1442ae8bbeb0bdccc38b03ccbc6b46c6c073
     }
 
     @Override
