@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
     com.kakao.usermgmt.LoginButton kakaoLoginBtn;
     ImageButton fakekakao;
     SessionCallback callback;
-    TextView textView;
+    ImageButton emailSignUpBtn;
     Intent itent;
     private static final String TAG = LoginActivity.class.getSimpleName();
 
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         login_button = findViewById(R.id.email_login);
         login_button.setOnClickListener(loginClickListener);
-        textView = findViewById(R.id.signup);
+        emailSignUpBtn = findViewById(R.id.signup);
         // kakao = findViewById(R.id.kakao_login_button);
 
 
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        });
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        emailSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, EmailSignUpActivity.class);
