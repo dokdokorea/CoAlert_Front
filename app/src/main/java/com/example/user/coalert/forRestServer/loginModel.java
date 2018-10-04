@@ -3,7 +3,7 @@ package com.example.user.coalert.forRestServer;
 public class loginModel {
     String id;
     String session;
-
+    String error;
     public String getId() {
         return id;
     }
@@ -20,8 +20,16 @@ public class loginModel {
         this.session = session;
     }
 
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
     @Override
     public String toString() {
-        return "{password: "+getSession()+", id: "+getId ()+"}";
+        return "{session: "+getSession()+", id: "+getId ()+", error:"+getError()+"}";
     }
 }

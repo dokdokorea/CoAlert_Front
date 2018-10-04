@@ -60,7 +60,6 @@ public class WriteReviewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
-
         editText = findViewById(R.id.one_line);
         wordsNum = findViewById(R.id.wordsNumber);
         smileRating = findViewById(R.id.smile_rating);
@@ -69,51 +68,6 @@ public class WriteReviewActivity extends AppCompatActivity {
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
-        final Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
-        userImageRecyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("asdasd", "asdasd");
-                new AlertDialog.Builder(WriteReviewActivity.this)
-                        .setTitle("업로드할 이미지 선택")
-                        .setPositiveButton("사진 촬영", cameraListener)
-                        .setNeutralButton("앨범선택", albumListener)
-                        .setNegativeButton("취소", cancelListener)
-                        .show();
-            }
-            DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    cameraView();
-                }
-            };
-
-            DialogInterface.OnClickListener albumListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    if (letsDetailReview.getText() == "자세히 작성") {
-                        startActivityForResult(intent, ALBUM_REQUEST);
-                    } else {
-                        Log.e("asdasd", "asdasd");
-                        intent.setType("image/*");
-                        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-                        intent.setAction(Intent.ACTION_GET_CONTENT);
-                        startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST);
-                    }
-                }
-            };
-
-            DialogInterface.OnClickListener cancelListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.dismiss();
-                }
-            };
-        });
-
-
-
 
         letsDetailReview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,47 +135,53 @@ public class WriteReviewActivity extends AppCompatActivity {
 
             }
         });
-
-        personalPicRecyclerview=(RecyclerView)findViewById(R.id.personal_prod_pic);
+        personalPicRecyclerview = (RecyclerView) findViewById(R.id.personal_prod_pic);
         personalPicRecyclerview.setHasFixedSize(true);
-        personalPicRecyclerview.setLayoutManager(new LinearLayoutManager(this));
-        recyclerArr=new ArrayList<>();
-        recyclerArr.add(new OneImageCardView(R.drawable.irin));
+        personalPicRecyclerview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerArr = new ArrayList<>();
+        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                R.drawable.irin);
+        recyclerArr.add(new OneImageCardView(icon));
+        recyclerArr.add(new OneImageCardView(icon));
+        recyclerArr.add(new OneImageCardView(icon));
+        recyclerArr.add(new OneImageCardView(icon));
         personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-            case ALBUM_REQUEST:
-                {
-                    Log.e("requestCode", String.valueOf(requestCode));
-                Uri url = data.getData();
-                ClipData clipData = data.getClipData();
-                if (clipData != null) {
-                    for (int i = 0; i < 3; i++) {
-                        Uri urione = clipData.getItemAt(i).getUri();
-                        Log.e("path: ", urione.toString());
-                    }
-                } else {
+        int position;
+        if( data != null) {
+            if (requestCode == 100) {
+                position = requestCode - 100;
+            } else {
+                position = requestCode - 1000;
+            }
+            switch (requestCode - position) {
+                case ALBUM_REQUEST: {
+                    Uri url = data.getData();
+                    Log.e("onActivityResult", String.valueOf(requestCode));
                     String path = _getRealPathFromURI(this, url);
                     Bitmap img = BitmapFactory.decodeFile(path);
-                    Log.e("path: ", path);
-                    imageView.setImageBitmap(img);
+                    for (int i = 0; i < 4; i++)
+                        Log.e("바꾼기 전 ", String.valueOf(recyclerArr.get(i)));
+                    recyclerArr.set(position, new OneImageCardView(img));
+                    for (int i = 0; i < 4; i++)
+                        Log.e("바꾼 후 ", String.valueOf(recyclerArr.get(i)));
+                    personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
+                    break;
                 }
-                break;
-            }
-            case CAMERA_REQUEST:
-                {
-                try {
-                    Bitmap img = MediaStore.Images.Media.getBitmap(getBaseContext().getContentResolver(), allUri);
-                    imageView.setImageBitmap(img);
-                } catch (IOException e) {
-                    e.printStackTrace();
+                case CAMERA_REQUEST: {
+                    try {
+                        Bitmap img = MediaStore.Images.Media.getBitmap(getBaseContext().getContentResolver(), allUri);
+                        recyclerArr.set(position, new OneImageCardView(img));
+                        personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
                 }
-                break;
             }
         }
     }
