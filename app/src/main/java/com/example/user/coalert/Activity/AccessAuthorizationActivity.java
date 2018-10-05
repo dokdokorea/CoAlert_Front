@@ -27,15 +27,28 @@ public class AccessAuthorizationActivity extends AppCompatActivity {
         setContentView(R.layout.access_authorization);
         accessBtn = findViewById(R.id.authorization_confirm_button);
         accessBtn.setOnClickListener(mainClickListener);
-
+        permissionCheck();
     }
+    void permissionCheck() {
+        int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int ReadAudioPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
+        int WriteStorage = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (ReadAudioPermmission != PackageManager.PERMISSION_GRANTED && ReadStoragetPermmission != PackageManager.PERMISSION_GRANTED &&
+                WriteStorage != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
 
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE},
+                        1000);
+            }
+        }
+    }
     Button.OnClickListener mainClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent=new Intent(AccessAuthorizationActivity.this,MainActivity.class);
+            Intent intent=new Intent(AccessAuthorizationActivity.this,LoginActivity.class);
             startActivity(intent);
-
             finish();
         }
     };

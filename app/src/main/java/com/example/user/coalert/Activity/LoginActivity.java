@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            final Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
+            final Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(accessActivity);
             finish();
 
