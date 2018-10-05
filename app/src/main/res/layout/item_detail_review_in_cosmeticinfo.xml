@@ -105,8 +105,8 @@
 
                     <TextView
                         android:id="@+id/detail_context"
-                        style="@style/detailreviewContext"
                         android:layout_width="match_parent"
+                        style="@style/detailreviewContext"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
                         android:ellipsize="end"
@@ -125,7 +125,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/iu5" />
+                        android:background="@drawable/reviewexample" />
 
                 </LinearLayout>
 

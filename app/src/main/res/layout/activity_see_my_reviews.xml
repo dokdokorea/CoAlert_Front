@@ -25,15 +25,16 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="2dp">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="2dp"
+            android:layout_marginTop="5dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -44,7 +45,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:background="@color/divideLine"
                     android:onClick="viewSimple"
                     android:orientation="horizontal">
@@ -61,7 +63,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
                         android:gravity="right"
-                        android:text="▼"
+                        android:id="@+id/simple_list_icon"
+                        android:text="▶"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -70,7 +73,8 @@
                     android:id="@+id/view_simple_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp" />
+                    android:layout_marginLeft="4dp"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -100,7 +104,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
                         android:gravity="right"
-                        android:text="▼"
+                        android:id="@+id/detail_list_icon"
+                        android:text="▶"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -109,7 +114,8 @@
                     android:id="@+id/view_detail_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp" />
+                    android:layout_marginLeft="4dp"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
@@ -117,7 +123,7 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </LinearLayout>
