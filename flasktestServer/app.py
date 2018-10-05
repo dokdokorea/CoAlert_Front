@@ -11,7 +11,6 @@ def root():
     return "hi flask"
 
 
-
 @app.route("/recommendCosmetic", methods=['POST'])
 def getRecommendCosmetic():
     kindCosmetic = {1: 'sunblock', 2: 'eyeShadow', 3: 'foundation', 4: 'libTint'}
@@ -33,12 +32,22 @@ def integrity():
     print(id)
     return json.dumps({'emailCheck': True})
 
+
 @app.route("/login", methods=['POST'])
 def login():
     id = request.args.get('id')
     password = request.args.get('password')
     print(id, password)
     return ''
+
+
+@app.route("/signup", methods=['POST'])
+def signup():
+    id = request.args.get('id')
+    password = request.args.get('password')
+    print(id, password)
+    return json.dumps({'id': id})
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
