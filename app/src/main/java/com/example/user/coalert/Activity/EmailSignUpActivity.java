@@ -45,7 +45,7 @@ public class EmailSignUpActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.input_email);
         lastButton = findViewById(R.id.lastSignUpButton);
         lastButton.setClickable(false);
-        nextPageIntent = new Intent(this, CommonSignUpActivity.class);
+
         final Context context = this;
         emailRedundancyCheckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,11 +116,12 @@ public class EmailSignUpActivity extends AppCompatActivity {
         lastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!password.getText().equals("") && !name.getText().equals("") && !confirmPassword.getText().equals("") && isEmail(String.valueOf(name.getText()))) {
+                if (!password.getText().equals("") && !name.getText().equals("") && !confirmPassword.getText().equals("") && isEmail(String.valueOf(inputEmail .getText()))) {
                     if (String.valueOf(password.getText()).equals(String.valueOf(confirmPassword.getText()))) {
-                        nextPageIntent.putExtra("name", name.getText());
-                        nextPageIntent.putExtra("email", inputEmail.getText());
-                        nextPageIntent.putExtra("password", password.getText());
+                        nextPageIntent = new Intent(getApplicationContext(), CommonSignUpActivity.class);
+                        nextPageIntent.putExtra("name", String.valueOf(name.getText()));
+                        nextPageIntent.putExtra("email", String.valueOf(inputEmail.getText()));
+                        nextPageIntent.putExtra("password", String.valueOf(password.getText()));
                         startActivity(nextPageIntent);
                     }else{
                         Log.e("lastButton ClickEvent4", "false");
