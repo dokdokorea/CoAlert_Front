@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.recommendCosmeticItem;
+import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 
@@ -43,10 +44,10 @@ public class recommendCosmeticAdapter extends BaseAdapter {
         percent.setText(String.valueOf(item.getPercent()));
         return view;
     }
-    public void addItem(String Cname, String estimate){
+    public void addItem(JsonElement Cname, JsonElement estimate){
         recommendCosmeticItem recommendCosmeticItem = new recommendCosmeticItem();
-        recommendCosmeticItem.setCname(Cname);
-        recommendCosmeticItem.setPercent(Float.parseFloat(estimate)*20);
+        recommendCosmeticItem.setCname(Cname.getAsString());
+        recommendCosmeticItem.setPercent(estimate.getAsFloat()*20);
         itemList.add(recommendCosmeticItem);
     }
 }

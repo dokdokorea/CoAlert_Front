@@ -7,7 +7,7 @@ from sklearn.externals import joblib
 from konlpy.tag import Twitter
 
 
-def get_recommaned_cosmetic(userId, kind_cosmetic, type=0):
+def get_recommaned_cosmetic(userId, kind_cosmetic, start, type=0):
     original_data = pd.read_csv('RecommendSystem//data/' + kind_cosmetic + '.csv')
     change_type = {'건성': 0, '지성': 1, '중성': 2, '복합성': 3, '민감성': 4}
     original_data['type'] = original_data['type'].map(change_type)
@@ -21,13 +21,15 @@ def get_recommaned_cosmetic(userId, kind_cosmetic, type=0):
     cosmetic_id = name_to_id.loc[best_cosmetic, :]
     sim_scores = list(enumerate(cosine_sim[int(cosmetic_id)]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:26]
+    sim_scores = sim_scores[1:30]
     svd = joblib.load('RecommendSystem/model/' + kind_cosmetic + '/' + kind_cosmetic + '_' + str(type) + '.pkl')
     cosmetic_id = [i[0] for i in sim_scores]
     prediction = making_predict_data(cosmetic_id, original_data)
     prediction['est'] = prediction['popId'].apply(lambda x: svd.predict(userId, x).est)
     prediction = prediction.sort_values('est', ascending=False)
-    return prediction.head(10)
+    print(len(prediction))
+    start = int(start)
+    return prediction.iloc[start:start+10, :]
 
 
 def get_best_cosmetic(original_data, type):

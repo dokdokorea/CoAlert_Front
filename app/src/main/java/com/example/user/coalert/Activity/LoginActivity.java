@@ -76,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
 
         callback = new SessionCallback();
         Session.getCurrentSession().addCallback(callback);
-        permissionCheck();
+
 
         /*kakaotalk button syncrhonize with real kakao button*/
         fakekakao = findViewById(R.id.kakao_login_button);
@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            final Intent accessActivity = new Intent(LoginActivity.this, AccessAuthorizationActivity.class);
+            final Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(accessActivity);
             finish();
 
@@ -192,23 +192,6 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    void permissionCheck() {
-        int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        int ReadAudioPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
-        int WriteStorage = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (ReadAudioPermmission != PackageManager.PERMISSION_GRANTED && ReadStoragetPermmission != PackageManager.PERMISSION_GRANTED &&
-                WriteStorage != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE},
-                        1000);
-            }
-        }
-    }
-    /*카카오톡 연동하기(키해
-    /*카카오톡 연동하기(키해시 받아오기) 안돼*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -1,10 +1,13 @@
 package com.example.user.coalert.Activity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 
 import android.app.FragmentTransaction;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -71,4 +74,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 }
