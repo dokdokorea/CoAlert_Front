@@ -18,8 +18,8 @@ import com.example.user.coalert.Singleton.UUFiSingleton;
 import com.example.user.coalert.forRestServer.getRecommendModel;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
+
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -29,6 +29,7 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
     kindCosmeticAdapter kindCosmeticAdapter;
     ListView kindCosmeticListView;
     String[] data = {"선블락", "아이쉐도우", "파운데이션", "립틴트"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +49,8 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                     @Override
                     public void run() {
                         super.run();
-                        try{
-                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos+1,
+                        try {
+                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos + 1,
                                     UUFiSingleton.getInstance().getIndependenceNum(), "0");
                             List<getRecommendModel> result = call.execute().body();
                             String moveRecommendCosmetic = result.toString();
@@ -58,10 +59,7 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                             recommendPage.putExtra("recommendData", moveRecommendCosmetic);
                             startActivity(recommendPage);
                             finish();
-                        } catch(
-                                IOException e)
-
-                        {
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }

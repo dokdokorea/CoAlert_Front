@@ -12,7 +12,11 @@ import android.widget.TextView;
 
 import com.example.user.coalert.R;
 import com.example.user.coalert.Adapter.recommendCosmeticAdapter;
+import com.example.user.coalert.forRestServer.getRecommendModel;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
@@ -21,6 +25,7 @@ import java.util.List;
 public class recommendCosmeticShow extends AppCompatActivity {
     Intent getReceiveData;
     TextView showRecommendTextView;
+    ListView RecommendCosmetic;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -33,33 +38,20 @@ public class recommendCosmeticShow extends AppCompatActivity {
         showRecommendTextView.setText("추천 받을 화장품: " + Cname);
         String recommendCosmetics = getReceiveData.getStringExtra("recommendData");
         recommendCosmeticAdapter recommendCosmeticAdapter = new recommendCosmeticAdapter();
-        String[] beforeToJson = getDataAtJson(recommendCosmetics);
-        for (int i = 0; i< 10; i++){
-            String[] splitJson = beforeToJson[i].split(",");
-            String cosmeticName = splitJson[0].substring(4);
-            cosmeticName = cosmeticName.replace(':', ' ');
-            String estimate = splitJson[1].substring(10, splitJson[1].length()-1);
-            setData(recommendCosmeticAdapter, cosmeticName, estimate);
-        }
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = jsonParser.parse(recommendCosmetics);
+        JsonArray array = element.getAsJsonArray();
+        setData(array, recommendCosmeticAdapter);
+
     }
-    public void setData(recommendCosmeticAdapter adapter, String Cname, String estimate){
-        adapter.addItem(Cname, estimate);
-        ListView RecommendCosmetic = findViewById(R.id.showRecommendListView);
+
+    public void setData(JsonArray recommendCosmeticJsonArray, recommendCosmeticAdapter adapter) {
+        for (int i = 0; i < recommendCosmeticJsonArray.size(); i++) {
+            JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
+            adapter.addItem(oneData.get("id"), oneData.get("estimate"));
+        }
+        RecommendCosmetic = findViewById(R.id.showRecommendListView);
         RecommendCosmetic.setAdapter(adapter);
     }
-    public String[] getDataAtJson(String recommendCosmetics){
-        recommendCosmetics = recommendCosmetics.substring(1, recommendCosmetics.length() - 1);
-        int comma = 0;
-        StringBuilder recommendCosmeticsBuilder = new StringBuilder(recommendCosmetics);
-        for (int i = 0; i < recommendCosmetics.length(); i++) {
-            if (recommendCosmetics.charAt(i) == ',') {
-                if (comma % 2 == 1) {
-                    recommendCosmeticsBuilder.setCharAt(i, '@');
-                }
-                comma +=1;
-            }
-        }
-        String[] beforeToJson = recommendCosmeticsBuilder.toString().split("@");
-        return beforeToJson;
-    }
+
 }

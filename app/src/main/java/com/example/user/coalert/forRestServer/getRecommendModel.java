@@ -24,7 +24,7 @@ public class getRecommendModel {
 
     @Override
     public String toString() {
-        return "{id:"+getCosmeticname()+", " +
-                "estimate:"+getEstimate()+"}";
+        return "{\"id\":\""+getCosmeticname()+"\", " +
+                "\"estimate\":"+getEstimate()+"}";
     }
 }
