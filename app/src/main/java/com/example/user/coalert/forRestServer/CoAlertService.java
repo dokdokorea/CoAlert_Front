@@ -73,6 +73,7 @@ public interface CoAlertService {
     Call<List<getRecommendModel>> recommendCall(
             @Query("persontype") int personType,
             @Query("cosmetictype") int cosmeticType,
+            @Query("id") String id,
             @Query("start") int start
     );
 
