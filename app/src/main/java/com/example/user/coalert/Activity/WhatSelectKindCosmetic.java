@@ -50,8 +50,7 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                     public void run() {
                         super.run();
                         try {
-                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos + 1,
-                                    UUFiSingleton.getInstance().getIndependenceNum(), "0");
+                            Call<List<getRecommendModel>> call = ForRestSingleton.getInstance().recommendCall(0, pos + 1, 0);
                             List<getRecommendModel> result = call.execute().body();
                             String moveRecommendCosmetic = result.toString();
                             Intent recommendPage = new Intent(getBaseContext(), recommendCosmeticShow.class);

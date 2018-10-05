@@ -26,11 +26,17 @@
         android:layout_height="9dp"
         android:background="#572254" />
 
-    <ListView
-        android:id="@+id/showRecommendListView"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/recommendScrollView"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        android:fillViewport="true">
+        <ListView
+            android:id="@+id/showRecommendListView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </ScrollView>
 </LinearLayout>
