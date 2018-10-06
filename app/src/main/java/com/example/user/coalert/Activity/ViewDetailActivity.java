@@ -1,5 +1,6 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -23,6 +24,8 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static int currentPage = 0;
     private static final Integer[] ImageList={R.drawable.iu1,R.drawable.iu2,R.drawable.iu7,R.drawable.iu3jpg,R.drawable.iu4,R.drawable.iu5};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
+
+    String title;
 
     DetailReviewSliderAdapter adapter;
     ViewPager viewPager;
@@ -135,6 +138,10 @@ public class ViewDetailActivity extends AppCompatActivity {
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
         PostContext.setText(Context);
+
+        Intent intent=new Intent(this.getIntent());
+        title=intent.getStringExtra("title");
+        PostTitle.setText(title);
     }
 
     private void init() {
