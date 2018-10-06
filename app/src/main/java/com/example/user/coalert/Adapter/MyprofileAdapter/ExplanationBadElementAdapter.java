@@ -41,7 +41,6 @@ public class ExplanationBadElementAdapter extends RecyclerView.Adapter<Explanati
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.rank.setText(mDataSet.get(position).getText1());
         holder.element_name.setText(mDataSet.get(position).getText2());
-
     }
 
     @Override

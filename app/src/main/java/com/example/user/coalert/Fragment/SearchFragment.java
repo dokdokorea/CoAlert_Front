@@ -38,6 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.Adapter.searchAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
@@ -95,7 +96,10 @@ public class SearchFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Toast.makeText(getApplicationContext(), list.get(position),Toast.LENGTH_LONG).show();
-                //TODO 서치 데이터에서 눌렀을 때 이벤트입니다.
+                //TODO 서치 데이터에서 눌렀을 때 이벤트를 처리해주면 됩니다.
+                Intent intent = new Intent(view.getContext(), CosmeticInformationActivity.class);
+                intent.putExtra("cosmeticName", list.get(position));
+                startActivity(intent);
             }
         });
 
