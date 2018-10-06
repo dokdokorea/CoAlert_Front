@@ -8,8 +8,7 @@
     android:layout_alignParentBottom="true"
     android:background="@color/app_background"
     android:orientation="vertical"
-    tools:context=".Fragment.HomeFragment"
-    >
+    tools:context=".Fragment.HomeFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -101,75 +100,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/divideLine" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-                style="@style/point_font"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hot_youtuber" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/hot_youtuber_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/divideLine" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-                style="@style/point_font"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hot_review" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/best_review_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/divideLine" />
-
-
-            <TextView
-                style="@style/point_font"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_product" />
+                android:background="@android:color/white"
+                android:orientation="vertical">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/new_product_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/point_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hot_youtuber" />
 
-            <View
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hot_youtuber_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/divideLine" />
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@drawable/main_hot_review_background"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/point_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hot_review" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/best_review_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@drawable/main_new_prod_background"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/point_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_product" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/new_product_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
