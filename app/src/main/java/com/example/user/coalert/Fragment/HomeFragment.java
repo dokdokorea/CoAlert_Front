@@ -48,28 +48,19 @@ public class HomeFragment extends Fragment {
         detailElementBtn = (TextView) v.findViewById(R.id.detail_element_info_btn);
         searchIcon = (ImageView) v.findViewById(R.id.fragment_home_search_btn);
 
-        searchIcon.setOnClickListener(new View.OnClickListener() {
 
+        detailElementBtn = v.findViewById(R.id.detail_element_info_btn);
+        searchIcon = v.findViewById(R.id.fragment_home_search_btn);
+        searchFragment = new SearchFragment();
+        fragmentManager = getFragmentManager();
+        searchIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SearchFragment.class);
-                startActivity(intent);
-                detailElementBtn = v.findViewById(R.id.detail_element_info_btn);
-                searchIcon = v.findViewById(R.id.fragment_home_search_btn);
-                searchFragment = new SearchFragment();
-                fragmentManager = getFragmentManager();
-                searchIcon.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                        fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
-                        fragmentTransaction.commit();
-                    }
-                });
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
+                fragmentTransaction.commit();
             }
         });
-
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);

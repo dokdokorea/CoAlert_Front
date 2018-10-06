@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Adapter.searchAdapter;
@@ -51,6 +53,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 
 public class SearchFragment extends Fragment {
@@ -124,7 +128,6 @@ public class SearchFragment extends Fragment {
                            text = edit.getText().toString();
                             search(text, list, arrayList, searchAdapter);
                             if (previousText != text.length()) {
-
                                     new Thread(){
                                         @Override
                                         public void run() {
@@ -133,7 +136,6 @@ public class SearchFragment extends Fragment {
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
                                                 Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
                                                 Object result = call.execute().body();
-                                                assert result != null;
                                                 Log.e("result", result.toString());
                                             } catch (Exception e){
                                                 e.printStackTrace();
@@ -147,6 +149,19 @@ public class SearchFragment extends Fragment {
                 }else{
                     viewFlipper.setDisplayedChild(0);
                 }
+            }
+        });
+
+        edit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                switch (actionId) {
+                    case EditorInfo.IME_ACTION_SEARCH:
+
+                        //TODO 검색 버튼을 눌러줬을 때 이벤트입니다.
+                        break;
+                }
+                return true;
             }
         });
 // 화면 누르면  focus제거
