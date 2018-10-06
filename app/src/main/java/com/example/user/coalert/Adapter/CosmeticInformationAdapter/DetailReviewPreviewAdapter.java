@@ -65,8 +65,6 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
         }
     }
 
-
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final TwoImgFourStringCardView item=mDataSet.get(position);
@@ -84,6 +82,7 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
             public void onClick(View v) {
                 //goes to new activity passing the item name
                 Intent intent = new Intent(context, ViewDetailActivity.class);
+                intent.putExtra("title",item.getT3());
                 context.startActivity(intent);
 
                 //Toast.makeText(context,mDataSet.get(position).getText(),Toast.LENGTH_SHORT).show();
