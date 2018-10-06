@@ -15,15 +15,6 @@
         android:layout_height="50dp"
         android:background="@color/first">
 
-        <ImageView
-            android:id="@+id/home_myprofile_icon_btn"
-            android:layout_width="53dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/myprofile_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/home_app_logo"
             android:layout_width="wrap_content"

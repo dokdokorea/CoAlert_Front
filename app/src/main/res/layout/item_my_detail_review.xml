@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <android.support.v7.widget.CardView
         android:id="@+id/my_detail_review_card"
         android:layout_width="match_parent"
@@ -32,61 +31,58 @@
                     android:id="@+id/cosmetic_pic"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
                     android:src="@drawable/sun1" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="70dp"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
 
-                    <TextView
-                        android:id="@+id/cosmetic_name"
-                        style="@style/editprofile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Cosmetic name"
-                        android:textSize="15sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="70dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/detail_title"
-                        style="@style/detailreviewTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="insert title here"
-                        android:textSize="24dp"
-                        android:textStyle="normal"
-                        android:layout_marginTop="10dp"
-                        android:ellipsize="end"
-                        android:lines="1"/>
+                        <TextView
+                            android:id="@+id/cosmetic_name"
+                            style="@style/editprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Cosmetic name"
+                            android:textSize="15sp" />
 
+                        <TextView
+                            android:id="@+id/detail_title"
+                            style="@style/detailreviewTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:text="insert title here"
+                            android:textSize="24dp"
+                            android:textStyle="normal" />
 
-
-
-
-                </LinearLayout>
+                    </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center"
                         android:layout_alignParentRight="true"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@drawable/emptyheart"/>
+                            android:layout_marginRight="3dp"
+                            android:src="@drawable/emptyheart" />
 
                         <TextView
                             android:id="@+id/like_count"
@@ -98,18 +94,17 @@
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/more_detail"
                         android:layout_width="40dp"
                         android:layout_height="20dp"
-                        android:text="더보기"
-                        android:textSize="10sp"
-                        android:textColor="@color/com_facebook_blue"
-                        android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:gravity="right|bottom"
-                        android:background="#00000000"
+                        android:layout_alignParentEnd="true"
                         android:layout_margin="5dp"
-                        android:id="@+id/more_detail"
-                        />
+                        android:background="#00000000"
+                        android:gravity="right|bottom"
+                        android:text="더보기"
+                        android:textColor="@color/com_facebook_blue"
+                        android:textSize="10sp" />
 
                 </RelativeLayout>
 
@@ -136,11 +131,10 @@
                     android:orientation="vertical">
 
 
-
                     <TextView
                         android:id="@+id/detail_context"
-                        android:layout_width="match_parent"
                         style="@style/detailreviewContext"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:ellipsize="end"
                         android:lines="3"

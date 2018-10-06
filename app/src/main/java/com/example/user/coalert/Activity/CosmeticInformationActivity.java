@@ -1,5 +1,6 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewAdapter;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewPreviewAdapter;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.SimpleReviewAdapter;
+import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
@@ -26,6 +29,8 @@ import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
 import java.util.ArrayList;
 
+import static com.facebook.FacebookSdk.getApplicationContext;
+
 public class CosmeticInformationActivity extends AppCompatActivity{
     TabHost tabHost1;
     RecyclerView ingredient, simple,detail;
@@ -33,6 +38,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     TextView matching, company, ProductName;
     ImageView ProductImg;
     ImageButton wishbtn;
+    Button WriteReview;
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
 
@@ -50,6 +56,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ProductImg=(ImageView)findViewById(R.id.cosmetic_photo);
         ProductName=(TextView)findViewById(R.id.cosmetic_prod_name);
         company=(TextView)findViewById(R.id.cosmetic_comp_name);
+        WriteReview=(Button)findViewById(R.id.cosmetic_info_write_review);
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");
@@ -81,6 +88,15 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     wishbtn.setImageResource(R.drawable.fullheart);
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        WriteReview.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(CosmeticInformationActivity.this,WriteReviewActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -144,6 +160,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.irin,R.drawable.sun1,"핫한핫산","100","나는똥글을 싸지를것이다!","뿌직뿌직뿌지지지지지지직"));
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.iu7,R.drawable.sun1,"아이유","1000","밤편지","난~~~ 파도가 머~~물~던 모래 위에 적힌 글씨처럼~~~ 그대가 멀리~~~ 사라져 버릴 것 같아~~~~~"));
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.nayeon1,R.drawable.sun1,"나나연","500","나는나연","일은 열심히 하셨나연? 배고프지않나연?"));
-        detail.setAdapter(new DetailReviewPreviewAdapter(DetailPreviewArr));
+        detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
     }
 }

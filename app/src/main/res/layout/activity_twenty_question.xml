@@ -94,6 +94,15 @@
 
         </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/result_view"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,8 +112,38 @@
                 style="@style/detailreviewTitle"
                 android:id="@+id/skin_type_result"
                 android:textSize="50dp"
-                android:textColor="#0B0B61"
-                android:visibility="gone"/>
+                android:textColor="#0B0B61"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/retest"
+                        android:text="retest"/>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="40dp"
+                        android:layout_height="50dp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/gotype"
+                        android:text="goType"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
 
         </FrameLayout>
 

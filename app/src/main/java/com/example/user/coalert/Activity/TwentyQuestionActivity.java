@@ -1,5 +1,6 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,9 +14,9 @@ import com.transitionseverywhere.TransitionManager;
 
 public class TwentyQuestionActivity extends AppCompatActivity {
     TextView question, Answer;
-    Button No, Soso, Yes;
+    Button No, Soso, Yes, GoType,ReTest;
     int prev = 0, answer;
-    LinearLayout QuestionPage;
+    LinearLayout QuestionPage, ResultPage;
     ViewGroup transitionsContainer;
     String QList[] = {"모공이 크지 않다", "모공이 매우 작다", "모공이 매우 크다", "모공의 크기가 적당하다", "모공의 크기가\n부분적으로 다르다"
             , "눈 입 주위에\n잔주름이 많다", "겨울철은 당기고\n여름철은 유분이 많다", "피부가 두껍고,\n피지분비가 많다", "윤기가 없고 \n피부도 칙칙하다",
@@ -35,6 +36,9 @@ public class TwentyQuestionActivity extends AppCompatActivity {
         QuestionPage = (LinearLayout) findViewById(R.id.question_page);
         transitionsContainer = (ViewGroup) findViewById(R.id.container);
         Answer = (TextView) findViewById(R.id.skin_type_result);
+        ResultPage=(LinearLayout)findViewById(R.id.result_view);
+        ReTest=(Button)findViewById(R.id.retest);
+        GoType=(Button)findViewById(R.id.gotype);
 
         question.setText(QList[0]);
 
@@ -46,7 +50,6 @@ public class TwentyQuestionActivity extends AppCompatActivity {
 
                 setView(prev);
                 //setfinal();
-
             }
         });
 
@@ -69,6 +72,28 @@ public class TwentyQuestionActivity extends AppCompatActivity {
                 setView(prev);
             }
         });
+
+        ReTest.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answer = 0;
+                prev = 0;
+                TransitionManager.beginDelayedTransition(transitionsContainer);
+                QuestionPage.setVisibility(View.VISIBLE);
+                ResultPage.setVisibility(View.INVISIBLE);
+                setView(prev);
+            }
+        });
+
+        GoType.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Intent intent=new Intent(TwentyQuestionActivity.this,.class);
+                //startActivity(intent);
+
+            }
+        });
+
     }
     private void setView(int result){
 
@@ -86,7 +111,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
         if (result > 24) {
             TransitionManager.beginDelayedTransition(transitionsContainer);
             QuestionPage.setVisibility(View.INVISIBLE);
-            Answer.setVisibility(View.VISIBLE);
+            ResultPage.setVisibility(View.VISIBLE);
             Answer.setText(ResultList[result-24]);
         } else
             question.setText(QList[prev]);
@@ -96,7 +121,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
     private void setfinal(){
         TransitionManager.beginDelayedTransition(transitionsContainer);
         QuestionPage.setVisibility(View.INVISIBLE);
-        Answer.setVisibility(View.VISIBLE);
+        ResultPage.setVisibility(View.VISIBLE);
     }
 
     private int getQuestion(int prev, int answer) {

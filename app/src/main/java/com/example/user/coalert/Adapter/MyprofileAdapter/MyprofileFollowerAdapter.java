@@ -1,7 +1,9 @@
 package com.example.user.coalert.Adapter.MyprofileAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Activity.AnotherprofileActivity;
+import com.example.user.coalert.Activity.MainActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 
@@ -20,6 +24,7 @@ import java.util.List;
 public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFollowerAdapter.ViewHolder>{
     Context context;
     List <OneImgOneStringCardView> list;
+
     int item_layout;
     public MyprofileFollowerAdapter(Context context, List<OneImgOneStringCardView> items, int item_layout){
         this.context = context;
@@ -43,6 +48,10 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //goes to new activity passing the item name
+                Intent intent = new Intent(context, AnotherprofileActivity.class);
+                context.startActivity(intent);
+
                 Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
             }
         });
