@@ -52,11 +52,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import retrofit2.Call;
-
+import com.example.user.coalert.Singleton.ForBackgroundSingleton;
 
 public class SearchFragment extends Fragment {
+    Background variable = ForBackgroundSingleton.getInstance();
     FragmentTransaction fragmentTransaction;
     EditText edit;
     String text;
@@ -70,6 +72,7 @@ public class SearchFragment extends Fragment {
     List<String> list;
     TessBaseAPI mTess;
     Bitmap image;
+
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -107,7 +110,7 @@ public class SearchFragment extends Fragment {
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
 
-                    settingList(list);
+                    //final List<String> list = new ArrayList<>();
                     //ArrayList는 List를 상속받아서 구현하고 있다.
                     //arrayList는 list의 데이터를 복사해서 갖고 있다.
 
@@ -115,16 +118,18 @@ public class SearchFragment extends Fragment {
                         @Override
                         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                        }
+                    }
 
-                        @Override
-                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                        }
-                        @Override
+                    }
+                    @Override
                         public void afterTextChanged(Editable editable) {
                             final Background variable = ForBackgroundSingleton.getInstance();
-                            if (previousText != text.length()) {
+                            text = edit.getText().toString();
+                            //search(text, list, arrayList, searchAdapter);
+                                if (previousText != text.length()) {
                                     new Thread(){
                                         @Override
                                         public void run() {
@@ -135,7 +140,9 @@ public class SearchFragment extends Fragment {
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
                                                 Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), variable.id, variable.session);
                                                 Object result = call.execute().body();
-                                                assert result != null;
+                                                //assert result != null;
+                                                ArrayList temp = new ArrayList(variable.listCname);
+                                                list = temp;
                                                 Log.e("result", result.toString());
                                                 final ArrayList<String> arrayList = new ArrayList<String>(list);
                                                 final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
@@ -263,10 +270,10 @@ public class SearchFragment extends Fragment {
 
     public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter){
         list.clear();
-
-        if(findText.length() == 0){
+        if(findText.length() ==  0){
             list.addAll(arrayList);
-        }
+    }
+
         else{
             for(int i = 0; i<arrayList.size(); i++){
                 if(arrayList.get(i).toLowerCase().contains(findText)){
@@ -276,27 +283,12 @@ public class SearchFragment extends Fragment {
         }
         searchAdapter.notifyDataSetChanged();
     }
+
     void settingList(List<String> list){
-        list.add("슬기");
-        list.add("슬기의 파우치");
-        list.add("수지");
-        list.add("수지의 화장품");
-        list.add("크리스탈 비비 크림");
-        list.add("크리스탈");
-        list.add("손나은 쉐이딩");
-        list.add("손나은");
-        list.add("홍진영의 눈 커지는 비법");
-        list.add("루이");
-        list.add("진영");
-        list.add("슬기");
-        list.add("설리");
-        list.add("김예림");
-        list.add("혜리");
-        list.add("허영지");
+        list = variable.listCname;
+        }
     }
 
-
-}
 //만든 이유
 //EditText 커스텀하여 뒤로가기 버튼을 눌렀을 때 editText의 focus제거 해준다.
 class ExEditText extends android.support.v7.widget.AppCompatEditText {
