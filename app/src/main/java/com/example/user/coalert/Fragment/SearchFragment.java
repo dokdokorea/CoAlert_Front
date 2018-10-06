@@ -29,6 +29,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethod;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -67,9 +68,11 @@ public class SearchFragment extends Fragment {
     Uri allUri;
     int previousText = 0;
     int cameraRequest=10;
+    List<String> list;
     String datapath;
     TessBaseAPI mTess;
     Bitmap image;
+    ListView searchList;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -87,6 +90,15 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.fragment_search, container, false);
         final ViewFlipper viewFlipper = v.findViewById(R.id.viewFlipper);
+        searchList = v.findViewById(R.id.search_list);
+        searchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Toast.makeText(getApplicationContext(), list.get(position),Toast.LENGTH_LONG).show();
+                //TODO 서치 데이터에서 눌렀을 때 이벤트입니다.
+            }
+        });
+
         ImageButton imageButton = v.findViewById(R.id.search_camera);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +118,7 @@ public class SearchFragment extends Fragment {
                     viewFlipper.setDisplayedChild(1);
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
-                    final List<String> list = new ArrayList<>();
+                    list = new ArrayList<>();
                     settingList(list);
                     //ArrayList는 List를 상속받아서 구현하고 있다.
                     //arrayList는 list의 데이터를 복사해서 갖고 있다.
@@ -157,7 +169,6 @@ public class SearchFragment extends Fragment {
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
                 switch (actionId) {
                     case EditorInfo.IME_ACTION_SEARCH:
-
                         //TODO 검색 버튼을 눌러줬을 때 이벤트입니다.
                         break;
                 }
@@ -226,8 +237,6 @@ public class SearchFragment extends Fragment {
 
         return resizedBitmap;
     }
-
-
     void checkFile(File dir, String lang) {
         //directory does not exist, but we can successfully create it
         if (!dir.exists()&& dir.mkdirs()){

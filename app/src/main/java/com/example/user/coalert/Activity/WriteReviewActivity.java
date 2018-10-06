@@ -160,19 +160,17 @@ public class WriteReviewActivity extends AppCompatActivity {
             }
             switch (requestCode - position) {
                 case ALBUM_REQUEST: {
+                    //TODO 앨범으로 요청받았을 때
                     Uri url = data.getData();
                     Log.e("onActivityResult", String.valueOf(requestCode));
                     String path = _getRealPathFromURI(this, url);
                     Bitmap img = BitmapFactory.decodeFile(path);
-                    for (int i = 0; i < 4; i++)
-                        Log.e("바꾼기 전 ", String.valueOf(recyclerArr.get(i)));
                     recyclerArr.set(position, new OneImageCardView(img));
-                    for (int i = 0; i < 4; i++)
-                        Log.e("바꾼 후 ", String.valueOf(recyclerArr.get(i)));
                     personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
                     break;
                 }
                 case CAMERA_REQUEST: {
+                    //TODO 카메라로 요청받았을 때
                     try {
                         Bitmap img = MediaStore.Images.Media.getBitmap(getBaseContext().getContentResolver(), allUri);
                         recyclerArr.set(position, new OneImageCardView(img));

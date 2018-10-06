@@ -29,14 +29,12 @@ public class EmailSignUpActivity extends AppCompatActivity {
     EditText name;
     Button lastButton;
     Intent nextPageIntent;
-    AlertDialog.Builder alertDialogBuilder;
     static final String TRUE = "True";
     static final String FALSE = "False";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.email_sign_up);
         emailRedundancyCheckBtn = (Button) findViewById(R.id.email_redundancy_check_btn);
         confirmPassword = findViewById(R.id.password_certification);
