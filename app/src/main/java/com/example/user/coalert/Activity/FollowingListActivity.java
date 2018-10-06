@@ -34,7 +34,7 @@ TextView userId;
         RecyclerView recyclerView=(RecyclerView)findViewById(R.id.following_list_recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-
+followingArr=new ArrayList<>();
         followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
         followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
         followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
