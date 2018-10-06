@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hot_youtuber">지금 핫한 유투버의 동영상!</string>
-    <string name="for_more_information"><u>유해정보 더보기-></u></string>
-    <string name="user_nm">사용자</string>
-    <string name="bad_element1">유해성분1</string>
-    <string name="bad_element2">유해성분2</string>
-    <string name="cosmetic_recommendation">당신의 피부를 아름답게 만들어줄 추천 화장품!</string>
+
+
+    <string name="for_more_information">유해성분 \n확인</string>
+    <string name="cosmetic_recommendation">화장품 \n맞춤 추천</string>
+    <style name="main_button_text_style">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">37sp</item>
+        <item name="android:fontFamily">@font/kopub_medium</item>
+    </style>
+
+    <style name="main_buton_style">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
     <string name="new_product">신상품!!</string>
     <string name="hot_review">HOT REVIEW!!</string>
     <string name="sign_up">COALERT 회원가입</string>
