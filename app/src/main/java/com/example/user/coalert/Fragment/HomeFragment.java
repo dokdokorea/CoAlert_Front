@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
+import com.example.user.coalert.Activity.LoginActivity;
 import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
@@ -70,6 +71,15 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        TextView beforeBtn=v.findViewById(R.id.home_myprofile_icon_btn);
+        beforeBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);

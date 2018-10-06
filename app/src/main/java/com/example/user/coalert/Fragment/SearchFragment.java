@@ -19,6 +19,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.BaseKeyListener;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -36,7 +37,9 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Adapter.searchAdapter;
+import com.example.user.coalert.Background;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForBackgroundSingleton;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.searchModel;
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -121,7 +124,9 @@ public class SearchFragment extends Fragment {
                         }
                         @Override
                         public void afterTextChanged(Editable editable) {
-                           text = edit.getText().toString();
+                            final Background variable = ForBackgroundSingleton.getInstance();
+
+                            text = edit.getText().toString();
                             search(text, list, arrayList, searchAdapter);
                             if (previousText != text.length()) {
 
@@ -131,7 +136,7 @@ public class SearchFragment extends Fragment {
                                             try {
                                                 text = edit.getText().toString();
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
-                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
+                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), variable.id, variable.session);
                                                 Object result = call.execute().body();
                                                 assert result != null;
                                                 Log.e("result", result.toString());

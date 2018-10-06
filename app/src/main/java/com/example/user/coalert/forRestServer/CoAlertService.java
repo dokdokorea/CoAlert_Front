@@ -79,7 +79,7 @@ public interface CoAlertService {
 
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://172.30.1.17:5000/")
+            .baseUrl("http://192.168.0.10:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

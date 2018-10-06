@@ -27,6 +27,7 @@ import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.Singleton.UUFiSingleton;
+import com.facebook.login.LoginManager;
 import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
@@ -141,6 +142,7 @@ public class LoginActivity extends AppCompatActivity {
                         Call call = ForRestSingleton.getInstance().loginCall(email, password);
                         Object result = call.execute().body();
                         Log.e("result: ", result.toString());
+                        final String session = result.toString();
 
                     } catch (Exception e) {
                         e.printStackTrace();

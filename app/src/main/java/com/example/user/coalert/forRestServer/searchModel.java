@@ -1,10 +1,15 @@
 package com.example.user.coalert.forRestServer;
 
+import com.example.user.coalert.Background;
+import com.example.user.coalert.Singleton.ForBackgroundSingleton;
+
 public class searchModel {
     String cname;
     String company;
     String name;
     String error;
+
+    Background variable = ForBackgroundSingleton.getInstance();
 
     public String getError() {
         return error;
