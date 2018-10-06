@@ -124,10 +124,7 @@ public class SearchFragment extends Fragment {
                         @Override
                         public void afterTextChanged(Editable editable) {
                             final Background variable = ForBackgroundSingleton.getInstance();
-
-
                             if (previousText != text.length()) {
-
                                     new Thread(){
                                         @Override
                                         public void run() {
