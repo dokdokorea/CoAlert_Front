@@ -55,11 +55,19 @@
                     tools:ignore="AppLinkUrlError" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LoginActivity"></activity>
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity">
 
         </activity>
-        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.MainActivity" >
+
+        </activity>
         <activity android:name=".Activity.EmailSignUpActivity"></activity>
         <activity android:name=".Loading.Loading1Activity" />
         <activity android:name=".Activity.EditprofileActivity" />
@@ -82,11 +90,7 @@
 
         </activity>
         <activity android:name=".Activity.MyReviewListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
