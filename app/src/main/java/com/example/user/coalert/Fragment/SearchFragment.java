@@ -136,14 +136,15 @@ public class SearchFragment extends Fragment {
                                             try {
                                                 list = new ArrayList<>();
                                                 //받아온 데이터로 리스트틀 채워주세요.
+
                                                 text = edit.getText().toString();
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
                                                 Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), variable.id, variable.session);
                                                 Object result = call.execute().body();
                                                 //assert result != null;
-                                                ArrayList temp = new ArrayList(variable.listCname);
-                                                list = temp;
+                                                //ArrayList temp = new ArrayList(variable.listCname);
                                                 Log.e("result", result.toString());
+                                                list = variable.listCname;
                                                 final ArrayList<String> arrayList = new ArrayList<String>(list);
                                                 final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
                                                 listView.setAdapter(searchAdapter);

@@ -50,4 +50,4 @@ public class searchModel {
     public String toString() {
         return "{cname:"+getCname()+", company:"+getCompany()+", name:"+getName()+", error"+getError()+"}";
         }
-        }
+}
