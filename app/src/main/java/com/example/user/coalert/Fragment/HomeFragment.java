@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,35 +33,20 @@ public class HomeFragment extends Fragment {
     ArrayList<OneImgTwoStringCardView> newProduArr;
     SearchFragment searchFragment;
     FragmentManager fragmentManager;
-    private TextView detailElementBtn;
+    FrameLayout detailElementBtn;
+    FrameLayout suggestCosmetic;
     private ImageView searchIcon;
 
 
     public HomeFragment() {
     }
 
-    Button suggestCosmetic;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
-        detailElementBtn = (TextView) v.findViewById(R.id.detail_element_info_btn);
-        searchIcon = (ImageView) v.findViewById(R.id.fragment_home_search_btn);
-
-
         detailElementBtn = v.findViewById(R.id.detail_element_info_btn);
-        searchIcon = v.findViewById(R.id.fragment_home_search_btn);
-        searchFragment = new SearchFragment();
-        fragmentManager = getFragmentManager();
-        searchIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content_fragment_layout, searchFragment);
-                fragmentTransaction.commit();
-            }
-        });
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
