@@ -122,8 +122,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
+
         @Override
         public void onClick(View view) {
+            Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(accessActivity);
+            finish();
             new Thread(new Runnable() {
                 @SuppressLint("ShowToast")
                 @Override
@@ -136,25 +140,26 @@ public class LoginActivity extends AppCompatActivity {
                         password = testSHA256(password);
                         getUUID(getBaseContext());
                         Log.e("asdasd", email);
-                        Call<loginModel> call = ForRestSingleton.getInstance().loginCall(email, password);
-                        loginModel result = call.execute().body();
-                        final String canYouLogin = result.getError();
+//                        Call<loginModel> call = ForRestSingleton.getInstance().loginCall(email, password);
+//                        loginModel result = call.execute().body();
+//                        final String canYouLogin = result.getError();
                         //서버로 부터 받은 에러가 null이라면
-                        if(canYouLogin.equals("null")){
-                            final Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(accessActivity);
-                            finish();
-                        }else{
-                            //error가 있다면
-                            //thread안에서 UI이벤트를 반들고싶나 당신?
-                            //그렇다면 runOnUiThread를 써야 한다네 허허허
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Toast.makeText(getApplicationContext(), canYouLogin, Toast.LENGTH_LONG);
-                                }
-                            });
-                        }
+                        //서버와 테스트 하고 싶다면 주석을 지우거라
+//                        if(canYouLogin.equals("null")){
+
+
+
+//                        }else{
+//                            //error가 있다면
+//                            //thread안에서 UI이벤트를 반들고싶나 당신?
+//                            //그렇다면 runOnUiThread를 써야 한다네 허허허
+//                            runOnUiThread(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    Toast.makeText(getApplicationContext(), canYouLogin, Toast.LENGTH_LONG);
+//                                }
+//                            });
+//                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
