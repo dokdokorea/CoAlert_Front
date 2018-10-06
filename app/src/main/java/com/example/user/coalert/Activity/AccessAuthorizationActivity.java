@@ -27,7 +27,7 @@ public class AccessAuthorizationActivity extends AppCompatActivity {
         setContentView(R.layout.access_authorization);
         accessBtn = findViewById(R.id.authorization_confirm_button);
         accessBtn.setOnClickListener(mainClickListener);
-        permissionCheck();
+
     }
     void permissionCheck() {
         int ReadStoragetPermmission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
@@ -49,6 +49,7 @@ public class AccessAuthorizationActivity extends AppCompatActivity {
         public void onClick(View view) {
             Intent intent=new Intent(AccessAuthorizationActivity.this,LoginActivity.class);
             startActivity(intent);
+            permissionCheck();
             finish();
         }
     };
