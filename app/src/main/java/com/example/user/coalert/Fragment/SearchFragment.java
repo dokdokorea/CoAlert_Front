@@ -117,18 +117,16 @@ public class SearchFragment extends Fragment {
         edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean haveFocus) {
-                ListView listView = v.findViewById(R.id.search_list);
+                final ListView listView = v.findViewById(R.id.search_list);
                 if (haveFocus){
                     viewFlipper.setDisplayedChild(1);
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
-                    list = new ArrayList<>();
+
                     settingList(list);
                     //ArrayList는 List를 상속받아서 구현하고 있다.
                     //arrayList는 list의 데이터를 복사해서 갖고 있다.
-                    final ArrayList<String> arrayList = new ArrayList<String>(list);
-                    final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
-                    listView.setAdapter(searchAdapter);
+
                     edit.addTextChangedListener(new TextWatcher() {
                         @Override
                         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -142,16 +140,22 @@ public class SearchFragment extends Fragment {
                         @Override
                         public void afterTextChanged(Editable editable) {
                            text = edit.getText().toString();
-                            search(text, list, arrayList, searchAdapter);
+
                             if (previousText != text.length()) {
                                     new Thread(){
                                         @Override
                                         public void run() {
                                             try {
+                                                list = new ArrayList<>();
                                                 text = edit.getText().toString();
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
                                                 Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
                                                 Object result = call.execute().body();
+
+                                                final ArrayList<String> arrayList = new ArrayList<String>(list);
+                                                final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
+                                                listView.setAdapter(searchAdapter);
+                                                search(text, list, arrayList, searchAdapter);
                                                 Log.e("result", result.toString());
                                             } catch (Exception e){
                                                 e.printStackTrace();
