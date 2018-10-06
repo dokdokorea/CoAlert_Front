@@ -15,9 +15,10 @@
         android:id="@+id/editSearch"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
         android:background="@drawable/search_edit_text"
         android:hint="@string/input_search_name"
-        android:inputType=""
         android:textColor="@color/whiteBackground"
         android:textColorHint="@color/whiteBackground"
         android:layout_weight="5"/>
