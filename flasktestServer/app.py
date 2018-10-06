@@ -41,9 +41,11 @@ def login():
     print(id, password)
     return ''
 
-@app.route("/wordsresquest", methods=['POST'])
+
+@app.route("/search_bar", methods=['POST'])
 def wordsRequest():
     id = request.args.get('')
+
 
 @app.route("/signup", methods=['POST'])
 def signup():

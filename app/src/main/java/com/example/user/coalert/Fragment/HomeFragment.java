@@ -22,10 +22,14 @@ import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAda
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
 
 public class HomeFragment extends Fragment {
     ArrayList<OneImgOneStringCardView> youtuberArr;
@@ -90,7 +94,11 @@ public class HomeFragment extends Fragment {
         detailElementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //TODO 서버에 요청을 보내주세요 리스트 형식으로 받은 후 toString 해서 다음 액티비티로 넘겨주세요
                 Intent intent = new Intent(getActivity(), ExplanationBadElementActivity.class);
+//                Call<List<BadElementModel>> call = ForRestSingleton.getInstance().badElement();
+//                List<BadElement> result =  call.execute().body();
+//                intent.putExtra("badElement", result.toString());
                 startActivity(intent);
             }
         });
