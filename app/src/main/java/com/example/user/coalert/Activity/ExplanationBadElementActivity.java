@@ -33,6 +33,7 @@ public class ExplanationBadElementActivity extends Activity {
         badRecyclerView = findViewById(R.id.expl_bad_element_recyclerview);
         badRecyclerView.setHasFixedSize(true);
         badRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //서버와 연동할때 밑에 세줄을 지우시오
         badElementArr = new ArrayList<>();
         badElementArr.add(new TwoStringCardView("1", "내 사약 같은 맛"));
         badRecyclerView.setAdapter(new ExplanationBadElementAdapter(badElementArr));
@@ -49,7 +50,8 @@ public class ExplanationBadElementActivity extends Activity {
 //        for (int i = 0; i < inputData.size(); i++) {
 //            JsonObject oneData = (JsonObject) inputData.get(i);
 //            badElementArr.add(new TwoStringCardView(oneData.get("id").getAsString(), oneData.get("estimate").getAsString()));
-//        }
+// badRecyclerView.setAdapter(new ExplanationBadElementAdapter(badElementArr));
+// }
 //    }
 
 }
