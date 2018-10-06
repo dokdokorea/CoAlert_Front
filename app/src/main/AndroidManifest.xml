@@ -85,9 +85,7 @@
         <activity android:name=".Activity.TwentyQuestionActivity">
 
         </activity>
-        <activity android:name=".Activity.MyReviewListActivity">
-
-        </activity>
+        <activity android:name=".Activity.MyReviewListActivity"></activity>
 
 
     </application>
