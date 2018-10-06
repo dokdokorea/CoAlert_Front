@@ -1,60 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
-    android:background="@color/whiteBackground"
-    tools:context=".Fragment.HomeFragment">
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context=".Fragment.HomeFragment"
+    >
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/youngwoobabo"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:background="@color/first">
 
-        <TextView
-            android:id="@+id/home_app_logo"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@android:color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/home_notification_icon_btn"
-            app:layout_constraintHorizontal_bias="0.79"
-            app:layout_constraintStart_toEndOf="@+id/home_myprofile_icon_btn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/fragment_home_search_btn"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:src="@android:drawable/ic_menu_search"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="10dp"
+            android:src="@drawable/coalert_logo_word" />
 
         <ImageButton
             android:id="@+id/home_notification_icon_btn"
             android:layout_width="70dp"
             android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
             android:layout_marginEnd="8dp"
             android:background="@color/emptyBackground"
             android:scaleType="centerInside"
-            android:src="@drawable/notification"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/fragment_home_search_btn"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+            android:src="@drawable/notification" />
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -66,116 +44,58 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                style="@style/point_font"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="카테고리" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/home_category_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="60dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_height="250dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/user_nm" />
+                <FrameLayout
+                    android:id="@+id/detail_element_info_btn"
+                    style="@style/main_buton_style"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/main_bad_ingre_background">
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="의 유해성분은" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/siren" />
+
+                    <TextView
+                        style="@style/main_button_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/for_more_information" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/suggest_cosmetics"
+                    style="@style/main_buton_style"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/main_recommendation_bacground">
+                    <!--화장품 추천 횟수 제한걸기-->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="20dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/recommendation_icon" />
+
+                    <TextView
+                        style="@style/main_button_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/cosmetic_recommendation" />
+                </FrameLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/first_bad_element"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bad_element1"
-                    android:textColor="@android:color/holo_red_light" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=", "
-                    android:textColor="@android:color/holo_red_light" />
-
-                <TextView
-                    android:id="@+id/second_bad_element"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bad_element2"
-                    android:textColor="@android:color/holo_red_light" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="입니다." />
-
-            <TextView
-                android:id="@+id/detail_element_info_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="?attr/selectableItemBackground"
-                android:contextClickable="true"
-                android:gravity="end"
-                android:text="@string/for_more_information" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:background="@color/divideLine" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <TextView
-                style="@style/point_font"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cosmetic_recommendation"
-                android:textStyle="bold" />
-            <!--화장품 추천 횟수 제한걸기-->
-            <Button
-                android:id="@+id/suggest_cosmetics"
-                style="@style/defaultFont"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@color/whiteBackground"
-                android:text="화장품 추천"
-                android:textSize="20sp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -252,4 +172,4 @@
                 android:background="@color/divideLine" />
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
