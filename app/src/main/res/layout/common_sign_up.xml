@@ -5,11 +5,7 @@
     android:orientation="vertical">
 
     <TextView
-        style="@style/logoStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
+        style="@style/logo_style"
         android:text="정보 입력" />
 
     <TableLayout

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.ExplanationBadElementAdapter;
 import com.example.user.coalert.R;
@@ -21,11 +23,20 @@ public class ExplanationBadElementActivity extends Activity {
     ArrayList<TwoStringCardView> badElementArr;
     RecyclerView badRecyclerView;
     Intent getReceiveData;
+    ImageButton backBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explanation_bad_element);
+        backBtn=findViewById(R.id.expl_bad_element_back_btn);
+        backBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         //서버와 연동할때 주석을 푸시오.
 //        getReceiveData = getIntent();
 //        String badData = getReceiveData.getStringExtra("badElement");

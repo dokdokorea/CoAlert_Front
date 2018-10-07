@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import com.example.user.coalert.Adapter.NotificationAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,7 @@ public class NotificationActivity extends Activity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<OneImgOneStringCardView> myDataset;
+    private ArrayList<OneImgTwoStringCardView> myDataset;
     private ImageButton backBtn;
 
     @Override
@@ -40,10 +41,10 @@ public class NotificationActivity extends Activity {
 
         myDataset = new ArrayList<>();
 
-        mAdapter = new NotificationAdapter(myDataset);
+        mAdapter = new NotificationAdapter(getBaseContext(),myDataset,R.layout.notification);
 
-        myDataset.add(new OneImgOneStringCardView(R.drawable.cardview1, "#InsideOut"));
-        myDataset.add(new OneImgOneStringCardView(R.drawable.cardview2, "Catch me if you can"));
+        myDataset.add(new OneImgTwoStringCardView(R.drawable.cardview1, "#InsideOut","어디에어디에"));
+        myDataset.add(new OneImgTwoStringCardView(R.drawable.cardview2, "Catch me if you can","나는야나는야"));
         mRecyclerView.setAdapter(mAdapter);
     }
 }

@@ -6,6 +6,7 @@
     <string name="kakao_app_key_scheme">kakao031d8f317b94b235e7e7a0266e10f7f5</string>
     <string name="confirm_button">확인</string>
 
+    <string name="access_warning"> *선택적 접근 권한은 기능 사용 시 허용이 필요하며, \n 비허용시에도 해당 기능 외 서비스 이용이 가능합니다.</string>
     <string name="email_login_button">로그인</string>
     <string name="search">검색</string>
     <string name="home">홈</string>
@@ -13,7 +14,7 @@
     <string name="myprofile">프로필</string>
     <string name="wish_list">찜목록</string>
     <string name="user_name">사용자</string>
-    <string name="bad_element_title">맞춤 유해성분</string>
+    <string name="bad_element_title">유해성분</string>
     <string name="bad_element_rank">1</string>
 
     <string name="context">내가 낸대.\n 누가 머라해. \n 죽을래? \n 너도 나랑 같이 가자.</string>

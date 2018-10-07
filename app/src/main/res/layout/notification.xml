@@ -5,31 +5,16 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+        style="@style/barFrameLayoutStyle">
 
         <ImageButton
             android:id="@+id/notification_back_btn"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@color/emptyBackground"
-            android:scaleType="fitCenter"
-            android:src="@drawable/left_btn" />
+            style="@style/back_btn_style"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/yoon_gothic340"
-            android:gravity="center"
-            android:text="알림창"
-            android:textSize="25sp" />
+            style="@style/barTextStyle"
+            android:text="알림창" />
     </FrameLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/notification_recycler_view"

@@ -25,12 +25,12 @@
             android:id="@+id/home_notification_icon_btn"
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
+            android:layout_gravity="end|center"
             android:layout_margin="10dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="5dp"
             android:background="@color/emptyBackground"
             android:scaleType="centerInside"
-            android:src="@drawable/notification" />
+            android:src="@drawable/clicking_notification_btn" />
     </FrameLayout>
 
     <ScrollView
@@ -149,7 +149,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:background="@drawable/main_hot_review_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:elevation="10dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
