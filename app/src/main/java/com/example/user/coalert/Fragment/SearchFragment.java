@@ -151,12 +151,16 @@ public class SearchFragment extends Fragment {
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
                                                 Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
                                                 Object result = call.execute().body();
+                                                getActivity().runOnUiThread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        final ArrayList<String> arrayList = new ArrayList<String>(list);
+                                                        final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
+                                                        listView.setAdapter(searchAdapter);
+                                                        search(text, list, arrayList, searchAdapter);
+                                                    }
+                                                });
 
-                                                final ArrayList<String> arrayList = new ArrayList<String>(list);
-                                                final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
-                                                listView.setAdapter(searchAdapter);
-                                                search(text, list, arrayList, searchAdapter);
-                                                Log.e("result", result.toString());
                                             } catch (Exception e){
                                                 e.printStackTrace();
                                             }
