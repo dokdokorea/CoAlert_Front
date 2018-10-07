@@ -59,11 +59,7 @@
 
         </activity>
         <activity android:name=".Activity.AccessAuthorizationActivity" android:theme="@android:style/Theme.DeviceDefault.Dialog">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.MainActivity" >
 
@@ -78,7 +74,13 @@
 
         </activity>
         <activity android:name=".Activity.AnotherprofileActivity" />
-        <activity android:name=".Activity.CommonSignUpActivity" />
+        <activity android:name=".Activity.CommonSignUpActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Activity.WishListActivity" />
         <activity android:name=".Activity.CosmeticInformationActivity"></activity>
         <activity android:name=".Activity.ExplanationBadElementActivity" >
