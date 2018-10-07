@@ -40,7 +40,7 @@ import java.util.List;
 import retrofit2.Call;
 
 public class HomeFragment extends Fragment {
-    ArrayList<OneImgOneStringCardView> youtuberArr;
+    ArrayList<OneImgTwoStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
     SearchFragment searchFragment;
@@ -85,11 +85,10 @@ public class HomeFragment extends Fragment {
         bestReviewArr = new ArrayList<>();
         newProduArr = new ArrayList<>();
 
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url1, "심즈 캐릭터같은 메이크업!"));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url2, "숨막히는 메이크업 with 엠제이 mj kim [다린살롱]"));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url3, "barbie make up"));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url4, "횡설수설 속눈썹 강좌"));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url5, "Nicki Minaj make up / 니키미나즈 메이크업"));
+        youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "심즈 캐릭터같은 메이크업!","aiHSVQy9xN8"));
+        youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "눈이 2배 커지는 화장 비법","RDaiHSVQy9xN8"));
+        youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview4, "화자 초짜들은 봐라 어딜가도 평타치는 화장법","glXgSSOKlls"));
+        youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview5, "미국 화장법 집중 탐구","J0h8-OTC38I"));
 
         youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(getContext(),youtuberArr,R.layout.fragment_home));
 

@@ -1,6 +1,8 @@
 package com.example.user.coalert.Adapter.FragmentHomeElementAdapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,12 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.R;
-import com.example.user.coalert.item.OneImgOneStringCardView;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 
 public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.ViewHolder> {
-    private ArrayList<OneImgOneStringCardView> mDataSet;
+    private ArrayList<OneImgTwoStringCardView> mDataSet;
     Context context;
     int item_layout;
 
@@ -25,6 +27,7 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
         private ImageView imageView;
         private TextView textView;
         private CardView cardView;
+        private String url;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -34,7 +37,7 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
         }
     }
 
-    public HotYoutuberAdapter(Context context,ArrayList<OneImgOneStringCardView> myDataset,int item_layout) {
+    public HotYoutuberAdapter(Context context, ArrayList<OneImgTwoStringCardView> myDataset, int item_layout) {
         mDataSet = myDataset;
         this.context=context;
         this.item_layout=item_layout;
@@ -49,13 +52,19 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull HotYoutuberAdapter.ViewHolder holder, final int position) {
-        holder.imageView.setImageResource(mDataSet.get(position).getImage());
-        holder.textView.setText(mDataSet.get(position).getText());
+        holder.imageView.setBackgroundResource(mDataSet.get(position).getImage());
+        holder.textView.setText(mDataSet.get(position).getText1());
+        holder.url=mDataSet.get(position).getText2();
         holder.cardView.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,mDataSet.get(position).getText(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse( "http://youtu.be/" + mDataSet.get(position).getText2() ));
+                context.startActivity( intent );
+
+                //Toast.makeText(context,mDataSet.get(position).getText1(),Toast.LENGTH_SHORT).show();
             }
         });
     }

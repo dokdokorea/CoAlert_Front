@@ -1,6 +1,7 @@
 package com.example.user.coalert.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Activity.ViewDetailActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
@@ -31,6 +33,7 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_timeline, null);
+        v.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT,RecyclerView.LayoutParams.WRAP_CONTENT));
         return new ViewHolder(v) ;
     }
 
@@ -44,6 +47,10 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(context, ViewDetailActivity.class);
+                intent.putExtra("title",item.getText1());
+                context.startActivity(intent);
+
                 Toast.makeText(context,item.getText1(),Toast.LENGTH_SHORT).show();
             }
         });

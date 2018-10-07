@@ -173,7 +173,7 @@
                         android:textColor="#fff"
                         style="@style/editprofile"
                         android:background="#00000000"
-                        android:src="@drawable/next"
+                        android:src="@drawable/clicking_next_btn"
                         android:scaleType="centerInside" />
 
 
@@ -218,7 +218,7 @@
                         android:textColor="#fff"
                         style="@style/editprofile"
                         android:background="#00000000"
-                        android:src="@drawable/next"
+                        android:src="@drawable/clicking_next_btn"
                         android:scaleType="centerInside" />
 
 
