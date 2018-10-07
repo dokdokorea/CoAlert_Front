@@ -13,6 +13,7 @@
     <color name="fifth">#8c8e9a</color>
     <color name="sixth">#4b4f58</color>
     <color name="emptyBackground">#00ffffff</color>
+    <color name="boardBackground">#7FA6E7</color>
 
     <color name="mypageback">#E6E6E6</color>
 
@@ -23,7 +24,6 @@
     <color name="icon_background">#8c6961</color>
     <color name="pressed_icon_background"></color>
     <color name="lightbeige">#FACC2E</color>
-
 </resources>
 
 

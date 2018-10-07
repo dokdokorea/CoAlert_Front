@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,6 +108,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ts1.setContent(R.id.content1);
         ts1.setIndicator("성분");
         tabHost1.addTab(ts1);
+
 
         TabHost.TabSpec ts2=tabHost1.newTabSpec("Tab Spec 2");
         ts2.setContent(R.id.content2);

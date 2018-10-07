@@ -12,39 +12,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#fff"
-        android:orientation="horizontal">
+        android:background="@color/first">
 
         <ImageView
             android:id="@+id/cosmetic_back_btn"
-            android:layout_width="25dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:contextClickable="true"
-            android:src="@drawable/left_btn" />
+            style="@style/back_btn_style"
+            android:clickable="true" />
 
         <TextView
             android:id="@+id/cosmetic_prod_name"
-            style="@style/cosmetic_prod_title"
+            style="@style/barTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:paddingStart="60dp"
-            android:text="@string/cosmetic_pd_name"
-            android:textSize="21sp" />
+            android:text="@string/cosmetic_pd_name" />
 
         <Button
             android:id="@+id/cosmetic_info_write_review"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:background="#00ffffff"
-            android:fontFamily="@font/yoon_gothic320"
-            android:text="@string/write_revw" />
-    </LinearLayout>
+            android:background="@color/emptyBackground"
+            android:fontFamily="@font/kopub_medium"
+            android:text="@string/write_revw"
+            android:textColor="@android:color/white"
+            android:layout_gravity="end"/>
+    </FrameLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
@@ -94,7 +88,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:gravity="right"
-                    android:text="당신에게" />
+                    android:text="당신에게"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/kopub_medium"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -110,7 +106,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:gravity="left"
-                    android:text="적합합니다"/>
+                    android:text="적합합니다"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/kopub_medium"/>
 
             </LinearLayout>
 

@@ -53,9 +53,10 @@ public class CommonSignUpActivity extends AppCompatActivity{
         email = beforePageInfo.getStringExtra("email");
         password = beforePageInfo.getStringExtra("password");
         tv1.setText(" JAVA 32bit");
-        Log.e("email", email);
+        //에러나서 주석처리 했어요~
+  /*      Log.e("email", email);
         Log.e("password", password);
-        Log.e("name", name);
+        Log.e("name", name);*/
 
 //        final String name=info.getExtras().getString("name");
 //        final String id=info.getExtras().getString("id");

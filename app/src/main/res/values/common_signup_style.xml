@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="birthday">생년월일</string>
+    <string name="gender">성별</string>
+    <string name="male">남</string>
+    <string name="female">여</string>
+    <string name="skintype">피부타입</string>
+
+    <style name="signup_item_text_style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/kopub_medium</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/first</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="signup_each_layer_style">
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
     <string-array name="date_year">
         <item>2018</item>
         <item>2017</item>
@@ -117,6 +143,7 @@
         <item>중성</item>
         <item>복합성</item>
         <item>민감성</item>
+        <item>불확실성</item>
     </string-array>
 
     <string-array name="sex">

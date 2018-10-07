@@ -8,22 +8,17 @@
         style="@style/logo_style"
         android:text="정보 입력" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+    <LinearLayout style="@style/signup_each_layer_style">
 
-        <TableRow android:layout_marginTop="20dp">
+        <TextView
+            style="@style/signup_item_text_style"
+            android:text="@string/birthday" />
 
-            <TextView
-                style="@style/defaultFont"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="3dp"
-                android:gravity="center_vertical"
-                android:text="생년월일"
-                android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
 
             <Spinner
                 android:id="@+id/spinner_year"
@@ -34,90 +29,92 @@
             <Spinner
                 android:id="@+id/spinner_month"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <Spinner
                 android:id="@+id/spinner_day"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
 
-        </TableRow>
+    <LinearLayout style="@style/signup_each_layer_style">
 
-        <TableRow android:layout_marginTop="20dp">
+        <TextView
+            style="@style/signup_item_text_style"
+            android:text="@string/gender" />
 
-            <TextView
+        <RadioGroup
+            android:id="@+id/sexRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp">
+
+            <RadioButton
+                android:id="@+id/man"
                 style="@style/defaultFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="3dp"
-                android:gravity="center_vertical"
-                android:text="성별"
+                android:layout_weight="1"
+                android:text="@string/male"
                 android:textStyle="bold" />
 
-            <RadioGroup android:orientation="horizontal"
-                android:id="@+id/sexRadioGroup">
-
-                <RadioButton
-                    style="@style/defaultFont"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="50dp"
-                    android:text="남"
-                    android:id="@+id/man"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    style="@style/defaultFont"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="여"
-                    android:id="@+id/woman"
-                    android:textStyle="bold" />
-            </RadioGroup>
-        </TableRow>
-
-        <TableRow android:layout_marginTop="20dp">
-
-            <TextView
+            <RadioButton
+                android:id="@+id/woman"
                 style="@style/defaultFont"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:text="피부타입"
+                android:layout_weight="1"
+                android:text="@string/female"
                 android:textStyle="bold" />
+        </RadioGroup>
+    </LinearLayout>
 
-            <Spinner
-                android:id="@+id/spinner_skin_type"
-                android:layout_width="match_parent"
-                android:layout_height="50dp" />
-        </TableRow>
-    </TableLayout>
+    <LinearLayout style="@style/signup_each_layer_style">
+
+        <TextView
+            style="@style/signup_item_text_style"
+            android:text="@string/skintype" />
+
+        <Spinner
+            android:id="@+id/spinner_skin_type"
+            android:layout_width="140dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/name"
-            android:textSize="30dp"
-            android:text="name"/>
-
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="30dp" />
+
+        <TextView
             android:id="@+id/id"
-            android:textSize="30dp"
-            android:layout_below="@id/name"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:textSize="30dp" />
 
         <ImageView
+            android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/image"
-            android:textSize="30dp"
-            android:layout_below="@id/id"/>
+            android:layout_below="@id/id"
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/common_sign_up_confirmation_btn"
