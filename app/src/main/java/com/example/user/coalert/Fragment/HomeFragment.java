@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -28,6 +30,10 @@ import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,9 +85,12 @@ public class HomeFragment extends Fragment {
         bestReviewArr = new ArrayList<>();
         newProduArr = new ArrayList<>();
 
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview1, "슬기짱!"));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview2, "슬기님..."));
-        youtuberArr.add(new OneImgOneStringCardView(R.drawable.cardview3, "사랑해요"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url1, "심즈 캐릭터같은 메이크업!"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url2, "숨막히는 메이크업 with 엠제이 mj kim [다린살롱]"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url3, "barbie make up"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url4, "횡설수설 속눈썹 강좌"));
+        youtuberArr.add(new OneImgOneStringCardView(R.drawable.url5, "Nicki Minaj make up / 니키미나즈 메이크업"));
+
         youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(getContext(),youtuberArr,R.layout.fragment_home));
 
         bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview1, "uniqueBest", "내가 짱인디.."));
@@ -115,5 +124,21 @@ public class HomeFragment extends Fragment {
         });
 
         return v;
+    }
+
+
+    public static Bitmap getBitmapFromURL(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            // Log exception
+            return null;
+        }
     }
 }
