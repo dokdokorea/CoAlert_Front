@@ -143,6 +143,7 @@
         <item>중성</item>
         <item>복합성</item>
         <item>민감성</item>
+        <item>불확실성</item>
     </string-array>
 
     <string-array name="sex">
