@@ -4,16 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        style="@style/editprofile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/bad_element_title"
-        android:paddingTop="10dp"/>
+    <FrameLayout
+        style="@style/barFrameLayoutStyle">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        <ImageButton
+            android:id="@+id/expl_bad_element_back_btn"
+            style="@style/back_btn_style" />
+
+        <TextView
+            style="@style/barTextStyle"
+            android:text="@string/bad_element_title" />
+    </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/expl_bad_element_recyclerview"

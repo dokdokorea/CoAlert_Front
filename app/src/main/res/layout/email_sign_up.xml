@@ -17,43 +17,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
             <TextView
-                style="@style/logoStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                style="@style/logo_style"
+                android:text="회원가입" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:alpha="88"
-                android:background="@color/first" />
-
-            <TextView
-                style="@style/defaultFont"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:text="회원가입"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="20dp" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -162,10 +132,10 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/emailSignUpInputname"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/emailSignUpInputname"
                         android:ems="13"
                         android:inputType="text" />
                 </TableRow>
@@ -189,13 +159,13 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
+            android:id="@+id/lastSignUpButton"
             style="@style/defaultFont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@drawable/press_button"
             android:text="다음"
-            android:id="@+id/lastSignUpButton"
             android:textColor="@color/whiteBackground" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

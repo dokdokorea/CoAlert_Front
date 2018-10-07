@@ -5,30 +5,15 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/first">
+        style="@style/barFrameLayoutStyle">
 
         <ImageButton
             android:id="@+id/notification_back_btn"
-            android:layout_width="45dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@color/emptyBackground"
-            android:scaleType="fitCenter"
-            android:layout_marginStart="5dp"
-
-            android:src="@drawable/clicking_back_btn" />
+            style="@style/back_btn_style"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/kopub_medium"
-            android:gravity="center"
-            android:text="알림창"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            style="@style/barTextStyle"
+            android:text="알림창" />
     </FrameLayout>
 
     <android.support.v7.widget.RecyclerView

@@ -58,7 +58,12 @@
         <activity android:name=".Activity.LoginActivity">
 
         </activity>
-        <activity android:name=".Activity.AccessAuthorizationActivity">
+        <activity android:name=".Activity.AccessAuthorizationActivity" android:theme="@android:style/Theme.DeviceDefault.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.MainActivity" >
 
@@ -70,17 +75,15 @@
             android:name=".Popup.BreakPopup"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".Activity.NotificationActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.AnotherprofileActivity" />
         <activity android:name=".Activity.CommonSignUpActivity" />
         <activity android:name=".Activity.WishListActivity" />
         <activity android:name=".Activity.CosmeticInformationActivity"></activity>
-        <activity android:name=".Activity.ExplanationBadElementActivity" />
+        <activity android:name=".Activity.ExplanationBadElementActivity" >
+
+        </activity>
         <activity android:name=".Activity.CosmeticIngredientActivity"></activity>
         <activity android:name=".Activity.FollowingListActivity"></activity>
         <activity android:name=".Activity.WriteReviewActivity"></activity>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="500dp"
+    android:layout_height="500dp"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
         android:fontFamily="@font/yoon_gothic340"
         android:gravity="center"
         android:text="CoAlert에서 사용하는 접근권한 안내"
@@ -16,250 +17,240 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:alpha="80"
-        android:background="@color/divideLine" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" 필수 접근권한"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="3dp"
-        android:text=" 기기 및 앱 기록: 사용선 개선"
-        android:textColor="@color/explanationwords" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:alpha="80"
-        android:background="@color/divideLine" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text=" 선택적 접근권한"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/camera"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="45dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:text="사진·카메라"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="프로필, 물품 스캔, 평점/댓글/사진 첨부 업로드"
-            android:textColor="@color/explanationwords"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/folder"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintHorizontal_bias="0.111"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="45dp" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:text="파일 읽기"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_marginTop="3dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="앨범에 있는 사진을 업로드"
-            android:textColor="@color/explanationwords"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/textView1" />
-
-    </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/permissionTelephoneImage"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/telephone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/permssionTextViewTelephone1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <android.support.constraint.Guideline
-            android:id="@+id/permissionTelephoneGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="45dp" />
-
-        <TextView
-            android:id="@+id/permssionTextViewTelephone1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
-            android:text="전화"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/permissionTelephoneGuideline"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/permssionTextViewTelephone2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="핸드폰 고유 식별자 번호 조회"
-            android:textColor="@color/explanationwords"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/permissionTelephoneGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/permssionTextViewTelephone1" />
-    </android.support.constraint.ConstraintLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="5dp"
-        android:text=" *선택적 접근 권한은 기능 사용 시 허용이 필요하며, 비허용시에도 해당 기능 외 서비스 이용이 가능합니다."
-        android:textColor="@color/explanationwords"
-        android:layout_marginTop="10dp"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/divideLine" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text=" 접근권한 변경 방법"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:text="  휴대폰 설정 > CoAlert"
-        android:textColor="@color/explanationwords" />
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/authorization_confirm_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/press_button"
-            android:text="확인"
-            android:textColor="@color/whiteBackground"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+            android:layout_marginTop="20dp"
+            android:text=" 필수 접근권한"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="CoAlert에서 사용하는 접근권한 안내"
-    android:fontFamily="@font/yoon_gothic320"
-    android:gravity="center"
-    android:textColor="@color/first"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="3dp"
+            android:text=" 기기 및 앱 기록: 사용선 개선"
+            android:textColor="@color/explanationwords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text=" 선택적 접근권한"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="45dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="사진·카메라"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="프로필, 물품 스캔, 평점/댓글/사진 첨부 업로드"
+                android:textColor="@color/explanationwords"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/folder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="0.111"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="45dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="파일 읽기"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="3dp"
+                android:text="앨범에 있는 사진을 업로드"
+                android:textColor="@color/explanationwords"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/permissionTelephoneImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/telephone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/permssionTextViewTelephone1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/permissionTelephoneGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="45dp" />
+
+            <TextView
+                android:id="@+id/permssionTextViewTelephone1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="전화"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/permissionTelephoneGuideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/permssionTextViewTelephone2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="핸드폰 고유 식별자 번호 조회"
+                android:textColor="@color/explanationwords"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/permissionTelephoneGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/permssionTextViewTelephone1" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/access_warning"
+            android:textColor="@color/explanationwords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=" 접근권한 변경 방법"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="  휴대폰 설정 > CoAlert"
+            android:textColor="@color/explanationwords" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/authorization_confirm_button"
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/press_button"
+        android:text="@string/confirm_button"
+        android:textColor="@color/whiteBackground"
+        android:textStyle="bold" />
 
 </LinearLayout>
