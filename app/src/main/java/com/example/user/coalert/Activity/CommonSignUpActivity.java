@@ -30,7 +30,7 @@ import java.io.IOException;
 
 import retrofit2.Call;
 
-public class CommonSignUpActivity extends AppCompatActivity{
+public class CommonSignUpActivity extends AppCompatActivity {
     TextView tv1, tv2;
     ImageView profile;
     Bitmap bitmap;
@@ -43,6 +43,7 @@ public class CommonSignUpActivity extends AppCompatActivity{
     RadioGroup sexRadioGroup;
     RadioButton anyone;
     ImageView skinImg;
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_sign_up);
@@ -122,7 +123,6 @@ public class CommonSignUpActivity extends AppCompatActivity{
         daySpinner.setAdapter(dayAdapter);
 
 
-
         yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
@@ -164,7 +164,6 @@ public class CommonSignUpActivity extends AppCompatActivity{
 
             }
         });
-final Intent it3=new Intent(getApplicationContext(),CommonSignUpActivity.class);
         final Spinner skinTypeSpinner = findViewById(R.id.spinner_skin_type);
         ArrayAdapter skinAdapter = ArrayAdapter.createFromResource(this,
                 R.array.skin_type, android.R.layout.simple_spinner_dropdown_item);
@@ -175,14 +174,11 @@ final Intent it3=new Intent(getApplicationContext(),CommonSignUpActivity.class);
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedSkinType = (String) skinTypeSpinner.getSelectedItem().toString();
-                /*it3.putExtra("skintype", selectedSkinType); //it3_season 이라는 스트링으로 str_season 값을 넘긴다.
-                startActivity(it3);*/
                 setImgbySpinner(selectedSkinType);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
 
@@ -209,12 +205,11 @@ final Intent it3=new Intent(getApplicationContext(),CommonSignUpActivity.class);
         });
     }
 
-    protected void setImgbySpinner(String selectedSkinType){
-        switch (selectedSkinType){
-            case "중성":
-                Drawable img = getResources().getDrawable(R.drawable.normalskin);
+    protected void setImgbySpinner(String selectedSkinType) {
+        switch (selectedSkinType) {
+            case "피부타입선택":
+                Drawable img=getResources().getDrawable(R.drawable.normalskin);
                 skinImg.setImageDrawable(img);
-                break;
             case "지성":
                 img = getResources().getDrawable(R.drawable.oilyskin);
                 skinImg.setImageDrawable(img);
@@ -224,20 +219,13 @@ final Intent it3=new Intent(getApplicationContext(),CommonSignUpActivity.class);
                 skinImg.setImageDrawable(img);
                 break;
             case "민감성":
-                img = getResources().getDrawable(R.drawable.normalskin);
-                skinImg.setImageDrawable(img);
-                break;
-            case "복합성":
-                img = getResources().getDrawable(R.drawable.normalskin);
+                img = getResources().getDrawable(R.drawable.sensitiveskin);
                 skinImg.setImageDrawable(img);
                 break;
             case "불확실성":
-                img = getResources().getDrawable(R.drawable.normalskin);
-                skinImg.setImageDrawable(img);
                 break;
         }
     }
-
 
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

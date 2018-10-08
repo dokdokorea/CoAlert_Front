@@ -84,9 +84,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.WishListActivity" />
-        <activity android:name=".Activity.CosmeticInformationActivity"></activity>
+        <activity android:name=".Activity.CosmeticInformationActivity">
 
-
+        </activity>
         <activity android:name=".Activity.ExplanationBadElementActivity" >
 
         </activity>

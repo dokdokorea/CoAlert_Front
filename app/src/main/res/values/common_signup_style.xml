@@ -146,10 +146,9 @@
     </string-array>
 
     <string-array name="skin_type">
+        <item>피부타입선택</item>
         <item>지성</item>
         <item>건성</item>
-        <item>중성</item>
-        <item>복합성</item>
         <item>민감성</item>
         <item>불확실성</item>
     </string-array>

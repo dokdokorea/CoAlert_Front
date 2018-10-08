@@ -141,7 +141,7 @@
                     android:layout_margin="10dp"
                     android:background="@color/emptyBackground"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/share" />
+                    android:src="@drawable/clicking_share_btn" />
 
                 <Space
                     android:layout_width="10dp"

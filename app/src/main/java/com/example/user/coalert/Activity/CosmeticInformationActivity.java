@@ -109,16 +109,27 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ts1.setIndicator("성분");
         tabHost1.addTab(ts1);
 
+        TabWidget tw=tabHost1.findViewById(android.R.id.tabs);
+        View tabView1=tw.getChildTabViewAt(0);
+        TextView tv=tabView1.findViewById(android.R.id.title);
+        tv.setTextSize(20);
 
         TabHost.TabSpec ts2=tabHost1.newTabSpec("Tab Spec 2");
         ts2.setContent(R.id.content2);
         ts2.setIndicator("한줄리뷰");
         tabHost1.addTab(ts2);
 
+        View tabView2=tw.getChildTabViewAt(1);
+        TextView tv2=tabView2.findViewById(android.R.id.title);
+        tv2.setTextSize(20);
+
         TabHost.TabSpec ts3=tabHost1.newTabSpec("Tab Spec 3");
         ts3.setContent(R.id.content3);
         ts3.setIndicator("자세한리뷰");
         tabHost1.addTab(ts3);
+        View tabView3=tw.getChildTabViewAt(2);
+        TextView tv3=tabView3.findViewById(android.R.id.title);
+        tv3.setTextSize(20);
 
         ingredient=(RecyclerView)findViewById(R.id.tab_ingredient_list_recyclerview);
         ingredient.setHasFixedSize(true);
