@@ -17,32 +17,34 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
             <TextView
                 style="@style/logo_style"
                 android:text="회원가입" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="70dp" />
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp">
 
-                <TableRow
-                    android:layout_marginTop="10dp"
-                    android:paddingStart="-60dp">
+                <TableRow android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="10dp"
-                        android:layout_marginStart="3dp"
+                        android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="이메일"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -50,17 +52,18 @@
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="10"
+                        android:ems="15"
                         android:hint="coalert@example.com"
                         android:inputType="textWebEmailAddress" />
 
                     <Button
                         android:id="@+id/email_redundancy_check_btn"
-                        android:layout_width="60dp"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/default_button"
+                        android:fontFamily="@font/kopub_medium"
                         android:text="중복확인"
                         android:textColor="@android:color/white" />
 
@@ -68,7 +71,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="30dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
@@ -77,9 +80,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="5dp"
-                        android:layout_marginStart="3dp"
+                        android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="비밀번호"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -94,16 +98,17 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="30dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
                     <TextView
                         style="@style/defaultFont"
                         android:layout_marginEnd="5dp"
-                        android:layout_marginStart="3dp"
+                        android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
-                        android:text="비밀번호 확인"
+                        android:text="비밀번호확인"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -116,7 +121,7 @@
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="30dp" />
 
                 <TableRow android:layout_marginTop="10dp">
 
@@ -126,9 +131,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
-                        android:layout_marginStart="3dp"
+                        android:layout_marginStart="5dp"
                         android:gravity="center_vertical"
                         android:text="이름"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <EditText
