@@ -14,8 +14,13 @@
     <color name="sixth">#4b4f58</color>
     <color name="emptyBackground">#00ffffff</color>
     <color name="boardBackground">#7FA6E7</color>
+    <color name="lightBlue">#adb7f5</color>
     <color name="tab_skintype_color">#FF9CA0</color>
     <color name="mypageback">#E6E6E6</color>
+
+    <color name="purpleGrdStart">#C5A7E3</color>
+    <color name="purpleGrdCenter">#ACA7ED</color>
+    <color name="purpleGrdEnd">#ADB7F5</color>
 
     <color name="divideLine">#D8D8D8</color>
     <color name="whiteBackground">#FFFFFF</color>

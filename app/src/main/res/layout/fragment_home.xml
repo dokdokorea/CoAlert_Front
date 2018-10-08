@@ -46,9 +46,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:orientation="horizontal"
                 android:background="#fff"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:orientation="horizontal">
 
                 <FrameLayout
                     android:id="@+id/detail_element_info_btn"
@@ -106,8 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:orientation="vertical"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -120,18 +120,18 @@
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/hot_youtuber"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="@string/hot_youtuber" />
 
                     <ImageButton
+                        style="@style/editprofile"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
-                        android:textColor="#fff"
-                        style="@style/editprofile"
                         android:background="#00000000"
+                        android:scaleType="centerInside"
                         android:src="@drawable/clickednext"
-                        android:scaleType="centerInside" />
+                        android:textColor="#fff" />
 
 
                 </RelativeLayout>
@@ -150,8 +150,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:background="@drawable/main_hot_review_background"
-                android:orientation="vertical"
-                android:elevation="5dp">
+                android:elevation="5dp"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -164,22 +164,21 @@
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/hot_review"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="@string/hot_review" />
 
                     <ImageButton
+                        style="@style/editprofile"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
-                        android:textColor="#fff"
-                        style="@style/editprofile"
                         android:background="#00000000"
+                        android:scaleType="centerInside"
                         android:src="@drawable/clicking_next_btn"
-                        android:scaleType="centerInside" />
+                        android:textColor="#fff" />
 
 
                 </RelativeLayout>
-
 
 
                 <android.support.v7.widget.RecyclerView
@@ -187,10 +186,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/shadow"/>
+                android:background="@drawable/shadow" />
 
             <Space
                 android:layout_width="match_parent"
@@ -213,18 +213,18 @@
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="@string/new_product"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:text="@string/new_product" />
 
                     <ImageButton
+                        style="@style/editprofile"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
-                        android:textColor="#fff"
-                        style="@style/editprofile"
                         android:background="#00000000"
+                        android:scaleType="centerInside"
                         android:src="@drawable/clicking_next_btn"
-                        android:scaleType="centerInside" />
+                        android:textColor="#fff" />
 
 
                 </RelativeLayout>
@@ -234,10 +234,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:background="@drawable/shadow"/>
+                android:background="@drawable/shadow" />
+
 
         </LinearLayout>
     </ScrollView>

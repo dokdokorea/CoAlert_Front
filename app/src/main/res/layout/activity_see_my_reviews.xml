@@ -10,17 +10,18 @@
         android:background="@color/first">
 
         <ImageButton
+            android:id="@+id/see_my_reviews_back_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/left_btn" />
+            android:background="@drawable/clicking_back_btn" />
 
         <TextView
-            style="@style/detailreviewTitle"
+            style="@style/barTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="내가적은리뷰"
+            android:text="작성한 리뷰"
             android:textSize="35sp" />
 
     </RelativeLayout>
@@ -47,23 +48,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/divideLine"
+                    android:background="@drawable/purple_gradation"
                     android:onClick="viewSimple"
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/detailreviewContext"
+                        style="@style/whiteTextStyleSeeMyReviewsSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
                         android:text="간단리뷰 더보기" />
 
                     <TextView
+                        android:id="@+id/simple_list_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
                         android:gravity="right"
-                        android:id="@+id/simple_list_icon"
                         android:text="▶"
                         android:textSize="20sp" />
 
@@ -88,12 +89,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:background="@color/divideLine"
+                    android:background="@color/lightBlue"
                     android:onClick="viewDetail"
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/detailreviewContext"
+                        style="@style/whiteTextStyleSeeMyReviewsSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
