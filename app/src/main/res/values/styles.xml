@@ -74,10 +74,9 @@
     </style>
 
     <style name="editprofile">
-        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="android:fontFamily">@font/kopub_medium</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/sixth</item>
-        <item name="android:gravity">center</item>
     </style>
 
     <style name="editprofilevari">

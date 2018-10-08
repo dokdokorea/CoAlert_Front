@@ -7,10 +7,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
@@ -29,8 +31,8 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 public class MyProfileFragment extends Fragment {
     List<String> list;
     Button Edit;
-    LinearLayout wishBtn;
-    LinearLayout toxicListBtn;
+    FrameLayout wishBtn;
+    FrameLayout toxicListBtn;
 
     public MyProfileFragment() {
 
@@ -41,8 +43,8 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_myprofile, container, false);
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
-        wishBtn=(LinearLayout)v.findViewById(R.id.wish_button);
-        toxicListBtn=(LinearLayout)v.findViewById(R.id.toxicList);
+        wishBtn=v.findViewById(R.id.wish_button);
+        toxicListBtn=v.findViewById(R.id.toxicList);
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);

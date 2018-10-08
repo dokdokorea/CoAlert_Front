@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8D8D8"
+    android:background="@color/app_background"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -21,15 +21,6 @@
             android:text="MyPage"
             android:textSize="20dp"
             android:textStyle="bold" />
-
-        <ImageButton
-            android:id="@+id/backbtn"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:background="@color/whiteBackground"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/left_btn" />
 
 
     </RelativeLayout>
@@ -114,60 +105,12 @@
 
             </LinearLayout>
 
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/toxicList"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"
-                android:orientation="horizontal">
-
-                <TextView
-                    style="@style/editprofile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:padding="5dp"
-                    android:text="유해성분 목록 보기" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="1">
-
-
-                    <android.support.v4.widget.Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.9" />
-
-                    <ImageButton
-
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn" />
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-
-            <LinearLayout
-                android:id="@+id/wish_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"
-                android:orientation="horizontal">
+                android:layout_height="40dp"
+                android:background="@drawable/clicking_white_btn">
 
                 <TextView
                     style="@style/editprofile"
@@ -175,28 +118,44 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
                     android:padding="5dp"
+                    android:text="유해성분 목록 보기" />
+
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/clicking_next_btn_white_background"
+                    android:scaleType="fitCenter" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/wish_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/clicking_white_btn">
+
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
                     android:text="@string/wish_list" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <ImageButton
+                    android:layout_width="40dp"
                     android:layout_height="match_parent"
-                    android:weightSum="1">
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/clicking_next_btn_white_background"
+                    android:scaleType="fitCenter" />
 
-                    <android.support.v4.widget.Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.9" />
-
-                    <ImageButton
-                        android:layout_width="1dp"
-                        android:layout_height="14dp"
-                        android:layout_gravity="center"
-                        android:layout_marginEnd="8dp"
-                        android:layout_weight="0.1"
-                        android:background="@drawable/rightbtn" />
-                </LinearLayout>
-
-            </LinearLayout>
+            </FrameLayout>
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
@@ -206,66 +165,39 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff"
+                android:background="@android:color/white"
                 android:orientation="vertical">
 
 
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/following"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="40dp"
+                    android:background="@drawable/clicking_white_btn">
 
                     <TextView
                         style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
+                        android:layout_gravity="start|center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
                         android:text="팔로잉 목록" />
 
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageButton
+                        android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:weightSum="1">
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/clicking_next_btn_white_background"
+                        android:scaleType="fitCenter" />
 
-                        <android.support.v4.widget.Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.9" />
+                </FrameLayout>
 
-                        <ImageButton
-                            android:layout_width="1dp"
-                            android:layout_height="14dp"
-                            android:layout_gravity="bottom"
-                            android:layout_marginBottom="6dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="0.1"
-                            android:background="@drawable/rightbtn" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-                <LinearLayout
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="3dp"
-                        android:layout_weight="0.98"
-                        android:background="#D8D8D8" />
-
-
-                </LinearLayout>
-
+                    android:layout_height="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -298,44 +230,31 @@
 
                 </LinearLayout>
 
-                <LinearLayout
+                <FrameLayout
                     android:id="@+id/follower"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
+                    android:background="@drawable/clicking_white_btn">
 
                     <TextView
                         style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="5dp"
-                        android:gravity="center"
                         android:text="팔로워 목록" />
 
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <ImageButton
+                        android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:weightSum="1">
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/clicking_next_btn_white_background"
+                        android:scaleType="fitCenter" />
 
-                        <android.support.v4.widget.Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.9" />
-
-                        <ImageButton
-                            android:layout_width="1dp"
-                            android:layout_height="14dp"
-                            android:layout_gravity="center"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="0.1"
-                            android:background="@drawable/rightbtn" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                </FrameLayout>
 
             </LinearLayout>
 
@@ -353,9 +272,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/yoon_gothic330"
+                    style="@style/editprofile"
                     android:text="내가 사용한 화장품"
                     android:textSize="22dp" />
 
@@ -393,6 +312,9 @@
 
             </LinearLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
         </LinearLayout>
     </ScrollView>
 

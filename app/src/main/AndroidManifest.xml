@@ -64,7 +64,11 @@
 
         </activity>
         <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.EmailSignUpActivity">
 
@@ -76,11 +80,7 @@
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".Activity.NotificationActivity"></activity>
         <activity android:name=".Activity.AnotherprofileActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Activity.CommonSignUpActivity"></activity>
         <activity android:name=".Activity.WishListActivity" />
