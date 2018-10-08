@@ -17,16 +17,27 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/cosmetic_ingredient_pd_name"
-                style="@style/editprofile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingBottom="20dp"
-                android:paddingTop="10dp"
-                android:text="@string/cosmetic_pd_name" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    style="@style/black_back_btn_style"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/cosmetic_ingredient_pd_name"
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/first"
+                    android:text="@string/cosmetic_pd_name" />
+            </FrameLayout>
 
             <TabHost
                 android:id="@+id/tabHost1"
@@ -62,8 +73,7 @@
                             android:id="@+id/content2"
                             layout="@layout/tab_skintype"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            />
+                            android:layout_height="match_parent" />
                     </FrameLayout>
                 </LinearLayout>
             </TabHost>

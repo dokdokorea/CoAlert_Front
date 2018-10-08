@@ -10,11 +10,7 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/editprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            style="@style/tab_skintype_title_style"
             android:text="@string/oily_skin" />
 
         <android.support.v7.widget.RecyclerView
@@ -22,11 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
-            style="@style/editprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/tab_skintype_title_style"
             android:text="@string/dry_skin" />
 
         <android.support.v7.widget.RecyclerView
@@ -34,32 +31,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            style="@style/editprofile"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/normal_skin" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/normal_skin_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="20dp" />
 
         <TextView
-            style="@style/editprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/combination_skin" />
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/combination_skin_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            style="@style/editprofile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/tab_skintype_title_style"
             android:text="@string/sensitive_skin" />
 
         <android.support.v7.widget.RecyclerView
