@@ -40,7 +40,9 @@ import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.Adapter.searchAdapter;
+import com.example.user.coalert.Background;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForBackgroundSingleton;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.searchModel;
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -139,24 +141,31 @@ public class SearchFragment extends Fragment {
                         }
                         @Override
                         public void afterTextChanged(Editable editable) {
-                           text = edit.getText().toString();
-
+                            final Background variable = ForBackgroundSingleton.getInstance();
+                            text = edit.getText().toString();
                             if (previousText != text.length()) {
                                     new Thread(){
                                         @Override
                                         public void run() {
                                             try {
                                                 list = new ArrayList<>();
+                                                //받아온 데이터로 리스트틀 채워주세요.
                                                 text = edit.getText().toString();
                                                 Log.e("전송 메세지: ", text.substring(0, previousText));
-                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), "", "");
+                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), variable.id, variable.session);
                                                 Object result = call.execute().body();
-
-                                                final ArrayList<String> arrayList = new ArrayList<String>(list);
-                                                final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
-                                                listView.setAdapter(searchAdapter);
-                                                search(text, list, arrayList, searchAdapter);
                                                 Log.e("result", result.toString());
+                                                getActivity().runOnUiThread(new Runnable() {
+                                                    @Override
+                                                    public void run() {
+                                                        list = variable.listCname;
+                                                        final ArrayList<String> arrayList = new ArrayList<String>(list);
+                                                        final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
+                                                        listView.setAdapter(searchAdapter);
+                                                        search(text, list, arrayList, searchAdapter);
+                                                    }
+                                                });
+
                                             } catch (Exception e){
                                                 e.printStackTrace();
                                             }

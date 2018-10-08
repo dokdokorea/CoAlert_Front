@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/SearchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/SearchFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,7 @@
     <session id="383413844">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -107,9 +105,9 @@
               <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1538857453904" expanded="true" signature="238:239" ph="..." />
-                <marker date="1538857453904" expanded="true" signature="1056:1606" ph="..." />
-                <marker date="1538857453904" expanded="true" signature="1383:1415" ph="..." />
+                <marker date="1538865933107" expanded="true" signature="238:239" ph="..." />
+                <marker date="1538865933107" expanded="true" signature="1056:1606" ph="..." />
+                <marker date="1538865933107" expanded="true" signature="1383:1415" ph="..." />
               </folding>
             </state>
           </provider>
@@ -168,7 +166,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -314,10 +312,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="760" y="0" width="784" height="832" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35369128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.72790056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -369,9 +366,9 @@
           <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1538857453904" expanded="true" signature="238:239" ph="..." />
-            <marker date="1538857453904" expanded="true" signature="1056:1606" ph="..." />
-            <marker date="1538857453904" expanded="true" signature="1383:1415" ph="..." />
+            <marker date="1538865933107" expanded="true" signature="238:239" ph="..." />
+            <marker date="1538865933107" expanded="true" signature="1056:1606" ph="..." />
+            <marker date="1538865933107" expanded="true" signature="1383:1415" ph="..." />
           </folding>
         </state>
       </provider>

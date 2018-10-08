@@ -1,10 +1,15 @@
 package com.example.user.coalert.forRestServer;
 
+import com.example.user.coalert.Background;
+import com.example.user.coalert.Singleton.ForBackgroundSingleton;
+
+import java.util.List;
+
 public class searchModel {
-    String cname;
-    String company;
-    String name;
+    List<String> cname, company, name;
     String error;
+
+    Background variable = ForBackgroundSingleton.getInstance();
 
     public String getError() {
         return error;
@@ -14,28 +19,31 @@ public class searchModel {
         this.error = error;
     }
 
-    public String getCname() {
+    public List<String> getCname() {
+        this.setCname(cname);
         return cname;
     }
 
-    public void setCname(String cname) {
-        this.cname = cname;
+    public void setCname(List<String> cname) {
+        variable.listCname = cname;
     }
 
-    public String getCompany() {
+    public List<String> getCompany() {
+        this.setCompany(company);
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setCompany(List<String> company) {
+        variable.listCompany = company;
     }
 
-    public String getName() {
+    public List<String> getName() {
+        this.setName(name);
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(List<String> name) {
+        variable.listName = name;
     }
 
     @Override
