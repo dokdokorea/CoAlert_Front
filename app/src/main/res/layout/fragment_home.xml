@@ -47,7 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:orientation="horizontal"
-                android:background="#fff">
+                android:background="#fff"
+                android:elevation="5dp">
 
                 <FrameLayout
                     android:id="@+id/detail_element_info_btn"
@@ -105,7 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:elevation="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -140,7 +142,6 @@
                     android:layout_height="match_parent" />
             </LinearLayout>
 
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
@@ -150,7 +151,7 @@
                 android:layout_height="210dp"
                 android:background="@drawable/main_hot_review_background"
                 android:orientation="vertical"
-                android:elevation="10dp">
+                android:elevation="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -186,6 +187,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/shadow"/>
 
             <Space
                 android:layout_width="match_parent"
@@ -229,6 +234,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/shadow"/>
 
         </LinearLayout>
     </ScrollView>

@@ -4,25 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="40dp"
+        android:background="@color/first">
 
         <ImageView
             android:id="@+id/following_list_back_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="40dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/left_btn" />
+            android:src="@drawable/clicking_back_btn" />
 
         <TextView
-            style="@style/editprofile"
+            style="@style/barTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
             android:text="팔로잉한 유저" />
-    </LinearLayout>
+    </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/following_list_recyclerview"
