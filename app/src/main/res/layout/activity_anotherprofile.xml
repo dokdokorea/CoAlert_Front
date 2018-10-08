@@ -3,19 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8D8D8"
+    android:background="@color/app_background"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#ffffff"
-        android:fontFamily="@font/yoon_gothic340"
-        android:gravity="center"
-        android:text="CoAlert"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:layout_height="55dp"
+        android:background="@color/first">
+
+        <ImageButton
+            android:id="@+id/anotherprofile_back_btn"
+            style="@style/back_btn_style"
+            android:layout_gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/coalert_logo_word" />
+    </FrameLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
@@ -24,7 +31,7 @@
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,8 +75,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:paddingLeft="10dp"
                         android:fontFamily="@font/yoon_gothic330"
+                        android:paddingLeft="10dp"
                         android:text="아이린"
                         android:textSize="30dp" />
 
@@ -78,8 +85,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:paddingLeft="10dp"
                         android:fontFamily="@font/yoon_gothic330"
+                        android:paddingLeft="10dp"
                         android:text="example@gmail.com"
                         android:textSize="18dp" />
 
@@ -216,35 +223,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff"
+                android:background="@drawable/cloudy_knoxville"
+                android:elevation="3dp"
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/barTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/yoon_gothic330"
+                    android:gravity="start"
                     android:text="팔로우 목록"
-                    android:textSize="20dp" />
+                    android:textColor="@color/fifth" />
 
-                <LinearLayout
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="3dp"
-                        android:layout_weight="0.98"
-                        android:background="#D8D8D8" />
-
-
-                </LinearLayout>
-
+                    android:layout_height="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -270,35 +265,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#fff"
+                android:background="@drawable/cloudy_knoxville"
+                android:elevation="3dp"
                 android:orientation="vertical">
 
                 <TextView
+                    style="@style/barTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/yoon_gothic330"
+                    android:gravity="start"
                     android:text="리뷰한 화장품 목록"
-                    android:textSize="20dp" />
+                    android:textColor="@color/fifth" />
 
-                <LinearLayout
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="3dp"
-                        android:layout_weight="0.98"
-                        android:background="#D8D8D8" />
-
-
-                </LinearLayout>
-
+                    android:layout_height="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -314,8 +297,11 @@
 
                 </LinearLayout>
 
-            </LinearLayout>
 
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

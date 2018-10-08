@@ -25,6 +25,7 @@ public class AnotherprofileActivity extends AppCompatActivity {
     Button follow;
     ImageButton Toxic;
     ImageButton following;
+    ImageButton backBtn;
     int j = 0;
 
 
@@ -32,9 +33,7 @@ public class AnotherprofileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anotherprofile);
-
-
-
+        backBtn = findViewById(R.id.anotherprofile_back_btn);
         follow = (Button) findViewById(R.id.follower);
         Toxic = (ImageButton) findViewById(R.id.toxicList);
         following = (ImageButton) findViewById(R.id.following);
@@ -98,6 +97,14 @@ public class AnotherprofileActivity extends AppCompatActivity {
                     Toast.makeText(AnotherprofileActivity.this, "팔로우하셨습니다", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
