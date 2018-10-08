@@ -21,6 +21,6 @@ public class signUpModel {
 
     @Override
     public String toString() {
-        return "{id:"+getId()+",error:"+getError()+"}";
+        return "{\"id\":\""+getId()+"\",\"error\":\""+getError()+"\"}";
     }
 }

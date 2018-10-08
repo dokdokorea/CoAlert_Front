@@ -49,6 +49,7 @@ public class SimpleReviewModel {
 
     @Override
     public String toString() {
-        return "{cname:" + getCname() + ", content: " + getContent() + ", oneline: " + getOneline() + ", rate:" + getRate()+"error:"+getError()+"}";
+        return "{\"cname\":\"" + getCname() + "\", \"content\": \"" + getContent() + "\",\" oneline\": \"" + getOneline() + "\",\" rate\":\"" + getRate()+"\"" +
+                ",\"error\":\""+getError()+"\"}";
     }
 }

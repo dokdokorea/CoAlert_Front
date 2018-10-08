@@ -48,6 +48,6 @@ public class searchModel {
 
     @Override
     public String toString() {
-        return "{cname:"+getCname()+", company:"+getCompany()+", name:"+getName()+", error"+getError()+"}";
+        return "{\"cname\":\""+getCname()+"\", \"company\":\""+getCompany()+"\", \"name\":\""+getName()+"\", \"error\":\""+getError()+"\"}";
     }
 }

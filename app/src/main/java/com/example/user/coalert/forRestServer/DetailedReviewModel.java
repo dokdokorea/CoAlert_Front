@@ -65,6 +65,7 @@ public class DetailedReviewModel {
 //
     @Override
     public String toString() {
-        return "{locode: "+getLcode()+", id:"+getId()+", cname:"+getCname()+", title:"+getTitle()+", content:"+getContent()+", like:"+getLike()+"}";
+        return "{\"locode\": \""+getLcode()+"\", \"id\":\""+getId()+"\", \"cname\":\""+getCname()+"\", \"title\":\""+getTitle()+"\",\" content\":\""+getContent()+"\",\" " +
+                "like\":\""+getLike()+"\"}";
     }
 }

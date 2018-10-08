@@ -30,6 +30,6 @@ public class loginModel {
 
     @Override
     public String toString() {
-        return "{session: "+getSession()+", id: "+getId ()+", error:"+getError()+"}";
+        return "{\"session\": \""+getSession()+"\", \"id\": \""+getId ()+"\", \"error\":\""+getError()+"\"}";
     }
 }
