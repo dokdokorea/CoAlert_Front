@@ -3,6 +3,8 @@ package com.example.user.coalert.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +31,7 @@ import java.io.IOException;
 import retrofit2.Call;
 
 public class CommonSignUpActivity extends AppCompatActivity{
-    TextView tv1,tv2;
+    TextView tv1, tv2;
     ImageView profile;
     Bitmap bitmap;
     SessionCallback callback;
@@ -43,9 +45,9 @@ public class CommonSignUpActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_sign_up);
-        tv1=findViewById(R.id.name);
-        tv2=findViewById(R.id.id);
-        profile=findViewById(R.id.image);
+        tv1 = findViewById(R.id.name);
+        tv2 = findViewById(R.id.id);
+        profile = findViewById(R.id.image);
         lastButton = findViewById(R.id.common_sign_up_confirmation_btn);
         sexRadioGroup = findViewById(R.id.sexRadioGroup);
         beforePageInfo = getIntent();
@@ -97,36 +99,34 @@ public class CommonSignUpActivity extends AppCompatActivity{
         //Session.getCurrentSession().addCallback(callback);
 
         //YearSpinner
-        final Spinner yearSpinner=(Spinner)findViewById(R.id.spinner_year);
-        ArrayAdapter yearAdapter=ArrayAdapter.createFromResource(this,
-                R.array.date_year,android.R.layout.simple_spinner_item);
+        final Spinner yearSpinner = (Spinner) findViewById(R.id.spinner_year);
+        ArrayAdapter yearAdapter = ArrayAdapter.createFromResource(this,
+                R.array.date_year, android.R.layout.simple_spinner_item);
         yearAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(yearAdapter);
 
         //MonthSpinner
-        final Spinner monthSpinner=(Spinner)findViewById(R.id.spinner_month);
-        ArrayAdapter monthAdapter=ArrayAdapter.createFromResource(this,
-                R.array.date_month,android.R.layout.simple_spinner_item);
+        final Spinner monthSpinner = (Spinner) findViewById(R.id.spinner_month);
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this,
+                R.array.date_month, android.R.layout.simple_spinner_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         monthSpinner.setAdapter(monthAdapter);
 
         //DaySpinner
-        final Spinner daySpinner=(Spinner)findViewById(R.id.spinner_day);
-        ArrayAdapter dayAdapter=ArrayAdapter.createFromResource(this,
-                R.array.date_day,android.R.layout.simple_spinner_item);
+        final Spinner daySpinner = (Spinner) findViewById(R.id.spinner_day);
+        ArrayAdapter dayAdapter = ArrayAdapter.createFromResource(this,
+                R.array.date_day, android.R.layout.simple_spinner_item);
         dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         daySpinner.setAdapter(dayAdapter);
 
-        final Spinner skinTypeSpinner = findViewById(R.id.spinner_skin_type);
-        ArrayAdapter sexAdapter = ArrayAdapter.createFromResource(this,
-                R.array.skin_type, android.R.layout.simple_spinner_dropdown_item);
-        skinTypeSpinner.setAdapter(sexAdapter);
+
 
         yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 completeYear = (String) yearSpinner.getSelectedItem();
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
@@ -136,8 +136,8 @@ public class CommonSignUpActivity extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 selectedMonth = Integer.parseInt(String.valueOf(monthSpinner.getSelectedItem()));
-                if(selectedMonth < 10)
-                    completeMonth = String.valueOf("0"+selectedMonth);
+                if (selectedMonth < 10)
+                    completeMonth = String.valueOf("0" + selectedMonth);
                 else
                     completeMonth = String.valueOf(selectedMonth);
             }
@@ -152,7 +152,7 @@ public class CommonSignUpActivity extends AppCompatActivity{
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 selectedDay = Integer.parseInt(String.valueOf(daySpinner.getSelectedItem()));
                 if (selectedDay < 10)
-                    completeDay = String.valueOf("0"+selectedDay);
+                    completeDay = String.valueOf("0" + selectedDay);
                 else
                     completeMonth = String.valueOf(selectedMonth);
             }
@@ -162,10 +162,19 @@ public class CommonSignUpActivity extends AppCompatActivity{
 
             }
         });
+final Intent it3=new Intent(getApplicationContext(),CommonSignUpActivity.class);
+        final Spinner skinTypeSpinner = findViewById(R.id.spinner_skin_type);
+        ArrayAdapter skinAdapter = ArrayAdapter.createFromResource(this,
+                R.array.skin_type, android.R.layout.simple_spinner_dropdown_item);
+        skinAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        skinTypeSpinner.setAdapter(skinAdapter);
+
         skinTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selectedSkinType = (String)skinTypeSpinner.getSelectedItem();
+                selectedSkinType = (String) skinTypeSpinner.getSelectedItem().toString();
+                /*it3.putExtra("skintype", selectedSkinType); //it3_season 이라는 스트링으로 str_season 값을 넘긴다.
+                startActivity(it3);*/
             }
 
             @Override
@@ -173,20 +182,51 @@ public class CommonSignUpActivity extends AppCompatActivity{
 
             }
         });
+
+       /* String skinTypeString = it3.getStringExtra("skintype");
+
+        ImageView skinImg = findViewById(R.id.skin_type_image);
+        switch (skinTypeString){
+            case "중성":
+                Drawable img = getResources().getDrawable(R.drawable.normalskin);
+                skinImg.setImageDrawable(img);
+                break;
+            case "지성":
+                img = getResources().getDrawable(R.drawable.oilyskin);
+                skinImg.setImageDrawable(img);
+                break;
+            case "건성":
+                img = getResources().getDrawable(R.drawable.dryskin);
+                skinImg.setImageDrawable(img);
+                break;
+            case "민감성":
+                img = getResources().getDrawable(R.drawable.normalskin);
+                skinImg.setImageDrawable(img);
+                break;
+            case "복합성":
+                img = getResources().getDrawable(R.drawable.normalskin);
+                skinImg.setImageDrawable(img);
+                break;
+            case "불확실성":
+                img = getResources().getDrawable(R.drawable.normalskin);
+                skinImg.setImageDrawable(img);
+                break;
+        }*/
+
         lastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread(){
+                new Thread() {
                     @Override
                     public void run() {
                         super.run();
                         try {
                             anyone = findViewById(sexRadioGroup.getCheckedRadioButtonId());
-                        String fullBirth = completeYear+"-"+completeMonth+"-"+completeDay;
-                        Log.e("skitType", selectedSkinType+anyone.getText());
-                        Call<signUpModel> call = ForRestSingleton.getInstance().signUpCall(email, password, name, email, selectedSkinType, fullBirth, anyone.getText(), 0);
-                        signUpModel result = call.execute().body();
-                        Log.e("signUpmodel Result: ", result.toString());
+                            String fullBirth = completeYear + "-" + completeMonth + "-" + completeDay;
+                            Log.e("skitType", selectedSkinType + anyone.getText());
+                            Call<signUpModel> call = ForRestSingleton.getInstance().signUpCall(email, password, name, email, selectedSkinType, fullBirth, anyone.getText(), 0);
+                            signUpModel result = call.execute().body();
+                            Log.e("signUpmodel Result: ", result.toString());
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -195,6 +235,8 @@ public class CommonSignUpActivity extends AppCompatActivity{
             }
         });
     }
+
+
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -205,15 +247,12 @@ public class CommonSignUpActivity extends AppCompatActivity{
         }
 
 
-            String resultMsg = data.getStringExtra("name");
-            tv1.setText(resultMsg);
+        String resultMsg = data.getStringExtra("name");
+        tv1.setText(resultMsg);
 
-            Toast.makeText(this, "결과 : " + resultMsg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "결과 : " + resultMsg, Toast.LENGTH_SHORT).show();
 
     }
-
-
-
 
 
 //    private void requestMe() {
@@ -250,15 +289,17 @@ public class CommonSignUpActivity extends AppCompatActivity{
 //        });
 //    }
 
-    protected void showSignup(){
+    protected void showSignup() {
         redirectLoginActivity();
     }
-    private void redirectMainActivity(){
-        startActivity(new Intent(this,LoginActivity.class));
+
+    private void redirectMainActivity() {
+        startActivity(new Intent(this, LoginActivity.class));
         finish();
     }
-    protected void redirectLoginActivity(){
-        final Intent intent=new Intent(this, LoginActivity.class);
+
+    protected void redirectLoginActivity() {
+        final Intent intent = new Intent(this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();

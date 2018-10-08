@@ -7,7 +7,6 @@
     <string name="skintype">피부타입</string>
 
     <style name="signup_item_text_style">
-        <item name="android:layout_weight">1</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/kopub_medium</item>
@@ -17,8 +16,17 @@
         <item name="android:background">@color/first</item>
         <item name="android:paddingTop">5dp</item>
         <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
     </style>
-
+<style name="item_cover_layout">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_weight">1</item>
+    <item name="android:paddingTop">5dp</item>
+    <item name="android:paddingBottom">5dp</item>
+</style>
     <style name="signup_each_layer_style">
         <item name="android:layout_marginTop">50dp</item>
         <item name="android:layout_width">match_parent</item>

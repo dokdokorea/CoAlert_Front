@@ -5,7 +5,7 @@
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/mypageback"
+    android:background="@color/app_background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -33,7 +33,7 @@
             android:id="@+id/cosmetic_info_write_review"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/emptyBackground"
+            android:background="@drawable/clicking_button_with_pink_background"
             android:fontFamily="@font/kopub_medium"
             android:text="@string/write_revw"
             android:textColor="@android:color/white"
