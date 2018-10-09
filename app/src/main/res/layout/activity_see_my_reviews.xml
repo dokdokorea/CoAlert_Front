@@ -45,10 +45,10 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:background="@drawable/purple_gradation"
+                    android:background="@drawable/main_hot_review_background"
                     android:onClick="viewSimple"
                     android:orientation="horizontal">
 
@@ -57,6 +57,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
+                        android:textColor="@android:color/darker_gray"
                         android:text="간단리뷰 더보기" />
 
                     <TextView
@@ -87,9 +88,9 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_margin="5dp"
-                    android:background="@color/lightBlue"
+                    android:background="@drawable/main_hot_review_background"
                     android:onClick="viewDetail"
                     android:orientation="horizontal">
 
@@ -97,6 +98,7 @@
                         style="@style/whiteTextStyleSeeMyReviewsSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
                         android:layout_margin="7dp"
                         android:text="자세한리뷰 더보기" />
 
