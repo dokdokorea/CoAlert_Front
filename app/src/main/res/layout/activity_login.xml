@@ -25,21 +25,20 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="420dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dip"
-        android:layout_marginStart="8dip"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="10dip"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <LinearLayout
             android:id="@+id/login_conetent_linearlayout"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="20dip"
@@ -76,8 +75,8 @@
             android:background="@drawable/edit_text_background"
             android:elevation="30dip"
             android:fontFamily="@font/kopub_medium"
-            android:paddingBottom="40dip"
             android:paddingTop="40dip"
+            android:paddingBottom="40dip"
             android:text="@string/email_login_button"
             android:textColor="@android:color/black"
             android:textSize="17sp"
@@ -147,14 +146,16 @@
     <ImageButton
         android:id="@+id/signup"
         android:layout_width="300dip"
-        android:layout_height="0dp"
-        android:layout_marginBottom="186dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dip"
+        android:layout_marginBottom="186dp"
         android:background="@color/emptyBackground"
         android:scaleType="centerCrop"
         android:src="@drawable/email_sign_up_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        app:layout_constraintVertical_bias="0.019" />
 </android.support.constraint.ConstraintLayout>
