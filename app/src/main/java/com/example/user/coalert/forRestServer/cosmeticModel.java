@@ -52,6 +52,6 @@ public class cosmeticModel {
     @Override
     public String toString() {
         return "{\"cname\": \""+getCname()+"\", \"company\":\""+getCompany()
-                +"\"ingr\":\" "+getIngr()+"\",\" rank\":\" "+getRank()+ "\",\" error\":\" "+getError()+"\"}";
+                +"\",\"ingr\":\" "+getIngr()+"\",\" rank\":\" "+getRank()+ "\",\" error\":\" "+getError()+"\"}";
     }
 }
