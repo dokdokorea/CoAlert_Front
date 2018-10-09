@@ -35,8 +35,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="870dp"
-        app:layout_constraintTop_toBottomOf="@+id/youngwoobabo">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -111,7 +111,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp">
@@ -155,7 +155,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp">
@@ -198,13 +198,13 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="210dp"
                 android:background="@drawable/main_new_prod_background"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp">

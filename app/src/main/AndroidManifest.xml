@@ -62,9 +62,8 @@
         </activity>
         <activity
             android:name=".Activity.AccessAuthorizationActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog">
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
 
-        </activity>
         <activity android:name=".Activity.MainActivity">
 
         </activity>
