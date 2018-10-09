@@ -70,12 +70,13 @@ public class SearchFragment extends Fragment {
     InputMethodManager imm;
     Uri allUri;
     int previousText = 0;
-    int cameraRequest=10;
+    int cameraRequest = 10;
     List<String> list;
     String datapath;
     TessBaseAPI mTess;
     Bitmap image;
     ListView searchList;
+
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -97,7 +98,7 @@ public class SearchFragment extends Fragment {
         searchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(), list.get(position),Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), list.get(position), Toast.LENGTH_LONG).show();
                 //TODO 서치 데이터에서 눌렀을 때 이벤트를 처리해주면 됩니다.
                 Intent intent = new Intent(view.getContext(), CosmeticInformationActivity.class);
                 intent.putExtra("cosmeticName", list.get(position));
@@ -105,13 +106,15 @@ public class SearchFragment extends Fragment {
             }
         });
 
-        ImageButton imageButton = v.findViewById(R.id.search_camera);
+        LinearLayout imageButton = v.findViewById(R.id.search_bar_notfocusing);
         imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cameraView();
-            }
-        });
+                                           @Override
+                                           public void onClick(View view) {
+                                               cameraView();
+                                           }
+                                       }
+        );
+
         edit = v.findViewById(R.id.editSearch);
         //edit Text 포커스가 있냐 없냐에 따라서
         //이벤트 구분
@@ -120,7 +123,7 @@ public class SearchFragment extends Fragment {
             @Override
             public void onFocusChange(View view, boolean haveFocus) {
                 final ListView listView = v.findViewById(R.id.search_list);
-                if (haveFocus){
+                if (haveFocus) {
                     viewFlipper.setDisplayedChild(1);
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
@@ -139,43 +142,44 @@ public class SearchFragment extends Fragment {
                         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                         }
+
                         @Override
                         public void afterTextChanged(Editable editable) {
                             final Background variable = ForBackgroundSingleton.getInstance();
                             text = edit.getText().toString();
                             if (previousText != text.length()) {
-                                    new Thread(){
-                                        @Override
-                                        public void run() {
-                                            try {
-                                                list = new ArrayList<>();
-                                                //받아온 데이터로 리스트틀 채워주세요.
-                                                text = edit.getText().toString();
-                                                Log.e("전송 메세지: ", text.substring(0, previousText));
-                                                Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText-1), variable.id, variable.session);
-                                                Object result = call.execute().body();
-                                                Log.e("result", result.toString());
-                                                getActivity().runOnUiThread(new Runnable() {
-                                                    @Override
-                                                    public void run() {
-                                                        list = variable.listCname;
-                                                        final ArrayList<String> arrayList = new ArrayList<String>(list);
-                                                        final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
-                                                        listView.setAdapter(searchAdapter);
-                                                        search(text, list, arrayList, searchAdapter);
-                                                    }
-                                                });
+                                new Thread() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            list = new ArrayList<>();
+                                            //받아온 데이터로 리스트틀 채워주세요.
+                                            text = edit.getText().toString();
+                                            Log.e("전송 메세지: ", text.substring(0, previousText));
+                                            Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText - 1), variable.id, variable.session);
+                                            Object result = call.execute().body();
+                                            Log.e("result", result.toString());
+                                            getActivity().runOnUiThread(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    list = variable.listCname;
+                                                    final ArrayList<String> arrayList = new ArrayList<String>(list);
+                                                    final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
+                                                    listView.setAdapter(searchAdapter);
+                                                    search(text, list, arrayList, searchAdapter);
+                                                }
+                                            });
 
-                                            } catch (Exception e){
-                                                e.printStackTrace();
-                                            }
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
                                         }
-                                    }.start();
-                                    previousText = text.length();
+                                    }
+                                }.start();
+                                previousText = text.length();
                             }
                         }
                     });
-                }else{
+                } else {
                     viewFlipper.setDisplayedChild(0);
                 }
             }
@@ -208,8 +212,8 @@ public class SearchFragment extends Fragment {
         return v;
     }
 
-    public void cameraView(){
-        Uri uri = FileProvider.getUriForFile(getActivity(), "com.bignerdranch.android.test.fileprovider",new File(Environment.getExternalStorageDirectory(), "tmp_contact_" + System.currentTimeMillis() + ".jpg"));
+    public void cameraView() {
+        Uri uri = FileProvider.getUriForFile(getActivity(), "com.bignerdranch.android.test.fileprovider", new File(Environment.getExternalStorageDirectory(), "tmp_contact_" + System.currentTimeMillis() + ".jpg"));
         allUri = uri;
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, uri);
@@ -222,7 +226,7 @@ public class SearchFragment extends Fragment {
         if (requestCode == cameraRequest && resultCode == Activity.RESULT_OK) {
             try {
                 image = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), allUri);
-                image = Bitmap.createScaledBitmap(image, image.getWidth()/3, image.getHeight()/3, true);
+                image = Bitmap.createScaledBitmap(image, image.getWidth() / 3, image.getHeight() / 3, true);
                 image = rotateBitmap(image);
                 Log.e("int ActivityResult:", "asdasd");
             } catch (IOException e) {
@@ -254,25 +258,27 @@ public class SearchFragment extends Fragment {
 
         return resizedBitmap;
     }
+
     void checkFile(File dir, String lang) {
         //directory does not exist, but we can successfully create it
-        if (!dir.exists()&& dir.mkdirs()){
+        if (!dir.exists() && dir.mkdirs()) {
             copyFiles(lang);
         }
         //The directory exists, but there is no data file in it
-        if(dir.exists()) {
-            String datafilepath = datapath+ "/tessdata/"+lang+".traineddata";
-            File datafile =  new File(datafilepath);
+        if (dir.exists()) {
+            String datafilepath = datapath + "/tessdata/" + lang + ".traineddata";
+            File datafile = new File(datafilepath);
             if (!datafile.exists()) {
                 copyFiles(lang);
             }
         }
     }
+
     private void copyFiles(String lang) {
-        try{
-            String filepath = datapath + "/tessdata/"+lang+".traineddata";
+        try {
+            String filepath = datapath + "/tessdata/" + lang + ".traineddata";
             AssetManager assetManager = getActivity().getAssets();
-            InputStream instream = assetManager.open("tessdata/"+lang+".traineddata");
+            InputStream instream = assetManager.open("tessdata/" + lang + ".traineddata");
             OutputStream outstream = new FileOutputStream(filepath);
             byte[] buffer = new byte[1024];
             int read;
@@ -288,29 +294,30 @@ public class SearchFragment extends Fragment {
             e.printStackTrace();
         }
     }
-    void processImage(){
+
+    void processImage() {
         mTess.setImage(image);
         String test = mTess.getUTF8Text();
         Log.e("Result: ", test);
         mTess.end();
     }
 
-    public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter){
+    public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter) {
         list.clear();
 
-        if(findText.length() == 0){
+        if (findText.length() == 0) {
             list.addAll(arrayList);
-        }
-        else{
-            for(int i = 0; i<arrayList.size(); i++){
-                if(arrayList.get(i).toLowerCase().contains(findText)){
+        } else {
+            for (int i = 0; i < arrayList.size(); i++) {
+                if (arrayList.get(i).toLowerCase().contains(findText)) {
                     list.add(arrayList.get(i));
                 }
             }
         }
         searchAdapter.notifyDataSetChanged();
     }
-    void settingList(List<String> list){
+
+    void settingList(List<String> list) {
         list.add("슬기");
         list.add("슬기의 파우치");
         list.add("수지");
@@ -331,6 +338,7 @@ public class SearchFragment extends Fragment {
 
 
 }
+
 //만든 이유
 //EditText 커스텀하여 뒤로가기 버튼을 눌렀을 때 editText의 focus제거 해준다.
 class ExEditText extends android.support.v7.widget.AppCompatEditText {
@@ -339,14 +347,14 @@ class ExEditText extends android.support.v7.widget.AppCompatEditText {
         super(context);
     }
 
-    public ExEditText(Context context, AttributeSet attributeSet){
+    public ExEditText(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
     }
 
     @Override
     public boolean onKeyPreIme(int keyCode, KeyEvent event) {
-        if(event.getAction() == KeyEvent.ACTION_DOWN){
-            if(keyCode == KeyEvent.KEYCODE_BACK){
+        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+            if (keyCode == KeyEvent.KEYCODE_BACK) {
                 Log.e("asdasd", "Asdasdasd");
                 this.clearFocus();
                 return true;
