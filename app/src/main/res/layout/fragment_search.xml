@@ -17,20 +17,12 @@
         android:layout_height="50dp"
         android:imeOptions="actionSearch"
         android:inputType="text"
-        android:background="@drawable/search_edit_text"
+        android:background="#ff9c9f"
         android:hint="@string/input_search_name"
         android:textColor="@color/whiteBackground"
         android:textColorHint="@color/whiteBackground"
         android:layout_weight="5"/>
 
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/search_edit_text"
-        android:scaleType="fitXY"
-        android:src="@drawable/searchcamera"
-        android:layout_weight="1"
-        />
 
 </LinearLayout>
 
