@@ -45,7 +45,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="match_parent"
                 android:background="#fff"
                 android:elevation="5dp"
                 android:orientation="horizontal">
@@ -53,17 +53,17 @@
                 <FrameLayout
                     android:id="@+id/detail_element_info_btn"
                     style="@style/main_buton_style"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:background="@drawable/main_bad_ingre_background">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="20dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/siren" />
+                        android:src="@drawable/siren"
+                        android:layout_marginBottom="@dimen/_100sdp"
+                        />
 
                     <TextView
                         style="@style/main_button_text_style"
@@ -76,15 +76,15 @@
                 <FrameLayout
                     android:id="@+id/suggest_cosmetics"
                     style="@style/main_buton_style"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
                     android:background="@drawable/main_recommendation_bacground">
                     <!--화장품 추천 횟수 제한걸기-->
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/_7sdp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/recommendation_icon" />
 
@@ -132,8 +132,6 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/clickednext"
                         android:textColor="#fff" />
-
-
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView

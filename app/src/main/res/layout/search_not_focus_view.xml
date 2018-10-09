@@ -7,37 +7,28 @@
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
     android:background="@drawable/clicking_white_btn"
-    tools:layout_editor_absoluteY="52dp"
     >
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3" />
 
     <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="bottom|center"
         android:background="@color/emptyBackground"
         android:scaleType="fitCenter"
-        android:src="@drawable/clicking_bluecamera" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.03" />
+        android:src="@drawable/clicking_bluecamera"
+        android:layout_marginTop="@dimen/_160sdp"
+        android:layout_marginBottom="@dimen/_20sdp"/>
 
     <TextView
         style="@style/defaultFont"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
         android:layout_gravity="center"
         android:text="당신의 화장대를 찍어보세요."
-        android:textSize="30sp" />
+        android:textSize="@dimen/_23sdp"
+        />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.3" />
+
 </LinearLayout>

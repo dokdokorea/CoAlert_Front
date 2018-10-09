@@ -42,14 +42,15 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
     implementation "com.andkulikov:transitionseverywhere:1.8.0"
     implementation "me.grantland:autofittextview:0.2.+"
-
-    //카카오 로그인 sdk
-    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
-    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.rmtheis:tess-two:6.3.0'
     implementation 'com.ssomai:android.scalablelayout:2.1.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //카카오 로그인 sdk
+    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+
     //카카오링크 sdk
     //implementation group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
     //카카오톡 sdk

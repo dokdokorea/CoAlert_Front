@@ -28,12 +28,12 @@
 
 <ViewFlipper
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/_520sdp"
     android:id="@+id/viewFlipper"
     >
     <include
         android:id="@+id/search_bar_notfocusing"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/search_not_focus_view"
         />
