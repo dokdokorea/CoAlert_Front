@@ -14,7 +14,7 @@ import com.google.gson.JsonElement;
 import java.util.ArrayList;
 
 public class recommendCosmeticAdapter extends BaseAdapter {
-    ArrayList<recommendCosmeticItem> itemList = new ArrayList();
+    ArrayList<recommendCosmeticItem> itemList = new ArrayList<>();
     @Override
     public int getCount() {
         return itemList.size();
