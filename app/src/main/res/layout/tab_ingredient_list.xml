@@ -4,8 +4,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/emptyBackground"
+        android:text="타입별 위험도 보러가기"
+        android:id="@+id/by_type_ingredient"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:fontFamily="@font/yoon_gothic320"
+        />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tab_ingredient_list_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+
+
 </LinearLayout>

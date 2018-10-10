@@ -20,6 +20,7 @@
                 android:id="@+id/skin_card_ingred_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:text="@string/combination_skin"
                 android:layout_weight="4"
                 android:textSize="20sp"
