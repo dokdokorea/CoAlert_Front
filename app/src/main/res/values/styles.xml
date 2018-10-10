@@ -37,8 +37,8 @@
     <style name="black_back_btn_style">
         <item name="android:src">@drawable/clicking_pink_back_btn</item>
         <item name="android:scaleType">fitCenter</item>
-        <item name="android:layout_width">45dp</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/_30sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
         <item name="android:background">@color/emptyBackground</item>
         <item name="android:layout_marginStart">5dp</item>
         <item name="android:layout_gravity">start</item>

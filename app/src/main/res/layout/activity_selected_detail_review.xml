@@ -11,11 +11,9 @@
         android:layout_height="wrap_content"
         android:background="#fff">
 
-        <ImageView
-            android:id="@+id/write_review_back_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/left_btn" />
+        <ImageButton
+            android:id="@+id/selected_detail_review_back_btn"
+            style="@style/black_back_btn_style" />
 
         <TextView
             style="@style/logo_style"

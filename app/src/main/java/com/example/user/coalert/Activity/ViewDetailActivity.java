@@ -1,11 +1,14 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,6 +34,7 @@ public class ViewDetailActivity extends AppCompatActivity {
     ViewPager viewPager;
     TextView PostContext, CreatorId, PostTitle;
     ImageView CreatorPicture;
+ImageButton selected_detail_backBtn;
 
     String Context = "I'm twenty three \n" +
             "난 수수께끼 (Question)\n" +
@@ -129,7 +133,13 @@ public class ViewDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_detail_review);
         init();
-
+        selected_detail_backBtn= findViewById(R.id.selected_detail_review_back_btn);
+        selected_detail_backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         PostContext = (TextView) findViewById(R.id.detail_context);
         CreatorPicture = (ImageView) findViewById(R.id.user_profile);
         CreatorId = (TextView) findViewById(R.id.user_id);
