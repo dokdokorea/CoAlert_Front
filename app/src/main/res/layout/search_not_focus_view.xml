@@ -9,17 +9,6 @@
     android:background="@drawable/clicking_white_btn"
     >
 
-
-    <ImageButton
-        android:layout_width="@dimen/_100sdp"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_gravity="bottom|center"
-        android:background="@color/emptyBackground"
-        android:scaleType="fitCenter"
-        android:src="@drawable/clicking_bluecamera"
-        android:layout_marginTop="@dimen/_160sdp"
-        android:layout_marginBottom="@dimen/_20sdp"/>
-
     <TextView
         style="@style/defaultFont"
         android:layout_width="wrap_content"

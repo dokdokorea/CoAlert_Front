@@ -7,43 +7,55 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".Fragment.SearchFragment">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-    <com.example.user.coalert.Fragment.ExEditText
-        android:id="@+id/editSearch"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:background="#ff9c9f"
-        android:hint="@string/input_search_name"
-        android:textColor="@color/whiteBackground"
-        android:textColorHint="@color/whiteBackground"
-        android:layout_weight="5"/>
-
-
-</LinearLayout>
-
-<ViewFlipper
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/_520sdp"
-    android:id="@+id/viewFlipper"
-    >
-    <include
-        android:id="@+id/search_bar_notfocusing"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/search_not_focus_view"
-        />
-    <include
-        android:id="@+id/search_bar_focusing"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        layout="@layout/search_view"
-        />
-</ViewFlipper>
+        android:background="@color/first">
+
+        <com.example.user.coalert.Fragment.ExEditText
+            android:id="@+id/editSearch"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/searchbar"
+            android:ems="19"
+            android:hint="@string/input_search_name"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="@dimen/_20sdp"
+            android:textColorHint="@android:color/darker_gray" />
+
+        <ImageButton
+            android:id="@+id/search_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/emptyBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/clicking_bluecamera"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_520sdp">
+
+        <include
+            android:id="@+id/search_bar_notfocusing"
+            layout="@layout/search_not_focus_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/search_bar_focusing"
+            layout="@layout/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </ViewFlipper>
 </LinearLayout>
 
 
