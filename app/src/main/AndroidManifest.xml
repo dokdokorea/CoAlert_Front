@@ -83,7 +83,9 @@
         <activity android:name=".Activity.AnotherprofileActivity">
 
         </activity>
-        <activity android:name=".Activity.CommonSignUpActivity"></activity>
+        <activity android:name=".Activity.CommonSignUpActivity">
+
+        </activity>
         <activity android:name=".Activity.WishListActivity" />
         <activity android:name=".Activity.CosmeticInformationActivity"></activity>
         <activity android:name=".Activity.ExplanationBadElementActivity"></activity>

@@ -210,6 +210,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
             case "피부타입선택":
                 Drawable img=getResources().getDrawable(R.drawable.normalskin);
                 skinImg.setImageDrawable(img);
+                break;
             case "지성":
                 img = getResources().getDrawable(R.drawable.oilyskin);
                 skinImg.setImageDrawable(img);
@@ -222,7 +223,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
                 img = getResources().getDrawable(R.drawable.sensitiveskin);
                 skinImg.setImageDrawable(img);
                 break;
-            case "불확실성":
+            case "불확정성":
                 break;
         }
     }

@@ -20,13 +20,15 @@
         <item name="android:paddingStart">10dp</item>
         <item name="android:paddingEnd">10dp</item>
     </style>
-<style name="item_cover_layout">
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:layout_weight">1</item>
-    <item name="android:paddingTop">5dp</item>
-    <item name="android:paddingBottom">5dp</item>
-</style>
+
+    <style name="item_cover_layout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
     <style name="signup_each_layer_style">
         <item name="android:layout_marginTop">50dp</item>
         <item name="android:layout_width">match_parent</item>
@@ -150,7 +152,7 @@
         <item>지성</item>
         <item>건성</item>
         <item>민감성</item>
-        <item>불확실성</item>
+        <item>불확정성</item>
     </string-array>
 
     <string-array name="sex">
