@@ -132,7 +132,8 @@
             android:layout_width="10dip"
             android:layout_height="10dip"
             android:layout_gravity="center"
-            android:layout_marginTop="5dip" />
+            android:layout_marginTop="5dip"
+            android:onClick="facebookLoginOnClick"/>
 
         <ImageView
             android:id="@+id/fake_facebook"

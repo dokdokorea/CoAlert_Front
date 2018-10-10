@@ -39,9 +39,14 @@
 
             <TextView
                 style="@style/tab_skintype_title_style"
+                android:layout_height="40dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
                 android:text="@string/oily_skin"
                 android:layout_marginTop="10dp"
-                android:onClick="viewOil"/>
+                android:onClick="viewOil"
+                android:background="@drawable/main_hot_review_background"
+                />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/oily_skin_recycler_view"
@@ -56,7 +61,11 @@
 
             <TextView
                 style="@style/tab_skintype_title_style"
+                android:background="@drawable/main_hot_review_background"
                 android:text="@string/dry_skin"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                android:layout_height="40dp"
                 android:onClick="viewDry"/>
 
             <android.support.v7.widget.RecyclerView
@@ -72,6 +81,10 @@
             <TextView
                 style="@style/tab_skintype_title_style"
                 android:text="@string/sensitive_skin"
+                android:layout_height="40dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                android:background="@drawable/main_hot_review_background"
                 android:onClick="viewSensitive"/>
 
             <android.support.v7.widget.RecyclerView
