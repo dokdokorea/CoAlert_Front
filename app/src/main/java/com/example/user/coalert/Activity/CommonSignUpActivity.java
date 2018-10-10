@@ -221,7 +221,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
                 img = getResources().getDrawable(R.drawable.sensitiveskin);
                 skinImg.setImageDrawable(img);
                 break;
-            case "불확실성":
+            case "불확정성":
                 break;
         }
     }

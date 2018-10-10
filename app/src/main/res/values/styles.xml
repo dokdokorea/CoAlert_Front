@@ -10,8 +10,19 @@
 
     <style name="barFrameLayoutStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
         <item name="android:background">@color/first</item>
+    </style>
+
+    <style name="LayoutTopBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:background">@color/first</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/yoon_gothic320</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="back_btn_style">
