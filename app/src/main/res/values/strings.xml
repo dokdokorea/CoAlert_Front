@@ -29,4 +29,8 @@
     <string name="detailReviewButton">자세히 작성</string>
     <string name="kindSelectCosmetic">추천받을 화장품을 골라주세요!!</string>
     <string name="what_select_kind_bottom_textView">다른 화장품은 아직 개발중이에여 조금만 기다려주세요!!</string>
+    <string name="introduceBrand">브랜드 소개</string>
+    <string name="InnisfreeExplain">\n이니스프리는 깨끗한 섬이 주는 자연의 혜택을 담아 고객에게 건강한 아름다움을 선사하고,\n 건강함을 지키기위해 친환경 그 라이프를 실천하는 자연주의 브랜드입니다.\n</string>
+    <string name="introduceCosmetic">화장품 소개</string>
+    <string name="CoAlertCosmetic">코알라 화장품</string>
 </resources>
