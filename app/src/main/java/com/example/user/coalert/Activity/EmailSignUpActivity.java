@@ -63,11 +63,14 @@ public class EmailSignUpActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                if (password.getText().equals(confirmPassword.getText())){
+                String confirmedPassword = String.valueOf(confirmPassword.getText());
+                String inputPassword= String.valueOf(password.getText());
+                if(confirmedPassword.equals(inputPassword)){
                     passwordCheckImg.setImageResource(R.drawable.password_check);
                 }else{
                     passwordCheckImg.setImageResource(R.drawable.not_same_password);
                 }
+
             }
         });
 
