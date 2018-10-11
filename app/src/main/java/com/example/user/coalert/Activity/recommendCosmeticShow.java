@@ -115,8 +115,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
             JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
             recommendCosmeticAdapter.addItem(oneData.get("id"), oneData.get("estimate"));
         }
-        RecommendCosmetic = findViewById(R.id.showRecommendListView);
-        RecommendCosmetic.setAdapter(recommendCosmeticAdapter);
+        recommendCosmeticAdapter.notifyDataSetChanged();
     }
 
 }
