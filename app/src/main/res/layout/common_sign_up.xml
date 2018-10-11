@@ -14,34 +14,29 @@
 
             <TextView
                 style="@style/signup_item_text_style"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_1sdp"
                 android:text="@string/birthday" />
         </FrameLayout>
 
         <LinearLayout
-            android:layout_width="@dimen/_90sdp"
+            android:layout_width="@dimen/_165sdp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_gravity="center">
 
             <Spinner
                 android:id="@+id/spinner_year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content" />
 
             <Spinner
                 android:id="@+id/spinner_month"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content" />
 
             <Spinner
                 android:id="@+id/spinner_day"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 
@@ -105,6 +100,10 @@
             android:layout_weight="1" />
     </LinearLayout>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp" />
+
     <ImageView
         android:id="@+id/skin_type_image"
         android:layout_width="wrap_content"
@@ -126,10 +125,10 @@
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
             android:layout_below="@id/id"
-            android:textSize="30dp" />
+            android:textSize="@dimen/_22sdp" />
 
         <Button
             android:id="@+id/common_sign_up_confirmation_btn"

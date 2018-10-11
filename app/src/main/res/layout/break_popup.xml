@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#eeeeee"
     android:orientation="vertical"
-    android:layout_width="300dp"
+    android:layout_width="@dimen/_218sdp"
     android:layout_height="wrap_content">
 
     <!-- 타이틀바 -->
@@ -13,40 +13,36 @@
         <TextView
             android:text="이메일을 입력해주세요"
             android:fontFamily="@font/yoon_gothic340"
-            android:textSize="20sp"
+            android:textSize="@dimen/_15sdp"
             android:textColor="#fff"
             android:gravity="center"
             android:background="@color/first"
             android:layout_width="match_parent"
-            android:layout_height="53dp" />
+            android:layout_height="@dimen/_39sdp" />
     </LinearLayout>
-    <!-- //end 타이틀바 -->
 
-    <!-- Notice -->
     <LinearLayout
-        android:padding="24dp"
+        android:padding="@dimen/_17sdp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
             android:id="@+id/Confirm"
-            android:textSize="18sp"
+            android:textSize="@dimen/_13sdp"
             android:textColor="#000"
             android:hint="example@gmail.com"
             android:alpha="0.87"
             android:gravity="center"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="@dimen/_2sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <!-- Notice -->
 
     <View
         android:background="#66bdbdbd"
         android:layout_width="match_parent"
         android:layout_height="1dp" />
 
-    <!-- 닫기 버튼 -->
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="center"
@@ -55,16 +51,15 @@
         <Button
             android:text="확인"
             android:id="@+id/confirmbtn"
-            android:textSize="15sp"
+            android:textSize="@dimen/_11sdp"
             android:textColor="@color/first"
-            android:padding="16dp"
+            android:padding="@dimen/_11sdp"
             android:textStyle="bold"
             android:gravity="center"
             android:background="#00000000"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="@dimen/_39sdp"
             android:fontFamily="@font/yoon_gothic320"
             android:onClick="mOnClose"/>
     </LinearLayout>
-    <!--// 닫기 버튼 -->
 </LinearLayout>

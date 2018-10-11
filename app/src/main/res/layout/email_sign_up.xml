@@ -19,7 +19,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <TextView
                 style="@style/logo_style"
@@ -46,10 +46,10 @@
 
                     <EditText
                         android:id="@+id/emailSignUpInputname"
-                        android:layout_marginStart="@dimen/_4sdp"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:ems="13"
                         android:inputType="text" />
                 </TableRow>
@@ -66,16 +66,16 @@
                     <EditText
                         android:id="@+id/input_email"
                         style="@style/defaultFont"
-                        android:layout_marginStart="@dimen/_4sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:ems="14"
                         android:hint="coalert@example.com"
                         android:inputType="textWebEmailAddress" />
 
                     <Button
                         android:id="@+id/email_redundancy_check_btn"
-                        android:layout_width="70dp"
+                        android:layout_width="@dimen/_51sdp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginLeft="@dimen/_4sdp"
@@ -90,11 +90,11 @@
 
                     <TextView
                         style="@style/signup_item_text_style"
+                        android:paddingBottom="@dimen/_5sdp"
                         android:paddingEnd="@dimen/_20sdp"
                         android:paddingStart="@dimen/_20sdp"
-                        android:text="비밀번호"
                         android:paddingTop="@dimen/_5sdp"
-                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="비밀번호"
                         android:textSize="@dimen/_12sdp" />
 
                     <EditText
@@ -102,8 +102,8 @@
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="14"
                         android:layout_marginStart="@dimen/_4sdp"
+                        android:ems="14"
                         android:hint="6~12자리 숫자 또는 문자"
                         android:inputType="textPassword" />
                 </TableRow>
@@ -112,32 +112,32 @@
 
                     <TextView
                         style="@style/signup_item_text_style"
-                        android:text="비밀번호확인"
-                        android:textSize="@dimen/_12sdp"
-                        android:paddingTop="@dimen/_5sdp"
                         android:paddingBottom="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_7sdp"
                         android:paddingStart="@dimen/_10sdp"
-                        android:paddingEnd="@dimen/_7sdp"/>
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="비밀번호확인"
+                        android:textSize="@dimen/_12sdp" />
 
                     <EditText
                         android:id="@+id/password_certification"
-                        android:layout_marginStart="@dimen/_4sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:ems="10"
                         android:inputType="textPassword" />
                 </TableRow>
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="30dp" />
+                    android:layout_height="@dimen/_22sdp" />
 
 
             </TableLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="@dimen/_73sdp" />
         </LinearLayout>
     </ScrollView>
 

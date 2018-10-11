@@ -89,7 +89,8 @@
         android:layout_height="@dimen/_45sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="70dp"
+        android:paddingBottom="-30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,9 +120,10 @@
     <FrameLayout
         android:id="@+id/frameLayout2"
         android:layout_width="@dimen/_205sdp"
-        android:layout_height="@dimen/_45sdp"
+        android:layout_height="@dimen/_46sdp"
         android:layout_marginEnd="@dimen/_5sdp"
         android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="-10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +135,7 @@
             android:layout_height="@dimen/_5sdp"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:onClick="facebookLoginOnClick"/>
+            android:onClick="facebookLoginOnClick" />
 
         <ImageView
             android:id="@+id/fake_facebook"
@@ -147,7 +149,7 @@
     <ImageButton
         android:id="@+id/signup"
         android:layout_width="@dimen/_205sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_height="@dimen/_33sdp"
         android:layout_marginTop="@dimen/_7sdp"
         android:layout_marginBottom="@dimen/_90sdp"
         android:background="@color/emptyBackground"

@@ -12,22 +12,22 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/_51sdp"
         android:background="@color/first">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/_7sdp"
             android:src="@drawable/coalert_logo_word" />
 
         <ImageButton
             android:id="@+id/home_notification_icon_btn"
-            android:layout_width="60dp"
+            android:layout_width="@dimen/_44sdp"
             android:layout_height="match_parent"
             android:layout_gravity="end|center"
-            android:layout_margin="10dp"
-            android:layout_marginEnd="5dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
             android:background="@drawable/clicking_empty_to_gray_background"
             android:scaleType="centerInside"
             android:src="@drawable/notification" />
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#fff"
-                android:elevation="5dp"
+                android:elevation="@dimen/_3sdp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -99,21 +99,21 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
-                android:elevation="5dp"
+                android:elevation="@dimen/_3sdp"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -125,8 +125,8 @@
                     <ImageButton
                         android:id="@+id/main_youtube_next_btn"
                         style="@style/editprofile"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
                         android:layout_alignParentEnd="true"
                         android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
@@ -142,21 +142,21 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="215dp"
+                android:layout_height="@dimen/_156sdp"
                 android:background="@drawable/main_hot_review_background"
-                android:elevation="5dp"
+                android:elevation="@dimen/_3sdp"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -167,8 +167,8 @@
 
                     <ImageButton
                         style="@style/editprofile"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
                         android:layout_alignParentEnd="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
@@ -187,25 +187,25 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="@dimen/_7sdp"
                 android:background="@drawable/shadow" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="@dimen/_218sdp"
                 android:background="@drawable/main_new_prod_background"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -216,8 +216,8 @@
 
                     <ImageButton
                         style="@style/editprofile"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/_22sdp"
+                        android:layout_height="@dimen/_22sdp"
                         android:layout_alignParentEnd="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
@@ -235,7 +235,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="@dimen/_7sdp"
                 android:background="@drawable/shadow" />
 
 

@@ -8,7 +8,7 @@
        android:text="찜목록"/>
     <Space
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="@dimen/_7sdp" />
 
 <android.support.v7.widget.RecyclerView
     android:id="@+id/wish_recyclerview"

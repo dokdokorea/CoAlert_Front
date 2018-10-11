@@ -8,7 +8,7 @@
         android:id="@+id/notification_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/_7sdp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -18,9 +18,9 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/notification_card_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_margin="@dimen/_3sdp"
                 android:src="@drawable/cardview1" />
 
             <LinearLayout
@@ -33,7 +33,7 @@
                     android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="@dimen/_7sdp"
                     android:text="@string/user_name" />
 
                 <TextView
@@ -41,8 +41,8 @@
                     style="@style/defaultFont"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:text="우리가 지금 해오고 있는 것!" />
             </LinearLayout>
         </LinearLayout>

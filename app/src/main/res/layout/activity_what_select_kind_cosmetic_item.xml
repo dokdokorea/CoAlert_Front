@@ -3,4 +3,4 @@
     android:layout_height="50dp"
     android:id="@+id/selectKindCosmeticItem"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:textSize="30sp"/>
+    android:textSize="@dimen/_26sdp"/>

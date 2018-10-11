@@ -8,7 +8,7 @@
         android:id="@+id/my_simple_review_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="@dimen/_3sdp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -18,10 +18,10 @@
 
             <ImageView
                 android:id="@+id/cosmetic_pic"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/_3sdp"
                 android:src="@drawable/sun1" />
 
 
@@ -29,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/_3sdp"
                 android:orientation="vertical"
-                android:padding="5dp">
+                android:padding="@dimen/_3sdp">
 
                 <TextView
                     android:id="@+id/cosmetic_name"
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="CosmaeticName"
-                    android:textSize="13dp" />
+                    android:textSize="@dimen/_9sdp" />
 
 
                 <TextView
@@ -48,8 +48,8 @@
                     style="@style/editprofile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="3dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:gravity="left"
                     android:text="text1" />
 
@@ -61,28 +61,28 @@
 
                     <ImageView
                         android:id="@+id/first"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp" />
 
                     <ImageView
                         android:id="@+id/second"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp" />
 
                     <ImageView
                         android:id="@+id/third"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp" />
 
                     <ImageView
                         android:id="@+id/fourth"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp" />
 
                     <ImageView
                         android:id="@+id/fifth"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp" />
+                        android:layout_width="@dimen/_11sdp"
+                        android:layout_height="@dimen/_11sdp" />
                 </LinearLayout>
 
             </LinearLayout>
