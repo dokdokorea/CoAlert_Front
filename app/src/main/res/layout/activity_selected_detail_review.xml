@@ -79,7 +79,8 @@
                     style="@style/detailreviewContext"
                     android:text="UserId"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"/>
+                    android:layout_alignParentBottom="true"
+                    android:onClick="goAnotheruser"/>
 
             </RelativeLayout>
 
@@ -135,16 +136,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="이 제품에대한 더많은 리뷰를 보고싶다면?"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"/>
 
-            <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:scaleType="centerInside"
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/more_review"
                 android:layout_gravity="center"
-                android:background="@drawable/irin"/>
+                android:background="@color/emptyBackground"
+                android:text="more"
+                android:textColor="@color/tab_skintype_color"
+                android:fontFamily="@font/yoon_gothic340"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
 

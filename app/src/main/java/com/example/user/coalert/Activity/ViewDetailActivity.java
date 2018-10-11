@@ -8,12 +8,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.DetailReviewSliderAdapter;
 import com.example.user.coalert.R;
+import com.transitionseverywhere.TransitionManager;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -25,7 +27,7 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] ImageList={R.drawable.iu1,R.drawable.iu2,R.drawable.iu7,R.drawable.iu3jpg,R.drawable.iu4,R.drawable.iu5};
+    private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu7, R.drawable.iu3jpg, R.drawable.iu4, R.drawable.iu5};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
 
     String title;
@@ -34,7 +36,8 @@ public class ViewDetailActivity extends AppCompatActivity {
     ViewPager viewPager;
     TextView PostContext, CreatorId, PostTitle;
     ImageView CreatorPicture;
-ImageButton selected_detail_backBtn;
+    ImageButton selected_detail_backBtn;
+    Button moreinfo;
 
     String Context = "I'm twenty three \n" +
             "난 수수께끼 (Question)\n" +
@@ -133,7 +136,8 @@ ImageButton selected_detail_backBtn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_detail_review);
         init();
-        selected_detail_backBtn= findViewById(R.id.selected_detail_review_back_btn);
+        selected_detail_backBtn = findViewById(R.id.selected_detail_review_back_btn);
+        moreinfo=findViewById(R.id.more_review);
         selected_detail_backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,18 +152,27 @@ ImageButton selected_detail_backBtn;
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
         PostContext.setText(Context);
+        moreinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ViewDetailActivity.this,CosmeticInformationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        Intent intent=new Intent(this.getIntent());
-        title=intent.getStringExtra("title");
+
+        Intent intent = new Intent(this.getIntent());
+        title = intent.getStringExtra("title");
         PostTitle.setText(title);
     }
 
     private void init() {
-        for(int i=0;i<ImageList.length;i++)
+        for (int i = 0; i < ImageList.length; i++)
             ImageArr.add(ImageList[i]);
 
         mPager = (ViewPager) findViewById(R.id.view);
-        mPager.setAdapter(new DetailReviewSliderAdapter(ViewDetailActivity.this,ImageArr));
+        mPager.setAdapter(new DetailReviewSliderAdapter(ViewDetailActivity.this, ImageArr));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
@@ -179,6 +192,11 @@ ImageButton selected_detail_backBtn;
             public void run() {
                 handler.post(Update);
             }
-        }, 2500, 2500);
+        }, 4000, 4000);
+    }
+
+    public void goAnotheruser(View v) {
+       Intent intent=new Intent(ViewDetailActivity.this,AnotherprofileActivity.class);
+       startActivity(intent);
     }
 }

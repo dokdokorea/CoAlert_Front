@@ -24,7 +24,7 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="9dp"
-        android:background="#572254" />
+        android:background="@color/first" />
 
     <ScrollView
         android:id="@+id/recommendScrollView"

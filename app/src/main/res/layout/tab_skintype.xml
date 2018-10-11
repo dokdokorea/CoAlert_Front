@@ -10,9 +10,10 @@
 
         <ImageButton
             style="@style/black_back_btn_style"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/back_btn"/>
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/back_btn"
+            android:layout_gravity="center_vertical"/>
 
         <TextView
             android:id="@+id/cosmetic_ingredient_pd_name"
@@ -24,7 +25,7 @@
             android:paddingBottom="20dp"
             android:paddingTop="10dp"
             android:text="@string/cosmetic_pd_name"
-            android:textColor="@color/first" />
+            android:textColor="@color/tab_skintype_color" />
     </FrameLayout>
 
     <ScrollView
