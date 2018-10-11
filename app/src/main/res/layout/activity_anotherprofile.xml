@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@color/first">
 
         <ImageButton
@@ -19,14 +19,14 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
             android:src="@drawable/coalert_logo_word" />
     </FrameLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="@dimen/_2sdp" />
 
 
     <android.support.v4.widget.NestedScrollView
@@ -50,14 +50,14 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                    android:layout_margin="@dimen/_7sdp"
                     android:layout_weight="0.4"
                     android:gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_pic"
-                        android:layout_width="130dp"
-                        android:layout_height="130dp"
+                        android:layout_width="@dimen/_95sdp"
+                        android:layout_height="@dimen/_95sdp"
                         android:layout_gravity="center"
                         android:src="@drawable/irin" />
 
@@ -74,28 +74,28 @@
                         android:id="@+id/Name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/_15sdp"
                         android:fontFamily="@font/yoon_gothic330"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="@dimen/_7sdp"
                         android:text="아이린"
-                        android:textSize="30dp" />
+                        android:textSize="@dimen/_22sdp" />
 
                     <TextView
                         android:id="@+id/email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/_4sdp"
                         android:fontFamily="@font/yoon_gothic330"
-                        android:paddingLeft="10dp"
+                        android:paddingLeft="@dimen/_7sdp"
                         android:text="example@gmail.com"
-                        android:textSize="18dp" />
+                        android:textSize="@dimen/_13sdp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:paddingTop="@dimen/_7sdp"
                         android:weightSum="3.03">
 
                         <LinearLayout
@@ -103,16 +103,16 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:padding="8dp">
+                            android:padding="@dimen/_6sdp">
 
                             <Button
                                 android:id="@+id/follower"
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_margin="5dp"
+                                android:layout_height="@dimen/_29sdp"
+                                android:layout_margin="@dimen/_4sdp"
                                 android:background="#00ffffff"
                                 android:text="100"
-                                android:textSize="20sp" />
+                                android:textSize="@dimen/_15sdp" />
 
                             <TextView
                                 style="@style/editprofile"
@@ -120,7 +120,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="팔로워"
-                                android:textSize="13dp" />
+                                android:textSize="@dimen/_9sdp" />
 
                         </LinearLayout>
 
@@ -135,19 +135,19 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:padding="8dp">
+                            android:padding="@dimen/_6sdp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_margin="5dp">
+                                android:layout_height="@dimen/_29sdp"
+                                android:layout_margin="@dimen/_4sdp">
 
                                 <ImageButton
                                     android:id="@+id/toxicList"
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="@dimen/_29sdp"
                                     android:background="#00ffffff"
-                                    android:padding="2dp"
+                                    android:padding="@dimen/_1sdp"
                                     android:scaleType="centerInside"
                                     android:src="@drawable/danger" />
 
@@ -161,7 +161,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="유해성분"
-                                android:textSize="13dp" />
+                                android:textSize="@dimen/_9sdp" />
 
                         </LinearLayout>
 
@@ -177,19 +177,19 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="vertical"
-                            android:padding="8dp">
+                            android:padding="@dimen/_6sdp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_margin="5dp">
+                                android:layout_height="@dimen/_29sdp"
+                                android:layout_margin="@dimen/_4sdp">
 
                                 <ImageButton
                                     android:id="@+id/following"
                                     android:layout_width="match_parent"
-                                    android:layout_height="40dp"
+                                    android:layout_height="@dimen/_29sdp"
                                     android:background="#00ffffff"
-                                    android:padding="5dp"
+                                    android:padding="@dimen/_4sdp"
                                     android:scaleType="centerInside" />
 
 
@@ -202,7 +202,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="팔로잉"
-                                android:textSize="13dp" />
+                                android:textSize="@dimen/_9sdp" />
 
                         </LinearLayout>
 
@@ -217,34 +217,34 @@
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cloudy_knoxville"
-                android:elevation="3dp"
+                android:elevation="@dimen/_2sdp"
                 android:orientation="vertical">
 
                 <TextView
                     style="@style/barTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
                     android:gravity="start"
                     android:text="팔로우 목록"
                     android:textColor="@color/fifth" />
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="@dimen/_7sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.RecyclerView
@@ -259,34 +259,34 @@
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cloudy_knoxville"
-                android:elevation="3dp"
+                android:elevation="@dimen/_2sdp"
                 android:orientation="vertical">
 
                 <TextView
                     style="@style/barTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
                     android:gravity="start"
                     android:text="리뷰한 화장품 목록"
                     android:textColor="@color/fifth" />
 
                 <Space
                     android:layout_width="match_parent"
-                    android:layout_height="10dp" />
+                    android:layout_height="@dimen/_7sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="@dimen/_2sdp"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.RecyclerView
@@ -301,7 +301,7 @@
             </LinearLayout>
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/_15sdp" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

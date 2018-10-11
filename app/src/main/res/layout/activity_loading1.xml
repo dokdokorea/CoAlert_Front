@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="@dimen/_145sdp"
         android:src="@drawable/koala"
         android:layout_weight="0.2"/>
 
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Loading..."
-        android:textSize="30dp"
+        android:textSize="@dimen/_22sdp"
         android:layout_weight="0.1"/>
     <android.support.v4.widget.Space
         android:layout_width="match_parent"

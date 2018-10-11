@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="150dp"
+        android:layout_width="@dimen/_109sdp"
         android:layout_height="wrap_content"
         android:src="@drawable/coalert_logo" />
 
@@ -17,19 +17,19 @@
         style="@style/detailreviewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="@dimen/_22sdp"
         android:text="CoAlert" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="@dimen/_73sdp"
+        android:layout_marginRight="@dimen/_22sdp"
+        android:layout_marginLeft="@dimen/_22sdp"
         android:background="@drawable/twenty_question_border"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="@dimen/_15sdp"
         android:id="@+id/container">
 
         <FrameLayout
@@ -41,53 +41,53 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_7sdp"
             android:id="@+id/question_page">
 
             <TextView
                 android:id="@+id/question"
                 style="@style/detailreviewTitle"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="@dimen/_44sdp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="@dimen/_7sdp"
                 android:gravity="center"
                 android:text="Question"
                 android:textColor="#0B0B61"
-                android:textSize="30dp" />
+                android:textSize="@dimen/_22sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/nobtn"
-                    android:layout_width="80dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_58sdp"
+                    android:layout_height="@dimen/_36sdp"
                     android:text="아니오" />
 
                 <android.support.v4.widget.Space
-                    android:layout_width="30dp"
-                    android:layout_height="50dp" />
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_36sdp" />
 
                 <Button
                     android:id="@+id/sosobtn"
-                    android:layout_width="80dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_58sdp"
+                    android:layout_height="@dimen/_36sdp"
                     android:text="모름" />
 
                 <android.support.v4.widget.Space
-                    android:layout_width="30dp"
-                    android:layout_height="50dp" />
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_36sdp" />
 
                 <Button
                     android:id="@+id/yesbtn"
-                    android:layout_width="80dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/_58sdp"
+                    android:layout_height="@dimen/_36sdp"
                     android:text="네" />
 
             </LinearLayout>
@@ -100,7 +100,7 @@
                 android:orientation="vertical"
                 android:id="@+id/result_view"
                 android:gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:visibility="gone">
 
             <TextView
@@ -121,18 +121,18 @@
                     android:gravity="center">
 
                     <Button
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/_58sdp"
+                        android:layout_height="@dimen/_36sdp"
                         android:id="@+id/retest"
                         android:text="retest"/>
 
                     <android.support.v4.widget.Space
-                        android:layout_width="40dp"
-                        android:layout_height="50dp" />
+                        android:layout_width="@dimen/_29sdp"
+                        android:layout_height="@dimen/_36sdp" />
 
                     <Button
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/_58sdp"
+                        android:layout_height="@dimen/_36sdp"
                         android:id="@+id/gotype"
                         android:text="goType"/>
 
@@ -154,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Copyright by CoAlert"
-        android:textSize="15dp" />
+        android:textSize="@dimen/_11sdp" />
 
 
 </LinearLayout>
