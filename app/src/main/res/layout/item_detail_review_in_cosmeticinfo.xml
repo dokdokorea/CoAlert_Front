@@ -9,9 +9,9 @@
         android:id="@+id/detail_review_preview_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="@dimen/_3sdp"
         app:cardUseCompatPadding="true"
-        app:cardCornerRadius="6dp">
+        app:cardCornerRadius="@dimen/_4sdp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -22,24 +22,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
+            android:layout_margin="@dimen/_1sdp"
             android:background="#fff"
             android:orientation="vertical"
-            android:padding="2dp">
+            android:padding="@dimen/_1sdp">
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:orientation="horizontal">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_pic"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginLeft="@dimen/_7sdp"
                     android:src="@drawable/face1" />
 
 
@@ -48,50 +48,50 @@
                     style="@style/editprofile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:layout_toRightOf="@id/profile_pic"
                     android:text="UserId"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/_13sdp" />
 
                 <TextView
                     android:id="@+id/like_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:text="100"
                     android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/_15sdp" />
 
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="3dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:layout_toLeftOf="@+id/like_count"
                     android:background="@drawable/emptyheart" />
             </RelativeLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_margin="5dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_3sdp"
                 android:background="@color/mypageback" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:padding="10dp"
+                android:padding="@dimen/_7sdp"
                 android:weightSum="5">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="@dimen/_3sdp"
                     android:layout_weight="4"
                     android:orientation="vertical">
 
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="insert title here"
-                        android:textSize="25dp"
+                        android:textSize="@dimen/_18sdp"
                         android:textStyle="normal" />
 
                     <TextView
@@ -109,7 +109,7 @@
                         android:layout_width="match_parent"
                         style="@style/detailreviewContext"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="@dimen/_7sdp"
                         android:ellipsize="end"
                         android:lines="2"
                         android:text="insert context here" />
@@ -123,8 +123,8 @@
 
                     <ImageView
                         android:id="@+id/preview_img"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                        android:layout_width="@dimen/_51sdp"
+                        android:layout_height="@dimen/_51sdp"
                         android:layout_gravity="center"
                         android:background="@drawable/reviewexample" />
 

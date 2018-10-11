@@ -7,6 +7,6 @@
         android:layout_height="match_parent"
         android:id="@+id/search_list"
         android:divider="#999999"
-        android:dividerHeight="1dp"
+        android:dividerHeight="@dimen/_1sdp"
         android:clickable="true"/>
 </android.support.constraint.ConstraintLayout>

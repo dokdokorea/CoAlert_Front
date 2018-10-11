@@ -12,13 +12,13 @@
         <item name="android:fontFamily">@font/kopub_medium</item>
         <item name="android:textSize">@dimen/_16sdp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingTop">@dimen/_3sdp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@color/first</item>
-        <item name="android:paddingBottom">5dp</item>
-        <item name="android:paddingStart">10dp</item>
-        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">@dimen/_3sdp</item>
+        <item name="android:paddingStart">@dimen/_7sdp</item>
+        <item name="android:paddingEnd">@dimen/_7sdp</item>
     </style>
 
     <style name="item_cover_layout">

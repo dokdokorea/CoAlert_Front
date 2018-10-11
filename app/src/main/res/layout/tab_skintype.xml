@@ -10,8 +10,8 @@
 
         <ImageButton
             style="@style/black_back_btn_style"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
             android:id="@+id/back_btn"
             android:layout_gravity="center_vertical"/>
 
@@ -22,8 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingBottom="20dp"
-            android:paddingTop="10dp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingTop="@dimen/_7sdp"
             android:text="@string/cosmetic_pd_name"
             android:textColor="@color/tab_skintype_color" />
     </FrameLayout>
@@ -40,56 +40,56 @@
 
             <TextView
                 style="@style/tab_skintype_title_style"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/_29sdp"
                 android:gravity="right|center_vertical"
-                android:paddingRight="20dp"
+                android:paddingRight="@dimen/_15sdp"
                 android:text="@string/oily_skin"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:onClick="viewOil"
                 android:background="@drawable/main_hot_review_background"
                 />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/oily_skin_recycler_view"
-                android:layout_margin="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <TextView
                 style="@style/tab_skintype_title_style"
                 android:background="@drawable/main_hot_review_background"
                 android:text="@string/dry_skin"
                 android:gravity="right|center_vertical"
-                android:paddingRight="20dp"
-                android:layout_height="40dp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_height="@dimen/_29sdp"
                 android:onClick="viewDry"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/dry_skin_recycler_view"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/_3sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <TextView
                 style="@style/tab_skintype_title_style"
                 android:text="@string/sensitive_skin"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/_29sdp"
                 android:gravity="right|center_vertical"
-                android:paddingRight="20dp"
+                android:paddingRight="@dimen/_15sdp"
                 android:background="@drawable/main_hot_review_background"
                 android:onClick="viewSensitive"/>
 
             <android.support.v7.widget.RecyclerView
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/_3sdp"
                 android:id="@+id/sentitive_skin_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

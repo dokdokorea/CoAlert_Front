@@ -10,9 +10,9 @@
         android:id="@+id/hot_youtuber_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/_3sdp"
         card_view:cardUseCompatPadding="true"
-        card_view:cardCornerRadius="3dp">
+        card_view:cardCornerRadius="@dimen/_2sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,15 +21,15 @@
 
             <ImageView
                 android:id="@+id/youtube"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
+                android:layout_width="@dimen/_145sdp"
+                android:layout_height="@dimen/_145sdp"
                 android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/youtube_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:padding="@dimen/_7sdp"
                 android:text="ddd"
                 android:gravity="center"/>
         </LinearLayout>

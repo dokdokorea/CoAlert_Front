@@ -17,7 +17,7 @@
             android:id="@+id/anotherprofile_back_btn"
             android:src="@drawable/unclicked_left"
             android:layout_height="match_parent"
-            android:layout_width="45dp"
+            android:layout_width="@dimen/_33sdp"
             android:layout_gravity="start"
             android:background="@drawable/clicking_empty_to_gray_background"
             android:layout_marginStart="@dimen/_3sdp"

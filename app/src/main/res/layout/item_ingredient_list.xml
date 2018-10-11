@@ -8,7 +8,7 @@
         android:id="@+id/item_ingredient_list_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="@dimen/_3sdp"
         app:cardUseCompatPadding="true"
         app:cardElevation="0dp">
 
@@ -19,10 +19,10 @@
 
             <ImageView
                 android:id="@+id/item_ingredient_list_risk_level"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
                 android:scaleType="fitCenter"
-                android:padding="5dp"
+                android:padding="@dimen/_3sdp"
                 android:src="@drawable/face1" />
 
             <TextView
@@ -30,7 +30,7 @@
                 style="@style/editprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/_3sdp"
                 android:text="toxic ingredient"
                 android:layout_gravity="center"/>
         </LinearLayout>

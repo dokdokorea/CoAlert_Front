@@ -9,7 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_70sdp"
         app:cardUseCompatPadding="true"
-        >
+
+        android:layout_margin="@dimen/_3sdp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,18 +20,18 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_pic"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_29sdp"
+                android:layout_height="@dimen/_29sdp"
                 android:src="@drawable/face1"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="@dimen/_7sdp"/>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp"
+                android:padding="@dimen/_7sdp"
                 android:layout_gravity="center">
 
                 <TextView
@@ -38,8 +40,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:padding="10dp"
-                    android:layout_marginTop="10dp"
+                    android:padding="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
                     android:text="text1" />
 
 
@@ -48,30 +50,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="@dimen/_7sdp">
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
                         android:id="@+id/first"/>
 
                     <ImageView
                         android:id="@+id/second"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"/>
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"/>
 
                     <ImageView
                         android:id="@+id/third"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"/>
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
                         android:id="@+id/fourth"/>
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
                         android:id="@+id/fifth"/>
                 </LinearLayout>
 
