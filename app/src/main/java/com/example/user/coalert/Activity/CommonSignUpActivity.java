@@ -31,7 +31,7 @@ import java.io.IOException;
 import retrofit2.Call;
 
 public class CommonSignUpActivity extends AppCompatActivity {
-    TextView tv1, tv2;
+    TextView tv2;
     ImageView profile;
     Bitmap bitmap;
     SessionCallback callback;
@@ -47,7 +47,6 @@ public class CommonSignUpActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_sign_up);
-        tv1 = findViewById(R.id.name);
         tv2 = findViewById(R.id.id);
         profile = findViewById(R.id.image);
         lastButton = findViewById(R.id.common_sign_up_confirmation_btn);
@@ -57,7 +56,6 @@ public class CommonSignUpActivity extends AppCompatActivity {
         name = beforePageInfo.getStringExtra("name");
         email = beforePageInfo.getStringExtra("email");
         password = beforePageInfo.getStringExtra("password");
-        tv1.setText(" JAVA 32bit");
         //에러나서 주석처리 했어요~
   /*      Log.e("email", email);
         Log.e("password", password);
@@ -239,7 +237,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
 
 
         String resultMsg = data.getStringExtra("name");
-        tv1.setText(resultMsg);
+       // tv1.setText(resultMsg);
 
         Toast.makeText(this, "결과 : " + resultMsg, Toast.LENGTH_SHORT).show();
 

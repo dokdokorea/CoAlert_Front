@@ -106,7 +106,7 @@ public class SearchFragment extends Fragment {
             }
         });
 
-        LinearLayout imageButton = v.findViewById(R.id.search_bar_notfocusing);
+        final ImageButton imageButton = v.findViewById(R.id.search_camera);
         imageButton.setOnClickListener(new View.OnClickListener() {
                                            @Override
                                            public void onClick(View view) {

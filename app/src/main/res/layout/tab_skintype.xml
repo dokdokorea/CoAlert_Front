@@ -4,44 +4,95 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            style="@style/black_back_btn_style"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/back_btn"/>
 
         <TextView
-            style="@style/tab_skintype_title_style"
-            android:text="@string/oily_skin" />
+            android:id="@+id/cosmetic_ingredient_pd_name"
+            style="@style/editprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/cosmetic_pd_name"
+            android:textColor="@color/first" />
+    </FrameLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/oily_skin_recycler_view"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/container">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            <TextView
+                style="@style/tab_skintype_title_style"
+                android:layout_height="40dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                android:text="@string/oily_skin"
+                android:layout_marginTop="10dp"
+                android:onClick="viewOil"
+                android:background="@drawable/main_hot_review_background"
+                />
 
-        <TextView
-            style="@style/tab_skintype_title_style"
-            android:text="@string/dry_skin" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/oily_skin_recycler_view"
+                android:layout_margin="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/dry_skin_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            <TextView
+                style="@style/tab_skintype_title_style"
+                android:background="@drawable/main_hot_review_background"
+                android:text="@string/dry_skin"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                android:layout_height="40dp"
+                android:onClick="viewDry"/>
 
-        <TextView
-            style="@style/tab_skintype_title_style"
-            android:text="@string/sensitive_skin" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dry_skin_recycler_view"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/sentitive_skin_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                style="@style/tab_skintype_title_style"
+                android:text="@string/sensitive_skin"
+                android:layout_height="40dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                android:background="@drawable/main_hot_review_background"
+                android:onClick="viewSensitive"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_margin="5dp"
+                android:id="@+id/sentitive_skin_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

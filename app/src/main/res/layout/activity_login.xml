@@ -14,8 +14,8 @@
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginBottom="@dimen/_78sdp"
+        android:layout_marginTop="@dimen/_170sdp"
         android:src="@drawable/coalert_logo_word"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +25,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="420dp"
+        android:layout_width="@dimen/_300sdp"
         android:layout_height="0dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="10dip"
+        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +38,15 @@
 
         <LinearLayout
             android:id="@+id/login_conetent_linearlayout"
-            android:layout_width="300dp"
+            android:layout_width="@dimen/_190sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="20dip"
+            android:layout_marginStart="@dimen/_10sdp"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/login_email"
-                android:layout_width="300dip"
+                android:layout_width="@dimen/_185sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:background="@drawable/edit_text_background"
@@ -56,10 +56,10 @@
 
             <EditText
                 android:id="@+id/login_password"
-                android:layout_width="300dip"
+                android:layout_width="@dimen/_185sdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="15dip"
+                android:layout_marginTop="6sp"
                 android:background="@drawable/edit_text_background"
                 android:ems="12"
                 android:hint="비밀번호를 입력해주세요."
@@ -68,28 +68,28 @@
 
         <Button
             android:id="@+id/email_login"
-            android:layout_width="80dip"
+            android:layout_width="@dimen/_50sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="top|center"
-            android:layout_marginStart="10dip"
+            android:layout_marginStart="@dimen/_4sdp"
             android:background="@drawable/edit_text_background"
             android:elevation="30dip"
             android:fontFamily="@font/kopub_medium"
-            android:paddingTop="40dip"
-            android:paddingBottom="40dip"
+            android:paddingTop="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_25sdp"
             android:text="@string/email_login_button"
             android:textColor="@android:color/black"
-            android:textSize="17sp"
+            android:textSize="@dimen/_11sdp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/kakao_frameLayout"
         android:layout_width="0dp"
-        android:layout_height="70dip"
-        android:layout_marginEnd="8dip"
-        android:layout_marginStart="8dip"
-        android:layout_marginTop="44dip"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,8 +97,8 @@
 
         <com.kakao.usermgmt.LoginButton
             android:id="@+id/loginButton"
-            android:layout_width="10dip"
-            android:layout_height="30dip"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
             android:layout_gravity="center"
             android:background="@color/emptyBackground"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,10 +118,10 @@
 
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="300dip"
-        android:layout_height="70dip"
-        android:layout_marginEnd="8dip"
-        android:layout_marginStart="8dip"
+        android:layout_width="@dimen/_205sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,10 +129,11 @@
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/fb_login_button"
-            android:layout_width="10dip"
-            android:layout_height="10dip"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_5sdp"
             android:layout_gravity="center"
-            android:layout_marginTop="5dip" />
+            android:layout_marginTop="5dip"
+            android:onClick="facebookLoginOnClick"/>
 
         <ImageView
             android:id="@+id/fake_facebook"
@@ -145,10 +146,10 @@
 
     <ImageButton
         android:id="@+id/signup"
-        android:layout_width="300dip"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dip"
-        android:layout_marginBottom="186dp"
+        android:layout_width="@dimen/_205sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_90sdp"
         android:background="@color/emptyBackground"
         android:scaleType="centerCrop"
         android:src="@drawable/email_sign_up_button"

@@ -39,7 +39,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     TextView matching, company, ProductName;
     ImageView ProductImg;
     ImageButton wishbtn;
-    Button WriteReview;
+    Button WriteReview, MoreToxicByType;
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
 
@@ -58,6 +58,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ProductName=(TextView)findViewById(R.id.cosmetic_prod_name);
         company=(TextView)findViewById(R.id.cosmetic_comp_name);
         WriteReview=(Button)findViewById(R.id.cosmetic_info_write_review);
+        MoreToxicByType=(Button)findViewById(R.id.by_type_ingredient);
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");
@@ -97,6 +98,15 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(CosmeticInformationActivity.this,WriteReviewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        MoreToxicByType.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(CosmeticInformationActivity.this,CosmeticIngredientActivity.class);
                 startActivity(intent);
             }
         });
@@ -174,5 +184,9 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.iu7,R.drawable.sun1,"아이유","1000","밤편지","난~~~ 파도가 머~~물~던 모래 위에 적힌 글씨처럼~~~ 그대가 멀리~~~ 사라져 버릴 것 같아~~~~~"));
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.nayeon1,R.drawable.sun1,"나나연","500","나는나연","일은 열심히 하셨나연? 배고프지않나연?"));
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
+    }
+
+    public void backbtn(View v) {
+       finish();
     }
 }

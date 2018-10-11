@@ -3,12 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wish_list"
-        style="@style/editprofile"
-        android:layout_margin="10dp"/>
+   <TextView
+       style="@style/LayoutTopBarStyle"
+       android:text="찜목록"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="10dp" />

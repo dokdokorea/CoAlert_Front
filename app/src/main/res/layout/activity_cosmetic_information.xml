@@ -20,7 +20,8 @@
         <ImageView
             android:id="@+id/cosmetic_back_btn"
             style="@style/back_btn_style"
-            android:clickable="true" />
+            android:clickable="true"
+            android:onClick="backbtn"/>
 
         <TextView
             android:id="@+id/cosmetic_prod_name"
@@ -119,6 +120,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:orientation="horizontal">
+
+
 
                 <ImageButton
                     android:id="@+id/wish_btn"

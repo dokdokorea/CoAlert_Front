@@ -30,6 +30,15 @@ import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.Singleton.UUFiSingleton;
 import com.example.user.coalert.forRestServer.loginModel;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.Login;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
@@ -42,6 +51,8 @@ import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
 import com.kakao.util.helper.log.Logger;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -49,6 +60,7 @@ import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -68,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
     ImageButton emailSignUpBtn;
     Intent itent;
     private static final String TAG = LoginActivity.class.getSimpleName();
+    private CallbackManager callbackManager = CallbackManager.Factory.create();
 
 
     @Override
@@ -105,6 +118,44 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        callbackManager = CallbackManager.Factory.create();
+
+        //facebookLoginBtn.setReadPermissions("email");
+
+        facebookLoginBtn.setReadPermissions(Arrays.asList("public_profile", "email"));
+
+
+        facebookLoginBtn.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                GraphRequest graphRequest = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+                        Log.v("result",object.toString());
+                    }
+                });
+
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender,birthday");
+                graphRequest.setParameters(parameters);
+                graphRequest.executeAsync();
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.e("LoginErr",error.toString());
+            }
+        });
+
+
+
+
+
 //        kakao.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -124,6 +175,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 
 
     Button.OnClickListener loginClickListener = new View.OnClickListener() {
@@ -210,19 +264,72 @@ public class LoginActivity extends AppCompatActivity {
             SHA = null;
 
         }
-
         return SHA;
-
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
-            return;
-        }
         super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
+    public void facebookLoginOnClick(View v){
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this,
+                Arrays.asList("public_profile", "email"));
+        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
+            @Override
+            public void onSuccess(final LoginResult result) {
+
+                GraphRequest request;
+                request = GraphRequest.newMeRequest(result.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
+
+                    @Override
+                    public void onCompleted(JSONObject user, GraphResponse response) {
+                        if (response.getError() != null) {
+
+                        } else {
+                            Log.i("TAG", "user: " + user.toString());
+                            Log.i("TAG", "AccessToken: " + result.getAccessToken().getToken());
+                            setResult(RESULT_OK);
+
+                            Intent i = new Intent(LoginActivity.this, CommonSignUpActivity.class);
+                            startActivity(i);
+                            finish();
+                        }
+                    }
+                });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender,birthday");
+                request.setParameters(parameters);
+                request.executeAsync();
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.e("test", "Error: " + error);
+                //finish();
+            }
+
+            @Override
+            public void onCancel() {
+                //finish();
+            }
+        });
+    }
+
+
+//  kakao
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
+//            return;
+//        }
+//        super.onActivityResult(requestCode, resultCode, data);
+//    }
 
     protected void onDestroy() {
         super.onDestroy();
@@ -327,6 +434,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+
+
 
 
 

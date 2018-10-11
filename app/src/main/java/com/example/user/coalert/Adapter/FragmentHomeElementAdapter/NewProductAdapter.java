@@ -1,6 +1,7 @@
 package com.example.user.coalert.Adapter.FragmentHomeElementAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
@@ -57,6 +59,8 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(context, CosmeticInformationActivity.class);
+                context.startActivity(intent);
                 Toast.makeText(context,mDataset.get(position).getText2(),Toast.LENGTH_SHORT).show();
             }
         });

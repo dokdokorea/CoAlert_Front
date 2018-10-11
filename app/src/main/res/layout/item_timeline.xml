@@ -2,15 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.v7.widget.CardView
-        android:id="@+id/timeCardview"
-        card_view:cardCornerRadius="3dp"
+        android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_2sdp"
+        card_view:cardCornerRadius="@dimen/_1sdp"
+        card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,13 +22,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_3sdp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="60dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_weight="1"
                     android:src="@drawable/face1" />
 
@@ -33,22 +37,42 @@
                     android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="left|bottom"
-                    android:padding="10dp"
+                    android:padding="@dimen/_5sdp"
                     android:text="ddd"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
                     tools:ignore="RtlHardcoded" />
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp" />
+
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="417dp"
-                android:layout_height="210dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="@dimen/_200sdp"
+                android:maxWidth="@dimen/_200sdp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp" />
+
             <TextView
                 android:id="@+id/title"
+                style="@style/defaultFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="ddd"/>
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:padding="@dimen/_6sdp"
+                android:text="ddd"
+                android:textSize="@dimen/_14sdp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
