@@ -6,25 +6,25 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:background="#ffffff"
         android:fontFamily="@font/yoon_gothic340"
         android:gravity="center"
         android:text="MyPage"
-        android:textSize="20dp"
+        android:textSize="@dimen/_15sdp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/_36sdp"
         android:text="사용자정보"
         android:gravity="bottom"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_4sdp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:orientation="horizontal"
         android:background="#fff">
 
@@ -34,7 +34,7 @@
         android:text="이름 : "
         style="@style/editprofile"
         android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/_7sdp"
         />
 
         <EditText
@@ -51,11 +51,11 @@
   
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="@dimen/_2sdp" />
   
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:orientation="horizontal"
         android:background="#fff">
 
@@ -65,7 +65,7 @@
             android:text="개인정보 : "
             style="@style/editprofile"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             />
 
         <TextView
@@ -73,18 +73,18 @@
             android:layout_height="wrap_content"
             style="@style/editprofilevari"
             android:layout_gravity="center"
-            android:textSize="18sp"
+            android:textSize="@dimen/_13sdp"
             android:text="example@gmail.com"/>
 
     </LinearLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="@dimen/_2sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:orientation="horizontal"
         android:background="#fff">
 
@@ -94,26 +94,26 @@
             android:text="성별 :"
             style="@style/editprofile"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             android:id="@+id/sex"
-            android:entries="@array/sex"></Spinner>
+            android:entries="@array/sex"/>
 
     </LinearLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="@dimen/_2sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:orientation="horizontal"
         android:background="#fff">
 
@@ -123,26 +123,26 @@
             android:text="피부타입 :"
             style="@style/editprofile"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             android:id="@+id/skin_type"
-            android:entries="@array/skin_type"></Spinner>
+            android:entries="@array/skin_type"/>
 
     </LinearLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="3dp" />
+        android:layout_height="@dimen/_2sdp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:orientation="horizontal"
         android:background="#fff">
 
@@ -152,64 +152,64 @@
             android:text="생년월일 :"
             style="@style/editprofile"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             />
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             android:id="@+id/year"
-            android:entries="@array/date_year"></Spinner>
+            android:entries="@array/date_year"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="@style/editprofilevari"
             android:text="년"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/_13sdp"/>
 
         <Spinner
-            android:layout_width="60dp"
+            android:layout_width="@dimen/_44sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             android:id="@+id/month"
-            android:entries="@array/date_month"></Spinner>
+            android:entries="@array/date_month"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="@style/editprofilevari"
             android:text="월"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/_13sdp"/>
 
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/_7sdp"
             android:id="@+id/day"
-            android:entries="@array/date_day"></Spinner>
+            android:entries="@array/date_day"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             style="@style/editprofilevari"
             android:text="일"
-            android:textSize="18sp"/>
+            android:textSize="@dimen/_13sdp"/>
 
 
     </LinearLayout>
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="@dimen/_36sdp" />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:background="#fff"
         android:text="  회원탈퇴"
         android:id="@+id/broke"
@@ -223,12 +223,12 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_36sdp"
             android:layout_gravity="bottom"
             android:background="@color/first"
             android:text="적용"
             android:fontFamily="@font/yoon_gothic330"
-            android:textSize="28dp"
+            android:textSize="@dimen/_20sdp"
             android:textColor="#fff"
             android:id="@+id/editbtn"/>
 

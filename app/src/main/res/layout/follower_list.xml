@@ -11,8 +11,8 @@
 
         <ImageView
             android:id="@+id/follower_list_back_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
             android:scaleType="fitCenter"
             android:src="@drawable/left_btn" />
 
@@ -20,7 +20,7 @@
             style="@style/editprofile"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:text="팔로워" />
     </LinearLayout>
 

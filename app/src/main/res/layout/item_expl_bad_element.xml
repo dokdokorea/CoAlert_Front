@@ -15,16 +15,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp">
+            android:layout_marginTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingTop="@dimen/_3sdp">
 
             <TextView
                 android:id="@+id/bad_ele_rank"
                 style="@style/editprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="@dimen/_3sdp"
                 android:text="@string/bad_element_rank" />
 
 
@@ -34,9 +34,9 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/yoon_gothic320"
                 android:gravity="start|center_vertical"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="@dimen/_7sdp"
                 android:text="아메리카노 좋아 좋아 좋아 성분"
-                android:textSize="16sp" />
+                android:textSize="@dimen/_12sdp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

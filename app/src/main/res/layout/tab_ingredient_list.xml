@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/emptyBackground"
-        android:text="타입별 위험도 보러가기"
+        android:text="피부 타입별 위험도 보러가기"
         android:id="@+id/by_type_ingredient"
         android:gravity="center_vertical"
-        android:textSize="18sp"
+        android:textSize="@dimen/_13sdp"
         android:textColor="@color/colorPrimary"
-        android:paddingLeft="15dp"
+        android:paddingLeft="@dimen/_11sdp"
         android:fontFamily="@font/yoon_gothic320"
         />
 

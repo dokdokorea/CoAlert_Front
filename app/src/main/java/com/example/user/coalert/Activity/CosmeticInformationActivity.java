@@ -2,11 +2,13 @@ package com.example.user.coalert.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -38,7 +40,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     int percent=50,j=0;
     TextView matching, company, ProductName;
     ImageView ProductImg;
-    ImageButton wishbtn;
+    ImageButton wishbtn, shareBtn;
     Button WriteReview, MoreToxicByType;
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
@@ -52,6 +54,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cosmetic_information);
+        shareBtn = findViewById(R.id.share_btn);
         wishbtn=(ImageButton)findViewById(R.id.wish_btn);
         matching=(TextView)findViewById(R.id.matching_percent);
         ProductImg=(ImageView)findViewById(R.id.cosmetic_photo);
@@ -62,6 +65,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");
+        Drawable alpha = WriteReview.getBackground();
+        alpha.setAlpha(50);
         matching.setText(percent+"%");
         if(percent<20){
             matching.setTextColor(Color.RED);
@@ -90,6 +95,18 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     wishbtn.setImageResource(R.drawable.fullheart);
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        shareBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent msg = new Intent (Intent.ACTION_SEND);
+                msg.addCategory(Intent.CATEGORY_DEFAULT);
+                msg.putExtra(Intent.EXTRA_SUBJECT, "이상훈님의 말랑말랑썬크림(이니스프리)의 적합성을 확인하세요");
+                msg.putExtra(Intent.EXTRA_TEXT, "모든 화장품을 개인에게 맞추다 CoAlert");
+                msg.setType("text/plain");
+                startActivity(Intent.createChooser(msg, "공유"));
             }
         });
 

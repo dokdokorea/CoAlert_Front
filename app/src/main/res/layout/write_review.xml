@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/write_review_back_btn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
             android:src="@drawable/left_btn" />
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="5dp"
+            android:paddingTop="@dimen/_3sdp"
             android:text="리뷰 작성" />
 
         <Button
@@ -33,7 +33,7 @@
             android:background="@color/emptyBackground"
             android:text="자세한리뷰"
             android:textColor="@color/third"
-            android:textSize="16sp" />
+            android:textSize="@dimen/_12sdp" />
     </FrameLayout>
 
     <ScrollView
@@ -49,7 +49,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/_15sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,12 +58,12 @@
 
                 <ImageView
                     android:id="@+id/prod_image"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="@dimen/_145sdp"
+                    android:layout_height="@dimen/_145sdp"
                     android:layout_gravity="center"
-                    android:maxHeight="200dp"
+                    android:maxHeight="@dimen/_145sdp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/irin" />
+                    android:src="@drawable/hyoshin1" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,14 +82,14 @@
                         style="@style/defaultFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="@dimen/_7sdp"
                         android:text="@string/company_name" />
                 </LinearLayout>
             </LinearLayout>
 
             <Space
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/_15sdp" />
 
             <com.hsalf.smilerating.SmileRating
                 android:id="@+id/smile_rating"
@@ -98,15 +98,15 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="@dimen/_15sdp" />
 
             <EditText
                 android:id="@+id/one_line"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_7sdp"
                 android:background="@drawable/content_edge"
                 android:ems="17"
                 android:hint="100자 이내로 화장품의 평가를 적어주세요."
@@ -114,25 +114,25 @@
 
             <TextView
                 android:id="@+id/wordsNumber"
-                android:layout_width="63dp"
+                android:layout_width="@dimen/_46sdp"
                 android:layout_height="match_parent" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/personal_prod_pic"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="@dimen/_73sdp"
                 android:orientation="horizontal" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="@dimen/_22sdp" />
 
             <Button
                 android:id="@+id/write_review_save_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="@dimen/_7sdp"
                 android:background="@drawable/default_button"
                 android:text="저장"
                 android:textColor="@android:color/white" />

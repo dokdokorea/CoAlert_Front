@@ -6,13 +6,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:background="@color/first">
 
         <ImageButton
             android:id="@+id/see_my_reviews_back_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
             android:background="@drawable/clicking_back_btn" />
 
         <TextView
@@ -22,20 +22,20 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="작성한 리뷰"
-            android:textSize="35sp" />
+            android:textSize="@dimen/_25sdp" />
 
     </RelativeLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="2dp">
+        android:padding="@dimen/_1sdp">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -45,9 +45,9 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
                     android:background="@drawable/main_hot_review_background"
                     android:onClick="viewSimple"
                     android:orientation="horizontal">
@@ -56,7 +56,7 @@
                         style="@style/whiteTextStyleSeeMyReviewsSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
+                        android:layout_margin="@dimen/_5sdp"
                         android:textColor="@android:color/darker_gray"
                         android:text="간단리뷰 더보기" />
 
@@ -64,10 +64,10 @@
                         android:id="@+id/simple_list_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
+                        android:layout_margin="@dimen/_5sdp"
                         android:gravity="right"
                         android:text="▶"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                 </LinearLayout>
 
@@ -75,7 +75,7 @@
                     android:id="@+id/view_simple_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp"
+                    android:layout_marginLeft="@dimen/_3sdp"
                     android:visibility="gone"/>
 
             </LinearLayout>
@@ -84,12 +84,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/_7sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_margin="5dp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_margin="@dimen/_3sdp"
                     android:background="@drawable/main_hot_review_background"
                     android:onClick="viewDetail"
                     android:orientation="horizontal">
@@ -99,17 +99,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/darker_gray"
-                        android:layout_margin="7dp"
+                        android:layout_margin="@dimen/_5sdp"
                         android:text="자세한리뷰 더보기" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp"
+                        android:layout_margin="@dimen/_5sdp"
                         android:gravity="right"
                         android:id="@+id/detail_list_icon"
                         android:text="▶"
-                        android:textSize="20sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                 </LinearLayout>
 
@@ -117,7 +117,7 @@
                     android:id="@+id/view_detail_review"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp"
+                    android:layout_marginLeft="@dimen/_3sdp"
                     android:visibility="gone"/>
 
             </LinearLayout>

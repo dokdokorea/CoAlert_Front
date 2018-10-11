@@ -12,31 +12,30 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/_51sdp"
         android:background="@color/first">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/_7sdp"
             android:src="@drawable/coalert_logo_word" />
 
         <ImageButton
             android:id="@+id/home_notification_icon_btn"
-            android:layout_width="60dp"
+            android:layout_width="@dimen/_44sdp"
             android:layout_height="match_parent"
             android:layout_gravity="end|center"
-            android:layout_margin="10dp"
-            android:layout_marginEnd="5dp"
-            android:background="@color/emptyBackground"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:background="@drawable/clicking_empty_to_gray_background"
             android:scaleType="centerInside"
-            android:src="@drawable/clicking_notification_btn" />
+            android:src="@drawable/notification" />
     </FrameLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#fff"
-                android:elevation="5dp"
+                android:elevation="@dimen/_3sdp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -60,10 +59,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
+                        android:layout_marginBottom="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/siren"
-                        android:layout_marginBottom="@dimen/_100sdp"
-                        />
+                        android:src="@drawable/siren" />
 
                     <TextView
                         style="@style/main_button_text_style"
@@ -79,12 +78,12 @@
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:background="@drawable/main_recommendation_bacground">
-                    <!--화장품 추천 횟수 제한걸기-->
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/recommendation_icon" />
 
@@ -92,7 +91,7 @@
                         style="@style/main_button_text_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="@string/cosmetic_recommendation" />
                 </FrameLayout>
             </LinearLayout>
@@ -100,7 +99,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -108,14 +107,15 @@
                 android:background="@drawable/main_new_prod_background"
                 android:elevation="5dp"
                 android:orientation="vertical"
+                android:gravity="center_vertical"
                 >
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -125,14 +125,17 @@
                         android:text="@string/hot_youtuber" />
 
                     <ImageButton
+                        android:id="@+id/main_youtube_next_btn"
                         style="@style/editprofile"
                         android:layout_width="@dimen/_25sdp"
                         android:layout_height="@dimen/_25sdp"
                         android:layout_alignParentEnd="true"
-                        android:background="#00000000"
+                        android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
                         android:src="@drawable/clicking_next_btn"
+                        android:layout_centerVertical="true"
                         android:textColor="#fff" />
+
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -147,19 +150,21 @@
                 android:layout_height="10dp"
                 android:background="@drawable/shadow" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
-                android:orientation="vertical"
                 android:background="@drawable/main_hot_review_background"
-                >
+                android:elevation="@dimen/_3sdp"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -175,6 +180,7 @@
                         android:layout_alignParentEnd="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
+                        android:layout_centerVertical="true"
                         android:src="@drawable/clicking_next_btn"
                         android:textColor="#fff" />
 
@@ -190,22 +196,26 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="@dimen/_7sdp"
                 android:background="@drawable/shadow" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/whiteBackground"
-                android:elevation="5dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
 
                     <TextView
                         style="@style/point_font"
@@ -213,7 +223,6 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/hot_review" />
-
 
 
 
@@ -244,6 +253,10 @@
                     android:textColor="#fff"
                     android:layout_margin="10dp"/>
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp"
+                android:background="@drawable/shadow" />
 
 
         </LinearLayout>

@@ -17,8 +17,8 @@
         <ImageView
             android:id="@+id/wish_card_photo"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:maxHeight="200dp"
+            android:layout_height="@dimen/_145sdp"
+            android:maxHeight="@dimen/_145sdp"
             android:src="@drawable/cardview1" />
     </android.support.v7.widget.CardView>
 </LinearLayout>

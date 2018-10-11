@@ -8,8 +8,8 @@
     <android.support.v7.widget.CardView
         android:id="@+id/item_personal_prod_pic_cardview"
         app:cardUseCompatPadding="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+        android:layout_width="@dimen/_73sdp"
+        android:layout_height="@dimen/_73sdp">
 
         <ImageView
             android:id="@+id/item_personal_prod_pic_imageview"

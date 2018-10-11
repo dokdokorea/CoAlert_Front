@@ -23,8 +23,8 @@
 
                 <ImageButton
                     style="@style/black_back_btn_style"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp" />
+                    android:layout_width="@dimen/_29sdp"
+                    android:layout_height="@dimen/_29sdp" />
 
                 <TextView
                     android:id="@+id/cosmetic_ingredient_pd_name"
@@ -33,8 +33,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:paddingBottom="20dp"
-                    android:paddingTop="10dp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_7sdp"
                     android:textColor="@color/first"
                     android:text="@string/cosmetic_pd_name" />
             </FrameLayout>

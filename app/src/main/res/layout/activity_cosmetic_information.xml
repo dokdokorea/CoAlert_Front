@@ -14,7 +14,7 @@
         android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/_36sdp"
         android:background="@color/first">
 
         <ImageView
@@ -43,7 +43,7 @@
 
     <android.support.v4.widget.Space
         android:layout_width="match_parent"
-        android:layout_height="5dp" />
+        android:layout_height="@dimen/_4sdp" />
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -59,8 +59,8 @@
             <ImageView
                 android:id="@+id/cosmetic_photo"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/_218sdp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:contextClickable="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/cardview1" />
@@ -71,7 +71,7 @@
                 style="@style/company_nm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:text="@string/company_name" />
 
             <LinearLayout
@@ -80,8 +80,8 @@
                 android:orientation="horizontal"
                 android:weightSum="13"
                 android:background="@drawable/round_layout_border"
-                android:layout_margin="10dp"
-                android:padding="15dp">
+                android:layout_margin="@dimen/_7sdp"
+                android:padding="@dimen/_11sdp">
 
                 <TextView
                     style="@style/editprofile"
@@ -99,7 +99,7 @@
                     android:id="@+id/matching_percent"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textSize="40sp"/>
+                    android:textSize="@dimen/_29sdp"/>
 
                 <TextView
                     style="@style/editprofile"
@@ -125,29 +125,29 @@
 
                 <ImageButton
                     android:id="@+id/wish_btn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
                     android:layout_gravity="center"
                     android:background="@color/emptyBackground"
                     android:scaleType="fitCenter"
                     android:src="@drawable/emptyheart" />
 
                 <Space
-                    android:layout_width="5dp"
+                    android:layout_width="@dimen/_4sdp"
                     android:layout_height="0dp" />
 
                 <ImageButton
                     android:id="@+id/share_btn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
                     android:layout_gravity="center"
-                    android:layout_margin="10dp"
+                    android:layout_margin="@dimen/_7sdp"
                     android:background="@color/emptyBackground"
                     android:scaleType="fitCenter"
                     android:src="@drawable/clicking_share_btn" />
 
                 <Space
-                    android:layout_width="10dp"
+                    android:layout_width="@dimen/_7sdp"
                     android:layout_height="0dp" />
             </LinearLayout>
 
@@ -192,7 +192,7 @@
                             android:id="@+id/content2"
                             layout="@layout/tab_simple_review_list"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
 
                         <include
                             android:id="@+id/content3"

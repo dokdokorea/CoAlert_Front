@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="5dp"
+            android:paddingTop="@dimen/_3sdp"
             android:text="리뷰 보기" />
     </FrameLayout>
 
@@ -30,14 +30,15 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_3sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#fff"
             android:orientation="vertical"
-            android:padding="3dp">
+            android:padding="@dimen/_2sdp">
 
 
 
@@ -48,24 +49,24 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/user_profile"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="@dimen/_109sdp"
+                    android:layout_height="@dimen/_109sdp"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:src="@drawable/face1"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="@dimen/_15sdp"/>
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="@dimen/_131sdp"
                     android:background="#70ffffff"/>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="@dimen/_131sdp"
                     style="@style/detailreviewTitle"
                     android:gravity="center"
-                    android:textSize="40dp"
+                    android:textSize="@dimen/_29sdp"
                     android:id="@+id/post_title"
                     android:text="insert title here"
                     />
@@ -74,7 +75,7 @@
                     android:layout_height="wrap_content"
                     style="@style/detailreviewContext"
                     android:text="made by."
-                    android:textSize="15sp"
+                    android:textSize="@dimen/_11sdp"
                     android:layout_toLeftOf="@+id/user_id"
                     android:layout_alignParentBottom="true"/>
                 <TextView
@@ -95,8 +96,8 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_margin="5dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_3sdp"
                 android:background="@color/explanationwords" />
 
 
@@ -110,15 +111,15 @@
                     android:id="@+id/view"
                     class="android.support.v4.view.ViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="@dimen/_145sdp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="@dimen/_22sdp"/>
 
                 <me.relex.circleindicator.CircleIndicator
                     android:id="@+id/indicator"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/_29sdp"
                     android:layout_alignParentBottom="true"/>
 
             </LinearLayout>
@@ -128,7 +129,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="@dimen/_22sdp">
 
                 <TextView
                     android:id="@+id/detail_context"
@@ -144,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="이 제품에대한 더많은 리뷰를 보고싶다면?"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/_22sdp"
                 android:gravity="center"/>
 
             <Button
@@ -157,7 +158,7 @@
                 android:textColor="@color/tab_skintype_color"
                 android:fontFamily="@font/yoon_gothic340"
                 android:textSize="@dimen/_20sdp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="@dimen/_22sdp"/>
 
         </LinearLayout>
 

@@ -5,6 +5,6 @@
 </item>
 
     <item android:state_pressed="true">
-        <color android:color="@color/bottom_navigation_select"/>
+        <color android:color="#ffafb1" />
     </item>
 </selector>
