@@ -162,11 +162,10 @@ public class SearchFragment extends Fragment {
                                             getActivity().runOnUiThread(new Runnable() {
                                                 @Override
                                                 public void run() {
+                                                    list.clear();
                                                     list = variable.listCname;
-                                                    final ArrayList<String> arrayList = new ArrayList<String>(list);
                                                     final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
                                                     listView.setAdapter(searchAdapter);
-                                                    search(text, list, arrayList, searchAdapter);
                                                 }
                                             });
 
