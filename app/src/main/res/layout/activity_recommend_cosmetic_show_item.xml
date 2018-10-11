@@ -6,13 +6,13 @@
     <TextView
         android:id="@+id/recommendCname"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:textSize="18sp"
+        android:layout_height="@dimen/_33sdp"
+        android:textSize="@dimen/_13sdp"
         />
     <TextView
         android:id="@+id/matchingPercent"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:textSize="15sp"
+        android:layout_height="@dimen/_15sdp"
+        android:textSize="@dimen/_11sdp"
         />
 </LinearLayout>
