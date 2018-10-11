@@ -1,6 +1,7 @@
 package com.example.user.coalert.Activity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -42,7 +43,8 @@ public class AnotherprofileActivity extends AppCompatActivity {
         RecyclerView cosmeticList = (RecyclerView) findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         int ColumNumber = 3;      //GridView Column
-
+        Drawable alpha = backBtn.getBackground();
+        alpha.setAlpha(50);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
