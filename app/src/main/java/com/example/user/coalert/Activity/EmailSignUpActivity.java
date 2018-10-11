@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.user.coalert.R;
@@ -29,6 +32,7 @@ public class EmailSignUpActivity extends AppCompatActivity {
     EditText name;
     Button lastButton;
     Intent nextPageIntent;
+    ImageView passwordCheckImg;
     static final String TRUE = "True";
     static final String FALSE = "False";
 
@@ -36,6 +40,7 @@ public class EmailSignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.email_sign_up);
+        passwordCheckImg = findViewById(R.id.passwordCheck);
         emailRedundancyCheckBtn = (Button) findViewById(R.id.email_redundancy_check_btn);
         confirmPassword = findViewById(R.id.password_certification);
         password = findViewById(R.id.input_password);
@@ -43,8 +48,29 @@ public class EmailSignUpActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.input_email);
         lastButton = findViewById(R.id.lastSignUpButton);
         lastButton.setClickable(false);
-
         final Context context = this;
+
+        confirmPassword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (password.getText().equals(confirmPassword.getText())){
+                    passwordCheckImg.setImageResource(R.drawable.password_check);
+                }else{
+                    passwordCheckImg.setImageResource(R.drawable.not_same_password);
+                }
+            }
+        });
+
         emailRedundancyCheckBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
