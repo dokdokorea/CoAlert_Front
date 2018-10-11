@@ -12,10 +12,16 @@
         android:layout_height="@dimen/_40sdp"
         android:background="@color/first">
 
+
         <ImageButton
             android:id="@+id/anotherprofile_back_btn"
-            style="@style/back_btn_style"
-            android:layout_gravity="center_vertical" />
+            android:src="@drawable/unclicked_left"
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_gravity="start"
+            android:background="@drawable/clicking_empty_to_gray_background"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:scaleType="fitStart" />
 
         <ImageView
             android:layout_width="match_parent"

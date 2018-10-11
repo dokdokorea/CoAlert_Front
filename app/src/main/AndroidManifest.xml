@@ -58,8 +58,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity.LoginActivity">
-        </activity>
+        <activity android:name=".Activity.LoginActivity"></activity>
 
         <activity
             android:name=".Activity.AccessAuthorizationActivity"
@@ -69,6 +68,7 @@
 
         </activity>
         <activity android:name=".Activity.EmailSignUpActivity">
+
 
         </activity>
 
@@ -84,11 +84,6 @@
 
         </activity>
         <activity android:name=".Activity.CommonSignUpActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".Activity.WishListActivity">

@@ -126,6 +126,14 @@
                         android:layout_marginStart="@dimen/_4sdp"
                         android:ems="10"
                         android:inputType="textPassword" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@drawable/not_same_password"
+                        android:id="@+id/passwordCheck"/>
                 </TableRow>
 
                 <Space
