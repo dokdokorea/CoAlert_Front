@@ -28,15 +28,14 @@
             android:layout_gravity="end|center"
             android:layout_margin="10dp"
             android:layout_marginEnd="5dp"
-            android:background="@color/emptyBackground"
+            android:background="@drawable/clicking_empty_to_gray_background"
             android:scaleType="centerInside"
-            android:src="@drawable/clicking_notification_btn" />
+            android:src="@drawable/notification" />
     </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,10 +59,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
+                        android:layout_marginBottom="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/siren"
-                        android:layout_marginBottom="@dimen/_100sdp"
-                        />
+                        android:src="@drawable/siren" />
 
                     <TextView
                         style="@style/main_button_text_style"
@@ -79,12 +78,12 @@
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:background="@drawable/main_recommendation_bacground">
-                    <!--화장품 추천 횟수 제한걸기-->
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/recommendation_icon" />
 
@@ -92,7 +91,7 @@
                         style="@style/main_button_text_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
+                        android:layout_gravity="bottom|center"
                         android:text="@string/cosmetic_recommendation" />
                 </FrameLayout>
             </LinearLayout>
@@ -124,14 +123,15 @@
                         android:text="@string/hot_youtuber" />
 
                     <ImageButton
+                        android:id="@+id/main_youtube_next_btn"
                         style="@style/editprofile"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
-                        android:background="#00000000"
+                        android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
-                        android:src="@drawable/clickednext"
-                        android:textColor="#fff" />
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/unclickedpinknext"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView

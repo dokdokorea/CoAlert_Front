@@ -27,32 +27,49 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="70dp" />
+                android:layout_height="@dimen/_35sdp" />
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp">
+                android:layout_marginStart="@dimen/_6sdp">
 
-                <TableRow android:layout_marginTop="10dp">
+                <TableRow>
 
                     <TextView
+                        android:id="@+id/user_name"
+                        style="@style/signup_item_text_style"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_30sdp"
+                        android:text="이름"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <EditText
+                        android:id="@+id/emailSignUpInputname"
+                        android:layout_marginStart="@dimen/_4sdp"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_vertical"
+                        android:ems="13"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/_20sdp">
+
+                    <TextView
+                        style="@style/signup_item_text_style"
+                        android:paddingEnd="@dimen/_25sdp"
+                        android:paddingStart="@dimen/_25sdp"
                         android:text="이메일"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/_12sdp" />
 
                     <EditText
                         android:id="@+id/input_email"
                         style="@style/defaultFont"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="15"
+                        android:ems="14"
                         android:hint="coalert@example.com"
                         android:inputType="textWebEmailAddress" />
 
@@ -61,7 +78,7 @@
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="@dimen/_4sdp"
                         android:background="@drawable/default_button"
                         android:fontFamily="@font/kopub_medium"
                         android:text="중복확인"
@@ -69,50 +86,42 @@
 
                 </TableRow>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp" />
-
-                <TableRow android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="@dimen/_20sdp">
 
                     <TextView
-                        style="@style/defaultFont"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_vertical"
+                        style="@style/signup_item_text_style"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingStart="@dimen/_20sdp"
                         android:text="비밀번호"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp" />
 
                     <EditText
                         android:id="@+id/input_password"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:ems="13"
+                        android:ems="14"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:hint="6~12자리 숫자 또는 문자"
                         android:inputType="textPassword" />
                 </TableRow>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp" />
-
-                <TableRow android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="@dimen/_20sdp">
 
                     <TextView
-                        style="@style/defaultFont"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_vertical"
+                        style="@style/signup_item_text_style"
                         android:text="비밀번호확인"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/_12sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_7sdp"/>
 
                     <EditText
                         android:id="@+id/password_certification"
+                        android:layout_marginStart="@dimen/_4sdp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -123,28 +132,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp" />
 
-                <TableRow android:layout_marginTop="10dp">
-
-                    <TextView
-                        android:id="@+id/user_name"
-                        style="@style/defaultFont"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:gravity="center_vertical"
-                        android:text="이름"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/emailSignUpInputname"
-                        style="@style/defaultFont"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="13"
-                        android:inputType="text" />
-                </TableRow>
 
             </TableLayout>
 
