@@ -24,11 +24,13 @@
             android:text="리뷰 보기" />
     </FrameLayout>
 
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,6 +38,9 @@
             android:background="#fff"
             android:orientation="vertical"
             android:padding="3dp">
+
+
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -80,7 +85,10 @@
                     android:text="UserId"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:onClick="goAnotheruser"/>
+                    android:onClick="goAnotheruser"
+                    android:textStyle="bold"
+                    android:textColor="@color/boardBackground"
+                    android:layout_marginRight="10dp"/>
 
             </RelativeLayout>
 

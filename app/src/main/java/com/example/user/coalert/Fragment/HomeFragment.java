@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
 import com.example.user.coalert.Activity.NotificationActivity;
 import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
+import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
@@ -29,6 +30,7 @@ import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
+import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,6 +45,7 @@ public class HomeFragment extends Fragment {
     ArrayList<OneImgTwoStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
+    ArrayList<TwoImgTwoStringCardView> bestPreviewArr;
     SearchFragment searchFragment;
     FragmentManager fragmentManager;
     FrameLayout detailElementBtn;
@@ -72,18 +75,23 @@ public class HomeFragment extends Fragment {
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
         RecyclerView newProductRecyclerView = (RecyclerView) v.findViewById(R.id.new_product_recyclerview);
+        RecyclerView bestPreviewRecyclerView=(RecyclerView) v.findViewById(R.id.best_review_preview_recycler);
 
         youtuberRecyclerView.setHasFixedSize(true);
         bestReviewRecyclerView.setHasFixedSize(true);
         newProductRecyclerView.setHasFixedSize(true);
+        bestPreviewRecyclerView.setHasFixedSize(true);
 
         youtuberRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         bestReviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         newProductRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        bestPreviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+
 
         youtuberArr = new ArrayList<>();
         bestReviewArr = new ArrayList<>();
         newProduArr = new ArrayList<>();
+        bestPreviewArr=new ArrayList<>();
 
         youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "심즈 캐릭터같은 메이크업!","aiHSVQy9xN8"));
         youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "눈이 2배 커지는 화장 비법","RDaiHSVQy9xN8"));
@@ -101,6 +109,13 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "신상품", "니회사"));
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
         newProductRecyclerView.setAdapter(new NewProductAdapter(getContext(),newProduArr,R.layout.fragment_home));
+
+        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.cardview1,R.drawable.irinblack,"슬기","아이린의 화장법"));
+        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.irin,R.drawable.irinpink,"아이린","남다른 핑크"));
+        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.iu1,R.drawable.irinyellow,"아이린","색다른 옐로우"));
+
+        bestPreviewRecyclerView.setAdapter(new DetailReviewAdapter(getContext(),bestPreviewArr,R.layout.fragment_home));
+
 
         suggestCosmetic.setOnClickListener(new View.OnClickListener() {
             @Override

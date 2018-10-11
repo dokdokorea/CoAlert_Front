@@ -225,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
-            android:background="@color/fourth"
+            android:background="@color/first"
             android:text="적용"
             android:fontFamily="@font/yoon_gothic330"
             android:textSize="28dp"
