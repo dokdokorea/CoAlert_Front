@@ -2,6 +2,7 @@ package com.example.user.coalert.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -64,6 +65,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");
+        Drawable alpha = WriteReview.getBackground();
+        alpha.setAlpha(50);
         matching.setText(percent+"%");
         if(percent<20){
             matching.setTextColor(Color.RED);

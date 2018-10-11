@@ -192,7 +192,7 @@
                             android:id="@+id/content2"
                             layout="@layout/tab_simple_review_list"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent" />
 
                         <include
                             android:id="@+id/content3"
