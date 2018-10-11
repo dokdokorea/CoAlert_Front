@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Activity.InnisfreeAdActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.adCardViewItem;
 
@@ -48,10 +49,11 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
         Bitmap bitmap = adCardViewItem.getBitmap();
         holder.productImage.setImageBitmap(bitmap);
         holder.productName.setText("코알라 화장품");
-        holder.oneCardView.setOnClickListener(new View.OnClickListener() {
+        Log.e("positon", String.valueOf(position));
+        holder.oneCardView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, position, Toast.LENGTH_SHORT).show();
+                Log.e("asdasd", String.valueOf(position));
             }
         });
     }
