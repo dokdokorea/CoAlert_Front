@@ -82,7 +82,6 @@
         <activity
             android:name=".Popup.BreakPopup"
             android:theme="@android:style/Theme.Dialog" />
-
         <activity android:name=".Activity.NotificationActivity">
 
         </activity>
@@ -93,12 +92,16 @@
 
 
         </activity>
-        <activity android:name=".Activity.WishListActivity" >
+        <activity android:name=".Activity.WishListActivity">
 
 
         </activity>
         <activity android:name=".Activity.CosmeticInformationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.ExplanationBadElementActivity"></activity>
         <activity android:name=".Activity.CosmeticIngredientActivity">
@@ -113,13 +116,10 @@
         <activity android:name=".Activity.recommendCosmeticShow" />
         <activity android:name=".Activity.TwentyQuestionActivity" />
         <activity android:name=".Activity.MyReviewListActivity"></activity>
-        <activity android:name=".Activity.InnisfreeAdActivity"
+        <activity
+            android:name=".Activity.InnisfreeAdActivity"
             tools:ignore="DuplicateActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
