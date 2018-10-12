@@ -87,6 +87,7 @@ public class HomeFragment extends Fragment {
         bestReviewRecyclerView.setHasFixedSize(true);
         newProductRecyclerView.setHasFixedSize(true);
         bestPreviewRecyclerView.setHasFixedSize(true);
+        bestPreviewRecyclerView.setFocusable(false);
 
         youtuberRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         bestReviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));

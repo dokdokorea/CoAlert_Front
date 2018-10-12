@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hot_youtuber">지금 핫한 유투브 동영상!</string>
+    <string name="hot_youtuber">핫한 유투브</string>
     <string name="new_product">신상 맛보기</string>
     <string name="hot_review">인기 리뷰</string>
 

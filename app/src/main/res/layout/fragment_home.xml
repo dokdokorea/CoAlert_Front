@@ -12,18 +12,18 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_51sdp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@color/first">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_7sdp"
+            android:layout_margin="@dimen/_5sdp"
             android:src="@drawable/coalert_logo_word" />
 
         <ImageButton
             android:id="@+id/home_notification_icon_btn"
-            android:layout_width="@dimen/_44sdp"
+            android:layout_width="@dimen/_38sdp"
             android:layout_height="match_parent"
             android:layout_gravity="end|center"
             android:layout_margin="@dimen/_5sdp"
@@ -104,11 +104,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
-                android:background="@drawable/main_new_prod_background"
-                android:elevation="5dp"
-                android:orientation="vertical"
                 android:gravity="center_vertical"
-                >
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -127,14 +124,13 @@
                     <ImageButton
                         android:id="@+id/main_youtube_next_btn"
                         style="@style/editprofile"
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
-                        android:src="@drawable/clicking_next_btn"
-                        android:layout_centerVertical="true"
-                        android:textColor="#fff" />
+                        android:src="@drawable/clicking_next_btn_white_background" />
 
                 </RelativeLayout>
 
@@ -142,7 +138,7 @@
                     android:id="@+id/hot_youtuber_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
             </LinearLayout>
 
             <View
@@ -154,10 +150,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
-                android:background="@drawable/main_hot_review_background"
-                android:elevation="@dimen/_3sdp"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -175,13 +169,13 @@
 
                     <ImageButton
                         style="@style/editprofile"
-                        android:layout_width="@dimen/_25sdp"
-                        android:layout_height="@dimen/_25sdp"
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/clicking_next_btn"
+                        android:src="@drawable/clicking_next_btn_white_background"
                         android:textColor="#fff" />
 
 
@@ -191,18 +185,14 @@
                     android:id="@+id/new_product_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
+
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_7sdp"
                 android:background="@drawable/shadow" />
-
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -225,34 +215,33 @@
                         android:text="@string/hot_review" />
 
 
-
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
+                    android:id="@+id/best_review_preview_recycler"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/best_review_preview_recycler">
-                </android.support.v7.widget.RecyclerView>
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/best_review_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <ImageButton
                     style="@style/editprofile"
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="end"
+                    android:layout_margin="10dp"
                     android:background="#00000000"
                     android:scaleType="centerInside"
-                    android:src="@drawable/clickednext"
-                    android:textColor="#fff"
-                    android:layout_margin="10dp"/>
+                    android:src="@drawable/clicking_next_btn_white_background"
+                    android:textColor="#fff" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_7sdp"
