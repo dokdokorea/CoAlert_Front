@@ -15,7 +15,8 @@
         <FrameLayout
             android:background="@color/explanationwords"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_3sdp">
+                android:layout_marginTop="@dimen/_3sdp"
+                android:visibility="gone">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_pic"
@@ -69,11 +71,13 @@
                android:layout_width="match_parent"
                android:layout_height="@dimen/_1sdp"
                android:background="@color/explanationwords"
-               android:layout_margin="@dimen/_3sdp"/>
+               android:layout_margin="@dimen/_3sdp"
+               android:visibility="gone"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow">
 
                 <ImageView
                     android:layout_width="match_parent"

@@ -42,6 +42,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 
 public class HomeFragment extends Fragment {
@@ -99,6 +100,7 @@ public class HomeFragment extends Fragment {
         bestReviewRecyclerView.setHasFixedSize(true);
         newProductRecyclerView.setHasFixedSize(true);
         bestPreviewRecyclerView.setHasFixedSize(true);
+        bestPreviewRecyclerView.setFocusable(false);
 
         youtuberRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         bestReviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
