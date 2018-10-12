@@ -4,13 +4,14 @@
     <string name="new_product">신상 맛보기</string>
     <string name="hot_review">인기 리뷰</string>
 
-    <string name="for_more_information">유해 성분\n확인</string>
+    <string name="for_more_information">내 유해성분</string>
     <string name="cosmetic_recommendation">화장품\n맞춤 추천</string>
+
     <style name="main_button_text_style">
         <item name="android:gravity">center</item>
         <item name="android:layout_marginBottom">@dimen/_15sdp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">@dimen/_27sdp</item>
+        <item name="android:textSize">@dimen/_24sdp</item>
         <item name="android:fontFamily">@font/kopub_medium</item>
     </style>
 
