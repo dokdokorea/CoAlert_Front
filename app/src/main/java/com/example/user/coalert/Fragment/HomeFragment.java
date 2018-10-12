@@ -21,12 +21,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
+import com.example.user.coalert.Activity.HotYoutubeListActivity;
 import com.example.user.coalert.Activity.NotificationActivity;
 import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
+import com.example.user.coalert.Adapter.FragmentHomeLinkList.YoutubeListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.item.OneImgOneStringCardView;
@@ -51,7 +53,7 @@ public class HomeFragment extends Fragment {
     FragmentManager fragmentManager;
     FrameLayout detailElementBtn;
     FrameLayout suggestCosmetic;
-    ImageButton notification_icon;
+    ImageButton notification_icon, youtubelnk;
 
     public HomeFragment() {
     }
@@ -64,6 +66,16 @@ public class HomeFragment extends Fragment {
         detailElementBtn = v.findViewById(R.id.detail_element_info_btn);
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         notification_icon=v.findViewById(R.id.home_notification_icon_btn);
+        youtubelnk=v.findViewById(R.id.main_youtube_next_btn);
+
+        youtubelnk.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), HotYoutubeListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         notification_icon.setOnClickListener(new View.OnClickListener(){
 

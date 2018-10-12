@@ -16,30 +16,31 @@ import java.util.ArrayList;
 
 public class FollowerListActivity extends AppCompatActivity {
     ArrayList<TwoImgTwoStringCardView> follwerListArr;
-ImageView profilepic;
-ImageView followerBtn;
-TextView userName;
-TextView userId;
+    ImageView profilepic;
+    ImageView followerBtn;
+    TextView userName;
+    TextView userId;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.follower_list);
 
-        profilepic=(ImageView)findViewById(R.id.item_follower_list_circleimageview);
-        followerBtn=(ImageView)findViewById(R.id.item_follower_list_follower_btn);
-        userName=(TextView)findViewById(R.id.user_name);
-        userId=(TextView)findViewById(R.id.item_follower_email);
+        profilepic = (ImageView) findViewById(R.id.item_follower_list_circleimageview);
+        followerBtn = (ImageView) findViewById(R.id.item_follower_list_follower_btn);
+        userName = (TextView) findViewById(R.id.user_name);
+        userId = (TextView) findViewById(R.id.item_follower_email);
 
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.follower_list_recyclerview);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.follower_list_recyclerview);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        follwerListArr=new ArrayList<>();
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1,R.drawable.follow_btn,"이슬기","nunasarang@naver.com"));
+        follwerListArr = new ArrayList<>();
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
 
         recyclerView.setAdapter(new FollowerListAdapter(follwerListArr));
 

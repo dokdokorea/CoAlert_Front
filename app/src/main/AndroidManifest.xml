@@ -117,6 +117,8 @@
             tools:ignore="DuplicateActivity">
 
         </activity>
+        <activity android:name=".Activity.HotYoutubeListActivity"></activity>
+
     </application>
 
 </manifest>
