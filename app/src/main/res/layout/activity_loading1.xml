@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_weight="1"
+    android:background="@color/first"
     >
 
     <android.support.v4.widget.Space
@@ -16,16 +17,19 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="@dimen/_145sdp"
-        android:layout_height="@dimen/_145sdp"
-        android:src="@drawable/koala"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/loading_white_logo"
         android:layout_weight="0.2"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Loading..."
-        android:textSize="@dimen/_22sdp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="@font/yoon_gothic330"
+        android:textSize="@dimen/_25sdp"
         android:layout_weight="0.1"/>
     <android.support.v4.widget.Space
         android:layout_width="match_parent"

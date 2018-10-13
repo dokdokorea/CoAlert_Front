@@ -6,24 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
-    android:background="@color/app_background"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".Fragment.HomeFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_51sdp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@color/first">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_7sdp"
+            android:layout_margin="@dimen/_5sdp"
             android:src="@drawable/coalert_logo_word" />
 
         <ImageButton
             android:id="@+id/home_notification_icon_btn"
-            android:layout_width="@dimen/_44sdp"
+            android:layout_width="@dimen/_38sdp"
             android:layout_height="match_parent"
             android:layout_gravity="end|center"
             android:layout_margin="@dimen/_5sdp"
@@ -33,7 +33,7 @@
             android:src="@drawable/notification" />
     </FrameLayout>
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -45,67 +45,81 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#fff"
                 android:elevation="@dimen/_3sdp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
 
                 <FrameLayout
                     android:id="@+id/detail_element_info_btn"
                     style="@style/main_buton_style"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginStart="@dimen/_5sdp"
-                    android:background="@drawable/main_bad_ingre_background">
+                    android:background="@color/emptyBackground">
 
-                    <ImageView
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/main_bad_element_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_190sdp"
+                        android:src="@drawable/bad_element" />
+                    </FrameLayout>
+                    <!--<ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginBottom="@dimen/_80sdp"
-                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/siren" />
+                        android:src="@drawable/siren" />-->
 
                     <TextView
                         style="@style/main_button_text_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:text="@string/for_more_information" />
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/for_more_information"
+                        android:textColor="@android:color/black"/>
                 </FrameLayout>
 
                 <FrameLayout
                     android:id="@+id/suggest_cosmetics"
                     style="@style/main_buton_style"
+                    android:layout_marginTop="-20dp"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_marginStart="@dimen/_4sdp"
-                    android:background="@drawable/main_recommendation_bacground">
+                    android:background="@color/emptyBackground">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_190sdp"
+                        android:src="@drawable/main_recommendation_bacground" />
+
+               <!--     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_gravity="center|top"
-                        android:layout_marginTop="@dimen/_19sdp"
+                        android:layout_marginTop="@dimen/_27sdp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/recommendation_icon" />
+                        android:src="@drawable/recommendation_icon" />-->
 
                     <TextView
                         style="@style/main_button_text_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
                         android:text="@string/cosmetic_recommendation" />
                 </FrameLayout>
             </LinearLayout>
 
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
-
             <LinearLayout
+                android:layout_marginTop="-20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:elevation="@dimen/_3sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -113,91 +127,48 @@
                     android:layout_height="@dimen/_36sdp"
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
-                    android:layout_marginRight="@dimen/_3sdp">
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:background="@drawable/clicking_button_pink_to_darker"
+                    android:id="@+id/goYoutube">
 
                     <TextView
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/hot_youtuber" />
+                        android:text="@string/hot_youtuber"
+                        android:textColor="@android:color/background_light" />
 
                     <ImageButton
                         android:id="@+id/main_youtube_next_btn"
                         style="@style/editprofile"
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/unclickedpinknext"/>
+                        android:src="@drawable/next" />
+
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/hot_youtuber_recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_156sdp"
-                android:background="@drawable/main_hot_review_background"
-                android:elevation="@dimen/_3sdp"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_36sdp"
-                    android:layout_margin="@dimen/_3sdp"
-                    android:layout_marginLeft="@dimen/_3sdp"
-                    android:layout_marginRight="@dimen/_3sdp">
-
-                    <TextView
-                        style="@style/point_font"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/hot_review" />
-
-                    <ImageButton
-                        style="@style/editprofile"
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
-                        android:layout_alignParentEnd="true"
-                        android:background="#00000000"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/clicking_next_btn"
-                        android:textColor="#fff" />
-
-
-                </RelativeLayout>
-
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/best_review_recyclerview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp"
+                android:layout_height="10dp"
                 android:background="@drawable/shadow" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_218sdp"
-                android:background="@drawable/main_new_prod_background"
+                android:layout_height="@dimen/_30sdp"
+                android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -205,24 +176,27 @@
                     android:layout_height="@dimen/_36sdp"
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
-                    android:layout_marginRight="@dimen/_3sdp">
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:background="@drawable/clicking_button_pink_to_darker"
+                    android:id="@+id/goNewProduct">
 
                     <TextView
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/new_product" />
+                        android:text="@string/new_product"
+                        android:textColor="@android:color/background_light" />
 
                     <ImageButton
                         style="@style/editprofile"
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_27sdp"
+                        android:layout_height="@dimen/_27sdp"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
-                        android:src="@drawable/clicking_next_btn"
-                        android:textColor="#fff" />
+                        android:src="@drawable/next"/>
 
 
                 </RelativeLayout>
@@ -230,7 +204,89 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/new_product_recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp"
+                android:background="@drawable/shadow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#A9D0F5"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_3sdp">
+
+                    <TextView
+                        style="@style/point_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/hot_review"
+                        android:textColor="@android:color/background_light" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/best_review_preview_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/best_review_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/goHotReview">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="더보기"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            style="@style/point_font"
+                            android:textColor="#fff"/>
+
+                        <ImageButton
+                            style="@style/editprofile"
+                            android:layout_width="@dimen/_27sdp"
+                            android:layout_height="@dimen/_27sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_margin="10dp"
+                            android:background="#00000000"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/next" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <View
@@ -240,5 +296,5 @@
 
 
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

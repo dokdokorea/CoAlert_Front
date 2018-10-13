@@ -1,5 +1,6 @@
 package com.example.user.coalert.Adapter.CosmeticInformationAdapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,8 @@ import java.util.ArrayList;
 
 public class DetailReviewAdapter extends RecyclerView.Adapter<DetailReviewAdapter.ViewHolder> {
     private ArrayList<TwoImgTwoStringCardView> mDataSet;
+    Context context;
+    int item_layout;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView Title,CreatorId;
@@ -30,8 +33,10 @@ public class DetailReviewAdapter extends RecyclerView.Adapter<DetailReviewAdapte
         }
     }
 
-    public DetailReviewAdapter(ArrayList<TwoImgTwoStringCardView> myDataset) {
+    public DetailReviewAdapter(Context context,ArrayList<TwoImgTwoStringCardView> myDataset,int item_layout) {
         mDataSet = myDataset;
+        this.context=context;
+        this.item_layout=item_layout;
     }
 
     @NonNull
