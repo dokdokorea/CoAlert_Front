@@ -18,8 +18,8 @@ import com.example.user.coalert.item.OneImgTwoStringCardView;
 import java.util.ArrayList;
 
 public class NewProductListActivity extends Activity {
-    ArrayList<OneImgTwoStringCardView> NewProductArr;
-    private RecyclerView newproductRecyclerView;
+    ArrayList<OneImgTwoStringCardView> SunArr,LipArr,ShadowArr,PdArr;
+    private RecyclerView SunRecycler,LipRecycler,ShadowRecycler,PdRecycler;
     private int COLUM = 3;
     ImageView backBtn;
 
@@ -29,18 +29,42 @@ public class NewProductListActivity extends Activity {
         setContentView(R.layout.activity_new_product_list);
 
         backBtn=(ImageView)findViewById(R.id.back_btn);
-        newproductRecyclerView = (RecyclerView) findViewById(R.id.new_product_recyclerview);
-        newproductRecyclerView.setHasFixedSize(true);
-        newproductRecyclerView.setLayoutManager(new GridLayoutManager(this, COLUM));
-        NewProductArr = new ArrayList<>();
-        Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.drawable.cardview1);
-        for(int i=0;i<10;i++)
-        NewProductArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
+        SunRecycler = (RecyclerView) findViewById(R.id.sun_recycler);
+        LipRecycler=(RecyclerView)findViewById(R.id.liptint_recycler);
+        ShadowRecycler=(RecyclerView)findViewById(R.id.eyeshadow_recycler);
+        PdRecycler=(RecyclerView)findViewById(R.id.poundation_recycler);
+
+        SunRecycler.setHasFixedSize(true);
+        LipRecycler.setHasFixedSize(true);
+        ShadowRecycler.setHasFixedSize(true);
+        PdRecycler.setHasFixedSize(true);
+
+        SunRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
+        LipRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
+        ShadowRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
+        PdRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
+
+        SunArr = new ArrayList<>();
+        for(int i=0;i<4;i++)
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"SunBlock","inisfree"));
+        SunRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),SunArr,R.layout.activity_new_product_list));
+
+        LipArr = new ArrayList<>();
+        for(int i=0;i<1;i++)
+            LipArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+        LipRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),LipArr,R.layout.activity_new_product_list));
+
+        ShadowArr = new ArrayList<>();
+        for(int i=0;i<3;i++)
+            ShadowArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+        ShadowRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),ShadowArr,R.layout.activity_new_product_list));
+
+        PdArr = new ArrayList<>();
+        for(int i=0;i<7;i++)
+            PdArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+        PdRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),PdArr,R.layout.activity_new_product_list));
 
 
-//        wishRecyclerView.setAdapter(new NewProductAdapter(wishListArr));
-        newproductRecyclerView.setAdapter(new NewProductAdapter(getApplicationContext(),NewProductArr,R.layout.wish_list));
 
         backBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -50,7 +74,5 @@ public class NewProductListActivity extends Activity {
             }
         });
 
-
     }
-
 }

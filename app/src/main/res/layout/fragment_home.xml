@@ -60,12 +60,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         
-                    <de.hdodenhof.circleimageview.CircleImageView
+                    <ImageView
                         android:id="@+id/main_bad_element_btn"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
-                        android:src="@drawable/bad_element" />
+                        android:scaleType="centerInside"
+                        android:src="@drawable/science" />
                     </FrameLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_190sdp"
+                        android:src="#15000000"/>
                     <!--<ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/_60sdp"
@@ -79,9 +85,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:textStyle="bold"
                         android:layout_marginTop="@dimen/_20sdp"
-                        android:text="@string/for_more_information"
-                        android:textColor="@android:color/black"/>
+                        android:text="@string/for_more_information" />
+
+
                 </FrameLayout>
 
                 <FrameLayout
@@ -92,10 +100,16 @@
                     android:layout_marginStart="@dimen/_4sdp"
                     android:background="@color/emptyBackground">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_190sdp"
+                        android:src="@drawable/recommend"
+                        android:scaleType="centerInside"/>
+
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
-                        android:src="@drawable/main_recommendation_bacground" />
+                        android:src="#15000000"/>
 
                <!--     <ImageView
                         android:layout_width="wrap_content"
@@ -110,6 +124,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:textStyle="bold"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:text="@string/cosmetic_recommendation" />
                 </FrameLayout>

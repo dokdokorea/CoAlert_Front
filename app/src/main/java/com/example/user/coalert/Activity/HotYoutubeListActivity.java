@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Adapter.FragmentHomeLinkList.YoutubeListAdapter;
@@ -28,7 +29,7 @@ public class HotYoutubeListActivity extends AppCompatActivity {
     Button follow;
     ImageButton Toxic;
     ImageButton following;
-    ImageButton backBtn;
+    ImageView backBtn;
     int j = 0;
 
 
@@ -37,6 +38,7 @@ public class HotYoutubeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hot_youtube_list);
 
+        backBtn=(ImageView)findViewById(R.id.back_btn);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.hot_youtuber_recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
@@ -58,13 +60,13 @@ public class HotYoutubeListActivity extends AppCompatActivity {
 
 
 
-//        backBtn.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        backBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
 
