@@ -49,7 +49,7 @@ public class HotYoutubeListActivity extends AppCompatActivity {
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube1, R.drawable.face1, "숨막히는 메이크업", "엠제이","21k","AeKeOPxfc4M"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube2, R.drawable.iu1,"심즈 캐릭터같은 메이크업", "아이디","30k","lQh6bqJgxYI"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube3,R.drawable.iu2, "barbie makeup", "계획대로되고있어","5k","ET8vUaQxzYg"));
-        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube4, R.drawable.iu4,"횡설수설 속눈썹 강좌", "아이계획대로되고있어","30","TU8eTSERiSY"));
+        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube4, R.drawable.iu4,"횡설수설 속눈썹 강좌", "OK계획대로되고있어","30","TU8eTSERiSY"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube5, R.drawable.hyoshin1,"Nicki Minaj makeup", "아이디","5","0EndSryRh-s"));
 
 

@@ -46,7 +46,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:elevation="@dimen/_3sdp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp">
 
                 <FrameLayout
                     android:id="@+id/detail_element_info_btn"
@@ -62,9 +63,8 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/main_bad_element_btn"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bad_element"
-                        android:layout_marginTop="@dimen/_17sdp" />
+                        android:layout_height="@dimen/_190sdp"
+                        android:src="@drawable/bad_element" />
                     </FrameLayout>
                     <!--<ImageView
                         android:layout_width="wrap_content"
@@ -128,7 +128,8 @@
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginRight="@dimen/_3sdp"
-                    android:background="#F5A9A9">
+                    android:background="@drawable/clicking_button_pink_to_darker"
+                    android:id="@+id/goYoutube">
 
                     <TextView
                         style="@style/point_font"
@@ -147,7 +148,7 @@
                         android:layout_centerVertical="true"
                         android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
-                        android:src="@drawable/clicking_next_btn_white_background" />
+                        android:src="@drawable/next" />
 
                 </RelativeLayout>
 
@@ -176,7 +177,8 @@
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginRight="@dimen/_3sdp"
-                    android:background="#F5A9BC">
+                    android:background="@drawable/clicking_button_pink_to_darker"
+                    android:id="@+id/goNewProduct">
 
                     <TextView
                         style="@style/point_font"
@@ -194,8 +196,7 @@
                         android:layout_centerVertical="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
-                        android:src="@drawable/clicking_next_btn_white_background"
-                        android:textColor="#fff" />
+                        android:src="@drawable/next"/>
 
 
                 </RelativeLayout>
@@ -233,8 +234,6 @@
                         android:gravity="center"
                         android:text="@string/hot_review"
                         android:textColor="@android:color/background_light" />
-
-
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
@@ -249,17 +248,45 @@
                     android:layout_height="wrap_content"
                     android:visibility="gone" />
 
-                <ImageButton
-                    style="@style/editprofile"
-                    android:layout_width="@dimen/_27sdp"
-                    android:layout_height="@dimen/_27sdp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_gravity="end"
-                    android:layout_margin="10dp"
-                    android:background="#00000000"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/clicking_next_btn_white_background"
-                    android:textColor="#fff" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/goHotReview">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="더보기"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            style="@style/point_font"
+                            android:textColor="#fff"/>
+
+                        <ImageButton
+                            style="@style/editprofile"
+                            android:layout_width="@dimen/_27sdp"
+                            android:layout_height="@dimen/_27sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_margin="10dp"
+                            android:background="#00000000"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/next" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
             <View

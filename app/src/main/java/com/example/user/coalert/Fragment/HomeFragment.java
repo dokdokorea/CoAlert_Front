@@ -18,10 +18,12 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
 import com.example.user.coalert.Activity.HotYoutubeListActivity;
+import com.example.user.coalert.Activity.NewProductListActivity;
 import com.example.user.coalert.Activity.NotificationActivity;
 import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewAdapter;
@@ -55,6 +57,7 @@ public class HomeFragment extends Fragment {
     FrameLayout detailElementBtn;
     FrameLayout suggestCosmetic;
     ImageButton notification_icon, youtubelnk;
+    RelativeLayout goYoutube,goNewProduct;
 
     public HomeFragment() {
     }
@@ -68,12 +71,21 @@ public class HomeFragment extends Fragment {
         suggestCosmetic = v.findViewById(R.id.suggest_cosmetics);
         notification_icon=v.findViewById(R.id.home_notification_icon_btn);
         youtubelnk=v.findViewById(R.id.main_youtube_next_btn);
+        goYoutube=v.findViewById(R.id.goYoutube);
+        goNewProduct=v.findViewById(R.id.goNewProduct);
 
-        youtubelnk.setOnClickListener(new View.OnClickListener(){
-
+        goYoutube.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(), HotYoutubeListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        goNewProduct.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), NewProductListActivity.class);
                 startActivity(intent);
             }
         });
@@ -161,6 +173,8 @@ public class HomeFragment extends Fragment {
     }
 
 
+
+
     public static Bitmap getBitmapFromURL(String src) {
         try {
             URL url = new URL(src);
@@ -175,4 +189,5 @@ public class HomeFragment extends Fragment {
             return null;
         }
     }
+
 }

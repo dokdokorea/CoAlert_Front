@@ -69,7 +69,7 @@
         <Button
             android:id="@+id/email_login"
             android:layout_width="@dimen/_50sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="top|center"
             android:layout_marginStart="@dimen/_4sdp"
             android:background="@drawable/edit_text_background"
