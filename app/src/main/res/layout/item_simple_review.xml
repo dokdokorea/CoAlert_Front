@@ -24,7 +24,9 @@
                 android:layout_height="@dimen/_29sdp"
                 android:src="@drawable/face1"
                 android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/_7sdp"/>
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                />
 
 
             <LinearLayout
@@ -41,8 +43,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:padding="@dimen/_7sdp"
-                    android:layout_marginTop="@dimen/_7sdp"
-                    android:text="text1" />
+                    android:text="text1"/>
 
 
 

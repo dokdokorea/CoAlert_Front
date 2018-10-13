@@ -61,15 +61,15 @@ public class MySimpleReviewAdapter extends RecyclerView.Adapter<MySimpleReviewAd
         rate=mDataSet.get(position).getNumber();
         switch(rate){
             case 5:
-                holder.five.setImageResource(R.drawable.fullstar);
+                holder.five.setImageResource(R.drawable.new_star);
             case 4:
-                holder.four.setImageResource(R.drawable.fullstar);
+                holder.four.setImageResource(R.drawable.new_star);
             case 3:
-                holder.three.setImageResource(R.drawable.fullstar);
+                holder.three.setImageResource(R.drawable.new_star);
             case 2:
-                holder.two.setImageResource(R.drawable.fullstar);
+                holder.two.setImageResource(R.drawable.new_star);
             case 1:
-                holder.one.setImageResource(R.drawable.fullstar);
+                holder.one.setImageResource(R.drawable.new_star);
             default:
                 break;
         }
