@@ -13,10 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
+import com.example.user.coalert.Activity.FollowerListActivity;
+import com.example.user.coalert.Activity.FollowingListActivity;
 import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAdapter;
@@ -33,6 +36,7 @@ public class MyProfileFragment extends Fragment {
     Button Edit;
     FrameLayout wishBtn;
     FrameLayout toxicListBtn;
+    ImageButton goFollowing,goFollower;
 
     public MyProfileFragment() {
 
@@ -45,6 +49,9 @@ public class MyProfileFragment extends Fragment {
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
         wishBtn=v.findViewById(R.id.wish_button);
         toxicListBtn=v.findViewById(R.id.toxicList);
+        goFollowing=v.findViewById(R.id.go_following_list);
+        goFollower=v.findViewById(R.id.go_follower_list);
+
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
@@ -108,6 +115,24 @@ public class MyProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        goFollower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FollowerListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        goFollowing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), FollowingListActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         return v;
     }
 }

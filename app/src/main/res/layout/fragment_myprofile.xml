@@ -19,7 +19,9 @@
             android:fontFamily="@font/yoon_gothic340"
             android:gravity="center"
             android:text="MyPage"
-            android:textSize="@dimen/_15sdp"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="#fff"
+            android:background="@color/tab_skintype_color"
             android:textStyle="bold" />
 
 
@@ -116,17 +118,18 @@
                     style="@style/editprofile"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:layout_marginStart="@dimen/_3sdp"
                     android:padding="@dimen/_3sdp"
                     android:text="유해성분 목록 보기" />
 
 
-                <ImageButton
+                <ImageView
                     android:layout_width="@dimen/_29sdp"
                     android:layout_height="match_parent"
                     android:layout_gravity="end|center"
                     android:layout_marginEnd="@dimen/_6sdp"
-                    android:background="@drawable/clicking_next_btn_white_background"
+                    android:background="@drawable/unclickednext"
                     android:scaleType="fitCenter" />
 
             </FrameLayout>
@@ -147,12 +150,12 @@
                     android:padding="@dimen/_3sdp"
                     android:text="@string/wish_list" />
 
-                <ImageButton
+                <ImageView
                     android:layout_width="@dimen/_29sdp"
                     android:layout_height="match_parent"
                     android:layout_gravity="end|center"
                     android:layout_marginEnd="@dimen/_6sdp"
-                    android:background="@drawable/clicking_next_btn_white_background"
+                    android:background="@drawable/unclickednext"
                     android:scaleType="fitCenter" />
 
             </FrameLayout>
@@ -180,18 +183,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="start|center"
-                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
                         android:layout_marginStart="@dimen/_3sdp"
                         android:layout_marginTop="@dimen/_3sdp"
+                        android:padding="@dimen/_3sdp"
                         android:text="팔로잉 목록" />
 
                     <ImageButton
                         android:layout_width="@dimen/_29sdp"
                         android:layout_height="match_parent"
                         android:layout_gravity="end|center"
-                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
                         android:background="@drawable/clicking_next_btn_white_background"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:id="@+id/go_following_list"/>
 
                 </FrameLayout>
 
@@ -241,8 +246,9 @@
                         style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
                         android:layout_marginStart="@dimen/_3sdp"
+                        android:padding="@dimen/_3sdp"
                         android:layout_marginTop="@dimen/_3sdp"
                         android:text="팔로워 목록" />
 
@@ -250,9 +256,10 @@
                         android:layout_width="@dimen/_29sdp"
                         android:layout_height="match_parent"
                         android:layout_gravity="end"
-                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
                         android:background="@drawable/clicking_next_btn_white_background"
-                        android:scaleType="fitCenter" />
+                        android:scaleType="fitCenter"
+                        android:id="@+id/go_follower_list"/>
 
                 </FrameLayout>
 

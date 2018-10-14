@@ -117,8 +117,8 @@ public class HomeFragment extends Fragment {
         });
         Drawable alpha=notification_icon.getBackground();
         alpha.setAlpha(50);
-        Drawable youtubeBtn=(v.findViewById(R.id.main_youtube_next_btn)).getBackground();
-        youtubeBtn.setAlpha(50);
+        //Drawable youtubeBtn=(v.findViewById(R.id.main_youtube_next_btn)).getBackground();
+        //youtubeBtn.setAlpha(50);
 
         RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);

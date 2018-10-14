@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_gravity="center"
         android:text="당신의 화장대를 찍어보세요."
         android:textSize="@dimen/_23sdp"

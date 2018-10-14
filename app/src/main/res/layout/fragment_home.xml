@@ -16,6 +16,13 @@
         android:background="@color/first">
 
         <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/coalert_logo"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_5sdp"
@@ -156,7 +163,19 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/hot_youtuber"
-                        android:textColor="@android:color/background_light" />
+                        android:layout_toRightOf="@+id/hot_icon"
+                        android:textColor="@android:color/background_light"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/youtube_text"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:id="@+id/hot_icon"
+                        android:src="@drawable/love"/>
 
                     <ImageButton
                         android:id="@+id/main_youtube_next_btn"
@@ -165,9 +184,9 @@
                         android:layout_height="@dimen/_27sdp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:background="@drawable/clicking_empty_to_gray_background"
                         android:scaleType="centerInside"
-                        android:src="@drawable/next" />
+                        android:src="@drawable/love"
+                        android:visibility="gone"/>
 
                 </RelativeLayout>
 
@@ -209,7 +228,18 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/new_product"
-                        android:textColor="@android:color/background_light" />
+                        android:layout_toRightOf="@+id/new_icon"
+                        android:textColor="@android:color/background_light"
+                        android:id="@+id/new_text"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/new_icon"
+                        android:src="@drawable/newicon"/>
 
                     <ImageButton
                         style="@style/editprofile"
@@ -219,7 +249,8 @@
                         android:layout_centerVertical="true"
                         android:background="#00000000"
                         android:scaleType="centerInside"
-                        android:src="@drawable/next"/>
+                        android:src="@drawable/next"
+                        android:visibility="gone"/>
 
 
                 </RelativeLayout>
@@ -257,9 +288,19 @@
                         style="@style/point_font"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:gravity="center|right"
                         android:text="@string/hot_review"
-                        android:textColor="@android:color/background_light" />
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="@android:color/background_light"
+                        android:id="@+id/review_text"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/review_text"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/heat"/>
                 </RelativeLayout>
 
                 <android.support.v7.widget.RecyclerView
