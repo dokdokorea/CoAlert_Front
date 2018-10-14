@@ -18,16 +18,20 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.user.coalert.Activity.BestReviewListActivity;
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
 import com.example.user.coalert.Activity.HotYoutubeListActivity;
 import com.example.user.coalert.Activity.NewProductListActivity;
 import com.example.user.coalert.Activity.NotificationActivity;
 import com.example.user.coalert.Activity.WhatSelectKindCosmetic;
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewAdapter;
+import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewPreviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewAdapter;
+import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewPreviewAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeLinkList.YoutubeListAdapter;
@@ -51,13 +55,14 @@ public class HomeFragment extends Fragment {
     ArrayList<OneImgTwoStringCardView> youtuberArr;
     ArrayList<OneImgTwoStringCardView> bestReviewArr;
     ArrayList<OneImgTwoStringCardView> newProduArr;
-    ArrayList<TwoImgTwoStringCardView> bestPreviewArr;
+    ArrayList<OneImgOneStringCardView> bestPreviewArr;
     SearchFragment searchFragment;
     FragmentManager fragmentManager;
     FrameLayout detailElementBtn;
     FrameLayout suggestCosmetic;
     ImageButton notification_icon, youtubelnk;
     RelativeLayout goYoutube,goNewProduct;
+    LinearLayout goHotReview;
 
     public HomeFragment() {
     }
@@ -73,6 +78,15 @@ public class HomeFragment extends Fragment {
         youtubelnk=v.findViewById(R.id.main_youtube_next_btn);
         goYoutube=v.findViewById(R.id.goYoutube);
         goNewProduct=v.findViewById(R.id.goNewProduct);
+        goHotReview=v.findViewById(R.id.goHotReview);
+
+        goHotReview.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), BestReviewListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         goYoutube.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -142,11 +156,11 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
         newProductRecyclerView.setAdapter(new NewProductAdapter(getContext(),newProduArr,R.layout.fragment_home));
 
-        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.cardview1,R.drawable.irinblack,"슬기","아이린의 화장법"));
-        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.irin,R.drawable.irinpink,"아이린","남다른 핑크"));
-        bestPreviewArr.add(new TwoImgTwoStringCardView(R.drawable.iu1,R.drawable.irinyellow,"아이린","색다른 옐로우"));
+        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinblack,"아이린의 화장법"));
+        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinpink,"남다른 핑크"));
+        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinyellow,"색다른 옐로우"));
 
-        bestPreviewRecyclerView.setAdapter(new DetailReviewAdapter(getContext(),bestPreviewArr,R.layout.fragment_home));
+        bestPreviewRecyclerView.setAdapter(new BestReviewPreviewAdapter(getContext(),bestPreviewArr,R.layout.fragment_home));
 
 
         suggestCosmetic.setOnClickListener(new View.OnClickListener() {

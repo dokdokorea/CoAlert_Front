@@ -176,7 +176,9 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
                 android:background="@drawable/shadow" />
 
 
@@ -227,12 +229,15 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_7sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
                 android:background="@drawable/shadow" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#A9D0F5"
+                android:layout_margin="@dimen/_1sdp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -273,14 +278,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/goHotReview">
+                        android:id="@+id/goHotReview"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="end"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/clicking_empty_to_darker_background"
+                        android:padding="@dimen/_3sdp"
+                        android:layout_margin="@dimen/_4sdp">
 
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="더보기"
-                            android:layout_marginTop="@dimen/_2sdp"
                             style="@style/point_font"
                             android:textColor="#fff"/>
 
@@ -288,9 +298,6 @@
                             style="@style/editprofile"
                             android:layout_width="@dimen/_27sdp"
                             android:layout_height="@dimen/_27sdp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_gravity="end"
-                            android:layout_margin="10dp"
                             android:background="#00000000"
                             android:scaleType="centerInside"
                             android:src="@drawable/next" />
