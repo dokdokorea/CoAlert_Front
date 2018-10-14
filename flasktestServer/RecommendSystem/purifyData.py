@@ -8,7 +8,7 @@ from konlpy.tag import Twitter
 
 
 def get_recommaned_cosmetic(userId, kind_cosmetic, start, type=0):
-    original_data = pd.read_csv('RecommendSystem//data/' + kind_cosmetic + '.csv')
+    original_data = pd.read_csv('data/' + kind_cosmetic + '.csv')
     change_type = {'건성': 0, '지성': 1, '중성': 2, '복합성': 3, '민감성': 4}
     original_data['type'] = original_data['type'].map(change_type)
     id_purify_data = get_id_purify_data(original_data)
@@ -22,7 +22,7 @@ def get_recommaned_cosmetic(userId, kind_cosmetic, start, type=0):
     sim_scores = list(enumerate(cosine_sim[int(cosmetic_id)]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1:30]
-    svd = joblib.load('RecommendSystem/model/' + kind_cosmetic + '/' + kind_cosmetic + '_' + str(type) + '.pkl')
+    svd = joblib.load('model/' + kind_cosmetic + '/' + kind_cosmetic + '_' + str(type) + '.pkl')
     cosmetic_id = [i[0] for i in sim_scores]
     prediction = making_predict_data(cosmetic_id, original_data)
     prediction['est'] = prediction['popId'].apply(lambda x: svd.predict(userId, x).est)
@@ -112,3 +112,10 @@ def making_predict_data(cosmetic_id, original_data):
     predict_data = original_data[['popId', 'name']]
     predict_data = predict_data.drop_duplicates()
     return predict_data.iloc[cosmetic_id]
+
+def add_data_at_csv(userid, popid, type, rate, review, name, kind_cosmetic):
+    newData = pd.DataFrame({'userId': userid, 'name': name, 'popId': popid,
+                            'rate': rate, 'review': review, 'type': type}, index=[0])
+    csvData = pd.read_csv('data/'+kind_cosmetic+'.csv')
+    csvData.loc[len(csvData)] = newData.loc[0]
+    csvData.to_csv('data/'+kind_cosmetic+'.csv')
