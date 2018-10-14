@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -35,7 +36,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
     ImageView profile;
     Bitmap bitmap;
     SessionCallback callback;
-    Button lastButton;
+    Button lastButton, goQuestionButton;
     String completeYear, completeMonth, completeDay, selectedSkinType;
     Integer selectedDay, selectedMonth, selectedSex;
     String email, name, password;
@@ -43,6 +44,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
     RadioGroup sexRadioGroup;
     RadioButton anyone;
     ImageView skinImg;
+    LinearLayout showQuestion;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +54,24 @@ public class CommonSignUpActivity extends AppCompatActivity {
         lastButton = findViewById(R.id.common_sign_up_confirmation_btn);
         sexRadioGroup = findViewById(R.id.sexRadioGroup);
         skinImg = findViewById(R.id.skin_type_image);
+        goQuestionButton=findViewById(R.id.goTwenty);
+        showQuestion=findViewById(R.id.showGobtn);
         beforePageInfo = getIntent();
         name = beforePageInfo.getStringExtra("name");
         email = beforePageInfo.getStringExtra("email");
         password = beforePageInfo.getStringExtra("password");
+
+
+
+        goQuestionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(CommonSignUpActivity.this,TwentyQuestionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         //에러나서 주석처리 했어요~
   /*      Log.e("email", email);
         Log.e("password", password);
@@ -208,16 +224,24 @@ public class CommonSignUpActivity extends AppCompatActivity {
             case "피부타입선택":
                 Drawable img=getResources().getDrawable(R.drawable.normalskin);
                 skinImg.setImageDrawable(img);
+                skinImg.setVisibility(View.GONE);
+                showQuestion.setVisibility(View.VISIBLE);
                 break;
             case "지성":
+                showQuestion.setVisibility(View.GONE);
+                skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.oilyskin);
                 skinImg.setImageDrawable(img);
                 break;
             case "건성":
+                showQuestion.setVisibility(View.GONE);
+                skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.dryskin);
                 skinImg.setImageDrawable(img);
                 break;
             case "민감성":
+                showQuestion.setVisibility(View.GONE);
+                skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.sensitiveskin);
                 skinImg.setImageDrawable(img);
                 break;

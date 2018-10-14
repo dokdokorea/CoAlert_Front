@@ -24,12 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_73sdp"
-        android:layout_marginRight="@dimen/_22sdp"
-        android:layout_marginLeft="@dimen/_22sdp"
+        android:layout_marginRight="@dimen/_21sdp"
+        android:layout_marginLeft="@dimen/_21sdp"
         android:background="@drawable/twenty_question_border"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="@dimen/_15sdp"
+        android:padding="@dimen/_12sdp"
         android:id="@+id/container">
 
         <FrameLayout
@@ -49,13 +49,13 @@
                 android:id="@+id/question"
                 style="@style/detailreviewTitle"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_44sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/_7sdp"
                 android:gravity="center"
                 android:text="Question"
                 android:textColor="#0B0B61"
-                android:textSize="@dimen/_22sdp" />
+                android:textSize="@dimen/_24sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,8 +66,11 @@
 
                 <Button
                     android:id="@+id/nobtn"
-                    android:layout_width="@dimen/_58sdp"
-                    android:layout_height="@dimen/_36sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    style="@style/defaultFont"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     android:text="아니오" />
 
                 <android.support.v4.widget.Space
@@ -76,8 +79,11 @@
 
                 <Button
                     android:id="@+id/sosobtn"
-                    android:layout_width="@dimen/_58sdp"
-                    android:layout_height="@dimen/_36sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    style="@style/defaultFont"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     android:text="모름" />
 
                 <android.support.v4.widget.Space
@@ -86,8 +92,11 @@
 
                 <Button
                     android:id="@+id/yesbtn"
-                    android:layout_width="@dimen/_58sdp"
-                    android:layout_height="@dimen/_36sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    style="@style/defaultFont"
+                    android:textColor="#000"
+                    android:textStyle="bold"
                     android:text="네" />
 
             </LinearLayout>
@@ -111,6 +120,7 @@
                 android:gravity="center"
                 style="@style/detailreviewTitle"
                 android:id="@+id/skin_type_result"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:textSize="50dp"
                 android:textColor="#0B0B61"/>
 
@@ -121,20 +131,26 @@
                     android:gravity="center">
 
                     <Button
-                        android:layout_width="@dimen/_58sdp"
-                        android:layout_height="@dimen/_36sdp"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:id="@+id/retest"
-                        android:text="retest"/>
+                        style="@style/defaultFont"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="다시하기"/>
 
                     <android.support.v4.widget.Space
                         android:layout_width="@dimen/_29sdp"
                         android:layout_height="@dimen/_36sdp" />
 
                     <Button
-                        android:layout_width="@dimen/_58sdp"
-                        android:layout_height="@dimen/_36sdp"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:id="@+id/gotype"
-                        android:text="goType"/>
+                        style="@style/defaultFont"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="설정하기"/>
 
 
                 </LinearLayout>

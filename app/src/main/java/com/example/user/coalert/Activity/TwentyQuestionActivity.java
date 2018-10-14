@@ -21,7 +21,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
     String QList[] = {"모공이 크지 않다", "모공이 매우 작다", "모공이 매우 크다", "모공의 크기가 적당하다", "모공의 크기가\n부분적으로 다르다"
             , "눈 입 주위에\n잔주름이 많다", "겨울철은 당기고\n여름철은 유분이 많다", "피부가 두껍고,\n피지분비가 많다", "윤기가 없고 \n피부도 칙칙하다",
             "얼굴이 자주 빨개진다", "피부톤이 밝고\n고른편이다", "환절기에\n피부트러블이 생긴다", "피부톤이\n전체적으로 어둡다", "세안 후 당기고 T존 부위는\n유분이 많다",
-            "얼굴이 많이 건조하다", "피부에 윤기가 없다", "나이에 비해\n피부가 좋다", "화장이 잘 지워지고 유분이 많다", "T존 부위만 화장이\n잘 지워진다", "피곤하면 트러블이\n생긴다",
+            "얼굴이 많이 건조하다", "피부에 윤기가 없다", "나이에 비해\n피부가 좋다", "화장이 잘 지워지고\n유분이 많다", "T존 부위만 화장이\n잘 지워진다", "피곤하면 트러블이\n생긴다",
             "세안 후 얼굴이\n전체적으로 당긴다", "화장이 오래 간다", "여드름성 트러블이\n잘 일어난다", "얼굴이 부분적으로\n번들거린다", "화장품이나 비누를 바꾸면\n트러블이 생긴다"};
     String ResultList[] = {"건성피부", "일반피부", "지성피부", "복합성피부", "민감성피부"};
 
@@ -88,8 +88,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
         GoType.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent=new Intent(TwentyQuestionActivity.this,.class);
-                //startActivity(intent);
+                finish();
 
             }
         });
@@ -112,7 +111,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
             TransitionManager.beginDelayedTransition(transitionsContainer);
             QuestionPage.setVisibility(View.INVISIBLE);
             ResultPage.setVisibility(View.VISIBLE);
-            Answer.setText(ResultList[result-24]);
+            Answer.setText(ResultList[result-25]);
         } else
             question.setText(QList[prev]);
 

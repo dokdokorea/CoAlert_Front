@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment {
     FrameLayout detailElementBtn;
     FrameLayout suggestCosmetic;
     ImageButton notification_icon, youtubelnk;
+    ImageView toxicback,recommendback;
     RelativeLayout goYoutube,goNewProduct;
     LinearLayout goHotReview;
 
@@ -79,6 +80,8 @@ public class HomeFragment extends Fragment {
         goYoutube=v.findViewById(R.id.goYoutube);
         goNewProduct=v.findViewById(R.id.goNewProduct);
         goHotReview=v.findViewById(R.id.goHotReview);
+        toxicback=v.findViewById(R.id.my_toxic_background);
+        recommendback=v.findViewById(R.id.recommend_background);
 
         goHotReview.setOnClickListener(new View.OnClickListener(){
             @Override

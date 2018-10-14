@@ -71,6 +71,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
+                        android:id="@+id/my_toxic_background"
                         android:src="#15000000"/>
                     <!--<ImageView
                         android:layout_width="wrap_content"
@@ -109,6 +110,7 @@
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
+                        android:id="@+id/recommend_background"
                         android:src="#15000000"/>
 
                <!--     <ImageView
@@ -143,6 +145,8 @@
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginRight="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_2sdp"
                     android:background="@drawable/clicking_button_pink_to_darker"
                     android:id="@+id/goYoutube">
 
@@ -194,6 +198,8 @@
                     android:layout_margin="@dimen/_3sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginRight="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_2sdp"
                     android:background="@drawable/clicking_button_pink_to_darker"
                     android:id="@+id/goNewProduct">
 
@@ -237,7 +243,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#A9D0F5"
-                android:layout_margin="@dimen/_1sdp"
+                android:layout_margin="@dimen/_3sdp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -259,6 +265,7 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/best_review_preview_recycler"
                     android:layout_width="match_parent"
+                    android:padding="@dimen/_3sdp"
                     android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 

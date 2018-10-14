@@ -50,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_4sdp"
-                        android:ems="13"
+                        android:ems="10"
                         android:inputType="text" />
                 </TableRow>
 
@@ -69,20 +69,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_4sdp"
-                        android:ems="14"
+                        android:ems="12"
                         android:hint="coalert@example.com"
                         android:inputType="textWebEmailAddress" />
 
-                    <Button
-                        android:id="@+id/email_redundancy_check_btn"
-                        android:layout_width="@dimen/_51sdp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginLeft="@dimen/_4sdp"
-                        android:background="@drawable/default_button"
-                        android:fontFamily="@font/kopub_medium"
-                        android:text="중복확인"
-                        android:textColor="@android:color/white" />
+                        <Button
+                            android:id="@+id/email_redundancy_check_btn"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:background="@drawable/default_button"
+                            android:fontFamily="@font/kopub_medium"
+                            android:text="중복확인"
+                            android:textColor="@android:color/white" />
 
                 </TableRow>
 
@@ -103,7 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_4sdp"
-                        android:ems="14"
+                        android:ems="12"
                         android:hint="6~12자리 숫자 또는 문자"
                         android:inputType="textPassword" />
                 </TableRow>
@@ -127,13 +127,23 @@
                         android:ems="10"
                         android:inputType="textPassword" />
 
-                    <ImageView
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
-                        android:scaleType="fitXY"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_gravity="center"
-                        android:src="@drawable/not_same_password"
-                        android:id="@+id/passwordCheck"/>
+                        >
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:scaleType="centerInside"
+                            android:layout_gravity="center"
+                            android:background="@drawable/not_same_password"
+                            android:id="@+id/passwordCheck"/>
+
+                    </LinearLayout>
+
+
                 </TableRow>
 
                 <Space
