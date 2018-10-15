@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.ExplanationBadElementAdapter;
 import com.example.user.coalert.R;
@@ -23,13 +24,14 @@ public class ExplanationBadElementActivity extends Activity {
     ArrayList<TwoStringCardView> badElementArr;
     RecyclerView badRecyclerView;
     Intent getReceiveData;
-    ImageButton backBtn;
+    ImageView backBtn;
+    int number=1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explanation_bad_element);
-        backBtn=findViewById(R.id.expl_bad_element_back_btn);
+        backBtn=findViewById(R.id.back_btn);
         backBtn.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -46,7 +48,9 @@ public class ExplanationBadElementActivity extends Activity {
         badRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         //서버와 연동할때 밑에 세줄을 지우시오
         badElementArr = new ArrayList<>();
-        badElementArr.add(new TwoStringCardView("1", "내 사약 같은 맛"));
+        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "내 사약 같은 맛"));
+        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "파라디클로로벤젠"));
+
         badRecyclerView.setAdapter(new ExplanationBadElementAdapter(badElementArr));
     }
 
