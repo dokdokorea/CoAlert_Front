@@ -66,7 +66,7 @@ public interface CoAlertService {
 
     @POST("idcheck")
     Call<emailRedundancyCheckModel> emailCheck(
-            @Query("eamil") String email
+            @Query("id") String email
     );
 
     @POST("recommendCosmetic")

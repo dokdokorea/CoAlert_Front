@@ -125,7 +125,6 @@ public class EmailSignUpActivity extends AppCompatActivity {
 
                                         // 다이얼로그 생성
                                         AlertDialog alertDialog = alertDialogBuilder.create();
-
                                         // 다이얼로그 보여주기
                                         alertDialog.show();
                                     }

@@ -24,7 +24,12 @@ public class searchAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return list.size();
+        try {
+            return list.size();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return 0;
     }
 
     @Override

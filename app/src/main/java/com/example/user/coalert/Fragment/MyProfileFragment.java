@@ -2,18 +2,23 @@ package com.example.user.coalert.Fragment;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
@@ -37,7 +42,9 @@ public class MyProfileFragment extends Fragment {
     FrameLayout wishBtn;
     FrameLayout toxicListBtn;
     ImageButton goFollowing,goFollower;
-
+    ImageView myImage;
+    Intent intent;
+    int REQUEST_ALBUM = 100;
     public MyProfileFragment() {
 
     }
@@ -51,7 +58,7 @@ public class MyProfileFragment extends Fragment {
         toxicListBtn=v.findViewById(R.id.toxicList);
         goFollowing=v.findViewById(R.id.go_following_list);
         goFollower=v.findViewById(R.id.go_follower_list);
-
+        myImage = v.findViewById(R.id.profile_pic);
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
@@ -94,7 +101,7 @@ public class MyProfileFragment extends Fragment {
         Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), EditprofileActivity.class);
+                intent = new Intent(getActivity(), EditprofileActivity.class);
                 startActivity(intent);
             }
         });
@@ -102,7 +109,7 @@ public class MyProfileFragment extends Fragment {
         wishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), WishListActivity.class);
+                intent = new Intent(getActivity(), WishListActivity.class);
                 startActivity(intent);
             }
         });
@@ -111,7 +118,7 @@ public class MyProfileFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), ExplanationBadElementActivity.class);
+                intent=new Intent(getActivity(), ExplanationBadElementActivity.class);
                 startActivity(intent);
             }
         });
@@ -119,7 +126,7 @@ public class MyProfileFragment extends Fragment {
         goFollower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FollowerListActivity.class);
+                intent = new Intent(getActivity(), FollowerListActivity.class);
                 startActivity(intent);
             }
         });
@@ -127,13 +134,29 @@ public class MyProfileFragment extends Fragment {
         goFollowing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), FollowingListActivity.class);
+                intent = new Intent(getActivity(), FollowingListActivity.class);
                 startActivity(intent);
             }
         });
 
+        myImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, REQUEST_ALBUM );
+            }
+        });
 
         return v;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_ALBUM){
+            Uri url = data.getData();
+            myImage.setImageURI(url);
+        }
     }
 }
 

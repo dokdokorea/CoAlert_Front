@@ -127,7 +127,7 @@ public class SearchFragment extends Fragment {
                     viewFlipper.setDisplayedChild(1);
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
-
+                    list = new ArrayList<>();
                     settingList(list);
                     //ArrayList는 List를 상속받아서 구현하고 있다.
                     //arrayList는 list의 데이터를 복사해서 갖고 있다.
@@ -152,7 +152,7 @@ public class SearchFragment extends Fragment {
                                     @Override
                                     public void run() {
                                         try {
-                                            list = new ArrayList<>();
+
                                             //받아온 데이터로 리스트틀 채워주세요.
                                             text = edit.getText().toString();
                                             Log.e("전송 메세지: ", text.substring(0, previousText));
