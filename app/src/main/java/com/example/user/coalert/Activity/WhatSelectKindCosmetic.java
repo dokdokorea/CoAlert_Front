@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.user.coalert.Adapter.kindCosmeticAdapter;
@@ -29,10 +30,11 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
     kindCosmeticAdapter kindCosmeticAdapter;
     ListView kindCosmeticListView;
     String[] data = {"선블락", "아이쉐도우", "파운데이션", "립틴트"};
-
+    ImageView backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_what_select_kind_cosmetic);
         kindCosmeticAdapter = new kindCosmeticAdapter();
         kindCosmeticListView = findViewById(R.id.selectKindCosmetic);
@@ -40,6 +42,13 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                 this,
                 R.layout.activity_what_select_kind_cosmetic_item,
                 data);
+        backButton = findViewById(R.id.kind_cosmetic_back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         kindCosmeticListView.setAdapter(forAdapter);
         kindCosmeticListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @SuppressLint("LongLogTag")
@@ -59,7 +68,6 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                             recommendPage.putExtra("recommendData", moveRecommendCosmetic);
                             Log.e("first Result", moveRecommendCosmetic);
                             startActivity(recommendPage);
-                            finish();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

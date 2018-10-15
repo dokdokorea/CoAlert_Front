@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -34,25 +36,32 @@ public class recommendCosmeticShow extends AppCompatActivity {
     boolean lastitemVisibleFlag;
     JsonArray purifyDataArray;
     recommendCosmeticAdapter recommendCosmeticAdapter;
-
+    ImageView back_btn;
     @SuppressLint({"SetTextI18n", "ClickableViewAccessibility"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         lastitemVisibleFlag = false;
         setContentView(R.layout.activity_recommend_cosmetic_show);
-        showRecommendTextView = findViewById(R.id.showRecommendTextView);
         scrollView = findViewById(R.id.recommendScrollView);
         getReceiveData = getIntent();
         String Cname = getReceiveData.getStringExtra("cname");
-        showRecommendTextView.setText("추천 받을 화장품: " + Cname);
+        RecommendCosmetic = findViewById(R.id.showRecommendListView);
         String recommendCosmetics = getReceiveData.getStringExtra("recommendData");
         kindCosmetic = getReceiveData.getIntExtra("kindCosmetic", 0);
         recommendCosmeticAdapter = new recommendCosmeticAdapter();
         purifyDataArray = dataToJsonArray(recommendCosmetics);
         setData(purifyDataArray);
+        back_btn = findViewById(R.id.recommend_back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         RecommendCosmetic.setOnTouchListener(forRecommendListViewEvent);
         RecommendCosmetic.setOnScrollListener(listViewScrollEvent);
+        RecommendCosmetic.setAdapter(recommendCosmeticAdapter);
     }
 
     public JsonArray dataToJsonArray(String data) {
@@ -116,6 +125,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
             recommendCosmeticAdapter.addItem(oneData.get("id"), oneData.get("estimate"));
         }
         recommendCosmeticAdapter.notifyDataSetChanged();
+
     }
 
 }

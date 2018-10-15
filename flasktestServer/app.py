@@ -1,7 +1,6 @@
 from flask import Flask, request, Response
-from RecommendSystem.purifyData import get_recommaned_cosmetic
+from RecommendSystem.recommendCosmetic import recommend_cosmetics
 import json
-import numpy as np
 
 app = Flask(__name__)
 
@@ -13,13 +12,13 @@ def root():
 
 @app.route("/recommendCosmetic", methods=['POST'])
 def getRecommendCosmetic():
-    kindCosmetic = {1: 'sunblock', 2: 'eyeShadow', 3: 'foundation', 4: 'libTint'}
+    kindCosmetic = {1: 'sunblock', 2: 'eyeshadow', 3: 'foundation', 4: 'libtint'}
     id = request.args.get('id')
     type = request.args.get('persontype')
     kindCosmeticNum = request.args.get('cosmetictype')
     startNum = request.args.get('start')
-    recommend_cosmetic = get_recommaned_cosmetic(userId=int(id), start=startNum,
-                                                 kind_cosmetic=kindCosmetic[int(kindCosmeticNum)], type=int(type))
+    recommend_cosmetic = recommend_cosmetics(user_id=int(id), start=int(startNum),
+                                             kind_cosmetic=kindCosmetic[int(kindCosmeticNum)], skin_type=int(type))
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)

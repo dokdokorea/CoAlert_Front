@@ -6,25 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".Activity.recommendCosmeticShow"
     android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_36sdp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="@color/first"
-        android:textSize="@dimen/_22sdp" />
-    <TextView
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
-        android:gravity="center|top"
-        android:textSize="@dimen/_15sdp"
-        android:paddingTop="@dimen/_7sdp"
-        android:id="@+id/showRecommendTextView"/>
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_7sdp"
-        android:background="@color/first" />
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/first">
+
+        <ImageView
+            android:id="@+id/recommend_back_btn"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/left_btn"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/coalert_logo_word" />
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/coalert_logo"
+            android:layout_gravity="end|center"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+    </FrameLayout>
+
 
     <ScrollView
         android:id="@+id/recommendScrollView"
@@ -34,7 +43,7 @@
         <ListView
             android:id="@+id/showRecommendListView"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp" />
