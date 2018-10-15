@@ -31,8 +31,7 @@ public class NotificationActivity extends Activity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
         mRecyclerView = (RecyclerView) findViewById(R.id.notification_recycler_view);

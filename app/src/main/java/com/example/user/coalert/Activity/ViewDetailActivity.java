@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.coalert.Adapter.DetailReviewSliderAdapter;
 import com.example.user.coalert.R;
@@ -29,6 +31,12 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static int currentPage = 0;
     private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu7, R.drawable.iu3jpg, R.drawable.iu4, R.drawable.iu5};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
+    Button topbtn;
+    ImageView LikeIcon;
+    TextView LikeCount;
+    ScrollView scroll;
+    int count=0;
+    int j=0;
 
     String title;
 
@@ -148,16 +156,59 @@ public class ViewDetailActivity extends AppCompatActivity {
         CreatorPicture = (ImageView) findViewById(R.id.user_profile);
         CreatorId = (TextView) findViewById(R.id.user_id);
         PostTitle = (TextView) findViewById(R.id.post_title);
+        LikeIcon=(ImageView)findViewById(R.id.like_icon);
+        LikeCount=(TextView) findViewById(R.id.like_count);
+        topbtn=(Button)findViewById(R.id.toTopButton);
+        scroll=(ScrollView)findViewById(R.id.scroll);
+
+
+
+        LikeCount.setText("3000");
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
         PostContext.setText(Context);
+        count=Integer.parseInt(LikeCount.getText().toString());
+        if (j == 0)
+            LikeIcon.setImageResource(R.drawable.black_empty_heart);
+        else
+            LikeIcon.setImageResource(R.drawable.pink_heart);
+
+
+
+        topbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scroll.fullScroll(ScrollView.FOCUS_UP);
+            }
+        });
+
         moreinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(ViewDetailActivity.this,CosmeticInformationActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        LikeIcon.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                j = 1 - j;
+
+                if (j == 0) {
+                    LikeIcon.setImageResource(R.drawable.black_empty_heart);
+                    LikeCount.setText(String.valueOf(--count));
+
+                    Toast.makeText(ViewDetailActivity.this, "좋아요", Toast.LENGTH_SHORT).show();
+                } else {
+                    LikeIcon.setImageResource(R.drawable.pink_heart);
+                    LikeCount.setText(String.valueOf(++count));
+                    Toast.makeText(ViewDetailActivity.this, "좋아요 취소", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

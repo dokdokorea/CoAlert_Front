@@ -111,13 +111,15 @@
                             android:orientation="vertical"
                             android:padding="@dimen/_6sdp">
 
-                            <Button
+                            <TextView
                                 android:id="@+id/follower"
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_29sdp"
                                 android:layout_margin="@dimen/_4sdp"
-                                android:background="#00ffffff"
+                                android:background="@color/emptyBackground"
+                                android:gravity="center"
                                 android:text="100"
+                                android:textColor="#000"
                                 android:textSize="@dimen/_15sdp" />
 
                             <TextView
@@ -195,7 +197,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="@dimen/_29sdp"
                                     android:background="#00ffffff"
-                                    android:padding="@dimen/_4sdp"
+                                    android:padding="@dimen/_2sdp"
                                     android:scaleType="centerInside" />
 
 
@@ -229,7 +231,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/cloudy_knoxville"
+                android:background="@color/whiteBackground"
                 android:elevation="@dimen/_2sdp"
                 android:orientation="vertical">
 
@@ -243,9 +245,20 @@
                     android:text="팔로우 목록"
                     android:textColor="@color/fifth" />
 
-                <Space
+                <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_7sdp" />
+                    android:layout_height="@dimen/_3sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/cloudy_knoxville"
+                    android:layout_margin="@dimen/_3sdp"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -271,7 +284,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/cloudy_knoxville"
+                android:background="@color/whiteBackground"
                 android:elevation="@dimen/_2sdp"
                 android:orientation="vertical">
 
@@ -285,9 +298,19 @@
                     android:text="리뷰한 화장품 목록"
                     android:textColor="@color/fifth" />
 
-                <Space
+                <android.support.v4.widget.Space
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_7sdp" />
+                    android:layout_height="@dimen/_3sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/cloudy_knoxville"
+                    android:layout_margin="@dimen/_3sdp"/>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

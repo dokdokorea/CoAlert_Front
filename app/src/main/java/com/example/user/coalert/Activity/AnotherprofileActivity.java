@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
@@ -23,10 +24,11 @@ import java.util.List;
 
 public class AnotherprofileActivity extends AppCompatActivity {
     List<String> list;
-    Button follow;
+    TextView follow;
     ImageButton Toxic;
     ImageButton following;
     ImageButton backBtn;
+    int count;
     int j = 0;
 
 
@@ -35,7 +37,7 @@ public class AnotherprofileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anotherprofile);
         backBtn = findViewById(R.id.anotherprofile_back_btn);
-        follow = (Button) findViewById(R.id.follower);
+        follow = (TextView) findViewById(R.id.follower);
         Toxic = (ImageButton) findViewById(R.id.toxicList);
         following = (ImageButton) findViewById(R.id.following);
 
@@ -45,6 +47,7 @@ public class AnotherprofileActivity extends AppCompatActivity {
         int ColumNumber = 3;      //GridView Column
         Drawable alpha = backBtn.getBackground();
         alpha.setAlpha(50);
+        count=100;
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
@@ -81,9 +84,9 @@ public class AnotherprofileActivity extends AppCompatActivity {
 
 
         if (j == 0)
-            following.setImageResource(R.drawable.emptyheart);
+            following.setImageResource(R.drawable.black_empty_heart);
         else
-            following.setImageResource(R.drawable.fullheart);
+            following.setImageResource(R.drawable.pink_heart);
 
         following.setOnClickListener(new View.OnClickListener() {
 
@@ -92,10 +95,12 @@ public class AnotherprofileActivity extends AppCompatActivity {
                 j = 1 - j;
 
                 if (j == 0) {
-                    following.setImageResource(R.drawable.emptyheart);
+                    following.setImageResource(R.drawable.black_empty_heart);
+                    follow.setText(String.valueOf(--count));
                     Toast.makeText(AnotherprofileActivity.this, "팔로우 취소하셨습니다", Toast.LENGTH_SHORT).show();
                 } else {
-                    following.setImageResource(R.drawable.fullheart);
+                    following.setImageResource(R.drawable.pink_heart);
+                    follow.setText(String.valueOf(++count));
                     Toast.makeText(AnotherprofileActivity.this, "팔로우하셨습니다", Toast.LENGTH_SHORT).show();
                 }
 
