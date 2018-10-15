@@ -42,7 +42,7 @@
                         android:paddingEnd="@dimen/_30sdp"
                         android:paddingStart="@dimen/_30sdp"
                         android:text="이름"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_10sdp" />
 
                     <EditText
                         android:id="@+id/emailSignUpInputname"
@@ -61,7 +61,7 @@
                         android:paddingEnd="@dimen/_25sdp"
                         android:paddingStart="@dimen/_25sdp"
                         android:text="이메일"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_10sdp" />
 
                     <EditText
                         android:id="@+id/input_email"
@@ -81,6 +81,7 @@
                             android:layout_marginLeft="@dimen/_2sdp"
                             android:background="@drawable/default_button"
                             android:fontFamily="@font/kopub_medium"
+                            android:textSize="@dimen/_10sdp"
                             android:text="중복확인"
                             android:textColor="@android:color/white" />
 
@@ -95,7 +96,7 @@
                         android:paddingStart="@dimen/_20sdp"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="비밀번호"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_10sdp" />
 
                     <EditText
                         android:id="@+id/input_password"
@@ -117,7 +118,7 @@
                         android:paddingStart="@dimen/_10sdp"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="비밀번호확인"
-                        android:textSize="@dimen/_12sdp" />
+                        android:textSize="@dimen/_10sdp" />
 
                     <EditText
                         android:id="@+id/password_certification"
@@ -138,7 +139,6 @@
                             android:layout_height="@dimen/_20sdp"
                             android:scaleType="centerInside"
                             android:layout_gravity="center"
-                            android:background="@drawable/not_same_password"
                             android:id="@+id/passwordCheck"/>
 
                     </LinearLayout>

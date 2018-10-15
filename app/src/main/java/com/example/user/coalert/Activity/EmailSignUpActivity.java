@@ -66,9 +66,10 @@ public class EmailSignUpActivity extends AppCompatActivity {
                 String confirmedPassword = String.valueOf(confirmPassword.getText());
                 String inputPassword= String.valueOf(password.getText());
                 if(confirmedPassword.equals(inputPassword)){
+                    passwordCheckImg.setVisibility(View.VISIBLE);
                     passwordCheckImg.setImageResource(R.drawable.password_check);
                 }else{
-                    passwordCheckImg.setImageResource(R.drawable.not_same_password);
+                    passwordCheckImg.setVisibility(View.INVISIBLE);
                 }
 
             }
