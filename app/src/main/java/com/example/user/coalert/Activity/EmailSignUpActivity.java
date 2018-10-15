@@ -50,6 +50,30 @@ public class EmailSignUpActivity extends AppCompatActivity {
         lastButton.setClickable(false);
         final Context context = this;
 
+        password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String confirmedPassword = String.valueOf(confirmPassword.getText());
+                String inputPassword = String.valueOf(password.getText());
+                if (confirmedPassword.equals(inputPassword)) {
+                    passwordCheckImg.setVisibility(View.VISIBLE);
+                    passwordCheckImg.setImageResource(R.drawable.password_check);
+                } else {
+                    passwordCheckImg.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+
         confirmPassword.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -64,11 +88,11 @@ public class EmailSignUpActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 String confirmedPassword = String.valueOf(confirmPassword.getText());
-                String inputPassword= String.valueOf(password.getText());
-                if(confirmedPassword.equals(inputPassword)){
+                String inputPassword = String.valueOf(password.getText());
+                if (confirmedPassword.equals(inputPassword)) {
                     passwordCheckImg.setVisibility(View.VISIBLE);
                     passwordCheckImg.setImageResource(R.drawable.password_check);
-                }else{
+                } else {
                     passwordCheckImg.setVisibility(View.INVISIBLE);
                 }
 
@@ -143,14 +167,14 @@ public class EmailSignUpActivity extends AppCompatActivity {
         lastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!password.getText().equals("") && !name.getText().equals("") && !confirmPassword.getText().equals("") && isEmail(String.valueOf(inputEmail .getText()))) {
+                if (!password.getText().equals("") && !name.getText().equals("") && !confirmPassword.getText().equals("") && isEmail(String.valueOf(inputEmail.getText()))) {
                     if (String.valueOf(password.getText()).equals(String.valueOf(confirmPassword.getText()))) {
                         nextPageIntent = new Intent(getApplicationContext(), CommonSignUpActivity.class);
                         nextPageIntent.putExtra("name", String.valueOf(name.getText()));
                         nextPageIntent.putExtra("email", String.valueOf(inputEmail.getText()));
                         nextPageIntent.putExtra("password", String.valueOf(password.getText()));
                         startActivity(nextPageIntent);
-                    }else{
+                    } else {
                         Log.e("lastButton ClickEvent4", "false");
                         Toast.makeText(getApplicationContext(), "아이디 혹은 비밀번호, 이름을 확인해주세요", Toast.LENGTH_LONG).show();
                     }
@@ -162,8 +186,9 @@ public class EmailSignUpActivity extends AppCompatActivity {
         });
 
     }
+
     public static boolean isEmail(String email) {
-        if (email==null) return false;
+        if (email == null) return false;
         boolean b = Pattern.matches(
                 "[\\w\\~\\-\\.]+@[\\w\\~\\-]+(\\.[\\w\\~\\-]+)+",
                 email.trim());
