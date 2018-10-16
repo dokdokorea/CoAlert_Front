@@ -5,6 +5,6 @@
         <color android:color="@color/emptyBackground"/>
     </item>
     <item android:state_pressed="true" >
-        <color android:color="@color/fifth"/>
+        <color android:color="#ffffff"/>
     </item>
 </selector>

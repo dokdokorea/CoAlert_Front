@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,16 +22,23 @@ public class FollowerListActivity extends AppCompatActivity {
     ImageView followerBtn;
     TextView userName;
     TextView userId;
-
+    ImageButton backBtn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.follower_list);
-
+        backBtn = findViewById(R.id.following_list_back_btn);
         profilepic = (ImageView) findViewById(R.id.item_follower_list_circleimageview);
         followerBtn = (ImageView) findViewById(R.id.item_follower_list_follower_btn);
         userName = (TextView) findViewById(R.id.user_name);
         userId = (TextView) findViewById(R.id.item_follower_email);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.follower_list_recyclerview);
         recyclerView.setHasFixedSize(true);

@@ -9,13 +9,13 @@
         android:layout_height="@dimen/_29sdp"
         android:background="@color/first">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/following_list_back_btn"
             android:layout_width="@dimen/_29sdp"
             android:layout_gravity="center_vertical"
             android:layout_height="@dimen/_29sdp"
             android:scaleType="fitCenter"
-            android:src="@drawable/clicking_back_btn" />
+            style="@style/back_btn_style" />
 
         <TextView
             style="@style/barTextStyle"

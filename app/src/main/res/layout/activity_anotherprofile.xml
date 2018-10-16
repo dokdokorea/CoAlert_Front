@@ -15,19 +15,20 @@
 
         <ImageButton
             android:id="@+id/anotherprofile_back_btn"
-            android:src="@drawable/unclicked_left"
-            android:layout_height="match_parent"
+            style="@style/back_btn_style"
             android:layout_width="@dimen/_33sdp"
-            android:layout_gravity="start"
-            android:background="@drawable/clicking_empty_to_gray_background"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
             android:layout_marginStart="@dimen/_3sdp"
-            android:scaleType="fitStart" />
+            android:scaleType="fitStart"
+            android:layout_marginTop="@dimen/_2sdp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:layout_gravity="center"
-            android:src="@drawable/coalert_logo_word" />
+            android:src="@drawable/coalert_logo_word"
+            />
     </FrameLayout>
 
     <android.support.v4.widget.Space
