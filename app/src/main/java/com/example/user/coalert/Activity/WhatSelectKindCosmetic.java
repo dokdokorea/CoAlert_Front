@@ -42,7 +42,7 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
                 this,
                 R.layout.activity_what_select_kind_cosmetic_item,
                 data);
-        backButton = findViewById(R.id.kind_cosmetic_back_button);
+        backButton = findViewById(R.id.what_back_btn);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

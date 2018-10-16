@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,6 +53,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     Button letsDetailReview;
     SmileRating smileRating;
     Uri allUri;
+    ImageButton backBtn;
     private static final int CAMERA_REQUEST = 100;
     private static final int ALBUM_REQUEST = 1000;
 
@@ -60,6 +62,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
+        backBtn = findViewById(R.id.selected_detail_review_back_btn);
         editText = findViewById(R.id.one_line);
         wordsNum = findViewById(R.id.wordsNumber);
         smileRating = findViewById(R.id.smile_rating);
@@ -68,6 +71,13 @@ public class WriteReviewActivity extends AppCompatActivity {
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         letsDetailReview.setOnClickListener(new View.OnClickListener() {
             @Override
