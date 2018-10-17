@@ -27,7 +27,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_3sdp"
                 android:gravity="center_vertical">
 
                 <Spinner
@@ -45,7 +45,7 @@
                     android:gravity="right"
                     android:layout_gravity="center_vertical"
                     android:text="년"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
             </RelativeLayout>
 
@@ -53,7 +53,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_5sdp">
+                android:layout_marginRight="@dimen/_3sdp">
 
                 <Spinner
                     android:id="@+id/spinner_month"
@@ -70,7 +70,7 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="center_vertical"
                     android:text="월"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
             </RelativeLayout>
 
@@ -91,7 +91,7 @@
                     android:layout_centerInParent="true"
                     android:layout_centerVertical="true"
                     android:text="일"
-                    android:textSize="@dimen/_15sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
             </RelativeLayout>
 
@@ -156,14 +156,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp" />
+        android:layout_height="@dimen/_50sdp" />
 
 
     <LinearLayout
         android:id="@+id/showGobtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
         android:gravity="center"
         android:orientation="vertical">
 
