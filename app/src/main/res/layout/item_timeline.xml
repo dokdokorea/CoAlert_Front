@@ -69,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:scaleType="fitCenter"
                 android:maxHeight="@dimen/_200sdp"
                 android:maxWidth="@dimen/_200sdp" />
 
@@ -101,12 +102,10 @@
             </LinearLayout>
 
 
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_2sdp"
-                android:background="@color/unclicked_home"
-                ></View>
+                android:background="@color/unclicked_home" />
 
             <TextView
                 android:layout_width="match_parent"

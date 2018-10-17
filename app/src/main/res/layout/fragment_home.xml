@@ -63,17 +63,11 @@
                     android:layout_marginStart="@dimen/_5sdp"
                     android:background="@color/emptyBackground">
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        
                     <ImageView
-                        android:id="@+id/main_bad_element_btn"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/science" />
-                    </FrameLayout>
+                        android:src="@drawable/science"
+                        />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
@@ -112,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_190sdp"
                         android:src="@drawable/recommend"
-                        android:scaleType="centerInside"/>
+                        />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
