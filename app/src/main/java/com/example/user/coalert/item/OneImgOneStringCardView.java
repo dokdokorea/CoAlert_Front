@@ -8,7 +8,7 @@ public class OneImgOneStringCardView {
     }
 
     public String getText() {
-        return text;
+        return this.text;
     }
 
     public OneImgOneStringCardView(int image, String text){

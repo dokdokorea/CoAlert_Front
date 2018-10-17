@@ -17,6 +17,8 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -39,12 +41,14 @@ import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
+import com.example.user.coalert.Adapter.NotFocusSearchAdapter;
 import com.example.user.coalert.Adapter.searchAdapter;
 import com.example.user.coalert.Background;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForBackgroundSingleton;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.searchModel;
+import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
 import java.io.File;
@@ -76,6 +80,9 @@ public class SearchFragment extends Fragment {
     TessBaseAPI mTess;
     Bitmap image;
     ListView searchList;
+    ArrayList<OneImgOneStringCardView> arrayList;
+    NotFocusSearchAdapter notFocusSearchAdapter;
+    RecyclerView cosmeticCompanySpecial;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -94,6 +101,16 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View v = inflater.inflate(R.layout.fragment_search, container, false);
         final ViewFlipper viewFlipper = v.findViewById(R.id.viewFlipper);
+        arrayList = new ArrayList<>();
+        cosmeticCompanySpecial = v.findViewById(R.id.notFocusSearchViewRecyclerView);
+        cosmeticCompanySpecial.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false));
+        arrayList = addData(arrayList);
+        notFocusSearchAdapter = new NotFocusSearchAdapter(arrayList);
+        cosmeticCompanySpecial.setHasFixedSize(true);
+        cosmeticCompanySpecial.setFocusable(false);
+        cosmeticCompanySpecial.setAdapter(notFocusSearchAdapter);
+
+
         searchList = v.findViewById(R.id.search_list);
         searchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -128,7 +145,7 @@ public class SearchFragment extends Fragment {
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
                     list = new ArrayList<>();
-                    settingList(list);
+//                    settingList(list);
                     //ArrayList는 List를 상속받아서 구현하고 있다.
                     //arrayList는 list의 데이터를 복사해서 갖고 있다.
 
@@ -195,6 +212,8 @@ public class SearchFragment extends Fragment {
                 return true;
             }
         });
+
+
 // 화면 누르면  focus제거
 //        imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
 //        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
@@ -316,24 +335,32 @@ public class SearchFragment extends Fragment {
         searchAdapter.notifyDataSetChanged();
     }
 
-    void settingList(List<String> list) {
-        list.add("슬기");
-        list.add("슬기의 파우치");
-        list.add("수지");
-        list.add("수지의 화장품");
-        list.add("크리스탈 비비 크림");
-        list.add("크리스탈");
-        list.add("손나은 쉐이딩");
-        list.add("손나은");
-        list.add("홍진영의 눈 커지는 비법");
-        list.add("루이");
-        list.add("진영");
-        list.add("슬기");
-        list.add("설리");
-        list.add("김예림");
-        list.add("혜리");
-        list.add("허영지");
+    public ArrayList<OneImgOneStringCardView> addData(ArrayList<OneImgOneStringCardView> arrayList) {
+        arrayList.add(new OneImgOneStringCardView(R.drawable.innisfree, "이니스프리"));
+        arrayList.add(new OneImgOneStringCardView(R.drawable.ysl, "입생로랑"));
+        arrayList.add(new OneImgOneStringCardView(R.drawable.chanel, "샤넬"));
+        arrayList.add(new OneImgOneStringCardView(R.drawable.mac, "맥"));
+        return arrayList;
     }
+//
+//    void settingList(List<String> list) {
+//        list.add("슬기");
+//        list.add("슬기의 파우치");
+//        list.add("수지");
+//        list.add("수지의 화장품");
+//        list.add("크리스탈 비비 크림");
+//        list.add("크리스탈");
+//        list.add("손나은 쉐이딩");
+//        list.add("손나은");
+//        list.add("홍진영의 눈 커지는 비법");
+//        list.add("루이");
+//        list.add("진영");
+//        list.add("슬기");
+//        list.add("설리");
+//        list.add("김예림");
+//        list.add("혜리");
+//        list.add("허영지");
+//    }
 
 
 }

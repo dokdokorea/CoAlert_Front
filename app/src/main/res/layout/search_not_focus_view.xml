@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
-    android:background="@drawable/clicking_white_btn"
-
-    >
+    android:background="@drawable/clicking_white_btn">
 
     <TextView
         style="@style/defaultFont"
@@ -22,108 +20,15 @@
         android:gravity="left"
         android:textStyle="bold"
         android:layout_marginBottom="@dimen/_8sdp"
-        android:layout_marginLeft="@dimen/_10sdp"
-        />
-
+        android:layout_marginLeft="@dimen/_10sdp" />
     <View
         android:layout_height="@dimen/_2sdp"
         android:layout_width="match_parent"
         android:background="@color/fifth" />
-    <FrameLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notFocusSearchViewRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_10sdp">
-        <ImageView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/innisfree"
-            android:layout_marginTop="@dimen/_10sdp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/enisfree"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp" />
-    </FrameLayout>
-    <View
-        android:layout_height="@dimen/_1sdp"
-        android:layout_width="match_parent"
-        android:background="@color/fifth"
-        android:layout_marginTop="@dimen/_13sdp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp">
-        <ImageView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/ysl"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:scaleType="fitXY"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-
-            android:text ="@string/ysl"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp" />
-    </FrameLayout>
-    <View
-        android:layout_height="@dimen/_1sdp"
-        android:layout_width="match_parent"
-        android:background="@color/fifth"
-        android:layout_marginTop="@dimen/_13sdp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_10sdp">
-        <ImageView
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/chanel"
-            android:layout_marginTop="@dimen/_10sdp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/chanel"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp" />
-    </FrameLayout>
-    <View
-        android:layout_height="@dimen/_1sdp"
-        android:layout_width="match_parent"
-        android:background="@color/fifth"
-        android:layout_marginTop="@dimen/_13sdp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_10sdp">
-        <ImageView
-            android:layout_width="@dimen/_120sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/mac"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:scaleType="centerCrop"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/mac"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:textSize="@dimen/_20sdp" />
-    </FrameLayout>
-    <View
-        android:layout_height="@dimen/_1sdp"
-        android:layout_width="match_parent"
-        android:background="@color/fifth"
-        android:layout_marginTop="@dimen/_13sdp"/>
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>

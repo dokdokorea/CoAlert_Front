@@ -124,7 +124,6 @@
         <activity android:name=".Activity.HotYoutubeListActivity"></activity>
         <activity android:name=".Activity.NewProductListActivity"></activity>
         <activity android:name=".Activity.BestReviewListActivity"></activity>
-
     </application>
 
 </manifest>
