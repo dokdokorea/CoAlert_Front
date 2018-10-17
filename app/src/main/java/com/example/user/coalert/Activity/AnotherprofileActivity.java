@@ -107,6 +107,15 @@ public class AnotherprofileActivity extends AppCompatActivity {
             }
         });
 
+        Toxic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent=new Intent(AnotherprofileActivity.this,ExplanationBadElementActivity.class);
+               startActivity(intent);
+            }
+        });
+
+
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

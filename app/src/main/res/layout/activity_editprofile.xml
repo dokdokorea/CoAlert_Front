@@ -4,15 +4,24 @@
     android:layout_height="match_parent"
     android:background="@color/mypageback">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
-        android:background="#ffffff"
-        android:fontFamily="@font/yoon_gothic340"
-        android:gravity="center"
-        android:text="MyPage"
-        android:textSize="@dimen/_15sdp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <ImageButton
+            android:id="@+id/selected_detail_review_back_btn"
+            style="@style/black_back_btn_style"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            style="@style/logo_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="@dimen/_3sdp"
+            android:text="회원정보 변경" />
+    </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"

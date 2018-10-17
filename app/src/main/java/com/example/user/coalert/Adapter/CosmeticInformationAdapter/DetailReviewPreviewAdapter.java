@@ -67,7 +67,7 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
 
         @Override
         public void onClick(View view) {
-            final TwoImgFourStringCardView item=mDataSet.get(getItemCount());
+            final TwoImgFourStringCardView item=mDataSet.get(getAdapterPosition());
             Intent intent = new Intent(context, ViewDetailActivity.class);
             intent.putExtra("title",item.getT3());
             context.startActivity(intent);

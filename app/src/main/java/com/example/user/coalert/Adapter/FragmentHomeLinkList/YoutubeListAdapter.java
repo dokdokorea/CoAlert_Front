@@ -24,6 +24,7 @@ import java.util.List;
 
 public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.ViewHolder>{
 
+
     Context context;
     List <TwoImgFourStringCardView> list;
     int item_layout;

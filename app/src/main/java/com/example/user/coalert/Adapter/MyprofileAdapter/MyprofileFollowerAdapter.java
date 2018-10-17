@@ -50,7 +50,8 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
             @Override
             public void onClick(View v) {
                 //goes to new activity passing the item name
-
+                Intent intent= new Intent(context,AnotherprofileActivity.class);
+                context.startActivity(intent);
             }
         });
     }

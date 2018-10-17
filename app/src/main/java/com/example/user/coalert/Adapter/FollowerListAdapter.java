@@ -1,5 +1,7 @@
 package com.example.user.coalert.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.user.coalert.Activity.AnotherprofileActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
@@ -15,6 +19,8 @@ import java.util.ArrayList;
 
 public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapter.ViewHolder> {
     private ArrayList<TwoImgTwoStringCardView> mDataSet;
+    Context context;
+    int item_layout;
     private int j = 0;
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -31,6 +37,14 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
             id = (TextView) itemView.findViewById(R.id.item_follower_email);
             follwerBtn = (ImageView) itemView.findViewById(R.id.item_follower_list_follower_btn);
             follwerBtn.setOnClickListener(this);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                   // Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(v.getContext(),AnotherprofileActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
         @Override
