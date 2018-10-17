@@ -1,9 +1,13 @@
 package com.example.user.coalert.Fragment;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,6 +35,7 @@ import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAd
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +46,7 @@ public class MyProfileFragment extends Fragment {
     Button Edit;
     FrameLayout wishBtn;
     FrameLayout toxicListBtn;
-    ImageButton goFollowing,goFollower;
+    ImageButton goFollowing, goFollower;
     ImageView myImage;
     Intent intent;
     int REQUEST_ALBUM = 100;
@@ -51,10 +56,10 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_myprofile, container, false);
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
-        wishBtn=v.findViewById(R.id.wish_button);
-        toxicListBtn=v.findViewById(R.id.toxicList);
-        goFollowing=v.findViewById(R.id.go_following_list);
-        goFollower=v.findViewById(R.id.go_follower_list);
+        wishBtn = v.findViewById(R.id.wish_button);
+        toxicListBtn = v.findViewById(R.id.toxicList);
+        goFollowing = v.findViewById(R.id.go_following_list);
+        goFollower = v.findViewById(R.id.go_follower_list);
         myImage = v.findViewById(R.id.profile_pic);
 
         RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
@@ -111,11 +116,11 @@ public class MyProfileFragment extends Fragment {
             }
         });
 
-        toxicListBtn.setOnClickListener(new View.OnClickListener(){
+        toxicListBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                intent=new Intent(getActivity(), ExplanationBadElementActivity.class);
+                intent = new Intent(getActivity(), ExplanationBadElementActivity.class);
                 startActivity(intent);
             }
         });
@@ -140,7 +145,7 @@ public class MyProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(intent, REQUEST_ALBUM );
+                startActivityForResult(intent, REQUEST_ALBUM);
             }
         });
 
@@ -150,9 +155,54 @@ public class MyProfileFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQUEST_ALBUM && data != null){
+        if (requestCode == REQUEST_ALBUM && data != null) {
             Uri url = data.getData();
-            myImage.setImageURI(url);
+            String imgPath = _getRealPathFromURI(getContext(), url);
+            Bitmap image = BitmapFactory.decodeFile(imgPath);
+            try {
+                ExifInterface exifInterface = new ExifInterface(imgPath);
+                int exifOrientation = exifInterface.getAttributeInt(
+                        ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+                int exifDegree = exifOrientationToDegrees(exifOrientation);
+                image = getRotatedBitmap(image, exifDegree);
+                myImage.setImageBitmap(image);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+    }
+
+    public int exifOrientationToDegrees(int exifOrientation) {
+        if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
+            return 90;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180)
+
+        {
+            return 180;
+        } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270)
+
+        {
+            return 270;
+        }
+        return 0;
+    }
+
+    public Bitmap getRotatedBitmap(Bitmap bitmap, int degrees) throws Exception {
+        if(bitmap == null) return null;
+        if (degrees == 0) return bitmap;
+
+        Matrix m = new Matrix();
+        m.setRotate(degrees, (float) bitmap.getWidth() / 2, (float) bitmap.getHeight() / 2);
+
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), m, true);
+    }
+
+    private String _getRealPathFromURI(Context context, Uri Uri) {
+        Cursor cursor = getActivity().getContentResolver().query(Uri, null, null, null, null);
+        cursor.moveToNext();
+        String path = cursor.getString(cursor.getColumnIndex("_data"));
+        return path;
     }
 }
