@@ -46,7 +46,7 @@ public class MyProfileFragment extends Fragment {
     Button Edit;
     FrameLayout wishBtn;
     FrameLayout toxicListBtn;
-    ImageButton goFollowing, goFollower;
+    FrameLayout goFollowing, goFollower;
     ImageView myImage;
     Intent intent;
     int REQUEST_ALBUM = 100;
@@ -58,17 +58,14 @@ public class MyProfileFragment extends Fragment {
         Edit = (Button) v.findViewById(R.id.edit_personal_info);
         wishBtn = v.findViewById(R.id.wish_button);
         toxicListBtn = v.findViewById(R.id.toxicList);
-        goFollowing = v.findViewById(R.id.go_following_list);
-        goFollower = v.findViewById(R.id.go_follower_list);
+        goFollowing = v.findViewById(R.id.following);
+        goFollower = v.findViewById(R.id.follower);
         myImage = v.findViewById(R.id.profile_pic);
 
-        RecyclerView recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         int ColumNumber = 3;
 
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(layoutManager);
 
         cosmeticList.setHasFixedSize(true);
         cosmeticList.setLayoutManager(new GridLayoutManager(getContext(), ColumNumber));
@@ -84,8 +81,6 @@ public class MyProfileFragment extends Fragment {
         item[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
 
         for (int i = 0; i < 5; i++) items.add(item[i]);
-
-        recyclerView.setAdapter(new MyprofileFollowerAdapter(getApplicationContext(), items, R.layout.fragment_myprofile));
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[6];

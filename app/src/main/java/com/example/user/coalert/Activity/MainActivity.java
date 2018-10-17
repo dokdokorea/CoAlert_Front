@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         AHBottomNavigation bottomNavigation = findViewById(R.id.bottom_navigation);
 
 
-        AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.whiteBackground);
-        AHBottomNavigationItem homeItem = new AHBottomNavigationItem(R.string.home, R.drawable.home, R.color.whiteBackground);
-        AHBottomNavigationItem timeLineItem = new AHBottomNavigationItem(R.string.timeline, android.R.drawable.ic_menu_upload_you_tube, R.color.whiteBackground);
-        AHBottomNavigationItem myprofileItem=new AHBottomNavigationItem(R.string.myprofile,R.drawable.myprofile_icon,R.color.whiteBackground);
+        AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.first);
+        AHBottomNavigationItem homeItem = new AHBottomNavigationItem(R.string.home, R.drawable.home, R.color.first);
+        AHBottomNavigationItem timeLineItem = new AHBottomNavigationItem(R.string.timeline, android.R.drawable.ic_menu_upload_you_tube, R.color.first);
+        AHBottomNavigationItem myprofileItem=new AHBottomNavigationItem(R.string.myprofile,R.drawable.myprofile_icon,R.color.first);
 
         bottomNavigation.addItem(searchItem);
         bottomNavigation.addItem(homeItem);
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigation.addItem(myprofileItem);
 
         bottomNavigation.setBehaviorTranslationEnabled(false);
-        bottomNavigation.setAccentColor(Color.parseColor("#51032d"));
-        bottomNavigation.setInactiveColor(R.color.bottom_navigation_select);
+        bottomNavigation.setAccentColor(Color.parseColor("#FF9C9F"));
+        bottomNavigation.setInactiveColor(R.color.first);
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
         fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.content_fragment_layout, new HomeFragment());

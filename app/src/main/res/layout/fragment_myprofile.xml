@@ -9,16 +9,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
+        android:layout_height="@dimen/_42sdp"
         android:background="#ffffff"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_36sdp"
+            android:layout_height="@dimen/_40sdp"
             android:fontFamily="@font/yoon_gothic340"
             android:gravity="center"
-            android:text="MYPAGE"
+            android:text="@string/my_page"
             android:textSize="@dimen/_18sdp"
             android:textColor="#fff"
             android:background="@color/tab_skintype_color"
@@ -160,16 +160,23 @@
 
             </FrameLayout>
 
-            <android.support.v4.widget.Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_weight="0.98"
+                    android:background="#D8D8D8" />
+
+
+            </LinearLayout>
 
 
                 <FrameLayout
@@ -200,39 +207,6 @@
 
                 </FrameLayout>
 
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/recyclerview"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:visibility="gone"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_2sdp"
-                        android:layout_weight="0.98"
-                        android:background="#D8D8D8" />
-
-
-                </LinearLayout>
-
                 <FrameLayout
                     android:id="@+id/follower"
                     android:layout_width="match_parent"
@@ -261,7 +235,6 @@
 
                 </FrameLayout>
 
-            </LinearLayout>
 
             <android.support.v4.widget.Space
                 android:layout_width="match_parent"

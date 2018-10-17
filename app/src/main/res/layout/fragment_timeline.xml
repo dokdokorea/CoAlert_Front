@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
+        android:layout_height="@dimen/_40sdp"
         android:fontFamily="@font/yoon_gothic340"
         android:gravity="center"
         android:text="타임라인"
