@@ -34,4 +34,9 @@
     <string name="introduceCosmetic">화장품 소개</string>
     <string name="CoAlertCosmetic">코알라 화장품</string>
     <string name="my_page">마이 페이지</string>
+    <string name="special_brand">브랜드 전용관</string>
+    <string name="enisfree">이니스프리</string>
+    <string name="ysl">입생로랑</string>
+    <string name="chanel">샤넬</string>
+    <string name="mac">맥</string>
 </resources>
