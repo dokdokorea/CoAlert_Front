@@ -36,19 +36,19 @@ public class MainActivity extends AppCompatActivity {
         AHBottomNavigation bottomNavigation = findViewById(R.id.bottom_navigation);
 
 
-        AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.first);
-        AHBottomNavigationItem homeItem = new AHBottomNavigationItem(R.string.home, R.drawable.home, R.color.first);
-        AHBottomNavigationItem timeLineItem = new AHBottomNavigationItem(R.string.timeline, android.R.drawable.ic_menu_upload_you_tube, R.color.first);
-        AHBottomNavigationItem myprofileItem=new AHBottomNavigationItem(R.string.myprofile,R.drawable.myprofile_icon,R.color.first);
+        AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.whiteBackground);
+        AHBottomNavigationItem homeItem = new AHBottomNavigationItem(R.string.home, R.drawable.home, R.color.whiteBackground);
+        AHBottomNavigationItem timeLineItem = new AHBottomNavigationItem(R.string.timeline, android.R.drawable.ic_menu_upload_you_tube, R.color.whiteBackground);
+        AHBottomNavigationItem myprofileItem=new AHBottomNavigationItem(R.string.myprofile,R.drawable.myprofile_icon,R.color.whiteBackground);
 
         bottomNavigation.addItem(searchItem);
         bottomNavigation.addItem(homeItem);
         bottomNavigation.addItem(timeLineItem);
         bottomNavigation.addItem(myprofileItem);
-
-        bottomNavigation.setBehaviorTranslationEnabled(false);
+        //클릭 됐을 때
         bottomNavigation.setAccentColor(Color.parseColor("#FF9C9F"));
-        bottomNavigation.setInactiveColor(R.color.first);
+        //클릭 안됐을 때
+        bottomNavigation.setInactiveColor(Color.parseColor("#808080"));
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
         fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.content_fragment_layout, new HomeFragment());
