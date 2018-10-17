@@ -44,22 +44,13 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
         Drawable drawable=context.getResources().getDrawable(item.getImage());
         holder.image.setBackground(drawable);
         holder.name.setText(item.getText());
-        holder.cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, CosmeticInformationActivity.class);
-                context.startActivity(intent);
-
-                Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
         return this.list.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView image;
         TextView name;
         CardView cardview;
@@ -68,6 +59,15 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
             image=(ImageView)itemView.findViewById(R.id.cosphoto);
             name=(TextView)itemView.findViewById(R.id.Name);
             cardview=(CardView)itemView.findViewById(R.id.cardview);
+            cardview.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            final OneImgOneStringCardView item = list.get(getAdapterPosition());
+            Intent intent = new Intent(context, CosmeticInformationActivity.class);
+            context.startActivity(intent);
+            Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -17,7 +17,7 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
     private ArrayList<TwoImgTwoStringCardView> mDataset;
     private int j = 0;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView imageView;
         private TextView name;
         private TextView id;
@@ -35,6 +35,17 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
             else
                 /*DB 목록 갱신*/
                 follwerBtn.setImageResource(R.drawable.following_btn);
+            follwerBtn.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            j = 1 - j;
+            if (j == 0)
+                follwerBtn.setImageResource(R.drawable.follow_btn);
+            else
+                /*DB 목록 갱신*/
+               follwerBtn.setImageResource(R.drawable.following_btn);
         }
     }
 
@@ -55,19 +66,6 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
         holder.name.setText(mDataset.get(position).getText1());
         holder.id.setText(mDataset.get(position).getText2());
         holder.follwerBtn.setImageResource(mDataset.get(position).getImg2());
-        holder.follwerBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                j = 1 - j;
-                if (j == 0)
-                    holder.follwerBtn.setImageResource(R.drawable.follow_btn);
-                else
-                    /*DB 목록 갱신*/
-                    holder.follwerBtn.setImageResource(R.drawable.following_btn);
-            }
-        });
-
     }
 
     @Override

@@ -45,17 +45,9 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         adCardViewItem adCardViewItem = itemList.get(position);
-        Log.e("asdasd", itemList.toString());
         Bitmap bitmap = adCardViewItem.getBitmap();
         holder.productImage.setImageBitmap(bitmap);
         holder.productName.setText("코알라 화장품");
-        Log.e("positon", String.valueOf(position));
-        holder.oneCardView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                Log.e("asdasd", String.valueOf(position));
-            }
-        });
     }
 
     @Override
@@ -72,7 +64,7 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
     public View getView(int i, View view, ViewGroup viewGroup) {
         return null;
     }
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView productImage;
         TextView productName;
         CardView oneCardView;
@@ -81,6 +73,12 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
             productName = itemView.findViewById(R.id.inisfreeText);
             productImage = itemView.findViewById(R.id.inisfreeImg);
             oneCardView = itemView.findViewById(R.id.adCardView);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context, "Clicked on position: " + getAdapterPosition(), Toast.LENGTH_LONG);
         }
     }
 }

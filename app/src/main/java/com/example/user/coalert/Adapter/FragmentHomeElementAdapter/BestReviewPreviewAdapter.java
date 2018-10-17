@@ -23,18 +23,7 @@ public class BestReviewPreviewAdapter extends RecyclerView.Adapter<BestReviewPre
     Context context;
     int item_layout;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView Title,CreatorId;
-        private ImageView TitleImg,CreatorImg;
-        private CardView ReviewCard;
 
-        public ViewHolder(View itemView) {
-            super(itemView);
-            TitleImg = (ImageView) itemView.findViewById(R.id.title_img);
-            Title=(TextView)itemView.findViewById(R.id.title_text);
-            ReviewCard=(CardView)itemView.findViewById(R.id.detail_review_card);
-        }
-    }
 
     public BestReviewPreviewAdapter(Context context, ArrayList<OneImgOneStringCardView> myDataset, int item_layout) {
         mDataSet = myDataset;
@@ -52,26 +41,33 @@ public class BestReviewPreviewAdapter extends RecyclerView.Adapter<BestReviewPre
 
     @Override
     public void onBindViewHolder(@NonNull final BestReviewPreviewAdapter.ViewHolder holder, int position) {
-        final OneImgOneStringCardView item=mDataSet.get(position);
         holder.TitleImg.setBackgroundResource(mDataSet.get(position).getImage());
         holder.Title.setText(mDataSet.get(position).getText());
-        holder.ReviewCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //goes to new activity passing the item name
-                Intent intent = new Intent(context, ViewDetailActivity.class);
-                intent.putExtra("title",item.getText());
-                context.startActivity(intent);
-
-                //Toast.makeText(context,mDataSet.get(position).getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
 
     @Override
     public int getItemCount() {
         return mDataSet.size();
     }
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private TextView Title,CreatorId;
+        private ImageView TitleImg,CreatorImg;
+        private CardView ReviewCard;
 
+        public ViewHolder(View itemView) {
+            super(itemView);
+            TitleImg = (ImageView) itemView.findViewById(R.id.title_img);
+            Title=(TextView)itemView.findViewById(R.id.title_text);
+            ReviewCard=(CardView)itemView.findViewById(R.id.detail_review_card);
+            ReviewCard.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            final OneImgOneStringCardView item=mDataSet.get(getAdapterPosition());
+            Intent intent = new Intent(context, ViewDetailActivity.class);
+            intent.putExtra("title",item.getText());
+            context.startActivity(intent);
+        }
+    }
 }

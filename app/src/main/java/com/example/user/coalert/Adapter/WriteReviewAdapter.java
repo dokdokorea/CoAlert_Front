@@ -36,12 +36,44 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
     private static final int CAMERA_REQUEST = 100;
     private static final int ALBUM_REQUEST = 1000;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.item_personal_prod_pic_imageview);
+            imageView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    cameraView(getAdapterPosition());
+                }
+            };
+
+            DialogInterface.OnClickListener albumListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Log.e("asdasd", String.valueOf(getAdapterPosition()));
+                    ((Activity) mcontext).startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST + getAdapterPosition());
+                }
+            };
+
+            DialogInterface.OnClickListener cancelListener = new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            };
+            new AlertDialog.Builder(mcontext)
+                    .setTitle("업로드할 이미지 선택")
+                    .setPositiveButton("사진 촬영", cameraListener)
+                    .setNeutralButton("앨범선택", albumListener)
+                    .setNegativeButton("취소", cancelListener)
+                    .show();
         }
     }
 
@@ -66,35 +98,10 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new AlertDialog.Builder(mcontext)
-                        .setTitle("업로드할 이미지 선택")
-                        .setPositiveButton("사진 촬영", cameraListener)
-                        .setNeutralButton("앨범선택", albumListener)
-                        .setNegativeButton("취소", cancelListener)
-                        .show();
+
             }
 
-            DialogInterface.OnClickListener cameraListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    cameraView(position);
-                }
-            };
 
-            DialogInterface.OnClickListener albumListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    Log.e("asdasd", String.valueOf(position));
-                    ((Activity) mcontext).startActivityForResult(Intent.createChooser(intent, "Select Picture"), ALBUM_REQUEST + position);
-                }
-            };
-
-            DialogInterface.OnClickListener cancelListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.dismiss();
-                }
-            };
         });
     }
 

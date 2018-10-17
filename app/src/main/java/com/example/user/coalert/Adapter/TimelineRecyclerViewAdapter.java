@@ -48,22 +48,13 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
         holder.comment.setText(item.getT4());
         holder.title.setText(item.getT2());
         holder.username.setText(item.getT1());
-        holder.cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, ViewDetailActivity.class);
-                intent.putExtra("title",item.getT2());
-                context.startActivity(intent);
-                Toast.makeText(context,item.getT2(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
         return this.list.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView titleImg,ProfilePicture;
         TextView title,comment,likecount;
         CardView cardview;
@@ -77,6 +68,16 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
             likecount=(TextView)itemView.findViewById(R.id.like_count);
             username=(TextView)itemView.findViewById(R.id.username);
             cardview=(CardView)itemView.findViewById(R.id.cardview);
+            cardview.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            final TwoImgFourStringCardView item = list.get(getAdapterPosition());
+            Intent intent = new Intent(context, ViewDetailActivity.class);
+            intent.putExtra("title",item.getT2());
+            context.startActivity(intent);
+            Toast.makeText(context,item.getT2(),Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -17,7 +17,7 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
     private ArrayList<TwoImgTwoStringCardView> mDataSet;
     private int j = 0;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private ImageView imageView;
         private TextView name;
         private TextView id;
@@ -30,6 +30,19 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
             name = (TextView) itemView.findViewById(R.id.user_name);
             id = (TextView) itemView.findViewById(R.id.item_follower_email);
             follwerBtn = (ImageView) itemView.findViewById(R.id.item_follower_list_follower_btn);
+            follwerBtn.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            j = 1 - j;
+
+            if (j == 0) {
+                follwerBtn.setImageResource(R.drawable.follow_btn);
+            } else {
+                follwerBtn.setImageResource(R.drawable.following_btn);
+            }
+
         }
     }
 
@@ -50,20 +63,6 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
         holder.name.setText(mDataSet.get(position).getText1());
         holder.id.setText(mDataSet.get(position).getText2());
         holder.follwerBtn.setImageResource(mDataSet.get(position).getImg2());
-        holder.follwerBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                j = 1 - j;
-
-                if (j == 0) {
-                    holder.follwerBtn.setImageResource(R.drawable.follow_btn);
-                } else {
-                    holder.follwerBtn.setImageResource(R.drawable.following_btn);
-                }
-
-            }
-        });
     }
 
     @Override

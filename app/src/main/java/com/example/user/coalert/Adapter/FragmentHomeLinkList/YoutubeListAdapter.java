@@ -56,10 +56,7 @@ public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse( "http://youtu.be/" + item.getT4() ));
-                context.startActivity( intent );
+
 
                 //Toast.makeText(context,mDataSet.get(position).getText1(),Toast.LENGTH_SHORT).show();
             }
@@ -70,7 +67,7 @@ public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.
     public int getItemCount() {
         return this.list.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView TitleImage;
         TextView TitleText;
         ImageView UserProfile;
@@ -86,6 +83,16 @@ public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.
             username=(TextView)itemView.findViewById(R.id.creator);
             SeeNum=(TextView) itemView.findViewById(R.id.see_num);
             cardview=(CardView)itemView.findViewById(R.id.hot_youtuber_cardview);
+            cardview.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            final TwoImgFourStringCardView item = list.get(getAdapterPosition());
+            Intent intent = new Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse( "http://youtu.be/" + item.getT4() ));
+            context.startActivity( intent );
         }
     }
 }

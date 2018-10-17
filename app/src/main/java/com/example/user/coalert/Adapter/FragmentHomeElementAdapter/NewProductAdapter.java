@@ -23,7 +23,7 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     Context context;
     int item_layout;
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView imageView;
         private TextView prodNameView;
         private TextView companyView;
@@ -35,6 +35,14 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
             prodNameView = (TextView) itemView.findViewById(R.id.new_product_name);
             companyView = (TextView) itemView.findViewById(R.id.company_name);
             cardView=itemView.findViewById(R.id.new_product_cardview);
+            cardView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent(context, CosmeticInformationActivity.class);
+            context.startActivity(intent);
+            Toast.makeText(context,mDataset.get(getAdapterPosition()).getText2(),Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -56,14 +64,6 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
         holder.imageView.setImageResource(mDataset.get(position).getImage());
         holder.prodNameView.setText(mDataset.get(position).getText1());
         holder.companyView.setText(mDataset.get(position).getText2());
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context, CosmeticInformationActivity.class);
-                context.startActivity(intent);
-                Toast.makeText(context,mDataset.get(position).getText2(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override

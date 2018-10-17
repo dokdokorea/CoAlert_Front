@@ -47,7 +47,7 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
 
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView ProfilePicture,PhotoPreview;
         private TextView UserId,LikeCount,Title,Context;
         private CardView DetailCard;
@@ -62,6 +62,15 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
             LikeCount=(TextView)itemView.findViewById(R.id.like_count);
             PhotoPreview=(ImageView)itemView.findViewById(R.id.preview_img);
             DetailCard=(CardView)itemView.findViewById(R.id.detail_review_preview_card);
+            DetailCard.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            final TwoImgFourStringCardView item=mDataSet.get(getItemCount());
+            Intent intent = new Intent(context, ViewDetailActivity.class);
+            intent.putExtra("title",item.getT3());
+            context.startActivity(intent);
         }
     }
 
@@ -77,17 +86,6 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
         holder.Context.setText(mDataSet.get(position).getT4());
         holder.PhotoPreview.setBackgroundResource(item.getImg2());
         holder.ProfilePicture.setImageResource(item.getImg1());
-        holder.DetailCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //goes to new activity passing the item name
-                Intent intent = new Intent(context, ViewDetailActivity.class);
-                intent.putExtra("title",item.getT3());
-                context.startActivity(intent);
-
-                //Toast.makeText(context,mDataSet.get(position).getText(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override

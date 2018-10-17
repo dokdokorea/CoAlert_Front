@@ -22,7 +22,7 @@ public class BestReviewAdapter extends RecyclerView.Adapter<BestReviewAdapter.Vi
     Context context;
 int item_layout;
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView imageView;
         private TextView idTextView;
         private TextView contentView;
@@ -35,6 +35,12 @@ int item_layout;
             idTextView = (TextView) itemView.findViewById(R.id.user_name);
             contentView = (TextView) itemView.findViewById(R.id.best_review_content);
             cardview = (CardView) itemView.findViewById(R.id.best_review_cardview);
+            cardview.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context, "나는 내 수대로 쓸거야.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -56,12 +62,6 @@ int item_layout;
         holder.imageView.setImageResource(mDataset.get(position).getImage());
         holder.idTextView.setText(mDataset.get(position).getText1());
         holder.contentView.setText(mDataset.get(position).getText2());
-        holder.cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "나는 내 수대로 쓸거야.", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override

@@ -23,7 +23,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     Context context;
 int item_layout;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView mImageView;
         private TextView mTextView;
         private TextView textView2;
@@ -36,6 +36,12 @@ int item_layout;
             mTextView = (TextView) itemView.findViewById(R.id.notification_card_text);
             textView2=itemView.findViewById(R.id.user_name);
             cardView=itemView.findViewById(R.id.notification_cardview);
+            cardView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context,mDataSet.get(getAdapterPosition()).getText1(),Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -57,13 +63,6 @@ int item_layout;
         holder.mTextView.setText(mDataSet.get(position).getText2());
         holder.textView2.setText(mDataSet.get(position).getText1());
         holder.mImageView.setImageResource(mDataSet.get(position).getImage());
-        holder.cardView.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context,mDataSet.get(position).getText1(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override

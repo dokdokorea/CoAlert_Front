@@ -23,7 +23,7 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
     Context context;
     int item_layout;
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView imageView;
         private TextView textView;
         private CardView cardView;
@@ -34,6 +34,15 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
             imageView = (ImageView) itemView.findViewById(R.id.youtube);
             textView = (TextView) itemView.findViewById(R.id.youtube_title);
             cardView=itemView.findViewById(R.id.hot_youtuber_cardview);
+            cardView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse( "http://youtu.be/" + mDataSet.get(getAdapterPosition()).getText2() ));
+            context.startActivity( intent );
         }
     }
 
@@ -55,18 +64,6 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
         holder.imageView.setBackgroundResource(mDataSet.get(position).getImage());
         holder.textView.setText(mDataSet.get(position).getText1());
         holder.url=mDataSet.get(position).getText2();
-        holder.cardView.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse( "http://youtu.be/" + mDataSet.get(position).getText2() ));
-                context.startActivity( intent );
-
-                //Toast.makeText(context,mDataSet.get(position).getText1(),Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
