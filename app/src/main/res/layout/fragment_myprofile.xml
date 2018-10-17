@@ -200,9 +200,6 @@
 
                 </FrameLayout>
 
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_7sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -214,7 +211,8 @@
                         android:id="@+id/recyclerview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" />
+                        android:orientation="horizontal"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 
@@ -307,7 +305,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_2sdp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_15sdp">
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recyclerview2"

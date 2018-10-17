@@ -120,20 +120,17 @@ public class HomeFragment extends Fragment {
         //Drawable youtubeBtn=(v.findViewById(R.id.main_youtube_next_btn)).getBackground();
         //youtubeBtn.setAlpha(50);
 
-        RecyclerView youtuberRecyclerView = (RecyclerView) v.findViewById(R.id.hot_youtuber_recyclerview);
+
         RecyclerView bestReviewRecyclerView = (RecyclerView) v.findViewById(R.id.best_review_recyclerview);
-        RecyclerView newProductRecyclerView = (RecyclerView) v.findViewById(R.id.new_product_recyclerview);
         RecyclerView bestPreviewRecyclerView=(RecyclerView) v.findViewById(R.id.best_review_preview_recycler);
 
-        youtuberRecyclerView.setHasFixedSize(true);
+
         bestReviewRecyclerView.setHasFixedSize(true);
-        newProductRecyclerView.setHasFixedSize(true);
         bestPreviewRecyclerView.setHasFixedSize(true);
         bestPreviewRecyclerView.setFocusable(false);
 
-        youtuberRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
         bestReviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        newProductRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         bestPreviewRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
 
@@ -146,9 +143,6 @@ public class HomeFragment extends Fragment {
         youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "눈이 2배 커지는 화장 비법","RDaiHSVQy9xN8"));
         youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview4, "화자 초짜들은 봐라 어딜가도 평타치는 화장법","glXgSSOKlls"));
         youtuberArr.add(new OneImgTwoStringCardView(R.drawable.cardview5, "미국 화장법 집중 탐구","J0h8-OTC38I"));
-        youtuberRecyclerView.setNestedScrollingEnabled(false);
-
-        youtuberRecyclerView.setAdapter(new HotYoutuberAdapter(getContext(),youtuberArr,R.layout.fragment_home));
 
         bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview1, "uniqueBest", "내가 짱인디.."));
         bestReviewArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "pleaseee", "슬기님..."));
@@ -159,8 +153,6 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview1, "신상품", "내회사"));
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview2, "신상품", "니회사"));
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
-        newProductRecyclerView.setNestedScrollingEnabled(false);
-        newProductRecyclerView.setAdapter(new NewProductAdapter(getContext(),newProduArr,R.layout.fragment_home));
 
         bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinblack,"아이린의 화장법"));
         bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinpink,"남다른 핑크"));
