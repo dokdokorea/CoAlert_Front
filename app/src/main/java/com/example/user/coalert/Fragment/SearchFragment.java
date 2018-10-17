@@ -105,7 +105,7 @@ public class SearchFragment extends Fragment {
         cosmeticCompanySpecial = v.findViewById(R.id.notFocusSearchViewRecyclerView);
         cosmeticCompanySpecial.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayout.VERTICAL, false));
         arrayList = addData(arrayList);
-        notFocusSearchAdapter = new NotFocusSearchAdapter(arrayList);
+        notFocusSearchAdapter = new NotFocusSearchAdapter(arrayList, getContext());
         cosmeticCompanySpecial.setHasFixedSize(true);
         cosmeticCompanySpecial.setFocusable(false);
         cosmeticCompanySpecial.setAdapter(notFocusSearchAdapter);

@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         AHBottomNavigationItem timeLineItem = new AHBottomNavigationItem(R.string.timeline, android.R.drawable.ic_menu_upload_you_tube, R.color.whiteBackground);
         AHBottomNavigationItem myprofileItem=new AHBottomNavigationItem(R.string.myprofile,R.drawable.myprofile_icon,R.color.whiteBackground);
 
+
         bottomNavigation.addItem(searchItem);
         bottomNavigation.addItem(homeItem);
         bottomNavigation.addItem(timeLineItem);
         bottomNavigation.addItem(myprofileItem);
-        //클릭 됐을 때
+        bottomNavigation.setBehaviorTranslationEnabled(false);
         bottomNavigation.setAccentColor(Color.parseColor("#FF9C9F"));
-        //클릭 안됐을 때
         bottomNavigation.setInactiveColor(Color.parseColor("#808080"));
         bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
         fragmentTransaction = getFragmentManager().beginTransaction();
