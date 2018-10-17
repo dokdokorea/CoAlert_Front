@@ -52,15 +52,15 @@ public class YoutubeListAdapter extends RecyclerView.Adapter<YoutubeListAdapter.
         holder.UserProfile.setImageResource(item.getImg2());
         holder.SeeNum.setText(item.getT3());
         holder.url=item.getT4();
-        holder.cardview.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-
-                //Toast.makeText(context,mDataSet.get(position).getText1(),Toast.LENGTH_SHORT).show();
-            }
-        });
+//        holder.cardview.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                Toast.makeText(context,item.getT1(),Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     @Override

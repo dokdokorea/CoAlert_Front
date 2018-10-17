@@ -37,6 +37,9 @@ public class HotYoutuberAdapter extends RecyclerView.Adapter<HotYoutuberAdapter.
             cardView.setOnClickListener(this);
         }
 
+
+
+
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(
