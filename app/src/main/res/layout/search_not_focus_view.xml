@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
-    android:background="@drawable/clicking_white_btn">
+    android:background="@color/purpleColor">
 
     <TextView
         style="@style/defaultFont"
@@ -16,7 +16,7 @@
         android:layout_gravity="center"
         android:text="@string/special_brand"
         android:textSize="@dimen/_23sdp"
-        android:textColor="#000000"
+        android:textColor="@color/goldColor"
         android:gravity="left"
         android:textStyle="bold"
         android:layout_marginBottom="@dimen/_8sdp"
@@ -24,7 +24,7 @@
     <View
         android:layout_height="@dimen/_2sdp"
         android:layout_width="match_parent"
-        android:background="@color/fifth" />
+        android:background="@color/goldColor" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/notFocusSearchViewRecyclerView"
         android:layout_width="match_parent"
