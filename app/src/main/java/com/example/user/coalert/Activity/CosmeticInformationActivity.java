@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
@@ -40,6 +42,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     int percent=50,j=0;
     TextView matching, company, ProductName;
     ImageView ProductImg;
+    NestedScrollView scroll;
     ImageButton wishbtn, shareBtn;
     Button WriteReview, MoreToxicByType;
     int DetailProfileImg,DetailCosmeticImg;
@@ -62,6 +65,9 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         company=(TextView)findViewById(R.id.cosmetic_comp_name);
         WriteReview=(Button)findViewById(R.id.cosmetic_info_write_review);
         MoreToxicByType=(Button)findViewById(R.id.by_type_ingredient);
+        scroll=(NestedScrollView)findViewById(R.id.scroll);
+        scroll.fullScroll(NestedScrollView.FOCUS_UP);
+
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");

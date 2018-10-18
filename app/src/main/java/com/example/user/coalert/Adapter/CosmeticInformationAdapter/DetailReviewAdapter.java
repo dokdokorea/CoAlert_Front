@@ -1,7 +1,9 @@
 package com.example.user.coalert.Adapter.CosmeticInformationAdapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.coalert.Activity.ViewDetailActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
@@ -20,9 +23,10 @@ public class DetailReviewAdapter extends RecyclerView.Adapter<DetailReviewAdapte
     Context context;
     int item_layout;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView Title,CreatorId;
         private ImageView TitleImg,CreatorImg;
+        private CardView PreviewCard;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -30,6 +34,16 @@ public class DetailReviewAdapter extends RecyclerView.Adapter<DetailReviewAdapte
             CreatorImg=(ImageView)itemView.findViewById(R.id.profile_pic);
             Title=(TextView)itemView.findViewById(R.id.title_text);
             CreatorId=(TextView)itemView.findViewById(R.id.profile_id);
+            PreviewCard=(CardView)itemView.findViewById(R.id.detail_review_card);
+            PreviewCard.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            final TwoImgTwoStringCardView item=mDataSet.get(getAdapterPosition());
+            Intent intent = new Intent(context, ViewDetailActivity.class);
+            intent.putExtra("title",item.getText2());
+            context.startActivity(intent);
         }
     }
 
