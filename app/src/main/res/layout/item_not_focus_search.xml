@@ -19,7 +19,7 @@
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:src="@drawable/innisfree" />
+                android:src="@drawable/innisfree_logo" />
 
             <TextView
                 android:id="@+id/cosmetic_company_name"

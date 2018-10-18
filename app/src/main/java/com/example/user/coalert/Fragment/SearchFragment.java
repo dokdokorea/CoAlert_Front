@@ -336,7 +336,7 @@ public class SearchFragment extends Fragment {
     }
 
     public ArrayList<OneImgOneStringCardView> addData(ArrayList<OneImgOneStringCardView> arrayList) {
-        arrayList.add(new OneImgOneStringCardView(R.drawable.innisfree, "이니스프리"));
+        arrayList.add(new OneImgOneStringCardView(R.drawable.innisfree_logo, "이니스프리"));
         arrayList.add(new OneImgOneStringCardView(R.drawable.ysl, "입생로랑"));
         arrayList.add(new OneImgOneStringCardView(R.drawable.chanel, "샤넬"));
         arrayList.add(new OneImgOneStringCardView(R.drawable.mac, "맥"));

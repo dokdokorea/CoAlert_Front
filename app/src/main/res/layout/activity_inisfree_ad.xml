@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_70sdp"
         android:id="@+id/adLogo"
         android:background="#f4f5e4"
-        android:src="@drawable/innisfree"
+        android:src="@drawable/innisfree_logo"
         android:scaleType="fitXY"/>
 
     <LinearLayout
