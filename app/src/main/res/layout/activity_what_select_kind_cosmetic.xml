@@ -19,11 +19,17 @@
             android:layout_marginLeft="@dimen/_5sdp"
             android:src="@drawable/clicking_back_btn" />
 
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/_5sdp"
-            android:src="@drawable/coalert_logo_word" />
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/yoon_gothic340"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:text="@string/recommend_cosmetic"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="#fff"
+            android:background="@color/tab_skintype_color"
+            android:textStyle="bold" />
 
         <ImageView
             android:layout_width="@dimen/_35sdp"

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purpleColor"
+    android:background="@color/app_background"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -11,7 +11,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:background="@color/purpleColor"
+            android:background="@color/app_background"
             android:layout_height="@dimen/_60sdp"
             android:id="@+id/notFocusItem">
 

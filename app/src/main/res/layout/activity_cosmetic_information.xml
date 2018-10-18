@@ -14,7 +14,7 @@
         android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_36sdp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@color/first">
 
         <ImageView

@@ -64,7 +64,7 @@
 
         <activity
             android:name=".Activity.AccessAuthorizationActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog" >
+            android:theme="@android:style/Theme.DeviceDefault.Dialog">
 
 
         </activity>
@@ -108,8 +108,7 @@
         <activity android:name=".Activity.FollowingListActivity">
 
         </activity>
-        <activity android:name=".Activity.FollowerListActivity">
-        </activity>
+        <activity android:name=".Activity.FollowerListActivity"></activity>
         <activity android:name=".Activity.WriteReviewActivity"></activity>
         <activity android:name=".Activity.ViewDetailActivity"></activity>
         <activity android:name=".Activity.WhatSelectKindCosmetic" />
@@ -119,7 +118,6 @@
         <activity
             android:name=".Activity.AdActivity"
             tools:ignore="DuplicateActivity">
-
         </activity>
         <activity android:name=".Activity.HotYoutubeListActivity"></activity>
         <activity android:name=".Activity.NewProductListActivity"></activity>
