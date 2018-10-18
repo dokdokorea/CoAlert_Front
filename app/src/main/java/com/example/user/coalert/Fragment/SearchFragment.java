@@ -381,7 +381,6 @@ class ExEditText extends android.support.v7.widget.AppCompatEditText {
     public boolean onKeyPreIme(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
             if (keyCode == KeyEvent.KEYCODE_BACK) {
-                Log.e("asdasd", "Asdasdasd");
                 this.clearFocus();
                 return true;
             }

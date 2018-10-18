@@ -6,22 +6,24 @@
     android:layout_height="match_parent"
     android:background="#edeeef"
     android:orientation="vertical"
-    tools:context=".Activity.InnisfreeAdActivity">
+    tools:context=".Activity.AdActivity">
 
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_70sdp"
+        android:id="@+id/adLogo"
         android:background="#f4f5e4"
-        android:src="@drawable/innisfree" />
+        android:src="@drawable/innisfree"
+        android:scaleType="fitXY"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_12sdp" />
+            android:layout_height="@dimen/_2sdp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -43,12 +45,14 @@
             android:background="#ffffff"
             android:text="@string/InnisfreeExplain"
             android:textColor="#000000"
-            android:textSize="@dimen/_13sdp" />
+            android:textSize="@dimen/_13sdp"
+            android:id="@+id/cosmeticCompanyExplain"
+            tools:ignore="InvalidId" />
     </LinearLayout>
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_12sdp" />
+        android:layout_height="@dimen/_2sdp" />
 
     <TextView
         android:layout_width="match_parent"

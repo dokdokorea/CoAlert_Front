@@ -117,7 +117,7 @@
         <activity android:name=".Activity.TwentyQuestionActivity" />
         <activity android:name=".Activity.MyReviewListActivity"></activity>
         <activity
-            android:name=".Activity.InnisfreeAdActivity"
+            android:name=".Activity.AdActivity"
             tools:ignore="DuplicateActivity">
 
         </activity>
