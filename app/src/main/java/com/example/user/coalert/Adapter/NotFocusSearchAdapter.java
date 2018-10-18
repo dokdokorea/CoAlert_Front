@@ -36,7 +36,6 @@ public class NotFocusSearchAdapter extends Adapter<NotFocusSearchAdapter.ViewHol
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.cosmeticCompanyImage.setImageResource(data.get(position).getImage());
-        holder.cosmeticCompanyName.setText(data.get(position).getText());
     }
 
 
@@ -47,12 +46,10 @@ public class NotFocusSearchAdapter extends Adapter<NotFocusSearchAdapter.ViewHol
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView cosmeticCompanyImage;
-        TextView cosmeticCompanyName;
         FrameLayout oneCardView;
         public ViewHolder(View itemView) {
             super(itemView);
             cosmeticCompanyImage = itemView.findViewById(R.id.cosmetic_company_image);
-            cosmeticCompanyName = itemView.findViewById(R.id.cosmetic_company_name);
             oneCardView = itemView.findViewById(R.id.notFocusItem);
             oneCardView.setOnClickListener(this);
         }
