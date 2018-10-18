@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:ignore="MissingConstraints"
-    android:background="@color/purpleColor">
+    android:background="@color/app_background">
 
     <TextView
         style="@style/defaultFont"
@@ -21,14 +21,16 @@
         android:textStyle="bold"
         android:layout_marginBottom="@dimen/_8sdp"
         android:layout_marginLeft="@dimen/_10sdp" />
+    <!--고딕BM체 수정-->
+
     <View
         android:layout_height="@dimen/_2sdp"
         android:layout_width="match_parent"
         android:background="@color/goldColor" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/notFocusSearchViewRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </LinearLayout>
