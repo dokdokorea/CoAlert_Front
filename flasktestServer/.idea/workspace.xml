@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +149,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="276">
               <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -421,7 +420,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="276">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />

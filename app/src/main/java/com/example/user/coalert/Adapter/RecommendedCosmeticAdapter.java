@@ -48,7 +48,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
         holder.CosmeticImage.setImageResource(item.getImage());
         holder.Company.setText(item.getText1());
         holder.Name.setText(item.getText2());
-        String str = format.format(item.getNumber());
+        String str = format.format(item.getNumber()*20);
 //        holder.Rating.setText(Float.toString(item.getNumber()));
         holder.Rating.setText(str);
     }
