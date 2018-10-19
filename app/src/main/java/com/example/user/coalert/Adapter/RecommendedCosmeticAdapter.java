@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,22 +28,21 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
 
     public RecommendedCosmeticAdapter(Context context, List<OneImgThreeStringCardView> items, int item_layout){
         this.context = context;
-        list = items;
+        this.list = items;
         this.item_layout =item_layout;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_hot_youtube_list, null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recommended_cosmetic_list, null);
         v.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT,RecyclerView.LayoutParams.WRAP_CONTENT));
-        return new ViewHolder(v) ;
+        return new RecommendedCosmeticAdapter.ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgThreeStringCardView item = list.get(position);
-        Drawable drawable=context.getResources().getDrawable(item.getImage());
         holder.CosmeticImage.setImageResource(item.getImage());
         holder.Company.setText(item.getText1());
         holder.Name.setText(item.getText2());
@@ -62,10 +62,10 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
 
         public ViewHolder(View itemView) {
             super(itemView);
-            CosmeticImage=(ImageView)itemView.findViewById(R.id.cosmetic_photo);
-            Company=(TextView)itemView.findViewById(R.id.company_name);
-            Name=(TextView)itemView.findViewById(R.id.cosmetic_name);
-            Rating=(TextView)itemView.findViewById(R.id.rating);
+            CosmeticImage=itemView.findViewById(R.id.recommend_cosmetic_photo);
+            Company=itemView.findViewById(R.id.recommend_company_name);
+            Name=itemView.findViewById(R.id.recommend_cosmetic_name);
+            Rating=itemView.findViewById(R.id.recommend_rating);
 
         }
 

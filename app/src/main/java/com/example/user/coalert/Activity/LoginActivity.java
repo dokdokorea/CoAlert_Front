@@ -198,6 +198,7 @@ public class LoginActivity extends AppCompatActivity {
                         getUUID(getBaseContext());
                         Call<loginModel> call = ForRestSingleton.getInstance().loginCall(email, password);
                         loginModel result = call.execute().body();
+                        Log.e("asdads", result.toString());
                         final String canYouLogin = result.getError();
 //                        if(canYouLogin.equals("null")){
                             runOnUiThread(new Runnable() {

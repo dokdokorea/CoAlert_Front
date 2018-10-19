@@ -284,7 +284,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.recommendCosmetic">
+  <component name="RunManager" selected="Flask server.flasktestServer">
     <configuration name="recommendCosmetic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,7 +329,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />

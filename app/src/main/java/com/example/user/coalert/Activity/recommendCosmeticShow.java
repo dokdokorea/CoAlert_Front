@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -34,15 +35,13 @@ import retrofit2.Call;
 public class recommendCosmeticShow extends AppCompatActivity {
     Intent getReceiveData;
     TextView showRecommendTextView;
-//    ListView RecommendCosmetic;
     RecyclerView CosmeticRecycler;
     ArrayList<OneImgThreeStringCardView> cosmeticArr;
     int kindCosmetic;
     boolean lastitemVisibleFlag;
     JsonArray purifyDataArray;
-    RecommendedCosmeticAdapter Adapter;
-//    recommendCosmeticAdapter recommendCosmeticAdapter;
     ImageView back_btn;
+    RecommendedCosmeticAdapter recommendedCosmeticAdapter;
     @SuppressLint({"SetTextI18n", "ClickableViewAccessibility"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +49,15 @@ public class recommendCosmeticShow extends AppCompatActivity {
         lastitemVisibleFlag = false;
         setContentView(R.layout.activity_recommend_cosmetic_show);
         getReceiveData = getIntent();
-        String Cname = getReceiveData.getStringExtra("cname");
-//        RecommendCosmetic = findViewById(R.id.showRecommendListView);
+        cosmeticArr = new ArrayList<>();
         CosmeticRecycler=findViewById(R.id.recommend_recycler);
+
+        String Cname = getReceiveData.getStringExtra("cname");
         String recommendCosmetics = getReceiveData.getStringExtra("recommendData");
         kindCosmetic = getReceiveData.getIntExtra("kindCosmetic", 0);
-//        recommendCosmeticAdapter = new recommendCosmeticAdapter();
         purifyDataArray = dataToJsonArray(recommendCosmetics);
         setData(purifyDataArray);
+        recommendedCosmeticAdapter = new RecommendedCosmeticAdapter(getApplicationContext(),cosmeticArr,R.layout.activity_recommend_cosmetic_show);
         back_btn = findViewById(R.id.recommend_back_btn);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +65,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
                 finish();
             }
         });
+        CosmeticRecycler.setLayoutManager(new LinearLayoutManager(getBaseContext(), LinearLayoutManager.VERTICAL, false));
         CosmeticRecycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
             @Override
@@ -84,13 +85,13 @@ public class recommendCosmeticShow extends AppCompatActivity {
                 if (newState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE && lastitemVisibleFlag) {
                     //TODO 스크롤이 바닥에 닿을 때
                     //TODO 서버에 요청할 때는 항상 스레드를 사용하시오
-                    if (Adapter.getItemCount() < 29) {
+                    if (recommendedCosmeticAdapter.getItemCount() < 29) {
                         new Thread() {
                             @Override
                             public void run() {
                                 super.run();
                                 try {
-                                    Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", Adapter.getItemCount());
+                                    Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", recommendedCosmeticAdapter.getItemCount());
                                     List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
                                     final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
                                     Log.e("asfsdafsadf", addRecommendCosmeticDataString);
@@ -119,6 +120,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
 //                }
             }
         });
+        CosmeticRecycler.setAdapter(recommendedCosmeticAdapter);
 //        RecommendCosmetic.setOnScrollListener(listViewScrollEvent);
 //        RecommendCosmetic.setOnTouchListener(forRecommendListViewEvent);
 //        RecommendCosmetic.setOnScrollListener(listViewScrollEvent);
@@ -138,13 +140,13 @@ public class recommendCosmeticShow extends AppCompatActivity {
             if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE && lastitemVisibleFlag) {
                 //TODO 스크롤이 바닥에 닿을 때
                 //TODO 서버에 요청할 때는 항상 스레드를 사용하시오
-                if (Adapter.getItemCount() < 29) {
+                if (recommendedCosmeticAdapter.getItemCount() < 29) {
                     new Thread() {
                         @Override
                         public void run() {
                             super.run();
                             try {
-                                Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", Adapter.getItemCount());
+                                Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", recommendedCosmeticAdapter.getItemCount());
                                 List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
                                 final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
                                 Log.e("asfsdafsadf", addRecommendCosmeticDataString);
@@ -171,13 +173,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
         }
     };
 
-//    View.OnTouchListener forRecommendListViewEvent = new View.OnTouchListener() {
-////        @Override
-////        public boolean onTouch(View view, MotionEvent motionEvent) {
-////            scrollView.requestDisallowInterceptTouchEvent(true);
-////            return false;
-////        }
-////    };
+
 
     public void setData(JsonArray recommendCosmeticJsonArray) {
         //TODO 어뎁터에 데이터를 추가합니다
@@ -186,11 +182,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
             JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
             cosmeticArr.add(new OneImgThreeStringCardView(R.drawable.sun1,"innisfree",oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
         }
-        CosmeticRecycler.setAdapter(new RecommendedCosmeticAdapter(getApplicationContext(),cosmeticArr,R.layout.activity_recommend_cosmetic_show));
-        Adapter.notifyDataSetChanged();
-
-        //recommendCosmeticAdapter.notifyDataSetChanged();
-
+        Log.e("data confirm", String.valueOf(cosmeticArr.get(0).getText2()));
     }
 
 }
