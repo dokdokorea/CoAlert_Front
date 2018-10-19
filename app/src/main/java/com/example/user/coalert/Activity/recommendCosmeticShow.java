@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.coalert.Adapter.RecommendedCosmeticAdapter;
 import com.example.user.coalert.R;
@@ -65,74 +66,16 @@ public class recommendCosmeticShow extends AppCompatActivity {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                if (dy > 0) {
-                    // Scrolling up
-                } else {
-                    // Scrolling down
-                }
-            }
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-
-                if (!recyclerView.canScrollVertically(1)) {
-                    Log.e("바닥이야", String.valueOf(cosmeticArr.size()));
-                    //TODO 스크롤이 바닥에 닿을 때
-                    //TODO 서버에 요청할 때는 항상 스레드를 사용하시오
-                    if (cosmeticArr.size() < 29) {
-                        new Thread() {
-                            @Override
-                            public void run() {
-                                super.run();
-                                try {
-                                    Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", cosmeticArr.size());
-                                    List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
-                                    final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
-                                    Log.e("asfsdafsadf", addRecommendCosmeticDataString);
-                                    runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            JsonArray addRecommendCosmeticDataJsonArray = dataToJsonArray(addRecommendCosmeticDataString);
-                                            setData(addRecommendCosmeticDataJsonArray);
-                                            recommendedCosmeticAdapter.notifyDataSetChanged();
-                                        }
-                                    });
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-
-                            }
-                        }.start();
-                    }
-                }
-
-            }
-        });
-        CosmeticRecycler.setAdapter(recommendedCosmeticAdapter);
-
-
-    }
-
-    public JsonArray dataToJsonArray(String data) {
-        JsonParser jsonParser = new JsonParser();
-        JsonElement element = jsonParser.parse(data);
-        return element.getAsJsonArray();
-    }
-
-    AbsListView.OnScrollListener listViewScrollEvent = new AbsListView.OnScrollListener() {
-        @Override
-        public void onScrollStateChanged(AbsListView absListView, int scrollState) {
-            if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE && lastitemVisibleFlag) {
-                //TODO 스크롤이 바닥에 닿을 때
-                //TODO 서버에 요청할 때는 항상 스레드를 사용하시오
-                if (recommendedCosmeticAdapter.getItemCount() < 29) {
+                int lastVisibleItemPosition = ((LinearLayoutManager)recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
+                int itemTotalCount = recyclerView.getAdapter().getItemCount() - 1;
+                if (lastVisibleItemPosition == itemTotalCount) {
+                    Toast.makeText(getApplicationContext(), "Last Position", Toast.LENGTH_SHORT).show();
                     new Thread() {
                         @Override
                         public void run() {
                             super.run();
                             try {
-                                Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", recommendedCosmeticAdapter.getItemCount());
+                                Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", cosmeticArr.size());
                                 List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
                                 final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
                                 Log.e("asfsdafsadf", addRecommendCosmeticDataString);
@@ -141,25 +84,26 @@ public class recommendCosmeticShow extends AppCompatActivity {
                                     public void run() {
                                         JsonArray addRecommendCosmeticDataJsonArray = dataToJsonArray(addRecommendCosmeticDataString);
                                         setData(addRecommendCosmeticDataJsonArray);
+                                        recommendedCosmeticAdapter.notifyDataSetChanged();
                                     }
                                 });
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-
                         }
                     }.start();
                 }
+
             }
-        }
+        });
+        CosmeticRecycler.setAdapter(recommendedCosmeticAdapter);
+    }
 
-        @Override
-        public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-            lastitemVisibleFlag = (totalItemCount > 0) && (firstVisibleItem + visibleItemCount >= totalItemCount);
-        }
-    };
-
-
+    public JsonArray dataToJsonArray(String data) {
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = jsonParser.parse(data);
+        return element.getAsJsonArray();
+    }
 
     public void setData(JsonArray recommendCosmeticJsonArray) {
         //TODO 어뎁터에 데이터를 추가합니다
