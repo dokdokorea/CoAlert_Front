@@ -19,6 +19,7 @@ def getRecommendCosmetic():
     startNum = request.args.get('start')
     recommend_cosmetic = recommend_cosmetics(user_id=int(id), start=int(startNum),
                                              kind_cosmetic=kindCosmetic[int(kindCosmeticNum)], skin_type=int(type))
+    print(recommend_cosmetic)
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)
