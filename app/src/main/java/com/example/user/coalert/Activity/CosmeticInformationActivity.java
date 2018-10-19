@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -36,6 +38,7 @@ import java.util.ArrayList;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
+
 public class CosmeticInformationActivity extends AppCompatActivity{
     TabHost tabHost1;
     RecyclerView ingredient, simple,detail;
@@ -47,6 +50,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     Button WriteReview, MoreToxicByType;
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
+    Parcelable state;
 
     ArrayList<OneImgOneStringCardView> IngArr;
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
@@ -180,6 +184,10 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic5"));
         ingredient.setAdapter(new TabIngredientListAdapter(IngArr));
 
+        ViewCompat.setNestedScrollingEnabled(ingredient, false);
+        ingredient.setFocusable(false);
+        findViewById(R.id.linearLayout).requestFocus();
+
         simple=(RecyclerView)findViewById(R.id.tab_simple_review_recycler);
         simple.setHasFixedSize(true);
         simple.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
@@ -189,6 +197,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"완죤강추 인생템이예요ㅠㅠㅠ",5));
         SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"별로임",2));
         simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
+        ViewCompat.setNestedScrollingEnabled(simple, false);
+
 
 //        detail=(RecyclerView)findViewById(R.id.tab_detail_review_recycler);
 //        detail.setHasFixedSize(true);
@@ -207,6 +217,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.iu7,R.drawable.sun1,"아이유","1000","밤편지","난~~~ 파도가 머~~물~던 모래 위에 적힌 글씨처럼~~~ 그대가 멀리~~~ 사라져 버릴 것 같아~~~~~"));
         DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.nayeon1,R.drawable.sun1,"나나연","500","나는나연","일은 열심히 하셨나연? 배고프지않나연?"));
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
+        ViewCompat.setNestedScrollingEnabled(detail, false);
+
     }
 
     public void backbtn(View v) {
