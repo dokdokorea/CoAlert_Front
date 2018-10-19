@@ -38,7 +38,7 @@ def login():
     id = request.args.get('id')
     password = request.args.get('password')
     print(id, password)
-    return ''
+    return json.dumps({'id':id, 'password':password})
 
 
 @app.route("/search_bar", methods=['POST'])

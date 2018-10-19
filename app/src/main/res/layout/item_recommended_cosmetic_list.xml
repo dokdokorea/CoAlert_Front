@@ -19,7 +19,7 @@
             android:padding="@dimen/_3sdp">
 
             <ImageView
-                android:id="@+id/cosmetic_photo"
+                android:id="@+id/recommend_cosmetic_photo"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_5sdp"
@@ -40,14 +40,14 @@
                 >
 
                 <TextView
-                    android:id="@+id/company_name"
+                    android:id="@+id/recommend_company_name"
                     style="@style/company_in_cosmetic_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="company"/>
 
                 <TextView
-                    android:id="@+id/cosmetic_name"
+                    android:id="@+id/recommend_cosmetic_name"
                     style="@style/name_in_cosmetic_item"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -65,7 +65,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/first"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:id="@+id/rating"/>
+                android:id="@+id/recommend_rating"/>
 
             </LinearLayout>
 
