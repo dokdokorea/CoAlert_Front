@@ -41,12 +41,21 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
-        <ListView
-            android:id="@+id/showRecommendListView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/recommend_recycler">
+
+
+           </android.support.v7.widget.RecyclerView>
+
+
+
+       </LinearLayout>
     </ScrollView>
 </LinearLayout>
