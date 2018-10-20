@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_3sdp"
         app:cardUseCompatPadding="true"
+
         app:cardElevation="0dp">
 
         <LinearLayout

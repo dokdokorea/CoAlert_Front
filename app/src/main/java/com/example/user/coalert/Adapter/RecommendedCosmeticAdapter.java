@@ -62,9 +62,10 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
         TextView Company;
         TextView Name;
         TextView Rating;
-
+        CardView recommendItem;
         public ViewHolder(View itemView) {
             super(itemView);
+            recommendItem = itemView.findViewById(R.id.item_ingredient_list_card);
             CosmeticImage=itemView.findViewById(R.id.recommend_cosmetic_photo);
             Company=itemView.findViewById(R.id.recommend_company_name);
             Name=itemView.findViewById(R.id.recommend_cosmetic_name);

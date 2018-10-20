@@ -106,61 +106,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-
-            <FrameLayout
-                android:id="@+id/toxicList"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_29sdp"
-                android:background="@drawable/clicking_white_btn">
-
-                <TextView
-                    style="@style/editprofile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:padding="@dimen/_3sdp"
-                    android:text="유해성분 목록 보기" />
-
-
-                <ImageView
-                    android:layout_width="@dimen/_29sdp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="@dimen/_6sdp"
-                    android:background="@drawable/unclickednext"
-                    android:scaleType="fitCenter" />
-
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:id="@+id/wish_button"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_29sdp"
-                android:background="@drawable/clicking_white_btn">
-
-                <TextView
-                    style="@style/editprofile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:padding="@dimen/_3sdp"
-                    android:text="@string/wish_list" />
-
-                <ImageView
-                    android:layout_width="@dimen/_29sdp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="end|center"
-                    android:layout_marginEnd="@dimen/_6sdp"
-                    android:background="@drawable/unclickednext"
-                    android:scaleType="fitCenter" />
-
-            </FrameLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -178,6 +123,58 @@
 
             </LinearLayout>
 
+            <FrameLayout
+                android:id="@+id/toxicList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/clicking_white_btn">
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:text="유해성분 목록 보기"
+                    />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/wish_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_29sdp"
+                android:background="@drawable/clicking_white_btn">
+                <TextView
+                    style="@style/editprofile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/wish_list"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_weight="0.98"
+                    android:background="#D8D8D8"
+                    />
+
+
+            </LinearLayout>
+
 
                 <FrameLayout
                     android:id="@+id/following"
@@ -189,57 +186,45 @@
                         style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_gravity="start|center"
-                        android:layout_marginBottom="@dimen/_4sdp"
-                        android:layout_marginStart="@dimen/_3sdp"
-                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/_6sdp"
                         android:padding="@dimen/_3sdp"
-                        android:text="팔로잉 목록" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/_29sdp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end|center"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:background="@drawable/clicking_next_btn_white_background"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/go_following_list"/>
-
+                        android:text="팔로잉 목록"
+                        android:paddingLeft="@dimen/_2sdp"/>
                 </FrameLayout>
 
                 <FrameLayout
                     android:id="@+id/follower"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_29sdp"
-                    android:layout_marginTop="@dimen/_3sdp"
                     android:background="@drawable/clicking_white_btn">
-
                     <TextView
                         style="@style/editprofile"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/_3sdp"
-                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:gravity="center"
                         android:padding="@dimen/_3sdp"
-                        android:layout_marginTop="@dimen/_3sdp"
-                        android:text="팔로워 목록" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/_29sdp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:layout_marginEnd="@dimen/_6sdp"
-                        android:background="@drawable/clicking_next_btn_white_background"
-                        android:scaleType="fitCenter"
-                        android:id="@+id/go_follower_list"/>
-
+                        android:text="팔로워 목록"
+                        android:paddingLeft="@dimen/_2sdp"/>
                 </FrameLayout>
 
 
-            <android.support.v4.widget.Space
+            <!--<android.support.v4.widget.Space-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/_7sdp" />-->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_7sdp" />
-
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_weight="0.98"
+                    android:background="#D8D8D8" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -249,12 +234,13 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_3sdp"
-                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:layout_marginStart="@dimen/_6sdp"
                     style="@style/editprofile"
                     android:text="내가 사용한 화장품"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="@dimen/_16sdp"
+                    android:gravity="center"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
