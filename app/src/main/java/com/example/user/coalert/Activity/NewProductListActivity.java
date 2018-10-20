@@ -45,9 +45,9 @@ public class NewProductListActivity extends Activity {
         PdRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
 
         SunArr = new ArrayList<>();
-        for(int i=0;i<4;i++)
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"SunBlock","inisfree"));
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun2,"SunBlockSunBlockSunBlock","inisfreeinisfreeinisfree"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun2,"4SP 세이프 톤업 선크림(SPF50+PA++++)","이니스프리"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun3,"365 안심 선크림(SPF50+PA++++)","토니모리"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun4,"UV 릴리프 모이스처라이저(SPF50+PA++++)","스킨푸드"));
         SunRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),SunArr,R.layout.activity_new_product_list));
 
 

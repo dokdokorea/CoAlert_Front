@@ -182,6 +182,7 @@ public class ViewDetailActivity extends AppCompatActivity {
         WriteReveiw=(TextView)findViewById(R.id.writeComment);
         GlobalApplication info=(GlobalApplication) getApplication();
 
+
         LikeCount.setText("3000");
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");

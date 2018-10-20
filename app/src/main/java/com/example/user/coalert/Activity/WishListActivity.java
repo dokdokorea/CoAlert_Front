@@ -31,9 +31,10 @@ public class WishListActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wish_list);
+;
 
-        GlobalApplication info=(GlobalApplication) getApplication();
-        backbtn=(ImageView) findViewById(R.id.back_btn);
+        GlobalApplication info = (GlobalApplication) getApplication();
+        backbtn = (ImageView) findViewById(R.id.back_btn);
         wishRecyclerView = (RecyclerView) findViewById(R.id.wish_recyclerview);
         wishRecyclerView.setHasFixedSize(true);
         wishRecyclerView.setLayoutManager(new GridLayoutManager(this, COLUM));
@@ -42,12 +43,12 @@ public class WishListActivity extends Activity {
                 R.drawable.cardview1);
 
 
-        for(int i=0;i<info.getWishlist().size();i++) {
-            wishListArr.add(new OneImgTwoStringCardView(R.drawable.sun1, info.getWishlist().get(i), info.getComplist().get(i)));
+        for (int i = 0; i < info.getWishlist().size(); i++) {
+            wishListArr.add(new OneImgTwoStringCardView(info.getCosphoto().get(i), info.getWishlist().get(i), info.getComplist().get(i)));
         }
 //        wishRecyclerView.setAdapter(new NewProductAdapter(wishListArr));
 
-        wishRecyclerView.setAdapter(new NewProductAdapter(getApplicationContext(),wishListArr,R.layout.wish_list));
+        wishRecyclerView.setAdapter(new NewProductAdapter(getApplicationContext(), wishListArr, R.layout.wish_list));
 
 
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -57,4 +58,5 @@ public class WishListActivity extends Activity {
             }
         });
     }
+
 }

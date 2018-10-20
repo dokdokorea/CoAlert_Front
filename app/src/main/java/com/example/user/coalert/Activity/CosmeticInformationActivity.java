@@ -119,6 +119,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     Toast.makeText(CosmeticInformationActivity.this, "찜하기 취소", Toast.LENGTH_SHORT).show();
                     info.removeWishlist(ProductName.getText().toString());
                     info.removeCompany(company.getText().toString());
+                    info.removeCosphoto((Integer)ProductImg.getTag());
 
                 } else {
                     wishbtn.setImageResource(R.drawable.fullheart);
@@ -126,7 +127,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     wishlist.add(ProductName.getText().toString());
                     info.setWishlist(wishlist);
                     info.addCompany(company.getText().toString());
-//                    info.addImage(convertImageViewToBitmap(ProductImg));
+                    Integer resource = (Integer)ProductImg.getTag();
+                    info.addcosphoto(resource);
 
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
@@ -251,18 +253,12 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        byte[] arr=getIntent().getByteArrayExtra("image");
 //        ProductImg.setImageBitmap(BitmapFactory.decodeByteArray(arr, 0, arr.length));
         ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+        ProductImg.setTag(intent.getExtras().getInt("picture"));
         ProductName.setText(intent.getStringExtra("cname"));
         company.setText(intent.getStringExtra("company"));
     }
 
     public void backbtn(View v) {
        finish();
-    }
-
-    private Bitmap convertImageViewToBitmap(ImageView v){
-
-        Bitmap bm=((BitmapDrawable)v.getDrawable()).getBitmap();
-
-        return bm;
     }
 }
