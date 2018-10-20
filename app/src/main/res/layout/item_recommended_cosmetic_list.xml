@@ -48,6 +48,7 @@
 
                 <TextView
                     android:id="@+id/recommend_cosmetic_name"
+                    android:paddingTop="@dimen/_1sdp"
                     style="@style/name_in_cosmetic_item"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

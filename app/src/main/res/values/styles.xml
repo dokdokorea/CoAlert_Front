@@ -126,13 +126,13 @@
 
     <style name="company_in_cosmetic_item">
         <item name="android:fontFamily">@font/kopub_medium</item>
-        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
         <item name="android:textColor">@color/fifth</item>
     </style>
 
     <style name="name_in_cosmetic_item">
         <item name="android:fontFamily">@font/kopub_medium</item>
-        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:textColor">@color/sixth</item>
         <item name="android:textStyle">bold</item>
     </style>

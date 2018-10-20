@@ -21,7 +21,6 @@ import java.util.List;
 
 public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<RecommendedCosmeticAdapter.ViewHolder>{
 
-
     Context context;
     List <OneImgThreeStringCardView> list;
     int item_layout;
