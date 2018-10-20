@@ -36,6 +36,7 @@ import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.BestReviewPre
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.HotYoutuberAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.Adapter.FragmentHomeLinkList.YoutubeListAdapter;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.GetBadIngredientModel;

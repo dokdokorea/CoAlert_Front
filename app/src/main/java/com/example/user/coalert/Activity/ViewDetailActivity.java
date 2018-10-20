@@ -1,23 +1,35 @@
 package com.example.user.coalert.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Adapter.SelectedDetailReviewAdapter.DetailReviewSliderAdapter;
 import com.example.user.coalert.Adapter.SelectedDetailReviewAdapter.DetaillReviewCommentAdapter;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
@@ -33,6 +45,7 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static int currentPage = 0;
     private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu7, R.drawable.iu3jpg, R.drawable.iu4, R.drawable.iu5};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
+    TextView GoodBtn,WriteReveiw;
     ArrayList<OneImgTwoStringCardView> CommentArr;
     RecyclerView comment;
     Button topbtn;
@@ -51,7 +64,7 @@ public class ViewDetailActivity extends AppCompatActivity {
     ImageButton selected_detail_backBtn;
     Button moreinfo;
 
-    String Context = "I'm twenty three \n" +
+    String context = "I'm twenty three \n" +
             "난 수수께끼 (Question)\n" +
             "뭐게요 맞혀봐요\n" +
             "I'm twenty three\n" +
@@ -165,18 +178,24 @@ public class ViewDetailActivity extends AppCompatActivity {
         topbtn=(Button)findViewById(R.id.toTopButton);
         scroll=(ScrollView)findViewById(R.id.scroll);
         comment=(RecyclerView)findViewById(R.id.commentRecycler);
+        GoodBtn=(TextView)findViewById(R.id.good_btn);
+        WriteReveiw=(TextView)findViewById(R.id.writeComment);
+        GlobalApplication info=(GlobalApplication) getApplication();
 
         LikeCount.setText("3000");
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
-        PostContext.setText(Context);
+        PostContext.setText(context);
+        PostContext.setText(info.getId());
         count=Integer.parseInt(LikeCount.getText().toString());
-        if (j == 0)
+        if (j == 0) {
             LikeIcon.setImageResource(R.drawable.black_empty_heart);
-        else
+            GoodBtn.setTextColor(getResources().getColor(R.color.whiteBackground));
+        }else {
             LikeIcon.setImageResource(R.drawable.pink_heart);
-
+            GoodBtn.setTextColor(getResources().getColor(R.color.colorAccent));
+        }
         comment.setHasFixedSize(true);
         comment.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         CommentArr=new ArrayList<>();
@@ -214,12 +233,34 @@ public class ViewDetailActivity extends AppCompatActivity {
                 if (j == 0) {
                     LikeIcon.setImageResource(R.drawable.black_empty_heart);
                     LikeCount.setText(String.valueOf(--count));
-
-                    Toast.makeText(ViewDetailActivity.this, "좋아요", Toast.LENGTH_SHORT).show();
+                    GoodBtn.setTextColor(getResources().getColor(R.color.whiteBackground));
+                    Toast.makeText(ViewDetailActivity.this, "좋아요 취소", Toast.LENGTH_SHORT).show();
                 } else {
                     LikeIcon.setImageResource(R.drawable.pink_heart);
                     LikeCount.setText(String.valueOf(++count));
+                    GoodBtn.setTextColor(getResources().getColor(R.color.colorAccent));
+                    Toast.makeText(ViewDetailActivity.this, "좋아요", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+        GoodBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                j = 1 - j;
+
+                if (j == 0) {
+                    LikeIcon.setImageResource(R.drawable.black_empty_heart);
+                    LikeCount.setText(String.valueOf(--count));
+                    GoodBtn.setTextColor(getResources().getColor(R.color.whiteBackground));
                     Toast.makeText(ViewDetailActivity.this, "좋아요 취소", Toast.LENGTH_SHORT).show();
+                } else {
+                    LikeIcon.setImageResource(R.drawable.pink_heart);
+                    LikeCount.setText(String.valueOf(++count));
+                    GoodBtn.setTextColor(getResources().getColor(R.color.colorAccent));
+                    Toast.makeText(ViewDetailActivity.this, "좋아요", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -263,4 +304,40 @@ public class ViewDetailActivity extends AppCompatActivity {
        Intent intent=new Intent(ViewDetailActivity.this,AnotherprofileActivity.class);
        startActivity(intent);
     }
+
+//    public void onShowPopup(View v){
+//
+//        LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//
+//        // inflate the custom popup layout
+//        inflatedView = layoutInflater.inflate(R.layout.popup_write_comment, null,false);
+//        // find the ListView in the popup layout
+//        LinearLayout headerView = (LinearLayout)inflatedView.findViewById(R.id.headerLayout);
+//        // get device size
+//        Display display = getWindowManager().getDefaultDisplay();
+//        final Point size = new Point();
+//        display.getSize(size);
+////        mDeviceHeight = size.y;
+//        DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
+//        int width = displayMetrics.widthPixels;
+//        int height = displayMetrics.heightPixels;
+//
+//
+//        // fill the data to the list items
+//        setSimpleList(listView);
+//
+//
+//        // set height depends on the device size
+//        popWindow = new PopupWindow(inflatedView, width,height-50, true );
+//        // set a background drawable with rounders corners
+//        popWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.popup_bg));
+//
+//        popWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NEEDED);
+//        popWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+//
+//        popWindow.setAnimationStyle(R.style.PopupAnimation);
+//
+//        // show the popup at bottom of the screen and set some margin at bottom ie,
+//        popWindow.showAtLocation(v, Gravity.BOTTOM, 0,100);
+//    }
 }

@@ -14,6 +14,7 @@ import android.os.Bundle;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.Fragment.HomeFragment;
 import com.example.user.coalert.Fragment.MyProfileFragment;
 import com.example.user.coalert.Fragment.SearchFragment;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AHBottomNavigation bottomNavigation = findViewById(R.id.bottom_navigation);
-
+        GlobalApplication info=(GlobalApplication) getApplication();
 
         AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.whiteBackground);
         AHBottomNavigationItem homeItem = new AHBottomNavigationItem(R.string.home, R.drawable.home, R.color.whiteBackground);

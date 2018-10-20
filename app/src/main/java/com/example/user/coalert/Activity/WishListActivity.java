@@ -14,6 +14,7 @@ import android.widget.ImageView;
 
 import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.WishListAdapter;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImageCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
@@ -31,6 +32,7 @@ public class WishListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wish_list);
 
+        GlobalApplication info=(GlobalApplication) getApplication();
         backbtn=(ImageView) findViewById(R.id.back_btn);
         wishRecyclerView = (RecyclerView) findViewById(R.id.wish_recyclerview);
         wishRecyclerView.setHasFixedSize(true);
@@ -38,26 +40,13 @@ public class WishListActivity extends Activity {
         wishListArr = new ArrayList<>();
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
                 R.drawable.cardview1);
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
-        wishListArr.add(new OneImgTwoStringCardView(R.drawable.cardview1,"cosmetic","company"));
 
+
+        for(int i=0;i<info.getWishlist().size();i++) {
+            wishListArr.add(new OneImgTwoStringCardView(R.drawable.sun1, info.getWishlist().get(i), "company"));
+        }
 //        wishRecyclerView.setAdapter(new NewProductAdapter(wishListArr));
+
         wishRecyclerView.setAdapter(new NewProductAdapter(getApplicationContext(),wishListArr,R.layout.wish_list));
 
 

@@ -192,18 +192,6 @@
                 android:textSize="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/emptyBackground"
-                android:layout_gravity="center_horizontal"
-                android:text="맨 위로 가기"
-                android:textColor="@color/boardBackground"
-                android:layout_marginBottom="@dimen/_15sdp"
-                android:id="@+id/toTopButton"
-                android:textSize="@dimen/_10sdp"/>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -214,7 +202,9 @@
                     android:layout_height="@dimen/_25sdp"
                     android:orientation="horizontal"
                     android:background="@color/light_pink"
-                    android:padding="@dimen/_2sdp">
+                    android:padding="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:paddingTop="@dimen/_2sdp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -222,8 +212,10 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:fontFamily="@font/bm_dohyen"
-                        android:textStyle="bold"
                         android:textColor="#fff"
+                        android:textSize="@dimen/_14sdp"
+                        android:background="@drawable/clicking_empty_to_lightdarker_background"
+                        android:id="@+id/good_btn"
                         android:text="좋아요"/>
 
                     <View
@@ -238,8 +230,10 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:fontFamily="@font/bm_dohyen"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/_14sdp"
                         android:textColor="#fff"
+                        android:background="@drawable/clicking_empty_to_lightdarker_background"
+                        android:id="@+id/writeComment"
                         android:text="댓글쓰기"/>
 
                 </LinearLayout>
@@ -252,6 +246,19 @@
                     android:padding="@dimen/_5sdp">
 
                 </android.support.v7.widget.RecyclerView>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/emptyBackground"
+                    android:layout_gravity="center_horizontal"
+                    android:text="맨 위로 가기"
+                    android:textColor="@color/boardBackground"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:id="@+id/toTopButton"
+                    android:textSize="@dimen/_10sdp"/>
 
 
             </LinearLayout>

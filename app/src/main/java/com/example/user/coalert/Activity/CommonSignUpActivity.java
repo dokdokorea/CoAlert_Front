@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.Autehntification.SessionCallback;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
@@ -45,6 +46,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
     RadioButton anyone;
     ImageView skinImg;
     LinearLayout showQuestion;
+
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -199,22 +201,26 @@ public class CommonSignUpActivity extends AppCompatActivity {
         lastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new Thread() {
-                    @Override
-                    public void run() {
-                        super.run();
-                        try {
-                            anyone = findViewById(sexRadioGroup.getCheckedRadioButtonId());
-                            String fullBirth = completeYear + "-" + completeMonth + "-" + completeDay;
-                            Log.e("skitType", selectedSkinType + anyone.getText());
-                            Call<signUpModel> call = ForRestSingleton.getInstance().signUpCall(email, password, name, email, selectedSkinType, fullBirth, anyone.getText(), 0);
-                            signUpModel result = call.execute().body();
-                            Log.e("signUpmodel Result: ", result.toString());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }.start();
+//                new Thread() {
+//                    @Override
+//                    public void run() {
+//                        super.run();
+//                        try {
+//                            anyone = findViewById(sexRadioGroup.getCheckedRadioButtonId());
+//                            String fullBirth = completeYear + "-" + completeMonth + "-" + completeDay;
+//                            Log.e("skitType", selectedSkinType + anyone.getText());
+//                            Call<signUpModel> call = ForRestSingleton.getInstance().signUpCall(email, password, name, email, selectedSkinType, fullBirth, anyone.getText(), 0);
+//                            signUpModel result = call.execute().body();
+//                            Log.e("signUpmodel Result: ", result.toString());
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }.start();
+                Toast.makeText(getApplicationContext(), "로그인 되셨습니다", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
