@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_chanel_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_inisfree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_mac_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_ysl_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/cardview_lines.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/AdActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/AdActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/AdImgAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/AdImgAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_chanel_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_mac_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ad_ysl_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_inisfree_ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_inisfree_ad.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_ad_cosmetic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/item_ad_cosmetic.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,13 +111,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="py" value="138" />
+          <entry key="py" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="138" />
+          <entry key="Python" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -161,8 +151,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            <state relative-caret-position="-192">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -432,8 +422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        <state relative-caret-position="-192">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

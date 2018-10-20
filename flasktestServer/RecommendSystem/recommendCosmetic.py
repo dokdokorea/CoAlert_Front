@@ -51,7 +51,7 @@ def read_csv_data(kind_cosmetic):
 def get_similarity_prediction_cosmetic(cosine_sim, best_cosmetic_id):
     sim_scores = list(enumerate(cosine_sim[int(best_cosmetic_id)]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:30]
+    sim_scores = sim_scores[0:30]
     prediction_cosmetic_id = [i[0] for i in sim_scores]
     return prediction_cosmetic_id
 

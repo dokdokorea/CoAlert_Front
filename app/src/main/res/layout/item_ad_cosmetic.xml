@@ -45,8 +45,8 @@
                 android:textSize="@dimen/_15sdp"
                 android:textColor="#000000"
                 android:id="@+id/inisfreeText"
-                android:layout_marginStart="@dimen/_80sdp"
-                android:layout_marginTop="@dimen/_3sdp"/>
+                android:layout_marginStart="@dimen/_20sdp"
+               />
         </LinearLayout>
     </android.support.v7.widget.CardView>
     </LinearLayout>
