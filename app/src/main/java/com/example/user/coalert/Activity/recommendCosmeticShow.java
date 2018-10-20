@@ -119,7 +119,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
         //TODO 어뎁터에 데이터를 추가합니다
         for (int i = 0; i < recommendCosmeticJsonArray.size(); i++) {
             JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
-            cosmeticArr.add(new OneImgThreeStringCardView(R.drawable.sun1,"innisfree",oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
+            cosmeticArr.add(new OneImgThreeStringCardView(R.drawable.sun1,oneData.get("company").toString().replaceAll("\"", ""),oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
         }
     }
 

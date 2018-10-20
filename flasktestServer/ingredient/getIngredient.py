@@ -4,7 +4,7 @@ import pandas as pd
 def get_bad_ingredient(type):
     # if(등록된 화장품이 0개 이면)
     allData = pd.DataFrame(columns=['성분명', '위험도'])
-    for cosmetic in ['foundation', 'eyeshadow', 'libtint', 'suncare']:
+    for cosmetic in ['foundation', 'eyeshadow', 'libtint', 'sunblock']:
         data = pd.read_csv('ingredient/data/' + cosmetic + 'BadIngredient.csv')
         data = data.loc[data[type] == -5.0, ['성분명', '위험도']]
         allData = allData.append(data)

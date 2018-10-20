@@ -21,10 +21,28 @@ public class getRecommendModel {
         this.cosmeticname = cosmeticname;
     }
 
+    String pixel;
+
+    public String getPixel() {
+        return pixel;
+    }
+
+    public void setPixel(String pixel) {
+        this.pixel = pixel;
+    }
+    String company;
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
 
     @Override
     public String toString() {
         return "{\"id\":\""+getCosmeticname()+"\", " +
-                "\"estimate\":"+getEstimate()+"}";
+                "\"estimate\":"+getEstimate()+",\"pixel\": \""+getPixel()+"\", \"company\":"+getCompany()+"}";
     }
 }

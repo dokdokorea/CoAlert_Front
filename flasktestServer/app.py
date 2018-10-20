@@ -1,6 +1,7 @@
 from flask import Flask, request, Response
 from RecommendSystem.recommendCosmetic import recommend_cosmetics
 from ingredient.getIngredient import get_bad_ingredient
+from cosmeticImg.splitCosmeticCompany import search
 import json
 
 app = Flask(__name__)
@@ -18,12 +19,14 @@ def getRecommendCosmetic():
     type = request.args.get('persontype')
     kindCosmeticNum = request.args.get('cosmetictype')
     startNum = request.args.get('start')
+    cosmetic_type = kindCosmetic[int(kindCosmeticNum)]
     recommend_cosmetic = recommend_cosmetics(user_id=int(id), start=int(startNum),
-                                             kind_cosmetic=kindCosmetic[int(kindCosmeticNum)], skin_type=int(type))
+                                             kind_cosmetic=cosmetic_type, skin_type=int(type))
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)
-        returnList.append({'cosmeticname': data['name'], 'estimate': data['est']})
+        pixel, company = search(cosmetic_type, data['name'])
+        returnList.append({'cosmeticname': data['name'], 'estimate': data['est'], 'pixel': str(pixel), 'company':company})
     return json.dumps(returnList)
 
 
