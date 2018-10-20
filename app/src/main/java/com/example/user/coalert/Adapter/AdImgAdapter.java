@@ -2,6 +2,7 @@ package com.example.user.coalert.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.adCardViewItem;
 
@@ -79,7 +81,10 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(context, "Clicked on position: " + getAdapterPosition(), Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(context, CosmeticInformationActivity.class);
+            intent.putExtra("cosmeticName", itemList.get(getAdapterPosition()).getExplain());
+            intent.putExtra("cosmeticImage", itemList.get(getAdapterPosition()).getBitmap());
+            context.startActivity(intent);
         }
     }
 }

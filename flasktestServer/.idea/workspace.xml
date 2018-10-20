@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/cardview_lines_black.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/cardview_lines_black.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/cardview_lines_green.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/cardview_lines_green.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_inisfree_ad.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_inisfree_ad.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_ad_cosmetic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/item_ad_cosmetic.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
