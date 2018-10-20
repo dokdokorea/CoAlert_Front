@@ -12,8 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgThreeStringCardView;
 
@@ -44,7 +46,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgThreeStringCardView item = list.get(position);
         DecimalFormat format = new DecimalFormat(".##");
-        holder.CosmeticImage.setImageResource(item.getImage());
+        holder.CosmeticImage.setImageBitmap(item.getImage());
         holder.Company.setText(item.getText1());
         holder.Name.setText(item.getText2().replaceAll("\"", ""));
         String str = format.format(item.getNumber()*20);
@@ -56,7 +58,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
     public int getItemCount() {
         return this.list.size();
     }
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView CosmeticImage;
         TextView Company;
         TextView Name;
@@ -69,8 +71,17 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
             Company=itemView.findViewById(R.id.recommend_company_name);
             Name=itemView.findViewById(R.id.recommend_cosmetic_name);
             Rating=itemView.findViewById(R.id.recommend_rating);
-
+            recommendItem.setOnClickListener(this);
         }
-
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(context, CosmeticInformationActivity.class);
+            Log.e("클릭", String.valueOf(getAdapterPosition()));
+            intent.putExtra("cname", list.get(getAdapterPosition()).getText2().replaceAll("\"",""));
+            intent.putExtra("company", list.get(getAdapterPosition()).getText1());
+            intent.putExtra("rating", list.get(getAdapterPosition()).getNumber());
+            intent.putExtra("image", list.get(getAdapterPosition()).getImage());
+            context.startActivity(intent);
+        }
     }
 }

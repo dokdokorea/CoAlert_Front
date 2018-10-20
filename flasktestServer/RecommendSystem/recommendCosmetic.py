@@ -17,7 +17,6 @@ def recommend_cosmetics(user_id, kind_cosmetic, start, skin_type):
     svd = making_model(id_purify_data, skin_type)
     prediction_data = making_predict_data(prediction_cosmetic_id, id_purify_data)
     recommend_cosmetic = predict(user_id, svd, prediction_data)
-    print(recommend_cosmetic)
     return recommend_cosmetic.iloc[start:start + 10, :]
 
 

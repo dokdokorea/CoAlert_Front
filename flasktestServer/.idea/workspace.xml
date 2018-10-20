@@ -2,411 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/3CE(쓰리컨셉아이즈 스타일난다)_무드 레시피 멀티 아이 컬러 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/3CE(쓰리컨셉아이즈 스타일난다)_무드 레시피 트리플 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/3CE(쓰리컨셉아이즈 스타일난다)_아이 스위치.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/나스(NARS)_듀오 아이 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/나스(NARS)_쉬머 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/더샘_샘물 싱글 섀도우(매트).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/더샘_샘물 싱글 섀도우(쉬머).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/더페이스샵_모노큐브 아이섀도우(매트).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/더페이스샵_모노큐브 아이섀도우(쉬머).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/더페이스샵_모노팝 아이즈(후드라이언).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/디올_5 꿀뢰르 디자이너.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/디올_5꿀뢰르.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/로라메르시에_리미티드 아이 아티스트 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/로라메르시에_매트 아이 컬러.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/로라메르시에_새틴 아이컬러.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/로라메르시에_캐비어 스틱 아이 컬러 - 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/롬앤(ROMAND)_퍼펙트 스타일링 아이팔렛트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/루나솔_쉬어 콘트라스트 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/루나솔_제미네이트 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/마죠리카 마죠르카_섀도우 커스터마이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/맥(MAC)_아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/맥(MAC)_프로 롱웨어 페인트 팟.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/메이크업포에버_다이아몬드 파우더.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/메이크업포에버_아쿠아 마틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/메이크업포에버_아티스트 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우 이탈프리즘 - 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우 이탈프리즘 - 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우 컬렉션 이탈프리즘.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_컬러 필터 섀도우 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/바비 브라운_럭스 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/바비 브라운_롱웨어 크림 섀도우 스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/바비 브라운_스파클 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/바비 브라운_아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/비셰(Visee)_글로시 리치 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/비욘드_싱글 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/삐아_섀이드 앤 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/삐아_캐시미어 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스킨푸드_미네랄 슈가 블렌드 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_매그니피센트 메탈 글리터 &amp; 글로우 리퀴드 아이섀도우 듀오 크롬 쉐이드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_매그니피센트 메탈 글리터 &amp; 글로우 리퀴드 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_매트 앤 메탈 아이섀도우 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_아이즈 아 더 윈도우 섀도우 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_퍼펙트 아이&amp;치크 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아르데코_아이섀도.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_모노아이즈 - 글리터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_모노아이즈 - 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_모노아이즈 - 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_샤인픽스 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아멜리_스윗다이아몬드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아멜리_스텝베이직 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어딕션_더 아이섀도우 - 펄(P).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어반디케이_네이키드 히트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어반디케이_문더스트 아이섀도우 파 아 포피에르.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어퓨_꾸뛰르 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어퓨_미네랄 모노 섀도우 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어퓨_미네랄 모노 섀도우 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어퓨_별총총 펄 파우더.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/어퓨_크리미 버터 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_계이득 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_글리터 피그먼트 [원더 펀 파크 &amp; 유니버스].jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_룩 앳 마이 아이즈 카페.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_룩 앳 마이 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_멜로우 젤리 팟 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_새틴 핏 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_캐시미어 핏 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_프리즘 인 아이즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 와인파티.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 주스바.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 체리 블라썸.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 카페인 홀릭.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 피치팜.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에스쁘아_아이섀도우 새틴.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에스쁘아_아이섀도우 시퀸.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에스쁘아_아이섀도우 코튼.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/에스쁘아_컬러 마스터 아이 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/웨이크메이크 (WAKEMAKE)_싱글스타일러 - 새틴.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/웨이크메이크 (WAKEMAKE)_포켓스타일러.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 글리터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/입큰_트윙클 아이 컬렉션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/잇츠스킨(이츠스킨)_라이프 컬러 팔레트 [아이].jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/컬러그램_힛팬 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/클리오_[플레이마이마이컬렉션] 프리즘 멀티 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/클리오_프로 레이어링 아이 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/클리오_프로 싱글 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/클리오_프리즘 에어 섀도우 스파클링.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/클리오_프리즘 에어 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/톰포드_아이 컬러 쿼드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/투페이스드_스위트 피치 아이 섀도우 컬렉션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/투페이스드_초콜릿 바 아이섀도우 컬렉션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/페리페라_잉크 피팅 섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_2018 S S 피스매칭 12구 섀도우 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_아이 메탈 글리터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_피스 매칭 섀도우 글리터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_피스 매칭 섀도우 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_피스 매칭 섀도우 쉬머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/홀리카홀리카_피스매칭 섀도우 4구 팔레트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/CNP(차앤박)_프로폴리스 앰플 인 쿠션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/RMK(알엠케이)_UV 리퀴드 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/RMK(알엠케이)_리퀴드 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/RMK(알엠케이)_젤 크리미 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/VDL(브이디엘)_수프림 크림 파운데이션 SPF35 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/VDL(브이디엘)_페이스 수프림 새틴 파운데이션 SPF20 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/겔랑_뜨뉘 드 퍼펙션 타임프루프 파운데이션 SPF 20 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/겔랑_란제리 드 뽀 파운데이션 SPF 20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/겔랑_블랑 드펄 에센스 인퓨즈드 브라이트닝 파운데이션 SPF25 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/겔랑_빠뤼르 골드 래디언스 파운데이션 SPF 30 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/나스(NARS)_네츄럴 래디언트 롱웨어 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/나스(NARS)_아쿠아 글로우 쿠션 파운데이션 SPF23 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/나스(NARS)_퓨어 래디언트 틴티드 모이스처라이저 SPF30 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/네이처리퍼블릭_프로방스 에어 스킨 핏 원데이 래스팅 파운데이션 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/네이처컬렉션_시그니처 쿠션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/더샘_에코 소울 바운스 크림 파운데이션 SPF50 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/더샘_파운데이션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/더페이스샵_잉크래스팅 파운데이션 슬림핏 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/더페이스샵_잉크래스팅 파운데이션 슬림핏 투고 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/디올_디올스킨 포에버 플루이드 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/디올_스노우 화이트 리빌 프레쉬 트랜스퍼런시 리퀴드 파운데이션 SPF30 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/디올_스킨 스타 스튜디오 메이크업.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/라임코스메틱_리얼 커버 핑크쿠션(기름종이 쿠션).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/랑콤_뗑 이돌 롱라스팅 파운데이션 SPF38 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/랑콤_뗑 이돌 울트라 24H 파운데이션 SPF15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/랑콤_블랑 엑스퍼트 쿠션 컴팩트 하이 커버리지 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/랑콤_압솔뤼 수블라임 레쥬브네이팅 에센스 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/레브론(revlon)_유스 에프엑스 필 블러 파운데이션 SPF20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/로레알파리_트루 매치 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/마몽드_커버 글로우 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/맥(MAC)_스튜디오 퍼펙트 SPF 15 PA+ 파운데이션 포티파이드 모이스처-퓨전 콤플렉스.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/맥(MAC)_프로 롱웨어 너리싱 워터프루프 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이블린 뉴욕_핏미 매트 + 포어리스 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이크업포에버_UV 브라이트 쿠션 SPF35 PA+++(프로쿠션).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이크업포에버_라이트 벨벳 쿠션 SPF 50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이크업포에버_울트라 HD 스틱 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이크업포에버_워터 블랜드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/메이크힐_원피엘 파운데이저 SPF20 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/문샷_마이크로 세팅핏 쿠션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/미샤_데일리 웨어 파운데이션 SPF35 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/미샤_래디언스 파운데이션 SPF20 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/미쯔요시_그리스 페인트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/바닐라코_프라임 프라이머 피팅 파운데이션 SPF 30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/바비 브라운_스킨 롱웨어 웨이트리스 파운데이션 SPF 15 PA++ (올데이 파운데이션).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/바비 브라운_스킨 파운데이션 스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/베네피트_플레이 스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/부르조아_헬씨 믹스 세럼 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/비오템_아쿠아수르스 수분 플럼핑 쿠션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/샤넬_레 베쥬 헬시 글로우 젤 터치 파운데이션 SPF25 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/샤넬_비타뤼미에르 루스 파우더 파운데이션 SPF15 .jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/설화수_퍼펙팅 쿠션 브라이트닝.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/시세이도_선 프로텍션 스틱 파운데이션 SPF36 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/시세이도_스포츠 커버 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/시세이도_싱크로 스킨 글로우 쿠션 컴팩트 SPF23 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/어반디케이_네이키드 글로우 쿠션 파운데이션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에센스_소프트 터치 무스 메이크업.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스쁘아_누드 핏 리퀴드 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스쁘아_테이핑 쿠션 SPF33 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스쁘아_프로 테일러 파운데이션 비 글로우 SPF25 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스쁘아_프로 테일러 파운데이션 비 실크 SPF34 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_더블 웨어 모이스춰 파우더 스테이-인-플레이스 메이크업 SPF 14 PA++ .jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_더블 웨어 스테이 인 플레이스 메이크업 SPF10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_더블웨어 누드 워터 프레시 메이크업 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_더블웨어 쿠션 비비 올 데이 웨어 리퀴드 컴팩트 SPF50 PA++++ (골드라벨).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_더블웨어 쿠션스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_리-뉴트리브 울트라 래디언스 메이크업 SPF15 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에스티 로더_퓨처리스트 아쿠아 브릴리언스 리퀴드 파운데이션 SPF15 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에이지투웨니스(AGE20's)_에센스 커버 팩트 RX(시즌 10) SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에이지투웨니스(AGE20's)_에센스 커버 팩트 TX(시즌 9) SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/에이지투웨니스(AGE20's)_에센스 커버 팩트 VX SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/웰라쥬_보탈필루이드 블루밍 쿠션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/이자녹스_듀얼 커버 쿠션 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/이자녹스_셀 리뉴 컨실링 쿠션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/이자녹스_에이지포커스 피토프로레티놀 익스트림 커버쿠션 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/입생로랑_뚜쉬 에끌라 르 땡.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/입생로랑_르 쿠션 엉크르 드 뽀 SPF23 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/입생로랑_올아워 파운데이션 SPF20 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/정샘물_에센셜 스킨 누더 쿠션 SPF50 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/정샘물_에센셜 스타실러 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_디자이너 리프트 파운데이션 SPF 20 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_디자이너 쉐이핑 크림 파운데이션 SPF20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_래스팅 실크 UV 파운데이션 SPF20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_루미너스 실크 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_투 고 쿠션 SPF23 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/조르지오아르마니_파워 패브릭 롱웨어 하이 커버 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/지베르니_밀착 실크 파운데이션 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/케이트_파우더리 스킨 메이커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/코겐도_아쿠아 파운데이션 SPF25 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/크레모랩_오 떼르말 쿠션2⃞ 오투 래스팅 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/크리니크(클리니크)_비욘드 퍼펙팅 파운데이션+컨실러 (요술봉 파운실러).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/클리오_킬 커버 파운웨어 쿠션 XP.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/투쿨포스쿨_아트클래스 스튜디오 드 땅뜨 리퀴드 새틴 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/투페이스드_본 디스 웨이 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/페리페라_에어리 잉크 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/페리페라_잉크래스팅 커버 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/포니이펙트(PONYEFFECT)_커버스테이 쿠션 파운데이션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/피알피엘(PRPL)_키스 앤 하트 쿠션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/한스킨_배어 글로우 파운데이션 SPF35 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/헤라_블랙 쿠션 SPF34 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/홀리카홀리카_커버메이징 슈퍼핏 파운스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/3CE(쓰리컨셉아이즈 스타일난다)_벨벳 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/3CE(쓰리컨셉아이즈 스타일난다)_타투 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/VDL(브이디엘)_엑스퍼트 컬러 립 스테인 (페이턴트 샤인).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/VDL(브이디엘)_엑스퍼트 컬러 립 큐브 플루이드 워터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/네이처리퍼블릭_리얼 젤 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/네이처리퍼블릭_바이플라워 트리플 무스 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/네이처리퍼블릭_세럼 인 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/더샘_롱웨어 잉크 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/더샘_샘물 무스 캔디 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/더페이스샵_홀리데이 트윙클 스노잉틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/디올_어딕트 라커 플럼프.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/뜨엘_에멀전 글로시 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/라네즈_워터드롭 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/라비오뜨_샤또 라비오뜨 와인 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/랑콤_마뜨 쉐이커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/랑콤_압솔뤼 에나멜 라커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/로레알파리_샤인 카레스 글로스 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/롬앤(ROMAND)_쥬시래스팅 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/리즐리_오 마이 어썸 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/릴리바이레드(lilibyred)_무드 라이어 벨벳 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/릴리바이레드(lilibyred)_앙큼 라이어 코팅 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/마몽드_하이라이트 립 틴트 글로우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/맥(MAC)_버시컬러 바니쉬 크림 립 스테인.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/맥(MAC)_버시컬러 스테인.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/머지(merzy)_더 퍼스트 벨벳틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/메이블린 뉴욕_컬러 센세이셔널 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/메이블린 뉴욕_컬러 졸트 페인트 틴트 매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/미샤_글램 에나멜 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/미샤_래스팅 페인팅 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/미샤_워터 볼륨 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/미샤_팝타스틱 젤리 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/바닐라코_투 키세스 듀얼 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/베네피트_고고틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/베네피트_차차틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/블랙루즈_에어 핏 벨벳틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/비디비치(VIDIVICI)_라끄 엑셀랑스 틴티드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/비욘드_아쿠아 틴티드 루즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/삐아_라스트 벨벳 립 틴트 2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/삐아_라스트 벨벳 립 틴트 3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/삐아_라스트 벨벳 립 틴트 4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/삐아_라스트 벨벳 립 틴트 5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/삐아_라스트 벨벳 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/아리따움_엔젤 키스 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/아리따움_원더 스테이 스틱 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/아이오페_틴티드 리퀴드 루즈.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/아임미미_아임 틱톡 틴트 립 벨벳.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/어퓨_래스팅 립 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/어퓨_물광 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/어퓨_컬러 립 스테인(벨벳틴트).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/어퓨_컬러 립 스테인(젤틴트).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에뛰드하우스_립리치 비비드 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에뛰드하우스_반밤 컬러 틴트 오일&amp;매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에뛰드하우스_베리 딜리셔스 컬러 인 리퀴드 립스.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에뛰드하우스_컬러 인 리퀴드 립스 무스.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에스쁘아_립스테인 워터 글로우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/에스티 로더_엔비 바이닐 립컬러.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/엘르걸_컬러 픽싱 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/엘르걸_크리미 실키 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/우드버리_울트라 HD 스무디 벨벳 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/웨이크메이크 (WAKEMAKE)_립 페인트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/웨이크메이크 (WAKEMAKE)_수분 톡 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/웨이크메이크 (WAKEMAKE)_젤리톡틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/웨이크메이크 (WAKEMAKE)_휘핑 톡 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/위치스파우치_래디언트 롤리틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/이글립스_라이블리 립매트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_리얼핏 매트 리퀴드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_비비드 슬림핏 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_비비드 오일 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_비비드 크리미 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/입생로랑_따뚜아쥬 꾸뛰르.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/입생로랑_베르니 아 레브르 바이닐 크림.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/입생로랑_베르니 아 레브르 팝 워터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/입생로랑_볼립떼 틴트 인 오일.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/정샘물_하이 틴티드 립 락커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/조르지오아르마니_립 마그넷.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/조르지오아르마니_엑스터시 라커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/캐시캣_워터 그라피 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/컬러그램_썬더볼 틴트 라커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/컬러그램_썬더볼 틴트 무스.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/크리니크(클리니크)_팝 리퀴드 매트 립 컬러+프라이머.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/클리오_매드 매트 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/클리오_워터킬 틴티드 립.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/토니모리_립톤 겟잇틴트 워터바.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/토니모리_퍼펙트 립스 쇼킹립.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/토니모리_피키비키 아트팝 에나멜 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/투쿨포스쿨_체크 글로시 블라스터 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/투쿨포스쿨_체크 크리미 블라스터 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/페리페라_잉크 더 라커.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/페리페라_잉크 더 에어리 벨벳.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/페리페라_잉크 더 젤라또.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/페리페라_잉크 더 포근 벨벳.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/페리페라_페리스 잉크 더 벨벳.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/헤라_센슈얼 틴트.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/홀리카홀리카_립코닉 크림 틴트건.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/홀리카홀리카_립코닉 틴트 마그마.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/홀리카홀리카_물방울 틴트 밤.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/홀리카홀리카_프로" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/23years old_2mg 선더마 B SPF35 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/BOM(비오엠)_그린 UV 썬 오프 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/CNP(차앤박)_센서티브 마일드 선블록 SPF35 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/CNP(차앤박)_톤업 프로텍션 선 SPF42 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/Huxley (헉슬리)_선크림 스테이 선 세이프 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/Huxley (헉슬리)_톤업 크림 스테이 선 세이프 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/RMK(알엠케이)_UV 페이스 프로텍터.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/SNP(에스엔피)_UV 퍼펙트 에어쿨 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/ULTRA V(울트라브이코스메틱)_NEW 이데베논 선블럭 SPF50+PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/구달_마일드 프로텍트 순한 선크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/구달_마일드 프로텍트 에센스 선 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/구달_마일드 프로텍트 촉촉한 선크림 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/그린핑거_야외놀이 선크림 SPF45 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/니베아_썬 프로텍트 워터젤 SPF50 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터아토_수분 촉촉 데일리 선 로션 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터자르트_더마 디펜스 선 플루이드.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터자르트_에브리 선 데이 에센스 선.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터자르트_에브리 선데이.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터자르트_컨트롤 에이 센스티브 선 프로텍터 SPF 35 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터지(고운세상)_그린 마일드 업 선 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터지(고운세상)_메디 UV 울트라 선 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/닥터지(고운세상)_브라이트닝 업 선 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더바디샵_스킨 디펜스 멀티 프로텍션 에센스 SPF50+ PA+++ .jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더샘_에코 어스 파워 노 세범 선 크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더샘_에코 어스 파워 핑크 선 크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더프트앤도프트_유브이 퍼펙션 멀티 베이스 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더프트앤도프트_유브이 퍼펙션 에브리데이썬 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/더프트앤도프트_유브이 퍼펙션 하이드라썬 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/데메테르_돈 하이드 썬 에센스 SPF37 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/라끄베르_유브이 스킨포스 선크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/라로슈포제_유비데아 XL 멜트-인 내츄럴 크림 SPF50 PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/라로슈포제_유비데아 XL 멜트-인 틴티드 크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/라비다_선 솔루션 프레쉬 선 에센스 IRF20 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/라포티셀_내추럴 미네랄 썬 프로텍션.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/랑콤_UV 엑스퍼트 GN-쉴드 자외선 차단제 SPF50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/랑콤_UV 엑스퍼트 XL쉴드 SPF50 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/랑콤_UV 엑스퍼트 유스 쉴드 아쿠아 젤.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/리얼베리어_익스트림 모이스처 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/리얼베리어_톤업 선블록 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/메이크프렘_유브이 디펜스 미 블루 레이 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/미샤_올 어라운드 세이프 블록 아쿠아 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/본트리_베리 에센스 선블럭 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/브라운랩_마일드-S 모이스쳐 라이트 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/브링그린_비타민 워터리 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/비오레_UV 아쿠아 리치 워터리 에센스 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/비오레_UV 아쿠아 리치 워터리 젤 SPF 50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/비욘드_피토 아쿠아 워터 선 베이스 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/빌리프_UV 프로텍터 멀티 선스크린.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/빌리프_UV 프로텍터 스탠바이유 선스크린.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/사바비안_썬 파우더 로션 SPF 25 PA +++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/센카_퍼펙트 UV 젤 SPF 50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/셀퓨전씨_레이저 썬스크린100 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/셀퓨전씨_메디스파 썬스크린 SPF47 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/숨37(sum37)_선 어웨이 쿨링 워터리 선블럭.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨푸드_로열허니 착한 선 젤 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/시드물_민중기 무기자차 썬크림 SPF40 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/시세이도_퍼펙트 UV 프로텍터 (파란자차) SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/식물나라_산소수 라이트 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/식물나라_산소수 피팅 선 크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/싸이닉_엔조이 마일드 썬 에센스 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/싸이닉_엔조이 퍼펙트 데일리 썬크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/쌍빠_어딕트 미네랄 소프튼 프로텍트 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/아넷사_퍼펙트 UV 선스크린 AA SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/아넷사_퍼펙트 에센스 선스크린 A+N SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/아이오페_UV 쉴드 선 프로텍터 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/애즈이즈투비(ASIS-TOBE)_퓨어 미네랄 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/애터미_선크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/어퓨_파워블록 데일리 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/어퓨_파워블록 뽀송 선크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/어퓨_파워블록 에센스 선크림 SPF50+PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/어퓨_퓨어 블록 내추럴 데일리 선크림 SPF45 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/얼트루_아임 쏘리 포 마이 스킨 데일리 카밍 선 크림 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에끌라두_오일프리 선크림.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에뛰드하우스_선 프라이즈 마일드 에어리 피니쉬 .jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에뛰드하우스_선프라이즈 내추럴 코렉터 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에뛰드하우스_유브이 더블 컷 산뜻 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에스쁘아_워터 스플래쉬 선크림 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에스쁘아_프로 엑스트라 프로텍티브 선베이스 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에스티 로더_크레센트 화이트 풀 사이클 브라이트닝 울트라 라이트 UV 프로텍터 SPF45 PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에슬레나_모이스쳐라이징 썬 스크린 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/에이트루_블랙 티 올 데이 아쿠아 선 젤 SPF30 PA++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/엔프라니_세이프 앤 마일드 선 블록SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/오브레(Obre)_알로에 썬프로텍션 크림.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_슈퍼푸드_블루베리 리밸런싱 워터리 선크림 SPF37 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_트루케어 논나노 논코메도 무기자차 선크림 SPF48 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/이솔_데일리 썬 쉴드 크림 SPF40++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/이자녹스_365 선 크림 SPF45 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/입생로랑_포에버 라이트 크리에이터 유브이 프로텍션 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/입큰_포어 애플 선블록 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/잇츠스킨(이츠스킨)_스마트솔루션365 실키 선블록 SPF50 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/잇츠스킨(이츠스킨)_유브이 어웨이 모이스트 점보 선블럭 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/크리니크(클리니크)_이븐 베터 다크 스팟 디펜스 SPF45 PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/클라란스_UV 플러스 데이 스크린HP SPF 40.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/클레어스(Dear,klairs)_소프트 에어리 UV 에센스 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/투쿨포스쿨_장조지롱 선블록 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/프리메라_스킨 릴리프 UV 프로텍터 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/헤라_선 메이트 프로텍터 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/홀리카홀리카_알로에 워터프루프 선 젤 SPF50+ PA++++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/화진_예브랑 센서티브 선크림 SPF40 PA+++.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asdads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_매그니피센트 메탈 글리터 앤 글로우 리퀴드 아이섀도우.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_모노 아이즈 틴트 스틱.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/디오_스노우 화이트 리빌 프레쉬 트랜스퍼런시 리퀴드 파운데이션 SPF30:PA+++.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/헤라_NEW UV 미스트 쿠션 커버 SPF50+ PA+++.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/토니모리_립톤 겟잇틴트 벨벳.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/kindCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/kindCosmeticAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getRecommendModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getRecommendModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/suncareBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/suncreamIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" beforeDir="false" afterPath="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -419,7 +31,8 @@
     <SUITE FILE_PATH="coverage/flasktestServer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1538750807371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasktestServer$flasktestServer.coverage" NAME="flasktestServer Coverage Results" MODIFIED="1538414357442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/flasktestServer$recommendCosmetic.coverage" NAME="recommendCosmetic Coverage Results" MODIFIED="1539635965432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
-    <SUITE FILE_PATH="coverage/flasktestServer$splitCosmeticCompany.coverage" NAME="splitCosmeticCompany Coverage Results" MODIFIED="1540061441906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cosmeticImg" />
+    <SUITE FILE_PATH="coverage/flasktestServer$splitCosmeticCompany.coverage" NAME="splitCosmeticCompany Coverage Results" MODIFIED="1540063628782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cosmeticImg" />
+    <SUITE FILE_PATH="coverage/flasktestServer$asdads.coverage" NAME="asdads Coverage Results" MODIFIED="1540069649510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -514,54 +127,61 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="1" />
+          <entry key="csv" value="35" />
           <entry key="dummy" value="17" />
-          <entry key="py" value="3442" />
+          <entry key="py" value="3766" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="1" />
+          <entry key="CSV" value="35" />
           <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="3442" />
+          <entry key="Python" value="3766" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="38" />
-          <entry key="Python" value="3" />
+          <entry key="CSV" value="39" />
+          <entry key="Image" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="38" />
-          <entry key="py" value="3" />
+          <entry key="csv" value="39" />
+          <entry key="jpg" value="2" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="290">
+              <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1540061906898" expanded="true" signature="1926:2299" ph="..." />
+                <marker date="1540068725614" expanded="true" signature="1956:2329" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+            <state>
+              <caret selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -569,9 +189,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asdads.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+        <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_매트.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 피치팜.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -593,11 +227,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
           <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
@@ -605,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -638,6 +267,8 @@
       <find>(</find>
       <find>)</find>
       <find>워터풀</find>
+      <find>스노우 화이트 리빌 프레쉬 트랜스퍼런시 리퀴드 파운데이션 SPF30/PA+++</find>
+      <find>선 프로텍션 스틱 파운데이션 SPF36/</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -648,14 +279,16 @@
       <list>
         <option value="$PROJECT_DIR$/RecommanedSystem/purifyData.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/purifyData.py" />
-        <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
         <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
         <option value="$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/suncareBadIngredient.csv" />
-        <option value="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" />
+        <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
+        <option value="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" />
+        <option value="$PROJECT_DIR$/asdads.py" />
       </list>
     </option>
   </component>
@@ -666,9 +299,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="960" />
+    <option name="x" value="672" />
+    <option name="y" value="191" />
+    <option name="width" value="1008" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -709,12 +343,29 @@
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="cosmeticImg" type="462c0819:PsiDirectoryNode" />
+              <item name="foundation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
               <item name="ingredient" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
               <item name="ingredient" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -736,15 +387,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cosmeticImg/eyeshadow" />
       <recent name="$PROJECT_DIR$/ingredient/data" />
       <recent name="C:\Users\dl579\OneDrive\desktop\CoAlert_Front1\flasktestServer\RecommanedSystem" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cosmeticImg/libtint" />
+      <recent name="$PROJECT_DIR$/cosmeticImg/foundation" />
+      <recent name="$PROJECT_DIR$/cosmeticImg/eyeshadow" />
       <recent name="$PROJECT_DIR$/cosmeticImg" />
       <recent name="$PROJECT_DIR$/ingredient/data" />
-      <recent name="$PROJECT_DIR$/ingredient" />
-      <recent name="$PROJECT_DIR$/RecommendSystem/data" />
-      <recent name="C:\Users\dl579\OneDrive\desktop\CoAlert_Front1\flasktestServer\RecommanedSystem\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -759,7 +411,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.splitCosmeticCompany">
+  <component name="RunManager" selected="Python.asdads">
+    <configuration name="asdads" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flasktestServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/asdads.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="getIngredient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -862,9 +536,11 @@
       <item itemvalue="Python.recommendCosmetic" />
       <item itemvalue="Python.getIngredient" />
       <item itemvalue="Python.splitCosmeticCompany" />
+      <item itemvalue="Python.asdads" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.asdads" />
         <item itemvalue="Python.splitCosmeticCompany" />
         <item itemvalue="Python.getIngredient" />
         <item itemvalue="Python.recommendCosmetic" />
@@ -887,14 +563,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -977,27 +652,33 @@
     <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_매트.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 피치팜.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1010,10 +691,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state>
+          <caret selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1022,12 +706,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="290">
+          <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1540061906898" expanded="true" signature="1926:2299" ph="..." />
+            <marker date="1540068725614" expanded="true" signature="1956:2329" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asdads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
