@@ -1,4 +1,4 @@
-package com.example.user.coalert.Adapter;
+package com.example.user.coalert.Adapter.SelectedDetailReviewAdapter;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
