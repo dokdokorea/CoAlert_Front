@@ -1,5 +1,6 @@
 from flask import Flask, request, Response
 from RecommendSystem.recommendCosmetic import recommend_cosmetics
+from ingredient.getIngredient import get_bad_ingredient
 import json
 
 app = Flask(__name__)
@@ -19,7 +20,6 @@ def getRecommendCosmetic():
     startNum = request.args.get('start')
     recommend_cosmetic = recommend_cosmetics(user_id=int(id), start=int(startNum),
                                              kind_cosmetic=kindCosmetic[int(kindCosmeticNum)], skin_type=int(type))
-    print(recommend_cosmetic)
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)
@@ -39,7 +39,7 @@ def login():
     id = request.args.get('id')
     password = request.args.get('password')
     print(id, password)
-    return json.dumps({'id':id, 'password':password})
+    return json.dumps({'id': id, 'password': password})
 
 
 @app.route("/search_bar", methods=['POST'])
@@ -51,10 +51,22 @@ def wordsRequest():
 def signup():
     id = request.args.get('id')
     password = request.args.get('password')
-    print(id, password)
     return json.dumps({'id': id})
 
 
+@app.route("/badIngredient", methods=['POST'])
+def badIngredient():
+    request_id = request.args.get('id')
+    person_type = request.args.get('person_type')
+    response_data = get_bad_ingredient(person_type)
+    print(response_data)
+    list = []
+    for i, data in response_data.iterrows():
+        list.append({"ingredientName": data['성분명'], "warningRate": data['위험도']})
+    return json.dumps(list)
+    # if(리뷰 수가 0이 아니라면 ){
+    #
+    # }
 
 
 if __name__ == '__main__':

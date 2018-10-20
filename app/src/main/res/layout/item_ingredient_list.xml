@@ -41,7 +41,7 @@
                 style="@style/editprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_50sdp"
                 android:text="toxic ingredient"
                 android:layout_gravity="center"/>
         </LinearLayout>

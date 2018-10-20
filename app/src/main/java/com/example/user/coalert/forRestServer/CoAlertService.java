@@ -20,7 +20,7 @@ public interface CoAlertService {
             @Query("search") String search,
             @Query("id") String id,
             @Query("session") String session1
-            );
+    );
 
     @POST("get_simple")
     Call<SimpleReviewModel> simpleReviewCall(
@@ -77,10 +77,15 @@ public interface CoAlertService {
             @Query("start") int start
     );
 
+    @POST("badIngredient")
+    Call<List<GetBadIngredientModel>> getBadIngredient(
+            @Query("id") String id,
+            @Query("person_type")String type
+    );
 
     Retrofit retrofit = new Retrofit.Builder()
 
-            .baseUrl("http://192.168.43.85:5000/")
+            .baseUrl("http://14.44.113.19:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

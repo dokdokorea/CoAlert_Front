@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -41,23 +42,24 @@ public class ExplanationBadElementActivity extends Activity {
             }
         });
         //서버와 연동할때 주석을 푸시오.
-//        getReceiveData = getIntent();
-//        String badData = getReceiveData.getStringExtra("badElement");
-//        JsonArray badElementJsonArray = dataToJsonArray(badData);
+        getReceiveData = getIntent();
+        String badData = getReceiveData.getStringExtra("badElement");
+        JsonArray badElementJsonArray = dataToJsonArray(badData);
         badRecyclerView = findViewById(R.id.expl_bad_element_recyclerview);
         badRecyclerView.setHasFixedSize(true);
         badRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         //서버와 연동할때 밑에 세줄을 지우시오
         badElementArr = new ArrayList<>();
-//        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "내 사약 같은 맛"));
-//        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "파라디클로로벤젠"));
-        badElementArr.add(new TwoStringCardView("toxic1","1"));
-        badElementArr.add(new TwoStringCardView("toxic2","3"));
-        badElementArr.add(new TwoStringCardView("toxic3","5"));
-        badElementArr.add(new TwoStringCardView("toxic4","6"));
-        badElementArr.add(new TwoStringCardView("toxic5","7"));
-        badElementArr.add(new TwoStringCardView("toxic6","9"));
+        setData(badElementJsonArray);
 
+    }
+
+    public void setData(JsonArray jsonArray){
+        for (int i = 0; i<jsonArray.size(); i++) {
+
+            JsonObject jsonObject = (JsonObject) jsonArray.get(i);
+            badElementArr.add(new TwoStringCardView(jsonObject.get("ingredientName").toString(), jsonObject.get("warningRate").toString().replaceAll("\"", "")));
+        }
         badRecyclerView.setAdapter(new TabIngredientListAdapter(badElementArr));
     }
 

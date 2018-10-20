@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ import com.example.user.coalert.Adapter.FragmentHomeElementAdapter.NewProductAda
 import com.example.user.coalert.Adapter.FragmentHomeLinkList.YoutubeListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
@@ -172,12 +174,28 @@ public class HomeFragment extends Fragment {
         detailElementBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO 서버에 요청을 보내주세요 리스트 형식으로 받은 후 toString 해서 다음 액티비티로 넘겨주세요
-                Intent intent = new Intent(getActivity(), ExplanationBadElementActivity.class);
-//                Call<List<BadElementModel>> call = ForRestSingleton.getInstance().badElement();
-//                List<BadElement> result =  call.execute().body();
-//                intent.putExtra("badElement", result.toString());
-                startActivity(intent);
+                new Thread(){
+                    @Override
+                    public void run() {
+                        super.run();
+                        try {
+                            Log.e("hihi", "asd");
+                            //TODO 서버에 요청을 보내주세요 리스트 형식으로 받은 후 toString 해서 다음 액티비티로 넘겨주세요
+                            final Intent intent = new Intent(getActivity(), ExplanationBadElementActivity.class);
+                            Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().getBadIngredient("0", "지성");
+                            List<GetBadIngredientModel> result = call.execute().body();
+                            intent.putExtra("badElement", result.toString());
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    startActivity(intent);
+                                }
+                            });
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
             }
         });
 
