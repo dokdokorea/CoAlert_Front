@@ -2,15 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:id="@+id/new_product_cardview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_3sdp"
         card_view:cardUseCompatPadding="true"
         card_view:cardCornerRadius="@dimen/_2sdp">
 
@@ -18,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#fff"
+            android:background="@drawable/thin_black_stoke"
             android:padding="@dimen/_3sdp"
             android:layout_margin="@dimen/_1sdp">
 
@@ -26,6 +25,7 @@
                 android:id="@+id/new_product_image"
                 android:layout_width="@dimen/_109sdp"
                 android:layout_height="@dimen/_109sdp"
+                android:padding="@dimen/_4sdp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:src="@drawable/face1" />
@@ -35,7 +35,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="@dimen/_6sdp"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:fontFamily="@font/bm_dohyen"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="@dimen/_10sdp"
                 android:text="@string/cosmetic_pd_name" />
 
             <TextView
@@ -43,7 +50,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/_3sdp"
+                android:gravity="top|center_horizontal"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:textSize="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:lines="1"
                 android:text="@string/company_name" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
