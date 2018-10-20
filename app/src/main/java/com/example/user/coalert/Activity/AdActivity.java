@@ -11,6 +11,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.AdImgAdapter;
@@ -29,6 +31,7 @@ public class AdActivity extends AppCompatActivity {
     String cosmeticCompanyName;
     AppCompatImageView adLogoImage;
     CircleImageView cosmeticImg;
+    ImageView backBtn;
     final String INISFREE = "이니스프리", MAC = "맥", CHANEL = "샤넬", YSL = "입생로랑";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,13 @@ public class AdActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         cosmeticCompanyName = previousIntent.getStringExtra("whatCompany");
         adLogoImage = findViewById(R.id.adLogo);
+        backBtn = findViewById(R.id.ad_cosmetic_back_btn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         /*이니스프리
          입생로랑
          샤넬

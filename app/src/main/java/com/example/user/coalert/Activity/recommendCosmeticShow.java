@@ -69,7 +69,6 @@ public class recommendCosmeticShow extends AppCompatActivity {
                 int lastVisibleItemPosition = ((LinearLayoutManager)recyclerView.getLayoutManager()).findLastCompletelyVisibleItemPosition();
                 int itemTotalCount = recyclerView.getAdapter().getItemCount() - 1;
                 if (lastVisibleItemPosition == itemTotalCount) {
-                    Toast.makeText(getApplicationContext(), "Last Position", Toast.LENGTH_SHORT).show();
                     new Thread() {
                         @Override
                         public void run() {
@@ -78,7 +77,6 @@ public class recommendCosmeticShow extends AppCompatActivity {
                                 Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", cosmeticArr.size());
                                 List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
                                 final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
-                                Log.e("asfsdafsadf", addRecommendCosmeticDataString);
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
