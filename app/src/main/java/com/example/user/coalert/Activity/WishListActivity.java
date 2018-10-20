@@ -43,7 +43,7 @@ public class WishListActivity extends Activity {
 
 
         for(int i=0;i<info.getWishlist().size();i++) {
-            wishListArr.add(new OneImgTwoStringCardView(R.drawable.sun1, info.getWishlist().get(i), "company"));
+            wishListArr.add(new OneImgTwoStringCardView(R.drawable.sun1, info.getWishlist().get(i), info.getComplist().get(i)));
         }
 //        wishRecyclerView.setAdapter(new NewProductAdapter(wishListArr));
 
