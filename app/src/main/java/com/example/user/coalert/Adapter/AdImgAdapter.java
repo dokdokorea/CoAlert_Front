@@ -82,8 +82,8 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(context, CosmeticInformationActivity.class);
-            intent.putExtra("cosmeticName", itemList.get(getAdapterPosition()).getExplain());
-            intent.putExtra("cosmeticImage", itemList.get(getAdapterPosition()).getBitmap());
+//            intent.putExtra("cosmeticName", itemList.get(getAdapterPosition()).getExplain());
+//            intent.putExtra("cosmeticImage", itemList.get(getAdapterPosition()).getBitmap());
             context.startActivity(intent);
         }
     }
