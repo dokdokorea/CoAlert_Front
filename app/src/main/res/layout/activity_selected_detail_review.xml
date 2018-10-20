@@ -203,6 +203,59 @@
                 android:id="@+id/toTopButton"
                 android:textSize="@dimen/_10sdp"/>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:orientation="horizontal"
+                    android:background="@color/light_pink"
+                    android:padding="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/bm_dohyen"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:text="좋아요"/>
+
+                    <View
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        ></View>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/bm_dohyen"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:text="댓글쓰기"/>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/commentRecycler"
+                    android:padding="@dimen/_5sdp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

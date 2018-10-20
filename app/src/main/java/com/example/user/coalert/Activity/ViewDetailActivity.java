@@ -1,12 +1,13 @@
 package com.example.user.coalert.Activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,9 +16,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.coalert.Adapter.DetailReviewSliderAdapter;
+import com.example.user.coalert.Adapter.SelectedDetailReviewAdapter.DetailReviewSliderAdapter;
+import com.example.user.coalert.Adapter.SelectedDetailReviewAdapter.DetaillReviewCommentAdapter;
 import com.example.user.coalert.R;
-import com.transitionseverywhere.TransitionManager;
+import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -31,6 +33,8 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static int currentPage = 0;
     private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu7, R.drawable.iu3jpg, R.drawable.iu4, R.drawable.iu5};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
+    ArrayList<OneImgTwoStringCardView> CommentArr;
+    RecyclerView comment;
     Button topbtn;
     ImageView LikeIcon;
     TextView LikeCount;
@@ -160,8 +164,7 @@ public class ViewDetailActivity extends AppCompatActivity {
         LikeCount=(TextView) findViewById(R.id.like_count);
         topbtn=(Button)findViewById(R.id.toTopButton);
         scroll=(ScrollView)findViewById(R.id.scroll);
-
-
+        comment=(RecyclerView)findViewById(R.id.commentRecycler);
 
         LikeCount.setText("3000");
         CreatorPicture.setImageResource(R.drawable.iu4);
@@ -173,6 +176,16 @@ public class ViewDetailActivity extends AppCompatActivity {
             LikeIcon.setImageResource(R.drawable.black_empty_heart);
         else
             LikeIcon.setImageResource(R.drawable.pink_heart);
+
+        comment.setHasFixedSize(true);
+        comment.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        CommentArr=new ArrayList<>();
+        CommentArr.add(new OneImgTwoStringCardView(R.drawable.iu1,"dlwlrma","hello my name is IU and 26years old"));
+        CommentArr.add(new OneImgTwoStringCardView(R.drawable.irin,"irin","Go! Go! 에어플레인! 번개처럼 날아라\n" +
+                "카우아이 파도 속 나를 던져 버리게\n" +
+                "이예이예 이예이예이예이예 \n" +
+                "Let’s power up! 까맣게 다 타버릴 거예요"));
+        comment.setAdapter(new DetaillReviewCommentAdapter(CommentArr));
 
 
 

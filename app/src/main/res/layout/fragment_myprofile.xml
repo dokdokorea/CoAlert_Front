@@ -263,9 +263,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:orientation="horizontal"
-                    android:layout_marginLeft="@dimen/_15sdp">
+                    android:layout_marginLeft="@dimen/_10sdp">
 
                     <android.support.v7.widget.RecyclerView
                         android:id="@+id/recyclerview2"
