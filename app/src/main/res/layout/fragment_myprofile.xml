@@ -50,7 +50,6 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -63,10 +62,8 @@
                         android:layout_width="@dimen/_95sdp"
                         android:layout_height="@dimen/_95sdp"
                         android:layout_gravity="center"
-                        android:src="@drawable/seul" />
-
+                        android:src="@drawable/user_gray" />
                 </LinearLayout>
-
 
                 <LinearLayout
                     android:layout_width="0dp"

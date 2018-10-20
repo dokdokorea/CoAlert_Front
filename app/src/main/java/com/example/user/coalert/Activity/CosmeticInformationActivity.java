@@ -28,6 +28,7 @@ import com.example.user.coalert.Adapter.CosmeticInformationAdapter.DetailReviewP
 import com.example.user.coalert.Adapter.CosmeticInformationAdapter.SimpleReviewAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAdapter;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
@@ -52,6 +53,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
     Parcelable state;
+
+
 
     ArrayList<TwoStringCardView> IngArr;
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
@@ -98,12 +101,20 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 j = 1 - j;
+                GlobalApplication info=(GlobalApplication) getApplication();
+                ArrayList<String> wishlist =new ArrayList<>();
 
                 if (j == 0) {
                     wishbtn.setImageResource(R.drawable.emptyheart);
                     Toast.makeText(CosmeticInformationActivity.this, "찜하기 취소", Toast.LENGTH_SHORT).show();
+                    info.removeWishlist(ProductName.getText().toString());
+
                 } else {
                     wishbtn.setImageResource(R.drawable.fullheart);
+                    wishlist=info.getWishlist();
+                    wishlist.add(ProductName.getText().toString());
+                    info.setWishlist(wishlist);
+
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
             }

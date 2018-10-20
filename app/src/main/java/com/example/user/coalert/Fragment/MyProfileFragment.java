@@ -24,6 +24,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.user.coalert.Activity.EditprofileActivity;
 import com.example.user.coalert.Activity.ExplanationBadElementActivity;
@@ -32,8 +33,11 @@ import com.example.user.coalert.Activity.FollowingListActivity;
 import com.example.user.coalert.Activity.WishListActivity;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapter;
 import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileRecyclerViewAdapter;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgOneStringCardView;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,7 +53,10 @@ public class MyProfileFragment extends Fragment {
     FrameLayout goFollowing, goFollower;
     ImageView myImage;
     Intent intent;
+    TextView name,email;
     int REQUEST_ALBUM = 100;
+
+
 
     @Nullable
     @Override
@@ -61,6 +68,12 @@ public class MyProfileFragment extends Fragment {
         goFollowing = v.findViewById(R.id.following);
         goFollower = v.findViewById(R.id.follower);
         myImage = v.findViewById(R.id.profile_pic);
+        name=v.findViewById(R.id.Name);
+        email=v.findViewById(R.id.email);
+        GlobalApplication info=(GlobalApplication) getActivity().getApplication();
+
+        name.setText(info.getId());
+        email.setText(info.getEmail());
 
         RecyclerView cosmeticList = (RecyclerView) v.findViewById(R.id.recyclerview2);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);

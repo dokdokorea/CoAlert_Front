@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
 import com.example.user.coalert.forRestServer.emailRedundancyCheckModel;
@@ -31,10 +32,12 @@ public class EmailSignUpActivity extends AppCompatActivity {
     EditText confirmPassword;
     EditText name;
     Button lastButton;
+    Button signupBtn;
     Intent nextPageIntent;
     ImageView passwordCheckImg;
     static final String TRUE = "True";
     static final String FALSE = "False";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +50,12 @@ public class EmailSignUpActivity extends AppCompatActivity {
         name = findViewById(R.id.emailSignUpInputname);
         inputEmail = findViewById(R.id.input_email);
         lastButton = findViewById(R.id.lastSignUpButton);
+        signupBtn=findViewById(R.id.common_sign_up_confirmation_btn);
         lastButton.setClickable(false);
         final Context context = this;
+
+
+
 
         password.addTextChangedListener(new TextWatcher() {
             @Override
@@ -173,6 +180,9 @@ public class EmailSignUpActivity extends AppCompatActivity {
                         nextPageIntent.putExtra("name", String.valueOf(name.getText()));
                         nextPageIntent.putExtra("email", String.valueOf(inputEmail.getText()));
                         nextPageIntent.putExtra("password", String.valueOf(password.getText()));
+                        GlobalApplication info=(GlobalApplication) getApplication();
+                        info.setId(name.getText().toString());
+                        info.setEmail(inputEmail.getText().toString());
                         startActivity(nextPageIntent);
                     } else {
                         Log.e("lastButton ClickEvent4", "false");

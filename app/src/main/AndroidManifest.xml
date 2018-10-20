@@ -58,6 +58,8 @@
             </intent-filter>
         </activity>
 
+
+
         <activity android:name=".Activity.LoginActivity">
 
         </activity>
@@ -76,10 +78,10 @@
         </activity>
         <activity android:name=".Activity.EmailSignUpActivity">
 
-
         </activity>
 
         <activity android:name=".Loading.Loading1Activity" />
+
         <activity android:name=".Activity.EditprofileActivity" />
         <activity
             android:name=".Popup.BreakPopup"
