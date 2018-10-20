@@ -43,6 +43,6 @@ public class getRecommendModel {
     @Override
     public String toString() {
         return "{\"id\":\""+getCosmeticname()+"\", " +
-                "\"estimate\":"+getEstimate()+",\"pixel\": \""+getPixel()+"\", \"company\":"+getCompany()+"}";
+                "\"estimate\":"+getEstimate()+",\"pixel\": \""+getPixel()+"\", \"company\":\""+getCompany()+"\"}";
     }
 }

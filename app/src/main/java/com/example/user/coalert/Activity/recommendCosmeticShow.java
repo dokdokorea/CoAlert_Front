@@ -2,11 +2,14 @@ package com.example.user.coalert.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
@@ -26,6 +29,8 @@ import com.google.gson.JsonParser;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
 import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayoutDirection;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -119,9 +124,20 @@ public class recommendCosmeticShow extends AppCompatActivity {
         //TODO 어뎁터에 데이터를 추가합니다
         for (int i = 0; i < recommendCosmeticJsonArray.size(); i++) {
             JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
-            cosmeticArr.add(new OneImgThreeStringCardView(R.drawable.sun1,oneData.get("company").toString().replaceAll("\"", ""),oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
+            Log.e("pixel", oneData.get("pixel").toString());
+            cosmeticArr.add(new OneImgThreeStringCardView(StringToBitMap(oneData.get("pixel").toString().substring(2, oneData.get("pixel").toString().length())), oneData.get("company").toString().replaceAll("\"", ""),oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
         }
     }
-
+    public Bitmap StringToBitMap(String encodedString){
+        try{
+            byte [] encodeByte=Base64.decode(encodedString,Base64.DEFAULT);
+            Bitmap bitmap=BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            Log.e("asdasd", bitmap.toString());
+            return bitmap;
+        }catch(Exception e){
+            e.getMessage();
+            return null;
+        }
+    }
 
 }

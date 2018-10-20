@@ -86,7 +86,6 @@ public class kindCosmeticAdapter extends RecyclerView.Adapter<kindCosmeticAdapte
                         recommendPage.putExtra("kindCosmetic", getAdapterPosition());
                         recommendPage.putExtra("cname", realData.get(getAdapterPosition()).getText());
                         recommendPage.putExtra("recommendData", moveRecommendCosmetic);
-                        Log.e("result", moveRecommendCosmetic);
                         context.startActivity(recommendPage);
                     } catch (IOException e) {
                         e.printStackTrace();

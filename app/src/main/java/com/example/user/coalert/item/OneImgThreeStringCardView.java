@@ -1,11 +1,13 @@
 package com.example.user.coalert.item;
 
+import android.graphics.Bitmap;
+
 public class OneImgThreeStringCardView {
-    int image;
+    Bitmap image;
     String text1,text2;
     float number;
 
-    public int getImage(){
+    public Bitmap getImage(){
         return this.image;
     }
 
@@ -21,7 +23,7 @@ public class OneImgThreeStringCardView {
         return this.number;
     }
 
-    public OneImgThreeStringCardView(int image, String text1, String text2, float number){
+    public OneImgThreeStringCardView(Bitmap image, String text1, String text2, float number){
         this.image=image;
         this.text1=text1;
         this.text2=text2;

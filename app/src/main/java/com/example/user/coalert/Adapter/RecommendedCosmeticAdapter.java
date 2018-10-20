@@ -44,7 +44,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgThreeStringCardView item = list.get(position);
         DecimalFormat format = new DecimalFormat(".##");
-        holder.CosmeticImage.setImageResource(item.getImage());
+        holder.CosmeticImage.setImageBitmap(item.getImage());
         holder.Company.setText(item.getText1());
         holder.Name.setText(item.getText2().replaceAll("\"", ""));
         String str = format.format(item.getNumber()*20);
