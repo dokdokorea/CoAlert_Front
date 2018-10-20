@@ -46,7 +46,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
         DecimalFormat format = new DecimalFormat(".##");
         holder.CosmeticImage.setImageResource(item.getImage());
         holder.Company.setText(item.getText1());
-        holder.Name.setText(item.getText2());
+        holder.Name.setText(item.getText2().replaceAll("\"", ""));
         String str = format.format(item.getNumber()*20);
 //        holder.Rating.setText(Float.toString(item.getNumber()));
         holder.Rating.setText(str);
