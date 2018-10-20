@@ -33,6 +33,7 @@ import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
 import com.example.user.coalert.item.TwoImgFourStringCardView;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
+import com.example.user.coalert.item.TwoStringCardView;
 
 import java.util.ArrayList;
 
@@ -52,7 +53,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
     Parcelable state;
 
-    ArrayList<OneImgOneStringCardView> IngArr;
+    ArrayList<TwoStringCardView> IngArr;
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
     ArrayList<TwoImgTwoStringCardView> DetailArr;
     ArrayList<TwoImgFourStringCardView> DetailPreviewArr;
@@ -177,11 +178,13 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             }
         });
         IngArr=new ArrayList<>();
-        IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic1"));
-        IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic2"));
-        IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic3"));
-        IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic4"));
-        IngArr.add(new OneImgOneStringCardView(R.drawable.cardview1,"toxic5"));
+        IngArr.add(new TwoStringCardView("toxic1","1"));
+        IngArr.add(new TwoStringCardView("toxic2","3"));
+        IngArr.add(new TwoStringCardView("toxic3","5"));
+        IngArr.add(new TwoStringCardView("toxic4","6"));
+        IngArr.add(new TwoStringCardView("toxic5","7"));
+        IngArr.add(new TwoStringCardView("toxic6","9"));
+
         ingredient.setAdapter(new TabIngredientListAdapter(IngArr));
 
         ViewCompat.setNestedScrollingEnabled(ingredient, false);
