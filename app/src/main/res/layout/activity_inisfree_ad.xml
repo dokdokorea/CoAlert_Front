@@ -8,13 +8,26 @@
     android:orientation="vertical"
     tools:context=".Activity.AdActivity">
 
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_180sdp">
         <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/adLogo"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_180sdp"
-            android:id="@+id/adLogo"
             android:background="#f4f5e4"
-            android:src="@drawable/ad_inisfree"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_inisfree" />
+        <ImageView
+            android:id="@+id/ad_cosmetic_back_btn"
+            style="@style/back_btn_style"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp"
+            />
+    </FrameLayout>
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_2sdp" />

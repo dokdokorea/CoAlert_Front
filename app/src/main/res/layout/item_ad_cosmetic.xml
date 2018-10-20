@@ -8,46 +8,47 @@
 
 <View android:layout_width="wrap_content"
     android:layout_height="@dimen/_8sdp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/cardview_lines_green">
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
-        app:cardCornerRadius="@dimen/_13sdp"
-        android:id="@+id/adCardView"
-        android:layout_marginEnd="@dimen/_1sdp"
-        app:contentPadding="@dimen/_10sdp"
-        android:hapticFeedbackEnabled="true"
-       >
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
+            android:id="@+id/adCardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:hapticFeedbackEnabled="true"
+            app:cardCornerRadius="@dimen/_13sdp"
+            app:contentPadding="@dimen/_10sdp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="@dimen/_60sdp"
-                android:layout_height="@dimen/_60sdp"
-                android:src="@drawable/coalert_logo"
-                android:id="@+id/background_border_image"
-                android:gravity="center"
-                android:layout_margin="@dimen/_10sdp"
-                app:civ_border_color="#81c147"
-                app:civ_border_width="@dimen/_2sdp"/>
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/CoAlertCosmetic"
-                android:layout_gravity="center"
-                android:textSize="@dimen/_15sdp"
-                android:textColor="#000000"
-                android:id="@+id/inisfreeText"
-                android:layout_marginStart="@dimen/_20sdp"
-               />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/background_border_image"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:src="@drawable/coalert_logo" />
+
+                <TextView
+                    android:id="@+id/inisfreeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="@string/CoAlertCosmetic"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 </LinearLayout>
