@@ -31,41 +31,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:weightSum="5">
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:weightSum="4">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_weight="4"
-                android:padding="@dimen/_3sdp"
-                >
+                android:layout_weight="3"
+                android:padding="@dimen/_3sdp">
 
                 <TextView
                     android:id="@+id/recommend_company_name"
                     style="@style/company_in_cosmetic_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_1sdp"
                     android:text="company"/>
 
                 <TextView
                     android:id="@+id/recommend_cosmetic_name"
+                    android:paddingTop="1dp"
                     style="@style/name_in_cosmetic_item"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="cosmetic name"/>
+                    android:text="cosmetic name cosmeticname cosmetic name"/>
 
             </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:textSize="@dimen/_25sdp"
                 android:gravity="center"
                 android:layout_weight="1"
-                android:text="9.8"
+                android:text="95.4"
                 android:textStyle="bold"
                 android:textColor="@color/first"
-                android:layout_marginRight="@dimen/_5sdp"
                 android:id="@+id/recommend_rating"/>
 
             </LinearLayout>
