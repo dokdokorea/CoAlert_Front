@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgThreeStringCardView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<RecommendedCosmeticAdapter.ViewHolder>{
@@ -42,11 +43,13 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgThreeStringCardView item = list.get(position);
+        DecimalFormat format = new DecimalFormat(".##");
         holder.CosmeticImage.setImageResource(item.getImage());
         holder.Company.setText(item.getText1());
         holder.Name.setText(item.getText2());
+        String str = format.format(item.getNumber()*20);
 //        holder.Rating.setText(Float.toString(item.getNumber()));
-        holder.Rating.setText(String.format("%.1f",item.getNumber()));
+        holder.Rating.setText(str);
     }
 
     @Override

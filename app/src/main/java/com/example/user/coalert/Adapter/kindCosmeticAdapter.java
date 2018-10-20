@@ -3,6 +3,8 @@ package com.example.user.coalert.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.coalert.Activity.recommendCosmeticShow;
@@ -45,7 +50,9 @@ public class kindCosmeticAdapter extends RecyclerView.Adapter<kindCosmeticAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textView.setText(realData.get(position).getText());
-        holder.textView.setBackgroundResource(realData.get(position).getImage());
+        holder.backImage.setBackgroundResource(realData.get(position).getImage());
+        holder.backImage.setAlpha(0.6f);
+
     }
 
     @Override
@@ -55,11 +62,14 @@ public class kindCosmeticAdapter extends RecyclerView.Adapter<kindCosmeticAdapte
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView textView;
-
+        FrameLayout frameLayout;
+        ImageView backImage;
         public ViewHolder(View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.selectKindCosmeticItem);
             textView.setOnClickListener(this);
+            frameLayout = itemView.findViewById(R.id.kind_background);
+            backImage = itemView.findViewById(R.id.kind_background_image);
         }
 
         @Override

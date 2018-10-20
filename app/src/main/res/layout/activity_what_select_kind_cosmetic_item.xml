@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
+    android:id="@+id/kind_background"
     android:layout_height="@dimen/_100sdp"
     android:layout_width="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_width="match_parent"
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/chanel"
+        android:id="@+id/kind_background_image"/>
+    <TextView android:layout_width="@dimen/_320sdp"
     android:layout_height="@dimen/_100sdp"
     android:id="@+id/selectKindCosmeticItem"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/chanel"
     android:text="hi"
     android:gravity="center"
-    android:textColor="#FFFFFF"
+    android:textColor="#000000"
+        android:textStyle="bold"
     android:textSize="@dimen/_26sdp"/>
-</LinearLayout>
+</FrameLayout>
