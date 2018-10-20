@@ -8,7 +8,7 @@
         android:id="@+id/item_ingredient_list_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_3sdp"
+        android:layout_margin="@dimen/_2sdp"
         app:cardUseCompatPadding="true"
         app:cardElevation="0dp">
 
@@ -16,7 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/_3sdp">
+            android:padding="@dimen/_3sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_2sdp">
 
             <ImageView
                 android:id="@+id/recommend_cosmetic_photo"

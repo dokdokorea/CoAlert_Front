@@ -8,22 +8,33 @@
         android:id="@+id/item_ingredient_list_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_3sdp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_3sdp"
         app:cardUseCompatPadding="true"
         app:cardElevation="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_8sdp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/item_ingredient_list_risk_level"
-                android:layout_width="@dimen/_36sdp"
-                android:layout_height="@dimen/_36sdp"
-                android:scaleType="fitCenter"
-                android:padding="@dimen/_3sdp"
-                android:src="@drawable/face1" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/circle_color"
+                android:src="#000"/>
+
+            <TextView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:text="5"
+                android:textSize="@dimen/_20sdp"
+                style="@style/defaultFont"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/toxic_level"/>
 
             <TextView
                 android:id="@+id/item_ingredient_list_ingredient_name"

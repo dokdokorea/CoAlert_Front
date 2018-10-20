@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.user.coalert.Adapter.MyprofileAdapter.ExplanationBadElementAdapter;
+import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAdapter;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.TwoStringCardView;
 import com.google.gson.JsonArray;
@@ -48,10 +49,16 @@ public class ExplanationBadElementActivity extends Activity {
         badRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         //서버와 연동할때 밑에 세줄을 지우시오
         badElementArr = new ArrayList<>();
-        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "내 사약 같은 맛"));
-        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "파라디클로로벤젠"));
+//        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "내 사약 같은 맛"));
+//        badElementArr.add(new TwoStringCardView(String.valueOf(number++), "파라디클로로벤젠"));
+        badElementArr.add(new TwoStringCardView("toxic1","1"));
+        badElementArr.add(new TwoStringCardView("toxic2","3"));
+        badElementArr.add(new TwoStringCardView("toxic3","5"));
+        badElementArr.add(new TwoStringCardView("toxic4","6"));
+        badElementArr.add(new TwoStringCardView("toxic5","7"));
+        badElementArr.add(new TwoStringCardView("toxic6","9"));
 
-        badRecyclerView.setAdapter(new ExplanationBadElementAdapter(badElementArr));
+        badRecyclerView.setAdapter(new TabIngredientListAdapter(badElementArr));
     }
 
     public JsonArray dataToJsonArray(String data) {
