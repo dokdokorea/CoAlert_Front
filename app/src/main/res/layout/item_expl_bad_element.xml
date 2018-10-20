@@ -34,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/yoon_gothic320"
                 android:gravity="start|center_vertical"
-                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_30sdp"
                 android:text="아메리카노 좋아 좋아 좋아 성분"
                 android:textSize="@dimen/_14sdp" />
         </LinearLayout>

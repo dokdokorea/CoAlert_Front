@@ -45,9 +45,9 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.textView.setText(mDataset.get(position).getText1());
-        holder.toxic_level.setText(mDataset.get(position).getText2());
-        setColor(holder,Integer.parseInt(mDataset.get(position).getText2()));
+        holder.textView.setText(mDataset.get(position).getText1().replaceAll("\"", ""));
+        holder.toxic_level.setText(String.valueOf(Math.abs(Integer.parseInt(mDataset.get(position).getText2()))));
+        setColor(holder,Math.abs(Integer.parseInt(mDataset.get(position).getText2())));
     }
 
     @Override
@@ -56,7 +56,6 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
     }
 
     public void setColor(@NonNull ViewHolder holder, int level){    // 색상 설정
-
         if(level<=2){
             holder.toxic_level.setTextColor(Color.parseColor("#3ADF00"));
             holder.toxic_circle.setImageResource(R.color.ingredient_safe);

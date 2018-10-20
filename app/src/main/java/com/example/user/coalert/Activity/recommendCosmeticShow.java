@@ -2,6 +2,7 @@ package com.example.user.coalert.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,6 +23,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayout;
+import com.orangegangsters.github.swipyrefreshlayout.library.SwipyRefreshLayoutDirection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,7 @@ import retrofit2.Call;
 public class recommendCosmeticShow extends AppCompatActivity {
     Intent getReceiveData;
     TextView showRecommendTextView;
+    SwipyRefreshLayout swipeRefreshLayout;
     RecyclerView CosmeticRecycler;
     ArrayList<OneImgThreeStringCardView> cosmeticArr;
     int kindCosmetic;
@@ -46,8 +50,9 @@ public class recommendCosmeticShow extends AppCompatActivity {
         setContentView(R.layout.activity_recommend_cosmetic_show);
         getReceiveData = getIntent();
         cosmeticArr = new ArrayList<>();
+        swipeRefreshLayout = findViewById(R.id.swipyrefreshlayout);
+        swipeRefreshLayout.setDirection(SwipyRefreshLayoutDirection.BOTTOM);
         CosmeticRecycler=findViewById(R.id.recommend_recycler);
-
         final String recommendCosmetics = getReceiveData.getStringExtra("recommendData");
         kindCosmetic = getReceiveData.getIntExtra("kindCosmetic", 0);
         purifyDataArray = dataToJsonArray(recommendCosmetics);
@@ -74,6 +79,13 @@ public class recommendCosmeticShow extends AppCompatActivity {
                         public void run() {
                             super.run();
                             try {
+                                swipeRefreshLayout.setOnRefreshListener(new SwipyRefreshLayout.OnRefreshListener() {
+                                    @Override
+                                    public void onRefresh(SwipyRefreshLayoutDirection direction) {
+                                        Log.d("MainActivity", "Refresh triggered at "
+                                                + (direction == SwipyRefreshLayoutDirection.TOP ? "top" : "bottom"));
+                                    }
+                                });
                                 Call<List<getRecommendModel>> addRecommendCosmetic = ForRestSingleton.getInstance().recommendCall(0, kindCosmetic + 1, "0", cosmeticArr.size());
                                 List<getRecommendModel> addRecommendCosmeticData = addRecommendCosmetic.execute().body();
                                 final String addRecommendCosmeticDataString = addRecommendCosmeticData.toString();
@@ -110,5 +122,6 @@ public class recommendCosmeticShow extends AppCompatActivity {
             cosmeticArr.add(new OneImgThreeStringCardView(R.drawable.sun1,"innisfree",oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
         }
     }
+
 
 }

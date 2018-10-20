@@ -19,6 +19,7 @@
         android:textColor="@color/goldColor"
         android:gravity="left"
         android:textStyle="bold"
+        android:fontFamily="@font/bm_dohyen"
         android:layout_marginBottom="@dimen/_8sdp"
         android:layout_marginLeft="@dimen/_10sdp" />
     <!--고딕BM체 수정-->
