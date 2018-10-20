@@ -5,9 +5,11 @@ import android.graphics.Bitmap;
 public class adCardViewItem {
     Bitmap bitmap;
     String explain;
-    public adCardViewItem(Bitmap bitmap, String explain){
+    int num;
+    public adCardViewItem(Bitmap bitmap, String explain, int num){
         this.bitmap = bitmap;
         this.explain = explain;
+        this.num = num;
     }
 
     public Bitmap getBitmap() {
@@ -17,4 +19,5 @@ public class adCardViewItem {
     public String getExplain() {
         return explain;
     }
+    public int getInt(){return num;}
 }

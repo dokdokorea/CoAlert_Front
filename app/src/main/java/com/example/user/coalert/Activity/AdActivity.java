@@ -3,11 +3,13 @@ package com.example.user.coalert.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
@@ -17,6 +19,8 @@ import com.example.user.coalert.item.adCardViewItem;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class AdActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     GridLayoutManager linearLayoutManager;
@@ -24,7 +28,7 @@ public class AdActivity extends AppCompatActivity {
     Intent previousIntent;
     String cosmeticCompanyName;
     AppCompatImageView adLogoImage;
-    TextView cosmeticCompanyExplain;
+    CircleImageView cosmeticImg;
     final String INISFREE = "이니스프리", MAC = "맥", CHANEL = "샤넬", YSL = "입생로랑";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,7 @@ public class AdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inisfree_ad);
         previousIntent = getIntent();
         recyclerView = findViewById(R.id.inisfree_ad_recyclerView);
-        cosmeticCompanyExplain = findViewById(R.id.cosmeticCompanyExplain);
+        cosmeticImg = findViewById(R.id.background_border_image);
         recyclerView.setHasFixedSize(true);
         cosmeticCompanyName = previousIntent.getStringExtra("whatCompany");
         adLogoImage = findViewById(R.id.adLogo);
@@ -48,46 +52,40 @@ public class AdActivity extends AppCompatActivity {
         switch (kindCosmetic){
             case MAC:
                 adLogoImage.setImageResource(R.drawable.ad_mac_logo);
-                adLogoImage.setBackgroundResource(R.color.whiteBackground);
-                cosmeticCompanyExplain.setText(R.string.MacExplain);
-                setImage();
+                setImage(1);
+                setBorder();
                 break;
             case CHANEL:
                 adLogoImage.setImageResource(R.drawable.ad_chanel_logo);
-                adLogoImage.setBackgroundResource(R.color.whiteBackground);
-                cosmeticCompanyExplain.setText(R.string.ChannelExplain);
-                setImage();
+                setImage(1);
+                setBorder();
                 break;
             case YSL:
                 adLogoImage.setImageResource(R.drawable.ad_ysl_logo);
-                adLogoImage.setBackgroundResource(R.color.whiteBackground);
-                cosmeticCompanyExplain.setText(R.string.YslExplain);
-                setImage();
+                setImage(1);
+                setBorder();
                 break;
             default:
-                setImage();
+                setImage(0);
                 break;
         }
     }
 
-    public void setLogo(){
-
+    public void setBorder(){
+        adLogoImage.setBackgroundResource(R.color.whiteBackground);
     }
 
-    public void setText(){
 
-    }
-
-    public void setImage(){
+    public void setImage(int num){
         ArrayList<adCardViewItem> list = new ArrayList<>();
         Bitmap bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.irin);
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품"));
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adImgAdapter = new AdImgAdapter(this.getApplicationContext(), list);
         recyclerView.setAdapter(adImgAdapter);

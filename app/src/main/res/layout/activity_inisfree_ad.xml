@@ -8,60 +8,16 @@
     android:orientation="vertical"
     tools:context=".Activity.AdActivity">
 
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_70sdp"
-        android:id="@+id/adLogo"
-        android:background="#f4f5e4"
-        android:src="@drawable/innisfree_logo"
-        android:scaleType="fitXY"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_2sdp" />
-
-        <TextView
+        <android.support.v7.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:text="@string/introduceBrand"
-            android:textColor="#000000"
-            android:textSize="@dimen/_25sdp"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp"
-            android:background="#d2d2d2" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:text="@string/InnisfreeExplain"
-            android:textColor="#000000"
-            android:textSize="@dimen/_13sdp"
-            android:id="@+id/cosmeticCompanyExplain"
-            tools:ignore="InvalidId" />
-    </LinearLayout>
-
+            android:layout_height="@dimen/_180sdp"
+            android:id="@+id/adLogo"
+            android:background="#f4f5e4"
+            android:src="@drawable/ad_inisfree"
+            android:scaleType="fitXY"/>
     <View
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_2sdp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:text="@string/introduceCosmetic"
-        android:textColor="#000000"
-        android:textSize="@dimen/_25sdp"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"

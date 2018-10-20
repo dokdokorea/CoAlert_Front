@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +16,8 @@ import com.example.user.coalert.R;
 import com.example.user.coalert.item.adCardViewItem;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> {
     ArrayList<adCardViewItem> itemList ;
@@ -39,8 +40,15 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         adCardViewItem adCardViewItem = itemList.get(position);
         Bitmap bitmap = adCardViewItem.getBitmap();
+        if(itemList.get(position).getInt() == 1) {
+            holder.productImage.setBorderColorResource(R.color.purpleColor);
+            holder.oneCardView.setBackgroundResource(R.drawable.cardview_lines_black);
+        }
+        else
+            holder.oneCardView.setBackgroundResource(R.drawable.cardview_lines_green);
         holder.productImage.setImageBitmap(bitmap);
         holder.productName.setText("코알라 화장품");
+
     }
 
     @Override
@@ -58,20 +66,20 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
         return null;
     }
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        ImageView productImage;
+        CircleImageView productImage;
         TextView productName;
         CardView oneCardView;
         public ViewHolder(View itemView) {
             super(itemView);
             productName = itemView.findViewById(R.id.inisfreeText);
-            productImage = itemView.findViewById(R.id.inisfreeImg);
+            productImage = itemView.findViewById(R.id.background_border_image);
             oneCardView = itemView.findViewById(R.id.adCardView);
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(context, "Clicked on position: " + getAdapterPosition(), Toast.LENGTH_LONG);
+            Toast.makeText(context, "Clicked on position: " + getAdapterPosition(), Toast.LENGTH_LONG).show();
         }
     }
 }
