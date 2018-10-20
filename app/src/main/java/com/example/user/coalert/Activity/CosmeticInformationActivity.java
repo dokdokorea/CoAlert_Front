@@ -250,7 +250,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         Intent intent = new Intent(this.getIntent());
 //        byte[] arr=getIntent().getByteArrayExtra("image");
 //        ProductImg.setImageBitmap(BitmapFactory.decodeByteArray(arr, 0, arr.length));
-        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+
+        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
         ProductName.setText(intent.getStringExtra("cname"));
         company.setText(intent.getStringExtra("company"));
     }
