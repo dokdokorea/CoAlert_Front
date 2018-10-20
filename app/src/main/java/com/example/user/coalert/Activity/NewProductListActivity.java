@@ -47,7 +47,7 @@ public class NewProductListActivity extends Activity {
         SunArr = new ArrayList<>();
         for(int i=0;i<4;i++)
         SunArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"SunBlock","inisfree"));
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"SunBlockSunBlockSunBlock","inisfreeinisfreeinisfree"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun2,"SunBlockSunBlockSunBlock","inisfreeinisfreeinisfree"));
         SunRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),SunArr,R.layout.activity_new_product_list));
 
 

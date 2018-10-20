@@ -1,7 +1,10 @@
 package com.example.user.coalert.Activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -90,12 +93,19 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             matching.setTextColor(Color.BLUE);
         }else
             matching.setTextColor(Color.GREEN);
+        GlobalApplication infor=(GlobalApplication) getApplication();
 
-        if (j == 0)
+        for(int i=0;i<infor.getWishlist().size();i++){
+            if(infor.getWishlist().get(i).equals(ProductName.getText().toString())){
+                j=1;
+            }
+        }
+
+        if (j == 0) {
             wishbtn.setImageResource(R.drawable.emptyheart);
-        else
+        }else {
             wishbtn.setImageResource(R.drawable.fullheart);
-
+        }
         wishbtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -108,12 +118,15 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     wishbtn.setImageResource(R.drawable.emptyheart);
                     Toast.makeText(CosmeticInformationActivity.this, "찜하기 취소", Toast.LENGTH_SHORT).show();
                     info.removeWishlist(ProductName.getText().toString());
+                    info.removeCompany(company.getText().toString());
 
                 } else {
                     wishbtn.setImageResource(R.drawable.fullheart);
                     wishlist=info.getWishlist();
                     wishlist.add(ProductName.getText().toString());
                     info.setWishlist(wishlist);
+                    info.addCompany(company.getText().toString());
+//                    info.addImage(convertImageViewToBitmap(ProductImg));
 
                     Toast.makeText(CosmeticInformationActivity.this, "찜!", Toast.LENGTH_SHORT).show();
                 }
@@ -233,9 +246,23 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
         ViewCompat.setNestedScrollingEnabled(detail, false);
 
+
+        Intent intent = new Intent(this.getIntent());
+//        byte[] arr=getIntent().getByteArrayExtra("image");
+//        ProductImg.setImageBitmap(BitmapFactory.decodeByteArray(arr, 0, arr.length));
+        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+        ProductName.setText(intent.getStringExtra("cname"));
+        company.setText(intent.getStringExtra("company"));
     }
 
     public void backbtn(View v) {
        finish();
+    }
+
+    private Bitmap convertImageViewToBitmap(ImageView v){
+
+        Bitmap bm=((BitmapDrawable)v.getDrawable()).getBitmap();
+
+        return bm;
     }
 }

@@ -2,6 +2,7 @@ package com.example.user.coalert.Autehntification;
 
 import android.app.Activity;
 import android.app.Application;
+import android.graphics.Bitmap;
 
 import com.example.user.coalert.R;
 import com.kakao.auth.KakaoSDK;
@@ -15,7 +16,41 @@ public class GlobalApplication extends Application {
 
     private String Id;
     private static ArrayList<String> wishlist =new ArrayList<>();
-    private ArrayList<Integer> cosphoto;
+    private static ArrayList<String> complist=new ArrayList<>();
+    private ArrayList<Integer> cosphoto=new ArrayList<>();
+    private ArrayList<Bitmap> image=new ArrayList<>();
+
+    public static ArrayList<String> getComplist() {
+        return complist;
+    }
+
+    public static void setComplist(ArrayList<String> complist) {
+        GlobalApplication.complist = complist;
+    }
+
+    public void addCompany(String wishitem) {
+        this.complist.add(wishitem);
+    }
+
+    public void removeCompany(String wishitem) {
+        this.complist.remove(wishitem);
+    }
+
+    public ArrayList<Bitmap> getImage() {
+        return image;
+    }
+
+    public void setImage(ArrayList<Bitmap> image) {
+        this.image = image;
+    }
+
+    public void addImage(Bitmap wishitem) {
+        this.image.add(wishitem);
+    }
+
+    public void removeImage(String wishitem) {
+        this.image.remove(wishitem);
+    }
 
     public ArrayList<String> getWishlist() {
         return wishlist;

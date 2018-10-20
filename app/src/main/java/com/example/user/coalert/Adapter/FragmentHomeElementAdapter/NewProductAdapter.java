@@ -2,6 +2,8 @@ package com.example.user.coalert.Adapter.FragmentHomeElementAdapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +18,7 @@ import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.ViewHolder> {
@@ -40,9 +43,19 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
 
         @Override
         public void onClick(View view) {
+            Bitmap sendBitmap = BitmapFactory.decodeResource(context.getResources(),mDataset.get(getAdapterPosition()).getImage());
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            sendBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            byte[] byteArray = stream.toByteArray();
+
+
             Intent intent=new Intent(context, CosmeticInformationActivity.class);
+            intent.putExtra("picture",mDataset.get(getAdapterPosition()).getImage());
+//            intent.putExtra("image",byteArray);
+            intent.putExtra("cname",mDataset.get(getAdapterPosition()).getText1());
+            intent.putExtra("company",mDataset.get(getAdapterPosition()).getText2());
             context.startActivity(intent);
-            Toast.makeText(context,mDataset.get(getAdapterPosition()).getText2(),Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context,mDataset.get(getAdapterPosition()).getText2(),Toast.LENGTH_SHORT).show();
         }
     }
 
