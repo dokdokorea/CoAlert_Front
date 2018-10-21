@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -98,6 +99,18 @@ public class ViewDetailActivity extends AppCompatActivity {
         PostTitle.setText("Twenty Three");
         PostContext.setText(context);
         count=Integer.parseInt(LikeCount.getText().toString());
+
+
+        Intent intent = new Intent(this.getIntent());
+        title = intent.getStringExtra("title");
+        count=Integer.parseInt(intent.getStringExtra("like"));
+        PostTitle.setText(title);
+        LikeCount.setText(intent.getStringExtra("like"));
+        CreatorId.setText(intent.getStringExtra("id"));
+        CreatorPicture.setImageResource(intent.getExtras().getInt("profile"));
+
+
+
         if (j == 0) {
             LikeIcon.setImageResource(R.drawable.black_empty_heart);
             GoodBtn.setTextColor(getResources().getColor(R.color.whiteBackground));
@@ -114,6 +127,9 @@ public class ViewDetailActivity extends AppCompatActivity {
                 "이예이예 이예이예이예이예 \n" +
                 "Let’s power up! 까맣게 다 타버릴 거예요"));
         comment.setAdapter(new DetaillReviewCommentAdapter(CommentArr));
+        ViewCompat.setNestedScrollingEnabled(comment, false);
+        comment.setFocusable(false);
+
 
 
 
@@ -176,9 +192,7 @@ public class ViewDetailActivity extends AppCompatActivity {
         });
 
 
-        Intent intent = new Intent(this.getIntent());
-        title = intent.getStringExtra("title");
-        PostTitle.setText(title);
+
     }
 
     private void init() {

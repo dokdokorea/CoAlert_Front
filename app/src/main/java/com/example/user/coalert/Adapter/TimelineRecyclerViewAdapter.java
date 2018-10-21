@@ -75,7 +75,10 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
         public void onClick(View view) {
             final TwoImgFourStringCardView item = list.get(getAdapterPosition());
             Intent intent = new Intent(context, ViewDetailActivity.class);
+            intent.putExtra("id",item.getT1());
             intent.putExtra("title",item.getT2());
+            intent.putExtra("like",item.getT3());
+            intent.putExtra("profile",item.getImg1());
             context.startActivity(intent);
             Toast.makeText(context,item.getT2(),Toast.LENGTH_SHORT).show();
         }
