@@ -71,7 +71,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
     ArrayList<TwoImgTwoStringCardView> DetailArr;
     ArrayList<TwoImgFourStringCardView> DetailPreviewArr;
-
+    TextView typeText;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +84,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         company=(TextView)findViewById(R.id.cosmetic_comp_name);
         WriteReview=(Button)findViewById(R.id.cosmetic_info_write_review);
         MoreToxicByType=(Button)findViewById(R.id.by_type_ingredient);
+        typeText = findViewById(R.id.cosmeticType);
         scroll=(NestedScrollView)findViewById(R.id.scroll);
         scroll.fullScroll(NestedScrollView.FOCUS_UP);
         final Intent intent = new Intent(this.getIntent());
@@ -281,11 +282,13 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     Call<List<getReviewModel>> call = ForRestSingleton.getInstance().getReview(kind, intent.getStringExtra("cname"));
                     List<getReviewModel> data = call.execute().body();
                     assert data != null;
+                    Log.e("asdasd", data.toString());
                     JsonArray review = dataToJsonArray(data.toString());
                     SimpleArr = new ArrayList<>();
                     for (int i = 0; i< review.size();i++) {
                         JsonObject jsonObject = (JsonObject) review.get(i);
-                        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin, jsonObject.get("review").toString(), 4));
+                        int rating = Integer.parseInt(jsonObject.get("rating").toString().replaceAll("\"",""));
+                        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin, rating, jsonObject.get("review").toString().replaceAll("\"", " ").replace("\\n", ""),jsonObject.get("type").toString().replace("\"","")));
                         }
                     simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
                 }catch (Exception e) {
