@@ -158,8 +158,8 @@ public class HomeFragment extends Fragment {
         newProduArr.add(new OneImgTwoStringCardView(R.drawable.cardview3, "신상품", "우리회사"));
 
         bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinblack,"아이린의 화장법"));
-        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinpink,"남다른 핑크"));
-        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinyellow,"색다른 옐로우"));
+        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.irinpink,"남다른 핑크매력 발산법"));
+        bestPreviewArr.add(new OneImgOneStringCardView(R.drawable.iu1,"아이유 메이크업"));
         bestPreviewRecyclerView.setNestedScrollingEnabled(false);
         bestPreviewRecyclerView.setAdapter(new BestReviewPreviewAdapter(getContext(),bestPreviewArr,R.layout.fragment_home));
 

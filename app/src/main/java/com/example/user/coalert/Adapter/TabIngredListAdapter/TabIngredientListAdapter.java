@@ -60,7 +60,7 @@ public class TabIngredientListAdapter extends RecyclerView.Adapter<TabIngredient
             holder.toxic_level.setTextColor(Color.parseColor("#3ADF00"));
             holder.toxic_circle.setImageResource(R.color.ingredient_safe);
         }else if(level<=4){
-            holder.toxic_level.setTextColor(Color.parseColor("#FFFF00"));
+            holder.toxic_level.setTextColor(Color.parseColor("#FFBF00"));
             holder.toxic_circle.setImageResource(R.color.ingredient_soso);
         }else if(level<=6){
             holder.toxic_level.setTextColor(Color.parseColor("#FF8000"));

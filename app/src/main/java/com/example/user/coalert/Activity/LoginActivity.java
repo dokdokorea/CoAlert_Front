@@ -25,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.Loading.Loading1Activity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
@@ -36,6 +37,7 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.Profile;
 import com.facebook.login.Login;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -190,7 +192,7 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     try {
-                        EditText loginEmail = findViewById(R.id.login_email);
+                        final EditText loginEmail = findViewById(R.id.login_email);
                         EditText loginPassword = findViewById(R.id.login_password);
                         String email = loginEmail.getText().toString();
                         String password = loginPassword.getText().toString();
@@ -204,8 +206,11 @@ public class LoginActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
+                                    GlobalApplication info=(GlobalApplication) getApplication();
+                                    info.setId(loginEmail.getText().toString());
                                     Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(accessActivity);
+                                    Toast.makeText(getApplicationContext(), info.getId()+"님 환영합니다!", Toast.LENGTH_LONG).show();
                                     finish();
                                     }
                             });
@@ -289,13 +294,15 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onCompleted(JSONObject user, GraphResponse response) {
                         if (response.getError() != null) {
-
+                            Toast.makeText(LoginActivity.this,"로그인정보가 일치하지않습니다..", Toast.LENGTH_SHORT).show();
                         } else {
                             Log.i("TAG", "user: " + user.toString());
                             Log.i("TAG", "AccessToken: " + result.getAccessToken().getToken());
                             setResult(RESULT_OK);
-
+                            GlobalApplication info=(GlobalApplication) getApplication();
+                            info.setId(Profile.getCurrentProfile().getId());
                             Intent i = new Intent(LoginActivity.this, CommonSignUpActivity.class);
+                            Toast.makeText(LoginActivity.this, Profile.getCurrentProfile()+"님 환영합니다!", Toast.LENGTH_SHORT).show();
                             startActivity(i);
                             finish();
                         }
@@ -407,10 +414,15 @@ public class LoginActivity extends AppCompatActivity {
                     //long number = userProfile.getId();
                     //Log.e("UserProfile", number + "");
 
-                    Toast.makeText(LoginActivity.this, String.valueOf(userProfile.getId()), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this, String.valueOf(userProfile.getId()), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, userProfile.getNickname()+"님 환영합니다!", Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
-                    intent.putExtra("name", userProfile.getNickname().toString());
+                    intent.putExtra("name", userProfile.getNickname());
                     intent.putExtra("id", String.valueOf(userProfile.getId()));
+                    GlobalApplication info=(GlobalApplication) getApplication();
+                    info.setId(userProfile.getNickname());
+
                     intent.putExtra("image", userProfile.getProfileImagePath());
 
                     startActivity(intent);

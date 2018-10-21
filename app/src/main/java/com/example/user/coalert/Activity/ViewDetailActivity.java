@@ -44,8 +44,11 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] ImageList = {R.drawable.sunreview1, R.drawable.sunreview2, R.drawable.sunreview3, R.drawable.sunreview4};
+    private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu3jpg, R.drawable.iu4};
     private static final Integer[] circleList = {R.drawable.sunreview1, R.drawable.sunreview2, R.drawable.sunreview3, R.drawable.sunreview4};
+    private static final Integer[] irinlist ={R.drawable.irinblack,R.drawable.irin,R.drawable.irin3,R.drawable.irin4,R.drawable.irin2};
+    private static final Integer[] colorlist ={R.drawable.irinpink,R.drawable.irinblack,R.drawable.irin3,R.drawable.irinyellow};
+    private static final Integer[] hyoshinlist ={R.drawable.hyoshin1,R.drawable.hyoshin2,R.drawable.hyoshin3,R.drawable.hyoshin4};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
     TextView GoodBtn,WriteReveiw;
     ArrayList<OneImgTwoStringCardView> CommentArr;
@@ -72,7 +75,6 @@ public class ViewDetailActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selected_detail_review);
-        init();
         selected_detail_backBtn = findViewById(R.id.selected_detail_review_back_btn);
         moreinfo=findViewById(R.id.more_review);
         selected_detail_backBtn.setOnClickListener(new View.OnClickListener() {
@@ -98,9 +100,8 @@ public class ViewDetailActivity extends AppCompatActivity {
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");
         PostTitle.setText("Twenty Three");
-        PostContext.setText(context);
-        count=Integer.parseInt(LikeCount.getText().toString());
 
+        count=Integer.parseInt(LikeCount.getText().toString());
 
         Intent intent = new Intent(this.getIntent());
         title = intent.getStringExtra("title");
@@ -109,6 +110,12 @@ public class ViewDetailActivity extends AppCompatActivity {
         LikeCount.setText(intent.getStringExtra("like"));
         CreatorId.setText(intent.getStringExtra("id"));
         CreatorPicture.setImageResource(intent.getExtras().getInt("profile"));
+
+
+        init(title);
+
+        PostContext.setText(context);
+
 
         if (j == 0) {
             LikeIcon.setImageResource(R.drawable.black_empty_heart);
@@ -189,10 +196,31 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     }
 
-    private void init() {
-        for (int i = 0; i < ImageList.length; i++)
-            ImageArr.add(ImageList[i]);
+    private void init(String title) {
+        if(title.equals("아이린의 화장법")) {
+            context="아이린이 화장을 하는 방법을 공개합니다!";
+            for (int i = 0; i < irinlist.length; i++)
+                ImageArr.add(irinlist[i]);
+        }
+        else if(title.equals("남다른 핑크매력 발산법")) {
+            context="팽크빛 화장을 하기위해서는 퍼스널 컬러를 파악하는것이 중요합니다!";
+            for (int i = 0; i < colorlist.length; i++)
+                ImageArr.add(colorlist[i]);
+        }
+        else if(title.equals("아이유 메이크업")) {
+            context="코스모폴리탄 잡지에 드라마 기대작인 달의 연인-보보경심 려의 출연진들의 화보가 실렸는데요. 화보에 실린 드라마의 주인공 아이유 양이 참으로 눈에  띄죠!\n" +
+                    "\n" +
+                    "본격적으로 아이유 메이크업에 돌입해보도록 할게요!\n\n곳곳에 아이유 얼굴의 포인트를 살린 아이유 메이크업 완성!\n" +
+                    "단아한 스타일링에 어울릴 듯한 메이크업이네요. 참고해보세요 :D";
+            for (int i = 0; i < ImageList.length; i++)
+                ImageArr.add(ImageList[i]);
+        }
+        else{
+            context="자세리뷰 내용";
+            for (int i = 0; i < circleList.length; i++)
+                ImageArr.add(circleList[i]);
 
+        }
         mPager = (ViewPager) findViewById(R.id.view);
         mPager.setAdapter(new DetailReviewSliderAdapter(ViewDetailActivity.this, ImageArr));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
