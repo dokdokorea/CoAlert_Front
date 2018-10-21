@@ -81,9 +81,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         scroll=(NestedScrollView)findViewById(R.id.scroll);
         scroll.fullScroll(NestedScrollView.FOCUS_UP);
         Intent intent = new Intent(this.getIntent());
-        ProductImg.setImageResource(R.drawable.sun1);
-        ProductName.setText("말랑말랑썬크림");
-        company.setText("이니스프리");
+
         Drawable alpha = WriteReview.getBackground();
         alpha.setAlpha(50);
         matching.setText(percent+"%");
@@ -97,13 +95,15 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             matching.setTextColor(Color.GREEN);
 
 //        Intent intent = new Intent(this.getIntent());
-        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
-        ProductImg.setTag(intent.getExtras().getInt("picture"));
-        ProductName.setText(intent.getStringExtra("cname"));
-        company.setText(intent.getStringExtra("company"));
-
-        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
-        matching.setText(String.valueOf(intent.getExtras().get("rating")));
+//        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+//        ProductImg.setTag(intent.getExtras().getInt("picture"));
+//        ProductName.setText(intent.getStringExtra("cname"));
+//        company.setText(intent.getStringExtra("company"));
+        Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
+// drawable 타입을 bitmap으로 변경
+        Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+        ProductImg.setImageBitmap(bitmap);
+        matching.setText(String.valueOf("리뷰등록 필요"));
         ProductName.setText(intent.getStringExtra("cname"));
         company.setText(intent.getStringExtra("company"));
 
