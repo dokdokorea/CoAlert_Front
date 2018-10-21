@@ -79,7 +79,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
             Log.e("클릭", String.valueOf(getAdapterPosition()));
             intent.putExtra("cname", list.get(getAdapterPosition()).getText2().replaceAll("\"",""));
             intent.putExtra("company", list.get(getAdapterPosition()).getText1());
-            intent.putExtra("rating", list.get(getAdapterPosition()).getNumber());
+            intent.putExtra("rating", list.get(getAdapterPosition()).getNumber()*20);
             intent.putExtra("image", list.get(getAdapterPosition()).getImage());
             context.startActivity(intent);
         }

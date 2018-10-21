@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     android:id="@+id/kind_background"
-    android:layout_height="@dimen/_100sdp"
+    android:layout_height="@dimen/_120sdp"
     android:layout_width="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_100sdp"
+        android:layout_height="@dimen/_120sdp"
         android:background="@drawable/chanel"
         android:id="@+id/kind_background_image"/>
     <TextView android:layout_width="@dimen/_320sdp"
-    android:layout_height="@dimen/_100sdp"
+    android:layout_height="@dimen/_120sdp"
     android:id="@+id/selectKindCosmeticItem"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:text="hi"
