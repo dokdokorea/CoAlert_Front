@@ -48,8 +48,8 @@ public class HotYoutubeListActivity extends AppCompatActivity {
 
         YoutubeArr = new ArrayList<>();
 
-        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube1, R.drawable.face1, "Glowy Coral Makeup (With Subs) 촉촉 코랄 메이크업", "PONY Syndrome","51.7k","DAu_jF-9AXs"));
-        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube2, R.drawable.iu1,"[Eng] 왕초보 기본템 데일리 메이크업! l 이사배(Risabae Makeup)", "RISABAE","5.4k","TSjVsxsQTes"));
+        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube1, R.drawable.face1, "Glowy Coral Makeup (With Subs) 촉촉 코랄 메이크업", "PONY Syndrome","51.7k","TSjVsxsQTes"));
+        YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube2, R.drawable.iu1,"[Eng] 왕초보 기본템 데일리 메이크업! l 이사배(Risabae Makeup)", "RISABAE","5.4k","DAu_jF-9AXs"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube3,R.drawable.iu2, "BOLD RED LIP MAKEUP\uD83D\uDC8B(With subs) 볼드 레드 립 메이크업", "PONY Syndrome","19.7k","p7BXc7GPsYA"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube4, R.drawable.iu4,"최애템으로 인생 데일리 메이크업! 같이 준비해요 -Get Ready With Me | 다또아", "다또아Daddoa","59k","MrRWpADHifw"));
         YoutubeArr.add(new TwoImgFourStringCardView(R.drawable.youtube5, R.drawable.hyoshin1,"이 영상을 보면 '베이스 천재'가 될 수 있습니다. #유형별 베이스법 #피부가 좋아보이는 베이스 표현법 | LAMUQE", "lamuqe","12.8k","vMx7ww59Le4-s"));
