@@ -46,6 +46,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
     boolean lastitemVisibleFlag;
     JsonArray purifyDataArray;
     ImageView back_btn;
+    TextView backHome;
     RecommendedCosmeticAdapter recommendedCosmeticAdapter;
     @SuppressLint({"SetTextI18n", "ClickableViewAccessibility"})
     @Override
@@ -53,6 +54,7 @@ public class recommendCosmeticShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         lastitemVisibleFlag = false;
         setContentView(R.layout.activity_recommend_cosmetic_show);
+        backHome = findViewById(R.id.recommend_back_home);
         getReceiveData = getIntent();
         cosmeticArr = new ArrayList<>();
         swipeRefreshLayout = findViewById(R.id.swipyrefreshlayout);
@@ -67,6 +69,14 @@ public class recommendCosmeticShow extends AppCompatActivity {
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+            }
+        });
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

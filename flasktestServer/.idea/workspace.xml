@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/setReviewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/WriteReviewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/WriteReviewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WhatSelectKindCosmetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WhatSelectKindCosmetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_cosmetic_information.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_cosmetic_information.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_recommend_cosmetic_show.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/activity_recommend_cosmetic_show.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/getReview.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/getReview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/foundationIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/foundationIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,8 +154,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+            <state relative-caret-position="465">
+              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
                 <marker date="1540145541525" expanded="true" signature="2557:3971" ph="..." />
@@ -205,7 +190,7 @@
         <entry file="file://$PROJECT_DIR$/RecommendSystem/getReview.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <marker date="1540152077391" expanded="true" signature="77:82" ph="..." />
@@ -1011,7 +996,7 @@
     <entry file="file://$PROJECT_DIR$/RecommendSystem/getReview.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
             <marker date="1540152077391" expanded="true" signature="77:82" ph="..." />
@@ -1032,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+        <state relative-caret-position="465">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
             <marker date="1540145541525" expanded="true" signature="2557:3971" ph="..." />
