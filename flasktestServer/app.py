@@ -4,6 +4,7 @@ from ingredient.getBadIngredient import get_bad_ingredient
 from ingredient.getIngredient import getIngredient
 from cosmeticImg.splitCosmeticCompany import search
 from RecommendSystem.oneCosmeticRating import requestOneCosmeticRating
+from RecommendSystem.getReview import  getReview
 import json
 
 app = Flask(__name__)
@@ -66,7 +67,6 @@ def badIngredient():
     request_id = request.args.get('id')
     person_type = request.args.get('person_type')
     response_data = get_bad_ingredient(person_type)
-    print(response_data)
     list = []
     for i, data in response_data.iterrows():
         list.append({"ingredientName": data['성분명'], "warningRate": data['위험도']})
@@ -94,7 +94,16 @@ def oneCosmeticRating():
     result = requestOneCosmeticRating(0, cosmetic_type, int(skin_type), cname)
     print(result)
     result = result.round(2)
-    return json.dumps({'Rating':result})
+    return json.dumps({'Rating': result})
+
+
+@app.route("/getReview", methods=['POST'])
+def getReviewList():
+    kind = request.args.get('kind')
+    cosmetic_type = kindCosmetic[int(kind)]
+    cosmetic_name = request.args.get('cname')
+    result_list = getReview(cosmetic_type, cosmetic_name)
+    return json.dumps(result_list)
 
 
 if __name__ == '__main__':

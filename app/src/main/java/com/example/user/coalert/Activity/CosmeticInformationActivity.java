@@ -34,6 +34,7 @@ import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAd
 import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.getReviewModel;
 import com.example.user.coalert.forRestServer.oneCosmeticRecommend;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
@@ -46,6 +47,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 
@@ -103,17 +105,18 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductImg.setTag(intent.getExtras().getInt("picture"));
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
+        final int kind = intent.getExtras().getInt("kind");
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
             Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
-            final int kind = intent.getExtras().getInt("kind");
+
             ProductImg.setImageBitmap(bitmap);
             new Thread(){
                 @Override
                 public void run() {
                     super.run();
-                    try {Log.e("kind", String.valueOf(kind));
-                        Call<oneCosmeticRecommend> call = ForRestSingleton.getInstance().oneRecommendCosmetic(2, intent.getStringExtra("cname"), 0);
+                    try {
+                        Call<oneCosmeticRecommend> call = ForRestSingleton.getInstance().oneRecommendCosmetic(kind, intent.getStringExtra("cname"), 0);
                         final oneCosmeticRecommend result = call.execute().body();
                         runOnUiThread(new Runnable() {
                             @Override
@@ -126,6 +129,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 }
             }.start();
         }else{
+
             ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
             matching.setText(String.valueOf(intent.getExtras().get("rating")));
         }
@@ -269,12 +273,27 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         simple=(RecyclerView)findViewById(R.id.tab_simple_review_recycler);
         simple.setHasFixedSize(true);
         simple.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        SimpleArr=new ArrayList<>();
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"괜찮았어요!",4));
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"음...뭐 그럭저럭?",3));
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.iu8,"완죤강추 인생템이예요ㅠㅠㅠ",5));
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.hyoshin2,"별로임",2));
-        simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    Call<List<getReviewModel>> call = ForRestSingleton.getInstance().getReview(kind, intent.getStringExtra("cname"));
+                    List<getReviewModel> data = call.execute().body();
+                    assert data != null;
+                    JsonArray review = dataToJsonArray(data.toString());
+                    SimpleArr = new ArrayList<>();
+                    for (int i = 0; i< review.size();i++) {
+                        JsonObject jsonObject = (JsonObject) review.get(i);
+                        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin, jsonObject.get("review").toString(), 4));
+                        }
+                    simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
         ViewCompat.setNestedScrollingEnabled(simple, false);
 
         detail=(RecyclerView)findViewById(R.id.tab_detail_review_preview_recycler);

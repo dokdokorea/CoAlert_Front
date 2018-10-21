@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/oneCosmeticRecommend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/src/main/res/drawable/look_at_my_eyes.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/oneCosmeticRating.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getReviewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/getReview.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/SearchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/SearchFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +20,7 @@
     <SUITE FILE_PATH="coverage/flasktestServer$getIngredient.coverage" NAME="getIngredient Coverage Results" MODIFIED="1540051870852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$oneCosmeticRating.coverage" NAME="oneCosmeticRating Coverage Results" MODIFIED="1540117058522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
     <SUITE FILE_PATH="coverage/flasktestServer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1538750807371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flasktestServer$getReview.coverage" NAME="getReview Coverage Results" MODIFIED="1540131792748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
     <SUITE FILE_PATH="coverage/flasktestServer$flasktestServer.coverage" NAME="flasktestServer Coverage Results" MODIFIED="1538414357442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/flasktestServer$getIngredient__1_.coverage" NAME="getIngredient (1) Coverage Results" MODIFIED="1540114078737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$recommendCosmetic.coverage" NAME="recommendCosmetic Coverage Results" MODIFIED="1539635965432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
@@ -112,56 +110,69 @@
     <session id="-614554436">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="52" />
           <entry key="dummy" value="21" />
-          <entry key="py" value="5902" />
+          <entry key="py" value="6596" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSV" value="52" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="5902" />
+          <entry key="Python" value="6596" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="51" />
-          <entry key="Image" value="3" />
-          <entry key="Python" value="7" />
+          <entry key="Image" value="4" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="51" />
-          <entry key="jpg" value="3" />
-          <entry key="py" value="7" />
+          <entry key="jpg" value="4" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+            <state relative-caret-position="398">
+              <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1540117599354" expanded="true" signature="2547:3151" ph="..." />
+                <marker date="1540133701164" expanded="true" signature="2571:3461" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/getReview.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="102" lean-forward="true" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+              <folding>
+                <marker date="1540133701167" expanded="true" signature="58:63" ph="..." />
               </folding>
             </state>
           </provider>
@@ -170,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1021">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+            <state relative-caret-position="482">
+              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -195,7 +206,7 @@
         <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <marker date="1540113247737" expanded="true" signature="259:260" ph="..." />
@@ -205,18 +216,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+        <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/닥터지(고운세상)_메디 UV 울트라 선 SPF50+ PA+++.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -285,6 +286,7 @@
         <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/oneCosmeticRating.py" />
+        <option value="$PROJECT_DIR$/RecommendSystem/getReview.py" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -296,10 +298,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="672" />
-    <option name="y" value="191" />
-    <option name="width" value="1008" />
-    <option name="height" value="789" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,11 +331,6 @@
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="cosmeticImg" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
@@ -403,7 +398,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.oneCosmeticRating">
+  <component name="RunManager" selected="Python.getReview">
     <configuration name="asdads" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -448,7 +443,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="getIngredient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="getReview" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -456,12 +451,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ingredient" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RecommendSystem" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ingredient/getBadIngredient.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RecommendSystem/getReview.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -531,19 +526,19 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.flasktestServer" />
-      <item itemvalue="Python.getIngredient" />
       <item itemvalue="Python.splitCosmeticCompany" />
       <item itemvalue="Python.asdads" />
       <item itemvalue="Python.getIngredient (1)" />
       <item itemvalue="Python.oneCosmeticRating" />
+      <item itemvalue="Python.getReview" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getReview" />
         <item itemvalue="Python.oneCosmeticRating" />
         <item itemvalue="Python.getIngredient (1)" />
         <item itemvalue="Python.asdads" />
         <item itemvalue="Python.splitCosmeticCompany" />
-        <item itemvalue="Python.getIngredient" />
       </list>
     </recent_temporary>
   </component>
@@ -564,12 +559,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22954823" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -630,12 +625,6 @@
     <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file:///anaconda3/envs/tensorflow/lib/python3.6/site-packages/pandas/core/internals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -669,9 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,10 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <marker date="1540057011704" expanded="true" signature="51:56" ph="..." />
-            <marker date="1540057011704" expanded="true" signature="505:739" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,31 +684,24 @@
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1540113247737" expanded="true" signature="259:260" ph="..." />
-          </folding>
+        <state relative-caret-position="745">
+          <caret line="92" column="8" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="8" />
         </state>
       </provider>
+      <provider editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1021">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="590">
+          <caret line="157" column="34" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/oneCosmeticRating.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -738,19 +713,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <marker date="1540117599354" expanded="true" signature="2547:3151" ph="..." />
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1540113247737" expanded="true" signature="259:260" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/닥터지(고운세상)_메디 UV 울트라 선 SPF50+ PA+++.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/getReview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="102" lean-forward="true" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+          <folding>
+            <marker date="1540133701167" expanded="true" signature="58:63" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="68" column="51" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <marker date="1540133701164" expanded="true" signature="2571:3461" ph="..." />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
