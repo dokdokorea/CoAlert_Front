@@ -41,7 +41,7 @@
                 android:fontFamily="@font/bm_dohyen"
                 android:gravity="center"
                 android:ellipsize="end"
-                android:lines="1"
+                android:lines="2"
                 android:textSize="@dimen/_10sdp"
                 android:text="@string/cosmetic_pd_name" />
 

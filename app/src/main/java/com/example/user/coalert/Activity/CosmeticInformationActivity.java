@@ -57,8 +57,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
     Parcelable state;
 
-
-
     ArrayList<TwoStringCardView> IngArr;
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
     ArrayList<TwoImgTwoStringCardView> DetailArr;
@@ -97,12 +95,14 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 
         for(int i=0;i<infor.getWishlist().size();i++){
             if(infor.getWishlist().get(i).equals(ProductName.getText().toString())){
+                Log.e("global",infor.getWishlist().get(i));
                 j=1;
             }
         }
 
         if (j == 0) {
             wishbtn.setImageResource(R.drawable.emptyheart);
+            Log.d("tag",ProductName.getText().toString());
         }else {
             wishbtn.setImageResource(R.drawable.fullheart);
         }
@@ -138,9 +138,10 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         shareBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                GlobalApplication info=(GlobalApplication) getApplication();
                 Intent msg = new Intent (Intent.ACTION_SEND);
                 msg.addCategory(Intent.CATEGORY_DEFAULT);
-                msg.putExtra(Intent.EXTRA_SUBJECT, "이상훈님의 말랑말랑썬크림(이니스프리)의 적합성을 확인하세요");
+                msg.putExtra(Intent.EXTRA_SUBJECT, info.getId()+"님의 "+ProductName.getText()+"("+company.getText()+")의 적합성은 "+percent+"%입니다 당신의 적합도도 확인하러오세요!");
                 msg.putExtra(Intent.EXTRA_TEXT, "모든 화장품을 개인에게 맞추다 CoAlert");
                 msg.setType("text/plain");
                 startActivity(Intent.createChooser(msg, "공유"));
