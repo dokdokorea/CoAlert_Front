@@ -251,8 +251,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         SimpleArr=new ArrayList<>();
         SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"괜찮았어요!",4));
         SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"음...뭐 그럭저럭?",3));
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.irin,"완죤강추 인생템이예요ㅠㅠㅠ",5));
-        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"별로임",2));
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.iu8,"완죤강추 인생템이예요ㅠㅠㅠ",5));
+        SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.hyoshin2,"별로임",2));
         simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
         ViewCompat.setNestedScrollingEnabled(simple, false);
 
@@ -260,12 +260,17 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         detail.setHasFixedSize(true);
         detail.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         DetailPreviewArr=new ArrayList<>();
-        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.irin,R.drawable.sun1,"핫한핫산","100","나는똥글을 싸지를것이다!","뿌직뿌직뿌지지지지지지직"));
-        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.iu7,R.drawable.sun1,"아이유","1000","밤편지","난~~~ 파도가 머~~물~던 모래 위에 적힌 글씨처럼~~~ 그대가 멀리~~~ 사라져 버릴 것 같아~~~~~"));
-        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.nayeon1,R.drawable.sun1,"나나연","500","나는나연","일은 열심히 하셨나연? 배고프지않나연?"));
+        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.irin,R.drawable.sun2,"dlwlrma","123","리얼 썬크림 후기!","안녕하세요 여러분 오늘은 쫀쫀하기로 소문난 A24 프리미엄 썬 프로텍션 크림 SPF 50+/PA+++ 선크림을 사용해보았어요"));
+        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.iu7,R.drawable.sunreview2,"아이유","1096","A24썬크림 써봤습니다~","좋았어요~~~"));
+        DetailPreviewArr.add(new TwoImgFourStringCardView(R.drawable.nayeon1,R.drawable.sunreview1,"duddn14758","739","A24 썬크림의 A부터 Z까지!","자외선 차단 지수 빵빵하다.\n" +
+                "워터프루프 선크림.\n천연원료와 유기농원료를 뽐내주는 전성분.\n" +
+                "피부주름개선과 피부미백에 도움을 준다고 한다.\n50시간 수분지속!\n" +
+                "민감피부 및 모든 피부를 위한 선크림으로 건성이나 수분부족형 지성 피부가 쓰기 좋다.\n" +
+                "미백 선크림으로 피부 톤을 한 층 밝혀준다.\n선크림 중에는 간혹 독해서 눈 주위에 바르면 눈이 시리고 따끔한 경우가 있는데 그렇지는 않았다.\n" +
+                "순한 선크림으로 오일프리선크림이기 때문에 확실히 촉촉한데 유분이 겉도는 느낌은 들지 않았다.\n" +
+                "단, 미백 효과를 준다는 점은 좋지만 하얗게 된다는 점 때문에 몸에 바르기에는 꺼려질 것 같다."));
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
         ViewCompat.setNestedScrollingEnabled(detail, false);
-
 
     }
     public void setData(JsonArray jsonArray){

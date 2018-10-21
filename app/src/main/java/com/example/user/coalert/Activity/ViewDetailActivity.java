@@ -44,7 +44,8 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] ImageList = {R.drawable.iu1, R.drawable.iu2, R.drawable.iu7, R.drawable.iu3jpg, R.drawable.iu4, R.drawable.iu5};
+    private static final Integer[] ImageList = {R.drawable.sunreview1, R.drawable.sunreview2, R.drawable.sunreview3, R.drawable.sunreview4};
+    private static final Integer[] circleList = {R.drawable.sunreview1, R.drawable.sunreview2, R.drawable.sunreview3, R.drawable.sunreview4};
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
     TextView GoodBtn,WriteReveiw;
     ArrayList<OneImgTwoStringCardView> CommentArr;
@@ -109,8 +110,6 @@ public class ViewDetailActivity extends AppCompatActivity {
         CreatorId.setText(intent.getStringExtra("id"));
         CreatorPicture.setImageResource(intent.getExtras().getInt("profile"));
 
-
-
         if (j == 0) {
             LikeIcon.setImageResource(R.drawable.black_empty_heart);
             GoodBtn.setTextColor(getResources().getColor(R.color.whiteBackground));
@@ -121,16 +120,11 @@ public class ViewDetailActivity extends AppCompatActivity {
         comment.setHasFixedSize(true);
         comment.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         CommentArr=new ArrayList<>();
-        CommentArr.add(new OneImgTwoStringCardView(R.drawable.iu1,"dlwlrma","hello my name is IU and 26years old"));
-        CommentArr.add(new OneImgTwoStringCardView(R.drawable.irin,"irin","Go! Go! 에어플레인! 번개처럼 날아라\n" +
-                "카우아이 파도 속 나를 던져 버리게\n" +
-                "이예이예 이예이예이예이예 \n" +
-                "Let’s power up! 까맣게 다 타버릴 거예요"));
+        CommentArr.add(new OneImgTwoStringCardView(R.drawable.iu1,"dlwlrma","우와 뭐야 이 후기 정말 굉장한걸?"));
+        CommentArr.add(new OneImgTwoStringCardView(R.drawable.irin,"irin","리뷰를 보다보니 저랑 딱 비슷한 타입이신거같아서 많은도움 받고가요~~"));
         comment.setAdapter(new DetaillReviewCommentAdapter(CommentArr));
         ViewCompat.setNestedScrollingEnabled(comment, false);
         comment.setFocusable(false);
-
-
 
 
         topbtn.setOnClickListener(new View.OnClickListener() {
