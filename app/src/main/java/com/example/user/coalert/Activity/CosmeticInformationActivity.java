@@ -123,7 +123,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
             Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
-
             ProductImg.setImageBitmap(bitmap);
             new Thread(){
                 @Override
@@ -145,7 +144,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         }else{
             Log.e("asdads", String.valueOf(intent.getExtras().get("rating")));
             ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
-            matching.setText(String.valueOf(intent.getExtras().get("rating")));
+            matching.setText(String.valueOf(new DecimalFormat("#.##").format(intent.getExtras().get("rating"))));
         }
 
         ProductName.setText(intent.getStringExtra("cname"));
