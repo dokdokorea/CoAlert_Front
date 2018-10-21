@@ -221,11 +221,15 @@ public class ViewDetailActivity extends AppCompatActivity {
             for (int i = 0; i < ImageList.length; i++)
                 ImageArr.add(ImageList[i]);
         }
-        else{
-            context="자세리뷰 내용";
+        else if(title.equals("민감성 피부여 일어나라!!")){
+            context="일어나라 일어나라!!";
             for (int i = 0; i < circleList.length; i++)
                 ImageArr.add(circleList[i]);
 
+        }else{
+            context="박효신의 잘생긴 메이크업";
+            for (int i = 0; i < hyoshinlist.length; i++)
+                ImageArr.add(hyoshinlist[i]);
         }
         mPager = (ViewPager) findViewById(R.id.view);
         mPager.setAdapter(new DetailReviewSliderAdapter(ViewDetailActivity.this, ImageArr));

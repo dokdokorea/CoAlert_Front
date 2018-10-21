@@ -43,6 +43,18 @@ public class DetailReviewAdapter extends RecyclerView.Adapter<DetailReviewAdapte
             final TwoImgTwoStringCardView item=mDataSet.get(getAdapterPosition());
             Intent intent = new Intent(context, ViewDetailActivity.class);
             intent.putExtra("title",item.getText2());
+            intent.putExtra("id",item.getText1());
+            intent.putExtra("profile",item.getImg1());
+
+            if(getAdapterPosition()==0){
+                intent.putExtra("like","2103");
+            }else if(getAdapterPosition()==1){
+                intent.putExtra("like","4932");
+            }else if(getAdapterPosition()==2){
+                intent.putExtra("like","8732");
+            }else{
+                intent.putExtra("like","3306");
+            }
             context.startActivity(intent);
         }
     }
