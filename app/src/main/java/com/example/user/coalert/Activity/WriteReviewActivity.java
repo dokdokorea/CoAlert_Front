@@ -77,7 +77,6 @@ public class WriteReviewActivity extends AppCompatActivity {
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
         imageView.setImageBitmap((Bitmap) getIntent.getExtras().get("image"));
-        Log.e("asdasd", getIntent.getStringExtra("company"));
         companyName.setText(getIntent.getStringExtra("company"));
         cname.setText(getIntent.getStringExtra("cname"));
         backBtn.setOnClickListener(new View.OnClickListener() {

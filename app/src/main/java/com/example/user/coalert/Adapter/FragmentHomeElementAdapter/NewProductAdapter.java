@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -58,11 +60,13 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
                         String[] companyAndType = mDataset.get(getAdapterPosition()).getText2().split(",");
                         Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(mDataset.get(getAdapterPosition()).getText1(), companyAndType[1]);
                         List<GetBadIngredientModel> result = call.execute().body();
+// drawable 타입을 bitmap으로 변경
                         Intent intent = new Intent(context, CosmeticInformationActivity.class);
                         intent.putExtra("cname", mDataset.get(getAdapterPosition()).getText2().replaceAll("\"", ""));
                         intent.putExtra("company", companyAndType[0]);
                         intent.putExtra("image", mDataset.get(getAdapterPosition()).getImage());
                         intent.putExtra("ingredient",result.toString());
+                        intent.putExtra("check", 0);
                         context.startActivity(intent);
                     }catch (Exception e){
                         e.printStackTrace();
