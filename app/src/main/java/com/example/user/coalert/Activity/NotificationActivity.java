@@ -42,8 +42,8 @@ public class NotificationActivity extends Activity {
 
         mAdapter = new NotificationAdapter(getBaseContext(),myDataset,R.layout.notification);
 
-        myDataset.add(new OneImgTwoStringCardView(R.drawable.cardview1, "#InsideOut","어디에어디에"));
-        myDataset.add(new OneImgTwoStringCardView(R.drawable.cardview2, "Catch me if you can","나는야나는야"));
+        myDataset.add(new OneImgTwoStringCardView(R.drawable.irin4, "irinlove","친구요청을 하셨습니다"));
+        myDataset.add(new OneImgTwoStringCardView(R.drawable.seul, "seulgi","게시글을 등록하셨습니다"));
         mRecyclerView.setAdapter(mAdapter);
     }
 }
