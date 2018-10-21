@@ -48,7 +48,7 @@
                     android:layout_height="@dimen/_29sdp"
                     android:layout_marginLeft="@dimen/_3sdp"
                     android:layout_marginRight="@dimen/_3sdp"
-                    android:background="@drawable/main_hot_review_background"
+                    android:background="@color/purpleGrdStart"
                     android:onClick="viewSimple"
                     android:orientation="horizontal">
 
@@ -57,8 +57,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
-                        android:textColor="@android:color/darker_gray"
-                        android:text="간단리뷰 더보기" />
+                        android:textColor="@android:color/white"
+                        android:text="간단리뷰 더보기"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:id="@+id/simple_list_icon"
@@ -67,6 +68,7 @@
                         android:layout_margin="@dimen/_5sdp"
                         android:gravity="right"
                         android:text="▶"
+                        android:textColor="@android:color/white"
                         android:textSize="@dimen/_15sdp" />
 
                 </LinearLayout>
@@ -90,7 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_29sdp"
                     android:layout_margin="@dimen/_3sdp"
-                    android:background="@drawable/main_hot_review_background"
+                    android:background="@color/purpleGrdStart"
                     android:onClick="viewDetail"
                     android:orientation="horizontal">
 
@@ -98,7 +100,8 @@
                         style="@style/whiteTextStyleSeeMyReviewsSub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
                         android:layout_margin="@dimen/_5sdp"
                         android:text="자세한리뷰 더보기" />
 
@@ -107,6 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/_5sdp"
                         android:gravity="right"
+                        android:textColor="@android:color/white"
                         android:id="@+id/detail_list_icon"
                         android:text="▶"
                         android:textSize="@dimen/_15sdp" />

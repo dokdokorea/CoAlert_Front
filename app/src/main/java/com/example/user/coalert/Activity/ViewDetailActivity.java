@@ -204,7 +204,7 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     private void init(String title) {
         if(title.equals("아이린의 화장법")) {
-            context="아이린이 화장을 하는 방법을 공개합니다!";
+            context="아이린이 무대 나올 때 마다 하는 메이크업에서\n 아이셰도우 색상이 참 예뻐서 찾아보다 마침 저랑 매칭도가 높아서 \n구입해서 사용하게 되었어요. 생각보다 \n 발색력이 좋고 지속력이 오래가서 지성분들에게도 강추합니다!";
             for (int i = 0; i < irinlist.length; i++)
                 ImageArr.add(irinlist[i]);
         }
