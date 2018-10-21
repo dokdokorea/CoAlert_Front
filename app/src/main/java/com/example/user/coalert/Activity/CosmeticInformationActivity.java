@@ -99,7 +99,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 
         for(int i=0;i<infor.getWishlist().size();i++){
             if(infor.getWishlist().get(i).equals(ProductName.getText().toString())){
-                Log.e("global",infor.getWishlist().get(i));
                 j=1;
             }
         }
@@ -157,6 +156,10 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(CosmeticInformationActivity.this,WriteReviewActivity.class);
+                Intent hi = new Intent(getIntent());
+                intent.putExtra("cname", hi.getStringExtra("cname"));
+                intent.putExtra("company",hi.getStringExtra("company"));
+                intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
                 startActivity(intent);
             }
         });

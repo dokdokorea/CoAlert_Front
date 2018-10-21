@@ -48,6 +48,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     ImageView imageView;
     TextView wordsNum;
     EditText editText;
+    TextView cname, companyName;
     RecyclerView userImageRecyclerView;
     int previousLength = 0;
     Button letsDetailReview;
@@ -62,16 +63,23 @@ public class WriteReviewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_review);
+        cname = findViewById(R.id.cosmetic_prod_name);
         backBtn = findViewById(R.id.selected_detail_review_back_btn);
         editText = findViewById(R.id.one_line);
         wordsNum = findViewById(R.id.wordsNumber);
+        companyName = findViewById(R.id.write_review_company);
         smileRating = findViewById(R.id.smile_rating);
+        imageView = findViewById(R.id.prod_image);
         letsDetailReview = findViewById(R.id.write_review_lets_detail_write_btn);
         userImageRecyclerView = findViewById(R.id.personal_prod_pic);
+        Intent getIntent = getIntent();
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
-
+        imageView.setImageBitmap((Bitmap) getIntent.getExtras().get("image"));
+        Log.e("asdasd", getIntent.getStringExtra("company"));
+        companyName.setText(getIntent.getStringExtra("company"));
+        cname.setText(getIntent.getStringExtra("cname"));
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
