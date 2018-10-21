@@ -1,10 +1,10 @@
 from flask import Flask, request, Response
-from RecommendSystem.recommendCosmetic import recommend_cosmetics
+from RecommendSystem.recommendCosmetic import recommend_cosmetics, add_data_to_csv
 from ingredient.getBadIngredient import get_bad_ingredient
 from ingredient.getIngredient import getIngredient
 from cosmeticImg.splitCosmeticCompany import search
 from RecommendSystem.oneCosmeticRating import requestOneCosmeticRating
-from RecommendSystem.getReview import  getReview
+from RecommendSystem.getReview import getReview
 import json
 
 app = Flask(__name__)
@@ -103,6 +103,20 @@ def getReviewList():
     cosmetic_name = request.args.get('cname')
     result_list = getReview(cosmetic_type, cosmetic_name)
     return json.dumps(result_list)
+
+
+@app.route("/setReview", methods=['POST'])
+def setReviewList():
+    id = request.args.get('id')
+    kind_cosmetic = request.args.get('kindCosmetic')
+    cname = request.args.get('cname')
+    rating = request.args.get('rating')
+    type = request.args.get('type')
+    review = request.args.get('review')
+    cosmetic_type = kindCosmetic[int(kind_cosmetic)]
+    print(id, cname, rating, type, review, cosmetic_type)
+    add_data_to_csv(id, cosmetic_type, cname, rating, type, review)
+    return json.dumps({'result': 'ok'})
 
 
 if __name__ == '__main__':

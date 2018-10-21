@@ -15,6 +15,7 @@ public interface CoAlertService {
     Gson gson = new GsonBuilder()
             .setLenient()
             .create();
+
     @POST("login")
     Call<loginModel> loginCall(
             @Query("id") String id,
@@ -91,22 +92,34 @@ public interface CoAlertService {
 
     @POST("ingredientPerCosmetic")
     Call<List<GetBadIngredientModel>> ingredientPerCosmetic(
-        @Query("cname") String cname,
-        @Query("kind") String kind
+            @Query("cname") String cname,
+            @Query("kind") String kind
     );
 
     @POST("oneCosmeticRating")
-            Call<oneCosmeticRecommend> oneRecommendCosmetic(
-                    @Query("kind") int kind,
-                    @Query("cname") String cname,
-                    @Query("type") int type
+    Call<oneCosmeticRecommend> oneRecommendCosmetic(
+            @Query("kind") int kind,
+            @Query("cname") String cname,
+            @Query("type") int type
     );
+
     @POST("getReview")
-            Call<List<getReviewModel>> getReview(
-                    @Query("kind") int kind,
-                    @Query("cname") String cname
+    Call<List<getReviewModel>> getReview(
+            @Query("kind") int kind,
+            @Query("cname") String cname
 
     );
+
+    @POST("setReview")
+    Call<setReviewModel> setReview(
+            @Query("id") int id,
+            @Query("kindCosmetic") int kind,
+            @Query("cname") String cname,
+            @Query("rating") int rating,
+            @Query("type") int type,
+            @Query("review") String text
+    );
+
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("http://192.168.43.85:5000/")
             .addConverterFactory(GsonConverterFactory.create(gson))

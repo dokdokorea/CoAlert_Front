@@ -46,6 +46,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,6 +108,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
         final int kind = intent.getExtras().getInt("kind");
+
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
             Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
@@ -207,6 +209,8 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
                     intent.putExtra("check", 1);
                 }
+                intent.putExtra("rating", matching.getText());
+                intent.putExtra("kind", kind);
                 intent.putExtra("cname", hi.getStringExtra("cname"));
                 intent.putExtra("company",hi.getStringExtra("company"));
                 startActivity(intent);
@@ -217,7 +221,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(CosmeticInformationActivity.this,CosmeticIngredientActivity.class);
+                Intent intent=new Intent(CosmeticInformationActivity.this, CosmeticIngredientActivity.class);
                 startActivity(intent);
             }
         });
@@ -314,7 +318,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 "단, 미백 효과를 준다는 점은 좋지만 하얗게 된다는 점 때문에 몸에 바르기에는 꺼려질 것 같다."));
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
         ViewCompat.setNestedScrollingEnabled(detail, false);
-
     }
     public void setData(JsonArray jsonArray){
         for (int i = 0; i<jsonArray.size(); i++) {
