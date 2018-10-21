@@ -124,15 +124,13 @@ public class recommendCosmeticShow extends AppCompatActivity {
         //TODO 어뎁터에 데이터를 추가합니다
         for (int i = 0; i < recommendCosmeticJsonArray.size(); i++) {
             JsonObject oneData = (JsonObject) recommendCosmeticJsonArray.get(i);
-            Log.e("pixel", oneData.get("pixel").toString());
-            cosmeticArr.add(new OneImgThreeStringCardView(StringToBitMap(oneData.get("pixel").toString().substring(2, oneData.get("pixel").toString().length())), oneData.get("company").toString().replaceAll("\"", ""),oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString())));
+            cosmeticArr.add( new OneImgThreeStringCardView(StringToBitMap(oneData.get("pixel").toString().substring(2, oneData.get("pixel").toString().length())), oneData.get("company").toString().replaceAll("\"", ""),oneData.get("id").toString(), Float.valueOf(oneData.get("estimate").toString()), kindCosmetic+1));
         }
     }
     public Bitmap StringToBitMap(String encodedString){
         try{
             byte [] encodeByte=Base64.decode(encodedString,Base64.DEFAULT);
             Bitmap bitmap=BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
-            Log.e("asdasd", bitmap.toString());
             return bitmap;
         }catch(Exception e){
             e.getMessage();

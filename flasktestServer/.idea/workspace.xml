@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ingredient/getBadIngredient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +24,7 @@
     <SUITE FILE_PATH="coverage/flasktestServer$getIngredient.coverage" NAME="getIngredient Coverage Results" MODIFIED="1540051870852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1538750807371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasktestServer$flasktestServer.coverage" NAME="flasktestServer Coverage Results" MODIFIED="1538414357442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flasktestServer$getIngredient__1_.coverage" NAME="getIngredient (1) Coverage Results" MODIFIED="1540092741307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$recommendCosmetic.coverage" NAME="recommendCosmetic Coverage Results" MODIFIED="1539635965432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
     <SUITE FILE_PATH="coverage/flasktestServer$splitCosmeticCompany.coverage" NAME="splitCosmeticCompany Coverage Results" MODIFIED="1540063628782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cosmeticImg" />
     <SUITE FILE_PATH="coverage/flasktestServer$asdads.coverage" NAME="asdads Coverage Results" MODIFIED="1540069649510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -111,32 +122,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="35" />
-          <entry key="dummy" value="17" />
-          <entry key="py" value="3766" />
+          <entry key="csv" value="50" />
+          <entry key="dummy" value="21" />
+          <entry key="py" value="5024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="35" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Python" value="3766" />
+          <entry key="CSV" value="50" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="5024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="39" />
+          <entry key="CSV" value="46" />
           <entry key="Image" value="3" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="39" />
+          <entry key="csv" value="46" />
           <entry key="jpg" value="3" />
-          <entry key="py" value="4" />
+          <entry key="py" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -146,22 +157,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+            <state relative-caret-position="768">
+              <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1540068725614" expanded="true" signature="1956:2329" ph="..." />
+                <marker date="1540089412864" expanded="true" signature="2476:2676" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
+        <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <marker date="1540092583917" expanded="true" signature="209:210" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
           <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -183,40 +217,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_매트.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 피치팜.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
+        <entry file="file://$PROJECT_DIR$/ingredient/getBadIngredient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding>
                 <marker date="1540057011704" expanded="true" signature="51:56" ph="..." />
                 <marker date="1540057011704" expanded="true" signature="505:739" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,6 +255,14 @@
       <find>워터풀</find>
       <find>스노우 화이트 리빌 프레쉬 트랜스퍼런시 리퀴드 파운데이션 SPF30/PA+++</find>
       <find>선 프로텍션 스틱 파운데이션 SPF36/</find>
+      <find>[</find>
+      <find>]</find>
+      <find>/</find>
+      <find>PA</find>
+      <find>워터</find>
+      <find>유브이</find>
+      <find>\</find>
+      <find>헥산다이올</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -258,16 +273,18 @@
       <list>
         <option value="$PROJECT_DIR$/RecommanedSystem/purifyData.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/purifyData.py" />
-        <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
         <option value="$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/suncareBadIngredient.csv" />
         <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" />
         <option value="$PROJECT_DIR$/asdads.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
+        <option value="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" />
+        <option value="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" />
       </list>
     </option>
   </component>
@@ -317,7 +334,13 @@
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="cosmeticImg" type="462c0819:PsiDirectoryNode" />
+              <item name="ingredient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="ingredient" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
@@ -362,7 +385,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.asdads">
+  <component name="RunManager" selected="Python.getIngredient (1)">
     <configuration name="asdads" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -385,7 +408,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="getIngredient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="getIngredient (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flasktestServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,6 +422,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ingredient/getIngredient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getIngredient" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flasktestServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ingredient" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ingredient/getBadIngredient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -451,21 +496,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Flask (app.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
-      <module name="flasktestServer" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
-      <option name="targetType" value="PATH" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
     <configuration name="flasktestServer" type="Python.FlaskServer" factoryName="Flask server">
       <module name="flasktestServer" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -483,19 +513,19 @@
     </configuration>
     <list>
       <item itemvalue="Flask server.flasktestServer" />
-      <item itemvalue="Flask server.Flask (app.py)" />
       <item itemvalue="Python.recommendCosmetic" />
       <item itemvalue="Python.getIngredient" />
       <item itemvalue="Python.splitCosmeticCompany" />
       <item itemvalue="Python.asdads" />
+      <item itemvalue="Python.getIngredient (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getIngredient (1)" />
         <item itemvalue="Python.asdads" />
         <item itemvalue="Python.splitCosmeticCompany" />
         <item itemvalue="Python.getIngredient" />
         <item itemvalue="Python.recommendCosmetic" />
-        <item itemvalue="Flask server.Flask (app.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -514,6 +544,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -590,24 +621,12 @@
     <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file:///anaconda3/envs/tensorflow/lib/python3.6/site-packages/pandas/core/internals.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="4856" selection-start-line="4856" selection-end-line="4856" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -622,39 +641,14 @@
     <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/미샤_모던 섀도우_매트.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/에뛰드하우스_플레이 컬러 아이즈 피치팜.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <marker date="1540057011704" expanded="true" signature="51:56" ph="..." />
-            <marker date="1540057011704" expanded="true" signature="505:739" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <marker date="1540068725614" expanded="true" signature="1956:2329" ph="..." />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/asdads.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -666,6 +660,15 @@
     <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -675,6 +678,48 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/getBadIngredient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <marker date="1540057011704" expanded="true" signature="51:56" ph="..." />
+            <marker date="1540057011704" expanded="true" signature="505:739" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <marker date="1540089412864" expanded="true" signature="2476:2676" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1540092583917" expanded="true" signature="209:210" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>

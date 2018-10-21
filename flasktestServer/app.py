@@ -1,11 +1,12 @@
 from flask import Flask, request, Response
 from RecommendSystem.recommendCosmetic import recommend_cosmetics
-from ingredient.getIngredient import get_bad_ingredient
+from ingredient.getBadIngredient import get_bad_ingredient
+from ingredient.getIngredient import getIngredient
 from cosmeticImg.splitCosmeticCompany import search
 import json
 
 app = Flask(__name__)
-
+kindCosmetic = {1: 'sunblock', 2: 'eyeshadow', 3: 'foundation', 4: 'libtint'}
 
 @app.route("/", methods=["GET", 'POST'])
 def root():
@@ -14,7 +15,7 @@ def root():
 
 @app.route("/recommendCosmetic", methods=['POST'])
 def getRecommendCosmetic():
-    kindCosmetic = {1: 'sunblock', 2: 'eyeshadow', 3: 'foundation', 4: 'libtint'}
+
     id = request.args.get('id')
     type = request.args.get('persontype')
     kindCosmeticNum = request.args.get('cosmetictype')
@@ -27,7 +28,8 @@ def getRecommendCosmetic():
         data['est'] = round(data['est'], 2)
         # print(data['name'])
         pixel, company = search(cosmetic_type, data['name'])
-        returnList.append({'cosmeticname': data['name'], 'estimate': data['est'], 'pixel': str(pixel), 'company':company})
+        returnList.append(
+            {'cosmeticname': data['name'], 'estimate': data['est'], 'pixel': str(pixel), 'company': company})
     return json.dumps(returnList)
 
 
@@ -71,6 +73,15 @@ def badIngredient():
     # if(리뷰 수가 0이 아니라면 ){
     #
     # }
+
+
+@app.route("/ingredientPerCosmetic", methods=['POST'])
+def ingredientPerCosmetic():
+    kind = request.args.get('kind')
+    cname = request.args.get('cname')
+    cosmetic_type = kindCosmetic[int(kind)]
+    result = getIngredient(cosmetic_type, cname)
+    return json.dumps(result)
 
 
 if __name__ == '__main__':
