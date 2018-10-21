@@ -8,7 +8,7 @@ from surprise import Reader, Dataset, SVD, evaluate
 def recommend_cosmetics(user_id, kind_cosmetic, start, skin_type):
     np.random.seed(42)
     pd.set_option('display.expand_frame_repr', False)
-    id_purify_data = pd.read_csv('RecommendSystem/data/new'+kind_cosmetic+'.csv')
+    id_purify_data = pd.read_csv('RecommendSystem/data/new' + kind_cosmetic + '.csv')
     id_purify_data = id_purify_data.drop('Unnamed: 0', axis=1)
     review_data = get_review_data(id_purify_data, skin_type)
     cosine_sim = review_to_vector(review_data)
@@ -117,3 +117,12 @@ def making_evaluate_data(id_purify_data, skin_type):
     return evaluate_data
 
 
+def add_data_to_csv(id, kind_cosmetic, cosmetic_name, rate, skin_type, review=""):
+    pd.set_option('display.expand_frame_repr', False)
+    read_data = pd.read_csv('RecommendSystem/data/new' + kind_cosmetic + '.csv')
+    name_to_id = name_2_id(read_data)
+    pop_id = name_to_id.loc[cosmetic_name, :]
+    data = [id, cosmetic_name, pop_id['popId'], rate, review, skin_type]
+    read_data = read_data.drop('Unnamed: 0', axis=1)
+    read_data.loc[len(read_data)] = data
+    read_data.to_csv('RecommendSystem/data/new' + kind_cosmetic + '.csv')

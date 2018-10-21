@@ -33,7 +33,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.WriteReviewAdapter;
+import com.example.user.coalert.Fragment.HomeFragment;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
+import com.example.user.coalert.forRestServer.oneCosmeticRecommend;
+import com.example.user.coalert.forRestServer.setReviewModel;
 import com.example.user.coalert.item.OneImageCardView;
 import com.hsalf.smilerating.BaseRating;
 import com.hsalf.smilerating.SmileRating;
@@ -41,6 +46,9 @@ import com.hsalf.smilerating.SmileRating;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
 
 
 public class WriteReviewActivity extends AppCompatActivity {
@@ -53,7 +61,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     TextView cname, companyName;
     RecyclerView userImageRecyclerView;
     int previousLength = 0;
-    Button letsDetailReview;
+    Button letsDetailReview, saveReview;
     SmileRating smileRating;
     Uri allUri;
     ImageButton backBtn;
@@ -73,18 +81,19 @@ public class WriteReviewActivity extends AppCompatActivity {
         smileRating = findViewById(R.id.smile_rating);
         imageView = findViewById(R.id.prod_image);
         letsDetailReview = findViewById(R.id.write_review_lets_detail_write_btn);
+        saveReview = findViewById(R.id.write_review_save_btn);
         userImageRecyclerView = findViewById(R.id.personal_prod_pic);
-        Intent getIntent = getIntent();
+        final Intent getIntent = getIntent();
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
-        int number = getIntent.getExtras().getInt("check");
+        final int number = getIntent.getExtras().getInt("check");
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) getIntent.getExtras().get("image"));
-            Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
             imageView.setImageBitmap(bitmap);
-        }else{
-            imageView.setImageBitmap((Bitmap)getIntent.getExtras().get("image"));
+        } else {
+            imageView.setImageBitmap((Bitmap) getIntent.getExtras().get("image"));
         }
         companyName.setText(getIntent.getStringExtra("company"));
         cname.setText(getIntent.getStringExtra("cname"));
@@ -172,13 +181,45 @@ public class WriteReviewActivity extends AppCompatActivity {
         recyclerArr.add(new OneImageCardView(icon));
         recyclerArr.add(new OneImageCardView(icon));
         personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
+
+        saveReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        try {
+                            int level = smileRating.getRating();
+                            Call call2 = ForRestSingleton.getInstance().setReview(0, getIntent.getExtras().getInt("kind"), cname.getText().toString(), level, 0, editText.getText().toString());
+                            call2.execute().body();
+                            Intent intent = new Intent(getApplicationContext(), CosmeticInformationActivity.class);
+                            Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(cname.getText().toString(), String.valueOf(getIntent.getExtras().getInt("kind")));
+                            List<GetBadIngredientModel> result = call.execute().body();
+                            Call<oneCosmeticRecommend> call3 = ForRestSingleton.getInstance().oneRecommendCosmetic(getIntent.getExtras().getInt("kind"), cname.getText().toString(), 0);
+                            oneCosmeticRecommend result3 = call3.execute().body();
+                            intent.putExtra("cname", cname.getText().toString());
+                            intent.putExtra("company", companyName.getText());
+                            intent.putExtra("rating", (result3.getRating()*20));
+                            intent.putExtra("image", (Bitmap)getIntent.getExtras().get("image"));
+                            intent.putExtra("ingredient",result.toString());
+                            intent.putExtra("kind", getIntent.getExtras().getInt("kind"));
+                            intent.putExtra("check",1);
+                            startActivity(intent);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+            }
+        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         int position;
-        if( data != null) {
+        if (data != null) {
             if (requestCode == 100) {
                 position = requestCode - 100;
             } else {
@@ -208,6 +249,7 @@ public class WriteReviewActivity extends AppCompatActivity {
                 }
             }
         }
+
     }
 
     private String _getRealPathFromURI(Context context, Uri Uri) {
