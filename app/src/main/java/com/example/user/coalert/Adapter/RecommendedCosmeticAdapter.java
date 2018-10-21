@@ -94,6 +94,7 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
                         intent.putExtra("rating", list.get(getAdapterPosition()).getNumber() * 20);
                         intent.putExtra("image", list.get(getAdapterPosition()).getImage());
                         intent.putExtra("ingredient",result.toString());
+                        intent.putExtra("check",1);
                         context.startActivity(intent);
                     }catch (Exception e){
                         e.printStackTrace();

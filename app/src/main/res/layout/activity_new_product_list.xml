@@ -46,6 +46,7 @@
                 android:background="@drawable/pinkstoke">
 
                 <TextView
+                    android:id="@+id/sunblockName"
                     style="@style/point_font"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -71,6 +72,7 @@
                 android:background="@drawable/pinkstoke">
 
                 <TextView
+                    android:id="@+id/eyeshadow"
                     style="@style/point_font"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -100,7 +102,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="파운데이션" />
+                    android:text="파운데이션"
+                    android:id="@+id/libtint"/>
 
             </LinearLayout>
 

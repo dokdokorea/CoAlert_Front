@@ -4,9 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +19,15 @@ import android.widget.Toast;
 
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
 
 public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.ViewHolder> {
     private ArrayList<OneImgTwoStringCardView> mDataset;
@@ -43,19 +51,28 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
 
         @Override
         public void onClick(View view) {
-            Bitmap sendBitmap = BitmapFactory.decodeResource(context.getResources(),mDataset.get(getAdapterPosition()).getImage());
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            sendBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-            byte[] byteArray = stream.toByteArray();
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
 
-
-            Intent intent=new Intent(context, CosmeticInformationActivity.class);
-            intent.putExtra("picture",mDataset.get(getAdapterPosition()).getImage());
-//            intent.putExtra("image",byteArray);
-            intent.putExtra("cname",mDataset.get(getAdapterPosition()).getText1());
-            intent.putExtra("company",mDataset.get(getAdapterPosition()).getText2());
-            context.startActivity(intent);
-//            Toast.makeText(context,mDataset.get(getAdapterPosition()).getText2(),Toast.LENGTH_SHORT).show();
+                        String[] companyAndType = mDataset.get(getAdapterPosition()).getText2().split(",");
+                        Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(mDataset.get(getAdapterPosition()).getText1(), companyAndType[1]);
+                        List<GetBadIngredientModel> result = call.execute().body();
+// drawable 타입을 bitmap으로 변경
+                        Intent intent = new Intent(context, CosmeticInformationActivity.class);
+                        intent.putExtra("cname", mDataset.get(getAdapterPosition()).getText2().replaceAll("\"", ""));
+                        intent.putExtra("company", companyAndType[0]);
+                        intent.putExtra("image", mDataset.get(getAdapterPosition()).getImage());
+                        intent.putExtra("ingredient",result.toString());
+                        intent.putExtra("check", 0);
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
         }
     }
 

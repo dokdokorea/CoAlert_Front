@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ingredient/getBadIngredient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/CoAlertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +16,7 @@
     <SUITE FILE_PATH="coverage/flasktestServer$getIngredient.coverage" NAME="getIngredient Coverage Results" MODIFIED="1540051870852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1538750807371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flasktestServer$flasktestServer.coverage" NAME="flasktestServer Coverage Results" MODIFIED="1538414357442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/flasktestServer$getIngredient__1_.coverage" NAME="getIngredient (1) Coverage Results" MODIFIED="1540092741307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
+    <SUITE FILE_PATH="coverage/flasktestServer$getIngredient__1_.coverage" NAME="getIngredient (1) Coverage Results" MODIFIED="1540107568512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingredient" />
     <SUITE FILE_PATH="coverage/flasktestServer$recommendCosmetic.coverage" NAME="recommendCosmetic Coverage Results" MODIFIED="1539635965432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RecommendSystem" />
     <SUITE FILE_PATH="coverage/flasktestServer$splitCosmeticCompany.coverage" NAME="splitCosmeticCompany Coverage Results" MODIFIED="1540063628782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cosmeticImg" />
     <SUITE FILE_PATH="coverage/flasktestServer$asdads.coverage" NAME="asdads Coverage Results" MODIFIED="1540069649510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -122,22 +114,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="50" />
+          <entry key="csv" value="51" />
           <entry key="dummy" value="21" />
-          <entry key="py" value="5024" />
+          <entry key="py" value="5218" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="50" />
+          <entry key="CSV" value="51" />
           <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="5024" />
+          <entry key="Python" value="5218" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="46" />
+          <entry key="CSV" value="48" />
           <entry key="Image" value="3" />
           <entry key="Python" value="5" />
         </counts>
@@ -145,7 +137,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="46" />
+          <entry key="csv" value="48" />
           <entry key="jpg" value="3" />
           <entry key="py" value="5" />
         </counts>
@@ -157,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+            <state relative-caret-position="203">
+              <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
                 <marker date="1540089412864" expanded="true" signature="2476:2676" ph="..." />
@@ -167,17 +159,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="90">
+              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1540092583917" expanded="true" signature="209:210" ph="..." />
+                <marker date="1540107603530" expanded="true" signature="227:228" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -185,7 +187,7 @@
           <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
           <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
@@ -263,6 +265,11 @@
       <find>유브이</find>
       <find>\</find>
       <find>헥산다이올</find>
+      <find>2-헥산다이올</find>
+      <find>12</find>
+      <find>헥산</find>
+      <find>적색104호의</find>
+      <find>적색</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -275,16 +282,17 @@
         <option value="$PROJECT_DIR$/RecommendSystem/purifyData.py" />
         <option value="$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv" />
-        <option value="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/suncareBadIngredient.csv" />
         <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" />
         <option value="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" />
         <option value="$PROJECT_DIR$/asdads.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
         <option value="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv" />
+        <option value="$PROJECT_DIR$/ingredient/data/libtintIngredient.csv" />
+        <option value="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" />
+        <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
       </list>
     </option>
   </component>
@@ -353,6 +361,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/leesanghoon/CoAlert_Front/flasktestServer/app.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -546,12 +555,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -663,12 +672,6 @@
     <entry file="file://$PROJECT_DIR$/ingredient/data/foundationIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -693,10 +696,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        <state relative-caret-position="203">
+          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
             <marker date="1540089412864" expanded="true" signature="2476:2676" ph="..." />
@@ -704,22 +713,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="90">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1540092583917" expanded="true" signature="209:210" ph="..." />
+            <marker date="1540107603530" expanded="true" signature="227:228" ph="..." />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>

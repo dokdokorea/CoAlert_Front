@@ -81,9 +81,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         scroll=(NestedScrollView)findViewById(R.id.scroll);
         scroll.fullScroll(NestedScrollView.FOCUS_UP);
         Intent intent = new Intent(this.getIntent());
-        ProductImg.setImageResource(R.drawable.sun1);
-        ProductName.setText("말랑말랑썬크림");
-        company.setText("이니스프리");
+        int number = intent.getExtras().getInt("check");
         Drawable alpha = WriteReview.getBackground();
         alpha.setAlpha(50);
         matching.setText(percent+"%");
@@ -97,13 +95,20 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             matching.setTextColor(Color.GREEN);
 
 //        Intent intent = new Intent(this.getIntent());
-        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
-        ProductImg.setTag(intent.getExtras().getInt("picture"));
-        ProductName.setText(intent.getStringExtra("cname"));
-        company.setText(intent.getStringExtra("company"));
+//        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+//        ProductImg.setTag(intent.getExtras().getInt("picture"));
+//        ProductName.setText(intent.getStringExtra("cname"));
+//        company.setText(intent.getStringExtra("company"));
+        if (number == 0) {
+            Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
+            Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+            ProductImg.setImageBitmap(bitmap);
+            matching.setText(String.valueOf("리뷰등록"));
+        }else{
+            ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
+            matching.setText(String.valueOf(intent.getExtras().get("rating")));
+        }
 
-        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
-        matching.setText(String.valueOf(intent.getExtras().get("rating")));
         ProductName.setText(intent.getStringExtra("cname"));
         company.setText(intent.getStringExtra("company"));
 
@@ -167,6 +172,10 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(CosmeticInformationActivity.this,WriteReviewActivity.class);
+                Intent hi = new Intent(getIntent());
+                intent.putExtra("cname", hi.getStringExtra("cname"));
+                intent.putExtra("company",hi.getStringExtra("company"));
+                intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
                 startActivity(intent);
             }
         });

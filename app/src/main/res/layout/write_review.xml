@@ -86,7 +86,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_7sdp"
-                        android:text="@string/company_name" />
+                        android:text="@string/company_name"
+                        android:id="@+id/write_review_company"/>
                 </LinearLayout>
             </LinearLayout>
 
