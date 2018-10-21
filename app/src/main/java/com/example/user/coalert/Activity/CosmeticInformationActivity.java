@@ -173,9 +173,16 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Intent intent=new Intent(CosmeticInformationActivity.this,WriteReviewActivity.class);
                 Intent hi = new Intent(getIntent());
+                int number = hi.getExtras().getInt("check");
+                if(number == 0){
+                    intent.putExtra("image", (Integer) hi.getExtras().get("image"));
+                    intent.putExtra("check", 0);
+                }else if(number == 1){
+                    intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
+                    intent.putExtra("check", 1);
+                }
                 intent.putExtra("cname", hi.getStringExtra("cname"));
                 intent.putExtra("company",hi.getStringExtra("company"));
-                intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
                 startActivity(intent);
             }
         });
@@ -248,16 +255,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         SimpleArr.add(new OneImgOneStringOneNumberCardView(R.drawable.face1,"별로임",2));
         simple.setAdapter(new SimpleReviewAdapter(SimpleArr));
         ViewCompat.setNestedScrollingEnabled(simple, false);
-
-
-//        detail=(RecyclerView)findViewById(R.id.tab_detail_review_recycler);
-//        detail.setHasFixedSize(true);
-//        detail.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-//        DetailArr=new ArrayList<>();
-//        DetailArr.add(new TwoImgTwoStringCardView(R.drawable.irin,R.drawable.seul,"명탐정코난","언니의 잇템!"));
-//        DetailArr.add(new TwoImgTwoStringCardView(R.drawable.seul,R.drawable.irin,"루루고양이","선크림 후기 이퀄리티 실화냐?!?"));
-//        DetailArr.add(new TwoImgTwoStringCardView(R.drawable.iu1,R.drawable.sun1,"즐거운핫산","100% 리얼한 선크림후기!"));
-//        detail.setAdapter(new DetailReviewAdapter(DetailArr));
 
         detail=(RecyclerView)findViewById(R.id.tab_detail_review_preview_recycler);
         detail.setHasFixedSize(true);

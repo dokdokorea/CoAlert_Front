@@ -16,5 +16,3 @@ def getIngredient(kind, cname):
                      'warningRate': str(badgredient_data.loc[badgredient_data['성분명'] == name, '위험도'].values[0])})
 
     return list
-
-# print(getIngredient('libtint', '라스트 벨벳 립 틴트 4'))

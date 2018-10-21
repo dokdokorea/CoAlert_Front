@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -76,7 +78,14 @@ public class WriteReviewActivity extends AppCompatActivity {
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
-        imageView.setImageBitmap((Bitmap) getIntent.getExtras().get("image"));
+        int number = getIntent.getExtras().getInt("check");
+        if (number == 0) {
+            Drawable drawable = getResources().getDrawable((Integer) getIntent.getExtras().get("image"));
+            Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+            imageView.setImageBitmap(bitmap);
+        }else{
+            imageView.setImageBitmap((Bitmap)getIntent.getExtras().get("image"));
+        }
         companyName.setText(getIntent.getStringExtra("company"));
         cname.setText(getIntent.getStringExtra("cname"));
         backBtn.setOnClickListener(new View.OnClickListener() {

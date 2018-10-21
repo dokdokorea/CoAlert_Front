@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/WriteReviewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/FragmentHomeElementAdapter/NewProductAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ingredient/getIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getIngredient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,14 +113,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="51" />
+          <entry key="csv" value="52" />
           <entry key="dummy" value="21" />
           <entry key="py" value="5218" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="51" />
+          <entry key="CSV" value="52" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="Python" value="5218" />
         </counts>
@@ -129,7 +128,7 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="48" />
+          <entry key="CSV" value="49" />
           <entry key="Image" value="3" />
           <entry key="Python" value="5" />
         </counts>
@@ -137,7 +136,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="48" />
+          <entry key="csv" value="49" />
           <entry key="jpg" value="3" />
           <entry key="py" value="5" />
         </counts>
@@ -159,76 +158,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <marker date="1540107603530" expanded="true" signature="227:228" ph="..." />
+                <marker date="1540109739231" expanded="true" signature="227:228" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
           <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/asdads.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/getBadIngredient.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-              <folding>
-                <marker date="1540057011704" expanded="true" signature="51:56" ph="..." />
-                <marker date="1540057011704" expanded="true" signature="505:739" ph="..." />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -293,6 +238,7 @@
         <option value="$PROJECT_DIR$/ingredient/data/libtintIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/getIngredient.py" />
+        <option value="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" />
       </list>
     </option>
   </component>
@@ -347,7 +293,12 @@
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="ingredient" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
+              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -555,12 +506,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -713,22 +664,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/getIngredient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <marker date="1540107603530" expanded="true" signature="227:228" ph="..." />
+            <marker date="1540109739231" expanded="true" signature="227:228" ph="..." />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
   </component>
 </project>
