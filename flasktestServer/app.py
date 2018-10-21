@@ -3,10 +3,12 @@ from RecommendSystem.recommendCosmetic import recommend_cosmetics
 from ingredient.getBadIngredient import get_bad_ingredient
 from ingredient.getIngredient import getIngredient
 from cosmeticImg.splitCosmeticCompany import search
+from RecommendSystem.oneCosmeticRating import requestOneCosmeticRating
 import json
 
 app = Flask(__name__)
 kindCosmetic = {1: 'sunblock', 2: 'eyeshadow', 3: 'foundation', 4: 'libtint'}
+
 
 @app.route("/", methods=["GET", 'POST'])
 def root():
@@ -15,7 +17,6 @@ def root():
 
 @app.route("/recommendCosmetic", methods=['POST'])
 def getRecommendCosmetic():
-
     id = request.args.get('id')
     type = request.args.get('persontype')
     kindCosmeticNum = request.args.get('cosmetictype')
@@ -82,6 +83,18 @@ def ingredientPerCosmetic():
     cosmetic_type = kindCosmetic[int(kind)]
     result = getIngredient(cosmetic_type, cname)
     return json.dumps(result)
+
+
+@app.route("/oneCosmeticRating", methods=['POST'])
+def oneCosmeticRating():
+    kind = request.args.get('kind')
+    cname = request.args.get('cname')
+    skin_type = request.args.get('type')
+    cosmetic_type = kindCosmetic[int(kind)]
+    result = requestOneCosmeticRating(0, cosmetic_type, int(skin_type), cname)
+    print(result)
+    result = result.round(2)
+    return json.dumps({'Rating':result})
 
 
 if __name__ == '__main__':

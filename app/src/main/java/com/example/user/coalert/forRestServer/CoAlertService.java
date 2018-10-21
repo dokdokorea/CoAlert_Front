@@ -89,6 +89,12 @@ public interface CoAlertService {
         @Query("kind") String kind
     );
 
+    @POST("oneCosmeticRating")
+            Call<oneCosmeticRecommend> oneRecommendCosmetic(
+                    @Query("kind") int kind,
+                    @Query("cname") String cname,
+                    @Query("type") int type
+    );
     Retrofit retrofit = new Retrofit.Builder()
 
             .baseUrl("http://192.168.43.85:5000/")

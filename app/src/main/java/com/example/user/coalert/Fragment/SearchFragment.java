@@ -47,6 +47,7 @@ import com.example.user.coalert.Background;
 import com.example.user.coalert.R;
 import com.example.user.coalert.Singleton.ForBackgroundSingleton;
 import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.forRestServer.searchModel;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.googlecode.tesseract.android.TessBaseAPI;
@@ -318,6 +319,33 @@ public class SearchFragment extends Fragment {
         String test = mTess.getUTF8Text();
         Log.e("Result: ", test);
         mTess.end();
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic("룩 앳 마이 아이즈", "2");
+                    final List<GetBadIngredientModel> result = call.execute().body();
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(getActivity(), CosmeticInformationActivity.class);
+                            intent.putExtra("cname", "룩 앳 마이 아이즈");
+                            intent.putExtra("company", "에뛰드하우스");
+                            intent.putExtra("check", 0);
+                            intent.putExtra("image", R.drawable.look_at_my_eyes);
+                            intent.putExtra("ingredient", result.toString());
+                            Log.e("asdasd", result.toString());
+                            getActivity().startActivity(intent);
+                        }
+                    });
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
     }
 
     public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter) {

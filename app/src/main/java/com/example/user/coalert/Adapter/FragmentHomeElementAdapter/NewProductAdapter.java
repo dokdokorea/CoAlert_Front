@@ -56,13 +56,14 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
                 public void run() {
                     super.run();
                     try {
-
                         String[] companyAndType = mDataset.get(getAdapterPosition()).getText2().split(",");
                         Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(mDataset.get(getAdapterPosition()).getText1(), companyAndType[1]);
                         List<GetBadIngredientModel> result = call.execute().body();
 // drawable 타입을 bitmap으로 변경
                         Intent intent = new Intent(context, CosmeticInformationActivity.class);
-                        intent.putExtra("cname", mDataset.get(getAdapterPosition()).getText2().replaceAll("\"", ""));
+                        Log.e("before",String.valueOf(companyAndType[1]));
+                        intent.putExtra("kind", companyAndType[1]);
+                        intent.putExtra("cname", mDataset.get(getAdapterPosition()).getText1());
                         intent.putExtra("company", companyAndType[0]);
                         intent.putExtra("image", mDataset.get(getAdapterPosition()).getImage());
                         intent.putExtra("ingredient",result.toString());
@@ -93,7 +94,7 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
     public void onBindViewHolder(@NonNull NewProductAdapter.ViewHolder holder, final int position) {
         holder.imageView.setImageResource(mDataset.get(position).getImage());
         holder.prodNameView.setText(mDataset.get(position).getText1());
-        holder.companyView.setText(mDataset.get(position).getText2());
+        holder.companyView.setText(mDataset.get(position).getText2().split(",")[0]);
     }
 
     @Override
