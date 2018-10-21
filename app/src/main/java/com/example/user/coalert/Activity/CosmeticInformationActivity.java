@@ -95,6 +95,18 @@ public class CosmeticInformationActivity extends AppCompatActivity{
             matching.setTextColor(Color.BLUE);
         }else
             matching.setTextColor(Color.GREEN);
+
+//        Intent intent = new Intent(this.getIntent());
+        ProductImg.setImageResource(intent.getExtras().getInt("picture"));
+        ProductImg.setTag(intent.getExtras().getInt("picture"));
+        ProductName.setText(intent.getStringExtra("cname"));
+        company.setText(intent.getStringExtra("company"));
+
+        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
+        matching.setText(String.valueOf(intent.getExtras().get("rating")));
+        ProductName.setText(intent.getStringExtra("cname"));
+        company.setText(intent.getStringExtra("company"));
+
         GlobalApplication infor=(GlobalApplication) getApplication();
 
         for(int i=0;i<infor.getWishlist().size();i++){
@@ -105,7 +117,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 
         if (j == 0) {
             wishbtn.setImageResource(R.drawable.emptyheart);
-            Log.d("tag",ProductName.getText().toString());
         }else {
             wishbtn.setImageResource(R.drawable.fullheart);
         }
@@ -254,14 +265,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ViewCompat.setNestedScrollingEnabled(detail, false);
 
 
-
-//        byte[] arr=getIntent().getByteArrayExtra("image");
-//        ProductImg.setImageBitmap(BitmapFactory.decodeByteArray(arr, 0, arr.length));
-
-        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
-        matching.setText(String.valueOf(intent.getExtras().get("rating")));
-        ProductName.setText(intent.getStringExtra("cname"));
-        company.setText(intent.getStringExtra("company"));
     }
     public void setData(JsonArray jsonArray){
         for (int i = 0; i<jsonArray.size(); i++) {

@@ -70,6 +70,10 @@ public class DetailReviewPreviewAdapter extends RecyclerView.Adapter<DetailRevie
             final TwoImgFourStringCardView item=mDataSet.get(getAdapterPosition());
             Intent intent = new Intent(context, ViewDetailActivity.class);
             intent.putExtra("title",item.getT3());
+            intent.putExtra("like",item.getT2());
+            intent.putExtra("profile",item.getImg1());
+            intent.putExtra("id",item.getT1());
+
             context.startActivity(intent);
         }
     }

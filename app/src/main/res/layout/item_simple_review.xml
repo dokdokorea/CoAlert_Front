@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_70sdp"
         app:cardUseCompatPadding="true"
-
-        android:layout_margin="@dimen/_3sdp">
+        android:layout_marginTop="@dimen/_3sdp">
 
 
         <LinearLayout

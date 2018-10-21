@@ -67,6 +67,19 @@ public class BestReviewPreviewAdapter extends RecyclerView.Adapter<BestReviewPre
             final OneImgOneStringCardView item=mDataSet.get(getAdapterPosition());
             Intent intent = new Intent(context, ViewDetailActivity.class);
             intent.putExtra("title",item.getText());
+            if(getAdapterPosition()==0){
+                intent.putExtra("like","2103");
+                intent.putExtra("id","dlwlrma");
+                intent.putExtra("profile",R.drawable.iu1);
+            }else if(getAdapterPosition()==1){
+                intent.putExtra("like","4932");
+                intent.putExtra("id","dokdokorea");
+                intent.putExtra("profile",R.drawable.hyoshin1);
+            }else{
+                intent.putExtra("like","8732");
+                intent.putExtra("id","irinlove");
+                intent.putExtra("profile",R.drawable.irin);
+            }
             context.startActivity(intent);
         }
     }

@@ -14,7 +14,7 @@
         <ImageButton
             android:id="@+id/selected_detail_review_back_btn"
             style="@style/black_back_btn_style"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical" />
 
         <TextView
             style="@style/logo_style"
@@ -31,7 +31,7 @@
             android:layout_gravity="end"
             android:background="@drawable/write_review_button"
             android:text="자세한리뷰"
-            android:textColor="#000000"
+            android:textColor="@color/first"
             android:textSize="@dimen/_12sdp" />
     </FrameLayout>
 
@@ -67,20 +67,24 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/cosmetic_prod_name"
                         style="@style/defaultFont"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cosmetic_pd_name" />
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text="@string/cosmetic_pd_name"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
 
                     <TextView
                         style="@style/defaultFont"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_7sdp"
                         android:text="@string/company_name"
                         android:id="@+id/write_review_company"/>
@@ -98,17 +102,17 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp" />
+                android:layout_height="@dimen/_20sdp" />
 
             <EditText
                 android:id="@+id/one_line"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginEnd="@dimen/_7sdp"
-                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
                 android:background="@drawable/content_edge"
-                android:ems="17"
+                android:ems="25"
                 android:hint="100자 이내로 화장품의 평가를 적어주세요."
                 android:inputType="textMultiLine" />
 
@@ -116,6 +120,10 @@
                 android:id="@+id/wordsNumber"
                 android:layout_width="@dimen/_46sdp"
                 android:layout_height="match_parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/personal_prod_pic"
@@ -135,6 +143,7 @@
                 android:layout_marginEnd="@dimen/_7sdp"
                 android:background="@drawable/default_button"
                 android:text="저장"
+                android:textSize="@dimen/_16sdp"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>

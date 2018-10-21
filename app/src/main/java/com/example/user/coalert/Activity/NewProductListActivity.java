@@ -45,28 +45,26 @@ public class NewProductListActivity extends Activity {
         PdRecycler.setLayoutManager(new GridLayoutManager(this, COLUM));
 
         SunArr = new ArrayList<>();
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun2,"4SP 세이프 톤업 선크림(SPF50+PA++++)","이니스프리"));
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun3,"365 안심 선크림(SPF50+PA++++)","토니모리"));
-        SunArr.add(new OneImgTwoStringCardView(R.drawable.sun4,"UV 릴리프 모이스처라이저(SPF50+PA++++)","스킨푸드"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.premiumsun,"프리미엄 선 프로텍션 크림 SPF50+ PA+++","A24"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.reliefsun,"UV 릴리프 모이스처라이저 SPF50+ PA++++","비레머디스"));
+        SunArr.add(new OneImgTwoStringCardView(R.drawable.uvdefense,"유브이 디펜스 미 블루 레이 선 플루이드 SPF50+ PA++++","메이크프렘"));
         SunRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),SunArr,R.layout.activity_new_product_list));
 
-
         LipArr = new ArrayList<>();
-        for(int i=0;i<1;i++)
-            LipArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+            LipArr.add(new OneImgTwoStringCardView(R.drawable.tint1,"라스트 벨벳 립 틴트 4","삐아"));
         LipRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),LipArr,R.layout.activity_new_product_list));
 
         ShadowArr = new ArrayList<>();
-        for(int i=0;i<3;i++)
-            ShadowArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+            ShadowArr.add(new OneImgTwoStringCardView(R.drawable.eyecolor,"매트 아이 컬러","로라 메르시에"));
         ShadowRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),ShadowArr,R.layout.activity_new_product_list));
 
         PdArr = new ArrayList<>();
-        for(int i=0;i<7;i++)
-            PdArr.add(new OneImgTwoStringCardView(R.drawable.sun1,"cosmetic","company"));
+
+            PdArr.add(new OneImgTwoStringCardView(R.drawable.poundation1,"뗑 이돌 롱라스팅 파운데이션 SPF38 PA++","랑콤"));
+        PdArr.add(new OneImgTwoStringCardView(R.drawable.poundation2,"아쿠아 글로우 쿠션 파운데이션 SPF23 PA++","나스"));
+        PdArr.add(new OneImgTwoStringCardView(R.drawable.poundation3,"원피엘 파운데이저 SPF20 PA++","메이크힐"));
+        PdArr.add(new OneImgTwoStringCardView(R.drawable.poundation4,"퓨처리스트 아쿠아 브릴리언스 리퀴드 파운데이션 SPF15 PA++","에스티로더"));
         PdRecycler.setAdapter(new NewProductAdapter(getApplicationContext(),PdArr,R.layout.activity_new_product_list));
-
-
 
         backBtn.setOnClickListener(new View.OnClickListener() {
 
