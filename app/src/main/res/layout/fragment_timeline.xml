@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#dbdbdb"
     android:layout_above="@+id/bottom_navigation"
+    android:background="@android:color/white"
+    android:orientation="vertical"
     tools:context=".Fragment.TimeLineFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40sdp"
+        android:background="@color/tab_skintype_color"
         android:fontFamily="@font/yoon_gothic340"
         android:gravity="center"
         android:text="타임라인"
-        android:textSize="@dimen/_18sdp"
         android:textColor="#fff"
-        android:background="@color/tab_skintype_color"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
 
     <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/swipe_layout">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/timeline_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/timeline_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>
