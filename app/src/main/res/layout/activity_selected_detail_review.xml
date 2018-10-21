@@ -203,8 +203,8 @@
                     android:orientation="horizontal"
                     android:background="@color/light_pink"
                     android:padding="@dimen/_2sdp"
-                    android:paddingBottom="@dimen/_2sdp"
-                    android:paddingTop="@dimen/_2sdp">
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_3sdp">
 
                     <TextView
                         android:layout_width="0dp"

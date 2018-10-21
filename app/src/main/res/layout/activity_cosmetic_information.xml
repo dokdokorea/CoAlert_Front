@@ -24,7 +24,6 @@
             android:onClick="backbtn"/>
 
         <TextView
-            android:id="@+id/cosmetic_prod_name"
             style="@style/barTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -66,51 +65,61 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/cardview1" />
 
+            <TextView
+                android:id="@+id/cosmetic_prod_name"
+                style="@style/name_in_cosmetic_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="name" />
+
 
             <TextView
                 android:id="@+id/cosmetic_comp_name"
                 style="@style/company_nm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_4sdp"
                 android:text="@string/company_name" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_90sdp"
                 android:orientation="horizontal"
-                android:weightSum="13"
+                android:weightSum="11"
                 android:background="@drawable/round_layout_border"
                 android:layout_margin="@dimen/_7sdp"
-                android:padding="@dimen/_11sdp">
+                android:gravity="center">
 
                 <TextView
-                    style="@style/editprofile"
+                    style="@style/view_percent_font"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
+                    android:layout_weight="3"
                     android:gravity="right"
                     android:text="당신에게"
-                    android:textColor="@android:color/white"
-                    android:fontFamily="@font/kopub_medium"/>
+                    android:textColor="@android:color/white"/>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/matching_percent"
                     android:layout_weight="3"
+                    style="@style/view_percent_font"
                     android:gravity="center"
                     android:textSize="@dimen/_29sdp"/>
 
                 <TextView
-                    style="@style/editprofile"
+                    style="@style/view_percent_font"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
+                    android:layout_weight="3"
                     android:gravity="left"
                     android:text="적합합니다"
-                    android:textColor="@android:color/white"
-                    android:fontFamily="@font/kopub_medium"/>
+                    android:textColor="@android:color/white"/>
 
             </LinearLayout>
 

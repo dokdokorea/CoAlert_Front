@@ -2,7 +2,7 @@
 <resources>
     <string name="write_revw">리뷰작성</string>
     <string name="see_cosmetic_element">화장품 성분 보기</string>
-    <string name="cosmetic_pd_name">화장품 이름</string>
+    <string name="cosmetic_pd_name">화장품 정보</string>
     <string name="company_name">회사 이름</string>
     <string name="simple_review">간단리뷰</string>
     <string name="detail_review">자세한 리뷰</string>
@@ -17,7 +17,7 @@
 
     <style name="company_nm">
         <item name="android:fontFamily">@font/yoon_gothic320</item>
-        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
@@ -30,6 +30,12 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/_13sdp</item>
+    </style>
+
+    <style name="view_percent_font">
+        <item name="android:fontFamily">@font/bm_dohyen</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/whiteBackground</item>
     </style>
 
 </resources>
