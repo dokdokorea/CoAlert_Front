@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asdads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/스틸라_매그니피센트 메탈 글리터 앤 글로우 리퀴드 아이섀도우.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/eyeshadow/아리따움_모노 아이즈 틴트 스틱.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/디오_스노우 화이트 리빌 프레쉬 트랜스퍼런시 리퀴드 파운데이션 SPF30:PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/foundation/헤라_NEW UV 미스트 쿠션 커버 SPF50+ PA+++.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cosmeticImg/libtint/토니모리_립톤 겟잇틴트 벨벳.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/recommendCosmeticShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/RecommendedCosmeticAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/kindCosmeticAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/kindCosmeticAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getRecommendModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/forRestServer/getRecommendModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/OneImgThreeStringCardView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" beforeDir="false" afterPath="$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +127,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="39" />
-          <entry key="Image" value="2" />
+          <entry key="Image" value="3" />
           <entry key="Python" value="4" />
         </counts>
       </usages-collector>
@@ -151,7 +135,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="39" />
-          <entry key="jpg" value="2" />
+          <entry key="jpg" value="3" />
           <entry key="py" value="4" />
         </counts>
       </usages-collector>
@@ -177,11 +161,11 @@
           <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="120">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -189,7 +173,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asdads.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -224,11 +208,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -342,34 +321,6 @@
             </path>
             <path>
               <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="cosmeticImg" type="462c0819:PsiDirectoryNode" />
-              <item name="foundation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="ingredient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="ingredient" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flasktestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="RecommendSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flasktestServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -392,11 +343,11 @@
       <recent name="C:\Users\dl579\OneDrive\desktop\CoAlert_Front1\flasktestServer\RecommanedSystem" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cosmeticImg/sunblock" />
       <recent name="$PROJECT_DIR$/cosmeticImg/libtint" />
       <recent name="$PROJECT_DIR$/cosmeticImg/foundation" />
       <recent name="$PROJECT_DIR$/cosmeticImg/eyeshadow" />
       <recent name="$PROJECT_DIR$/cosmeticImg" />
-      <recent name="$PROJECT_DIR$/ingredient/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -564,12 +515,12 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37728938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5153061" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -694,16 +645,6 @@
     <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -719,6 +660,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/스킨알엑스랩(skinrxlab)_워터풀 썬 업 크림  SPF50+ PA++++.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/splitCosmeticCompany.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
