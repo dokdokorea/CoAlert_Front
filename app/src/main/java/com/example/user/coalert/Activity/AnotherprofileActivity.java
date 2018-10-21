@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ public class AnotherprofileActivity extends AppCompatActivity {
     ImageButton Toxic;
     ImageButton following;
     ImageButton backBtn;
+    ImageView profile;
+    TextView id;
     int count;
     int j = 0;
 
@@ -40,6 +43,8 @@ public class AnotherprofileActivity extends AppCompatActivity {
         follow = (TextView) findViewById(R.id.follower);
         Toxic = (ImageButton) findViewById(R.id.toxicList);
         following = (ImageButton) findViewById(R.id.following);
+        profile=(ImageView)findViewById(R.id.profile_pic);
+        id=(TextView)findViewById(R.id.Name);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) findViewById(R.id.recyclerview2);
@@ -47,7 +52,12 @@ public class AnotherprofileActivity extends AppCompatActivity {
         int ColumNumber = 3;      //GridView Column
         Drawable alpha = backBtn.getBackground();
         alpha.setAlpha(50);
-        count=100;
+        count=73;
+
+        Intent intent=getIntent();
+        //profile.setImageResource(intent.getExtras().getInt("profile"));
+//        id.setText(intent.getStringExtra("id"));
+
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
@@ -59,12 +69,12 @@ public class AnotherprofileActivity extends AppCompatActivity {
 
         List<OneImgOneStringCardView> items = new ArrayList<>();
         OneImgOneStringCardView[] item = new OneImgOneStringCardView[6];
-        item[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
-        item[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
-        item[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
-        item[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
-        item[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
-        item[5] = new OneImgOneStringCardView(R.drawable.irin, "아이린");
+        item[0] = new OneImgOneStringCardView(R.drawable.cardview1, "seul");
+        item[1] = new OneImgOneStringCardView(R.drawable.nayeon1, "twice_nayeon");
+        item[2] = new OneImgOneStringCardView(R.drawable.hyoshin5, "god_hs");
+        item[3] = new OneImgOneStringCardView(R.drawable.irin3, "irinlove");
+        item[4] = new OneImgOneStringCardView(R.drawable.hyoshin8, "hs_park");
+        item[5] = new OneImgOneStringCardView(R.drawable.irin, "iheartrin");
 
 
         for (int i = 0; i < 6; i++) items.add(item[i]);
@@ -73,11 +83,11 @@ public class AnotherprofileActivity extends AppCompatActivity {
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[5];
-        cositem[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
-        cositem[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
-        cositem[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
-        cositem[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
-        cositem[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
+        item[0] = new OneImgOneStringCardView(R.drawable.nayeon1, "twice_nayeon");
+        item[1] = new OneImgOneStringCardView(R.drawable.hyoshin5, "god_hs");
+        item[2] = new OneImgOneStringCardView(R.drawable.irin3, "irinlove");
+        item[3] = new OneImgOneStringCardView(R.drawable.hyoshin8, "hs_park");
+        item[4] = new OneImgOneStringCardView(R.drawable.irin, "iheartrin");
 
         for (int i = 0; i < 5; i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(), cositems, R.layout.activity_anotherprofile));

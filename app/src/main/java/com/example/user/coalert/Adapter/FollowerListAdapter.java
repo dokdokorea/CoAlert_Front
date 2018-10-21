@@ -42,6 +42,8 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
                 public void onClick(View v) {
                    // Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(v.getContext(),AnotherprofileActivity.class);
+//                    intent.putExtra("id",name.getText());
+//                    intent.putExtra("email",id.getText());
                     v.getContext().startActivity(intent);
                 }
             });

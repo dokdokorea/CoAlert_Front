@@ -97,15 +97,14 @@ public class MyProfileFragment extends Fragment {
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[6];
-        cositem[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
-        cositem[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
-        cositem[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
-        cositem[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
-        cositem[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
-        cositem[5] = new OneImgOneStringCardView(R.drawable.irin, "irin");
+        cositem[0] = new OneImgOneStringCardView(R.drawable.premiumsun, "프리미엄 선 프로텍션 크림 SPF50+ PA+++");
+        cositem[1] = new OneImgOneStringCardView(R.drawable.tint1, "라스트 벨벳 립 틴트 4");
+        cositem[2] = new OneImgOneStringCardView(R.drawable.eyecolor, "매트 아이 컬러");
+        cositem[3] = new OneImgOneStringCardView(R.drawable.poundation1, "뗑 이돌 롱라스팅 파운데이션 SPF38 PA++");
 
 
-        for (int i = 0; i < 6; i++) cositems.add(cositem[i]);
+
+        for (int i = 0; i < 4; i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(), cositems, R.layout.fragment_myprofile));
 
         Edit.setOnClickListener(new View.OnClickListener() {
