@@ -38,6 +38,10 @@ import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
 import com.example.user.coalert.item.TwoImgFourStringCardView;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
 import com.example.user.coalert.item.TwoStringCardView;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
 
@@ -56,7 +60,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     int DetailProfileImg,DetailCosmeticImg;
     String DetailUserId,DetailTitle,DetailContext,DetailLikeCount;
     Parcelable state;
-
+    String badIngredient;
     ArrayList<TwoStringCardView> IngArr;
     ArrayList<OneImgOneStringOneNumberCardView> SimpleArr;
     ArrayList<TwoImgTwoStringCardView> DetailArr;
@@ -76,7 +80,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         MoreToxicByType=(Button)findViewById(R.id.by_type_ingredient);
         scroll=(NestedScrollView)findViewById(R.id.scroll);
         scroll.fullScroll(NestedScrollView.FOCUS_UP);
-
+        Intent intent = new Intent(this.getIntent());
         ProductImg.setImageResource(R.drawable.sun1);
         ProductName.setText("말랑말랑썬크림");
         company.setText("이니스프리");
@@ -92,9 +96,14 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         }else
             matching.setTextColor(Color.GREEN);
 
-        Intent intent = new Intent(this.getIntent());
+//        Intent intent = new Intent(this.getIntent());
         ProductImg.setImageResource(intent.getExtras().getInt("picture"));
         ProductImg.setTag(intent.getExtras().getInt("picture"));
+        ProductName.setText(intent.getStringExtra("cname"));
+        company.setText(intent.getStringExtra("company"));
+
+        ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
+        matching.setText(String.valueOf(intent.getExtras().get("rating")));
         ProductName.setText(intent.getStringExtra("cname"));
         company.setText(intent.getStringExtra("company"));
 
@@ -146,7 +155,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 GlobalApplication info=(GlobalApplication) getApplication();
                 Intent msg = new Intent (Intent.ACTION_SEND);
                 msg.addCategory(Intent.CATEGORY_DEFAULT);
-                msg.putExtra(Intent.EXTRA_SUBJECT, info.getId()+"님의 "+ProductName.getText()+"("+company.getText()+")의 적합성은 "+percent+"%입니다 당신의 적합도도 확인하러오세요!");
+                msg.putExtra(Intent.EXTRA_SUBJECT, info.getId()+"님의 "+ProductName.getText()+"("+company.getText()+")의 적합성은 "+matching.getText()+"%입니다 당신의 적합도도 확인하러오세요!");
                 msg.putExtra(Intent.EXTRA_TEXT, "모든 화장품을 개인에게 맞추다 CoAlert");
                 msg.setType("text/plain");
                 startActivity(Intent.createChooser(msg, "공유"));
@@ -209,15 +218,12 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 return false;
             }
         });
-        IngArr=new ArrayList<>();
-        IngArr.add(new TwoStringCardView("toxic1","1"));
-        IngArr.add(new TwoStringCardView("toxic2","3"));
-        IngArr.add(new TwoStringCardView("toxic3","5"));
-        IngArr.add(new TwoStringCardView("toxic4","6"));
-        IngArr.add(new TwoStringCardView("toxic5","7"));
-        IngArr.add(new TwoStringCardView("toxic6","9"));
+        badIngredient = intent.getExtras().getString("ingredient");
 
-        ingredient.setAdapter(new TabIngredientListAdapter(IngArr));
+        IngArr=new ArrayList<>();
+
+        JsonArray badElementJsonArray = dataToJsonArray(badIngredient);
+        setData(badElementJsonArray);
 
         ViewCompat.setNestedScrollingEnabled(ingredient, false);
         ingredient.setFocusable(false);
@@ -255,10 +261,21 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         ViewCompat.setNestedScrollingEnabled(detail, false);
 
 
-
     }
+    public void setData(JsonArray jsonArray){
+        for (int i = 0; i<jsonArray.size(); i++) {
 
+            JsonObject jsonObject = (JsonObject) jsonArray.get(i);
+            IngArr.add(new TwoStringCardView(jsonObject.get("ingredientName").toString(), jsonObject.get("warningRate").toString().replaceAll("\"", "")));
+        }
+        ingredient.setAdapter(new TabIngredientListAdapter(IngArr));
+    }
     public void backbtn(View v) {
        finish();
+    }
+    public JsonArray dataToJsonArray(String data) {
+        JsonParser jsonParser = new JsonParser();
+        JsonElement element = jsonParser.parse(data);
+        return element.getAsJsonArray();
     }
 }

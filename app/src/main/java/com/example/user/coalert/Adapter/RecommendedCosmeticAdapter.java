@@ -17,10 +17,14 @@ import android.widget.TextView;
 
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.item.OneImgThreeStringCardView;
 
 import java.text.DecimalFormat;
 import java.util.List;
+
+import retrofit2.Call;
 
 public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<RecommendedCosmeticAdapter.ViewHolder>{
 
@@ -75,13 +79,27 @@ public class RecommendedCosmeticAdapter extends RecyclerView.Adapter<Recommended
         }
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(context, CosmeticInformationActivity.class);
-            Log.e("클릭", String.valueOf(getAdapterPosition()));
-            intent.putExtra("cname", list.get(getAdapterPosition()).getText2().replaceAll("\"",""));
-            intent.putExtra("company", list.get(getAdapterPosition()).getText1());
-            intent.putExtra("rating", list.get(getAdapterPosition()).getNumber());
-            intent.putExtra("image", list.get(getAdapterPosition()).getImage());
-            context.startActivity(intent);
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        String cname = list.get(getAdapterPosition()).getText2().replaceAll("\"", "");
+                        Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(cname, String.valueOf(list.get(getAdapterPosition()).getKindCosmetic()));
+                        List<GetBadIngredientModel> result = call.execute().body();
+                        Log.e("asdasd", result.toString());
+                        Intent intent = new Intent(context, CosmeticInformationActivity.class);
+                        intent.putExtra("cname", list.get(getAdapterPosition()).getText2().replaceAll("\"", ""));
+                        intent.putExtra("company", list.get(getAdapterPosition()).getText1());
+                        intent.putExtra("rating", list.get(getAdapterPosition()).getNumber() * 20);
+                        intent.putExtra("image", list.get(getAdapterPosition()).getImage());
+                        intent.putExtra("ingredient",result.toString());
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
         }
     }
 }

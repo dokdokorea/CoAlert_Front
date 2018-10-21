@@ -80,7 +80,13 @@ public interface CoAlertService {
     @POST("badIngredient")
     Call<List<GetBadIngredientModel>> getBadIngredient(
             @Query("id") String id,
-            @Query("person_type")String type
+            @Query("person_type") String type
+    );
+
+    @POST("ingredientPerCosmetic")
+    Call<List<GetBadIngredientModel>> ingredientPerCosmetic(
+        @Query("cname") String cname,
+        @Query("kind") String kind
     );
 
     Retrofit retrofit = new Retrofit.Builder()
