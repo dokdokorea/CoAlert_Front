@@ -115,12 +115,31 @@ public class SearchFragment extends Fragment {
         searchList = v.findViewById(R.id.search_list);
         searchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(), list.get(position), Toast.LENGTH_LONG).show();
-                //TODO 서치 데이터에서 눌렀을 때 이벤트를 처리해주면 됩니다.
-                Intent intent = new Intent(view.getContext(), CosmeticInformationActivity.class);
-                intent.putExtra("cosmeticName", list.get(position));
-                startActivity(intent);
+            public void onItemClick(AdapterView<?> adapterView, final View view, final int position, long l) {
+                Log.e("asdasd", list.get(position));
+
+                new Thread(){
+                    @Override
+                    public void run() {
+                        super.run();
+                        try {
+                            Intent intent = new Intent(view.getContext(), CosmeticInformationActivity.class);
+                            intent.putExtra("cname", list.get(position));
+                            intent.putExtra("check", 0);
+                            intent.putExtra("image", R.drawable.medi_uv_ultra);
+                            intent.putExtra("company", "닥터지");
+                            intent.putExtra("kind", 1);
+                            Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(list.get(position), "1");
+                            List<GetBadIngredientModel> result = call.execute().body();
+                            intent.putExtra("ingredient", result.toString());
+                            Log.e("asdasd", result.toString());
+                            startActivity(intent);
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    }
+                }.start();
+
             }
         });
 
@@ -146,10 +165,10 @@ public class SearchFragment extends Fragment {
                     //List는 인터페이스이고
                     //list는 순간 순간 변하는 데이터들을 저장하고 뺴고 하기위한 역활
                     list = new ArrayList<>();
-//                    settingList(list);
-                    //ArrayList는 List를 상속받아서 구현하고 있다.
-                    //arrayList는 list의 데이터를 복사해서 갖고 있다.
-
+                    settingList(list);
+                    final ArrayList<String> arrayList = new ArrayList<String>(list);
+                    final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
+                    listView.setAdapter(searchAdapter);
                     edit.addTextChangedListener(new TextWatcher() {
                         @Override
                         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -163,40 +182,11 @@ public class SearchFragment extends Fragment {
 
                         @Override
                         public void afterTextChanged(Editable editable) {
-                            final Background variable = ForBackgroundSingleton.getInstance();
-                            text = edit.getText().toString();
-                            if (previousText != text.length()) {
-                                new Thread() {
-                                    @Override
-                                    public void run() {
-                                        try {
-
-                                            //받아온 데이터로 리스트틀 채워주세요.
-                                            text = edit.getText().toString();
-                                            Log.e("전송 메세지: ", text.substring(0, previousText));
-                                            Call<searchModel> call = ForRestSingleton.getInstance().searchCall(text.substring(0, previousText - 1), variable.id, variable.session);
-                                            Object result = call.execute().body();
-                                            Log.e("result", result.toString());
-                                            getActivity().runOnUiThread(new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                    list.clear();
-                                                    list = variable.listCname;
-                                                    final searchAdapter searchAdapter = new searchAdapter(list, getActivity());
-                                                    listView.setAdapter(searchAdapter);
-                                                }
-                                            });
-
-                                        } catch (Exception e) {
-                                            e.printStackTrace();
-                                        }
-                                    }
-                                }.start();
-                                previousText = text.length();
-                            }
+                            String text = edit.getText().toString();
+                            search(text, list, arrayList, searchAdapter);
                         }
                     });
-                } else {
+                }else{
                     viewFlipper.setDisplayedChild(0);
                 }
             }
@@ -256,9 +246,9 @@ public class SearchFragment extends Fragment {
             langs[0] = "kor";
             langs[1] = "eng";
             datapath = getActivity().getFilesDir().toString() + "/tesseract/";
-            for (int i = 0; i < langs.length; i++) {
+            for (int i = 0; i < langs.length; i++)
                 checkFile(new File(datapath + "tessdata/"), langs[i]);
-            }
+
             mTess = new TessBaseAPI();
             mTess.init(datapath, "eng+kor");
             mTess.setVariable(TessBaseAPI.VAR_CHAR_BLACKLIST, "!@#$%^&*()_=-[]}{;:'\"\\|~`,./<>?");
@@ -340,28 +330,13 @@ public class SearchFragment extends Fragment {
                         }
                     });
 
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }.start();
-
     }
 
-    public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter) {
-        list.clear();
-
-        if (findText.length() == 0) {
-            list.addAll(arrayList);
-        } else {
-            for (int i = 0; i < arrayList.size(); i++) {
-                if (arrayList.get(i).toLowerCase().contains(findText)) {
-                    list.add(arrayList.get(i));
-                }
-            }
-        }
-        searchAdapter.notifyDataSetChanged();
-    }
 
     public ArrayList<OneImgOneStringCardView> addData(ArrayList<OneImgOneStringCardView> arrayList) {
         arrayList.add(new OneImgOneStringCardView(R.drawable.innisfree_logo, "이니스프리"));
@@ -370,26 +345,47 @@ public class SearchFragment extends Fragment {
         arrayList.add(new OneImgOneStringCardView(R.drawable.mac, "맥"));
         return arrayList;
     }
-//
-//    void settingList(List<String> list) {
-//        list.add("슬기");
-//        list.add("슬기의 파우치");
-//        list.add("수지");
-//        list.add("수지의 화장품");
-//        list.add("크리스탈 비비 크림");
-//        list.add("크리스탈");
-//        list.add("손나은 쉐이딩");
-//        list.add("손나은");
-//        list.add("홍진영의 눈 커지는 비법");
-//        list.add("루이");
-//        list.add("진영");
-//        list.add("슬기");
-//        list.add("설리");
-//        list.add("김예림");
-//        list.add("혜리");
-//        list.add("허영지");
-//    }
 
+    public void search(String findText, List<String> list, ArrayList<String> arrayList, searchAdapter searchAdapter){
+        list.clear();
+
+        if(findText.length() == 0){
+            list.addAll(arrayList);
+        }
+        else{
+            for(int i = 0; i<arrayList.size(); i++){
+                if(arrayList.get(i).toLowerCase().contains(findText)){
+                    list.add(arrayList.get(i));
+                }
+            }
+        }
+        searchAdapter.notifyDataSetChanged();
+    }
+    void settingList(List<String> list){
+        list.add("UV 프로텍터 스탠바이유 선스크린");
+        list.add("NEW 이데베논 선블럭 SPF50+ PA++++");
+        list.add("유비데아 XL 멜트-인 틴티드 크림 SPF50+ PA++++");
+        list.add("썬 파우더 로션 SPF 25/PA +++");
+        list.add("2mg 선더마 B SPF35 PA++");
+        list.add("메디 UV 울트라 선 SPF50+ PA+++");
+        list.add("엔조이 마일드 썬 에센스 SPF50+ PA+++");
+        list.add("스마트솔루션365 실키 선블록 SPF50 PA+++");
+        list.add("바비 브라운");
+        list.add("스파클 아이섀도우");
+        list.add("컬러 필터 섀도우 팔레트");
+        list.add("럭스 아이섀도우");
+        list.add("아이섀도");
+        list.add("별총총 펄 파우더");
+        list.add("매트 앤 메탈 아이섀도우 팔레트");
+        list.add("모노큐브 아이섀도우(쉬머)");
+        list.add("모노큐브 아이섀도우(쉬머)");
+        list.add("모노큐브 아이섀도우(쉬머)");
+        list.add("모노큐브 아이섀도우(쉬머)");list.add("모노큐브 아이섀도우(쉬머)");
+        list.add("모노큐브 아이섀도우(쉬머)");
+        list.add("모노큐브 아이섀도우(쉬머)");
+
+
+    }
 
 }
 
