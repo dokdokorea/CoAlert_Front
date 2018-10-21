@@ -73,11 +73,13 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     ArrayList<TwoImgTwoStringCardView> DetailArr;
     ArrayList<TwoImgFourStringCardView> DetailPreviewArr;
     TextView typeText;
+    TextView backHome;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cosmetic_information);
         shareBtn = findViewById(R.id.share_btn);
+
         wishbtn=(ImageButton)findViewById(R.id.wish_btn);
         matching=(TextView)findViewById(R.id.matching_percent);
         ProductImg=(ImageView)findViewById(R.id.cosmetic_photo);
@@ -108,6 +110,15 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
         final int kind = intent.getExtras().getInt("kind");
+        backHome = findViewById(R.id.backHome);
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent1);
+                finish();
+            }
+        });
 
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
@@ -132,7 +143,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 }
             }.start();
         }else{
-
+            Log.e("asdads", String.valueOf(intent.getExtras().get("rating")));
             ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
             matching.setText(String.valueOf(intent.getExtras().get("rating")));
         }
@@ -214,6 +225,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 intent.putExtra("cname", hi.getStringExtra("cname"));
                 intent.putExtra("company",hi.getStringExtra("company"));
                 startActivity(intent);
+                finish();
             }
         });
 

@@ -21,6 +21,7 @@
             android:layout_marginLeft="@dimen/_5sdp"
             android:src="@drawable/clicking_back_btn" />
         <TextView
+            android:id="@+id/recommend_back_home"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_40sdp"
             android:fontFamily="@font/yoon_gothic340"

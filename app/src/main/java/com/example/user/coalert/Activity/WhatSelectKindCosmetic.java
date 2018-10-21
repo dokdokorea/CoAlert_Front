@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.kindCosmeticAdapter;
 import com.example.user.coalert.R;
@@ -34,11 +35,13 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
     kindCosmeticAdapter kindCosmeticAdapter;
     RecyclerView kindCosmeticListView;
     ImageView backButton;
+    TextView backHome;
     ArrayList<OneImgOneStringCardView> oneCardView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_what_select_kind_cosmetic);
+
         oneCardView = new ArrayList<>();
         oneCardView = setImage(oneCardView);
         kindCosmeticAdapter = new kindCosmeticAdapter(oneCardView, getApplicationContext());
@@ -54,6 +57,16 @@ public class WhatSelectKindCosmetic extends AppCompatActivity {
             }
         });
         kindCosmeticListView.setAdapter(kindCosmeticAdapter);
+        backHome = findViewById(R.id.kind_back_home);
+        backHome.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                Log.e("finish", "1");
+                finish();
+            }
+        });
     }
 
     public ArrayList<OneImgOneStringCardView> setImage(ArrayList<OneImgOneStringCardView> arrayList){
