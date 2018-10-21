@@ -3,10 +3,11 @@ import os
 
 
 def getIngredient(kind, cname):
+    #ingredient
+    print(kind)
     ingredient_data = pd.read_csv('ingredient/data/' + kind + 'Ingredient.csv')
     badgredient_data = pd.read_csv('ingredient/data/' + kind + 'BadIngredient.csv')
     ingredient = ingredient_data.loc[ingredient_data['제품명'] == cname, '성분구성']
-
     ingredient = ingredient.values[0].split(',')
     list = []
     print(ingredient)

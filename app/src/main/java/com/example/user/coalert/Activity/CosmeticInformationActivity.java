@@ -33,6 +33,8 @@ import com.example.user.coalert.Adapter.MyprofileAdapter.MyprofileFollowerAdapte
 import com.example.user.coalert.Adapter.TabIngredListAdapter.TabIngredientListAdapter;
 import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.oneCosmeticRecommend;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 import com.example.user.coalert.item.OneImgOneStringOneNumberCardView;
 import com.example.user.coalert.item.TwoImgFourStringCardView;
@@ -44,6 +46,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
 
@@ -80,7 +84,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         MoreToxicByType=(Button)findViewById(R.id.by_type_ingredient);
         scroll=(NestedScrollView)findViewById(R.id.scroll);
         scroll.fullScroll(NestedScrollView.FOCUS_UP);
-        Intent intent = new Intent(this.getIntent());
+        final Intent intent = new Intent(this.getIntent());
         int number = intent.getExtras().getInt("check");
         Drawable alpha = WriteReview.getBackground();
         alpha.setAlpha(50);
@@ -102,8 +106,25 @@ public class CosmeticInformationActivity extends AppCompatActivity{
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
             Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
+            final int kind = intent.getExtras().getInt("kind");
             ProductImg.setImageBitmap(bitmap);
-            matching.setText(String.valueOf("리뷰등록"));
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {Log.e("kind", String.valueOf(kind));
+                        Call<oneCosmeticRecommend> call = ForRestSingleton.getInstance().oneRecommendCosmetic(2, intent.getStringExtra("cname"), 0);
+                        final oneCosmeticRecommend result = call.execute().body();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                matching.setText(String.valueOf(result.getRating()*20));
+                            }
+                        });
+                    }catch (Exception e){
+                        e.printStackTrace();}
+                }
+            }.start();
         }else{
             ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
             matching.setText(String.valueOf(intent.getExtras().get("rating")));

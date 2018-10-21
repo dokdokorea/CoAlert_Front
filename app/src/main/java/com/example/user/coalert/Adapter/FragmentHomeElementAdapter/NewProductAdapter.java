@@ -61,6 +61,8 @@ public class NewProductAdapter extends RecyclerView.Adapter<NewProductAdapter.Vi
                         List<GetBadIngredientModel> result = call.execute().body();
 // drawable 타입을 bitmap으로 변경
                         Intent intent = new Intent(context, CosmeticInformationActivity.class);
+                        Log.e("before",String.valueOf(companyAndType[1]));
+                        intent.putExtra("kind", companyAndType[1]);
                         intent.putExtra("cname", mDataset.get(getAdapterPosition()).getText1());
                         intent.putExtra("company", companyAndType[0]);
                         intent.putExtra("image", mDataset.get(getAdapterPosition()).getImage());
