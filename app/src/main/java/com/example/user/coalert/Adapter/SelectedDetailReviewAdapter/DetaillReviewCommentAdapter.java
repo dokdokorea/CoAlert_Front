@@ -1,5 +1,6 @@
 package com.example.user.coalert.Adapter.SelectedDetailReviewAdapter;
 
+import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class DetaillReviewCommentAdapter extends RecyclerView.Adapter<DetaillReviewCommentAdapter.ViewHolder> {
     private ArrayList<OneImgTwoStringCardView> mDataSet;
     int rate;
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView id,comment;
@@ -41,6 +43,22 @@ public class DetaillReviewCommentAdapter extends RecyclerView.Adapter<DetaillRev
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_detail_review_comment, null,false);
         v.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT,RecyclerView.LayoutParams.WRAP_CONTENT));
         return new ViewHolder(v);
+    }
+
+    public void updateData(ArrayList<OneImgTwoStringCardView> viewModels) {
+        mDataSet.clear();
+        mDataSet.addAll(viewModels);
+        notifyDataSetChanged();
+    }
+
+    public void addItem(int position, OneImgTwoStringCardView viewModel) {
+        mDataSet.add(position, viewModel);
+        notifyItemInserted(position);
+    }
+
+    public void removeItem(int position) {
+        mDataSet.remove(position);
+        notifyItemRemoved(position);
     }
 
     @Override

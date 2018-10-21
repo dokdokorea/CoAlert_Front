@@ -220,15 +220,14 @@
         android:text="  휴대폰 설정 > CoAlert"
         android:textColor="@color/explanationwords" />
 
-        <Button
-            android:id="@+id/authorization_confirm_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/press_button"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/confirm_button"
-            android:textColor="@color/whiteBackground"
-            android:textStyle="bold"
-            />
+    <Button
+        android:id="@+id/authorization_confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_33sdp"
+        android:background="@drawable/press_button"
+        android:gravity="center"
+        android:text="@string/confirm_button"
+        android:textColor="@color/whiteBackground"
+        android:textStyle="bold" />
 </LinearLayout>

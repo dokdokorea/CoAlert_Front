@@ -3,6 +3,7 @@ package com.example.user.coalert.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,9 +18,11 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +60,8 @@ public class ViewDetailActivity extends AppCompatActivity {
     ImageView LikeIcon;
     TextView LikeCount;
     ScrollView scroll;
+    EditText writeContext;
+    Button commentConfirm;
     int count=0;
     int j=0;
 
@@ -96,6 +101,7 @@ public class ViewDetailActivity extends AppCompatActivity {
         WriteReveiw=(TextView)findViewById(R.id.writeComment);
 
 
+
         LikeCount.setText("3000");
         CreatorPicture.setImageResource(R.drawable.iu4);
         CreatorId.setText("dlwlrma");
@@ -132,6 +138,8 @@ public class ViewDetailActivity extends AppCompatActivity {
         comment.setAdapter(new DetaillReviewCommentAdapter(CommentArr));
         ViewCompat.setNestedScrollingEnabled(comment, false);
         comment.setFocusable(false);
+
+
 
 
         topbtn.setOnClickListener(new View.OnClickListener() {
@@ -192,8 +200,6 @@ public class ViewDetailActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     private void init(String title) {
@@ -208,7 +214,7 @@ public class ViewDetailActivity extends AppCompatActivity {
                 ImageArr.add(colorlist[i]);
         }
         else if(title.equals("아이유 메이크업")) {
-            context="코스모폴리탄 잡지에 드라마 기대작인 달의 연인-보보경심 려의 출연진들의 화보가 실렸는데요. 화보에 실린 드라마의 주인공 아이유 양이 참으로 눈에  띄죠!\n" +
+            context="코스모폴리탄 잡지에 드라마 기대작인 달의 연인-보보경심 려의 출연진들의 화보가 실렸는데요. \n화보에 실린 드라마의 주인공 아이유 양이 참으로 눈에  띄죠!\n" +
                     "\n" +
                     "본격적으로 아이유 메이크업에 돌입해보도록 할게요!\n\n곳곳에 아이유 얼굴의 포인트를 살린 아이유 메이크업 완성!\n" +
                     "단아한 스타일링에 어울릴 듯한 메이크업이네요. 참고해보세요 :D";
@@ -250,39 +256,62 @@ public class ViewDetailActivity extends AppCompatActivity {
        startActivity(intent);
     }
 
-//    public void onShowPopup(View v){
-//
-//        LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//        // inflate the custom popup layout
-//        inflatedView = layoutInflater.inflate(R.layout.popup_write_comment, null,false);
-//        // find the ListView in the popup layout
-//        LinearLayout headerView = (LinearLayout)inflatedView.findViewById(R.id.headerLayout);
-//        // get device size
-//        Display display = getWindowManager().getDefaultDisplay();
-//        final Point size = new Point();
-//        display.getSize(size);
-////        mDeviceHeight = size.y;
+    public void onShowPopup(View v){
+
+        LayoutInflater layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        // inflate the custom popup layout
+        final View inflatedView = layoutInflater.inflate(R.layout.popup_write_comment, null,false);
+
+        Display display = getWindowManager().getDefaultDisplay();
+        final Point size = new Point();
+        display.getSize(size);
+//        mDeviceHeight = size.y;
 //        DisplayMetrics displayMetrics = mContext.getResources().getDisplayMetrics();
-//        int width = displayMetrics.widthPixels;
-//        int height = displayMetrics.heightPixels;
-//
-//
-//        // fill the data to the list items
+////        int width = displayMetrics.widthPixels;
+////        int height = displayMetrics.heightPixels;
+
+        Point displaySize = new Point();
+        this.getWindowManager().getDefaultDisplay().getRealSize(displaySize);
+
+        Rect windowSize = new Rect();
+        this.getWindow().getDecorView().getWindowVisibleDisplayFrame(windowSize);
+
+        int width = displaySize.x - Math.abs(windowSize.width());
+        int height = displaySize.y - Math.abs(windowSize.height());
+
+
+        // fill the data to the list items
 //        setSimpleList(listView);
-//
-//
-//        // set height depends on the device size
+
+        PopupWindow popWindow = new PopupWindow(inflatedView,width,height, true);
+
+        // set height depends on the device size
 //        popWindow = new PopupWindow(inflatedView, width,height-50, true );
-//        // set a background drawable with rounders corners
-//        popWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.popup_bg));
-//
-//        popWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NEEDED);
-//        popWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-//
-//        popWindow.setAnimationStyle(R.style.PopupAnimation);
-//
-//        // show the popup at bottom of the screen and set some margin at bottom ie,
-//        popWindow.showAtLocation(v, Gravity.BOTTOM, 0,100);
-//    }
+        // set a background drawable with rounders corners
+
+        popWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NEEDED);
+        popWindow.setWidth(WindowManager.LayoutParams.MATCH_PARENT);
+
+        popWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+
+        popWindow.setAnimationStyle(R.style.PopupAnimation);
+
+        // show the popup at bottom of the screen and set some margin at bottom ie,
+        popWindow.showAtLocation(v, Gravity.BOTTOM, 0,100);
+        writeContext=(EditText)inflatedView.findViewById(R.id.commentContext);
+        commentConfirm=(Button)inflatedView.findViewById(R.id.confirmbtn);
+
+        commentConfirm.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalApplication info=(GlobalApplication) getApplication();
+
+                Toast.makeText(ViewDetailActivity.this, "댓글이 등록되었습니다", Toast.LENGTH_SHORT).show();
+                CommentArr.add(new OneImgTwoStringCardView(R.drawable.iu1,info.getId(),writeContext.getText().toString()));
+            }
+        });
+    }
+
+
 }
