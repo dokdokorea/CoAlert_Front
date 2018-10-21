@@ -22,7 +22,7 @@ public class SimpleReviewAdapter extends RecyclerView.Adapter<SimpleReviewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView,one,two,three,four,five;
-        private TextView title;
+        private TextView title, typeText;
 
 
         public ViewHolder(View itemView) {
@@ -34,6 +34,7 @@ public class SimpleReviewAdapter extends RecyclerView.Adapter<SimpleReviewAdapte
             three=(ImageView)itemView.findViewById(R.id.third);
             four=(ImageView)itemView.findViewById(R.id.fourth);
             five=(ImageView)itemView.findViewById(R.id.fifth);
+            typeText = itemView.findViewById(R.id.cosmeticType);
 //            one.setImageResource(R.drawable.emptystar);
 //            two.setImageResource(R.drawable.emptystar);
 //            three.setImageResource(R.drawable.emptystar);
@@ -59,6 +60,7 @@ public class SimpleReviewAdapter extends RecyclerView.Adapter<SimpleReviewAdapte
         holder.imageView.setImageResource(mDataSet.get(position).getImage());
         holder.title.setText(mDataSet.get(position).getText());
         rate=mDataSet.get(position).getNumber();
+        holder.typeText.setText(mDataSet.get(position).getType());
         switch(rate){
             case 5:
                 holder.five.setImageResource(R.drawable.new_star);

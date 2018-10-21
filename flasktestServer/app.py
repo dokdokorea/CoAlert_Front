@@ -28,7 +28,6 @@ def getRecommendCosmetic():
     returnList = []
     for i, data in recommend_cosmetic.iterrows():
         data['est'] = round(data['est'], 2)
-        # print(data['name'])
         pixel, company = search(cosmetic_type, data['name'])
         returnList.append(
             {'cosmeticname': data['name'], 'estimate': data['est'], 'pixel': str(pixel), 'company': company})

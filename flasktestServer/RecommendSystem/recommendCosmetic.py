@@ -117,5 +117,3 @@ def making_evaluate_data(id_purify_data, skin_type):
     return evaluate_data
 
 
-
-
