@@ -20,7 +20,7 @@
 
         <EditText
             android:id="@+id/commentContext"
-            android:hint="Write a Comment"
+            android:hint="댓글을 적어주세요."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusable="true"

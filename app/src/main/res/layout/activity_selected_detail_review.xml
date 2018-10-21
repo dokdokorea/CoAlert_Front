@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/mypageback"
     android:orientation="vertical">
 
@@ -14,7 +14,7 @@
         <ImageButton
             android:id="@+id/selected_detail_review_back_btn"
             style="@style/black_back_btn_style"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical" />
 
         <TextView
             style="@style/logo_style"
@@ -30,9 +30,9 @@
         android:layout_height="@dimen/_2sdp" />
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scroll">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,9 +40,6 @@
             android:background="#fff"
             android:orientation="vertical"
             android:padding="@dimen/_2sdp">
-
-
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -54,44 +51,44 @@
                     android:layout_height="@dimen/_109sdp"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
-                    android:src="@drawable/face1"
-                    android:layout_marginTop="@dimen/_15sdp"/>
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/face1" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_140sdp"
-                    android:background="#70ffffff"/>
+                    android:background="#70ffffff" />
 
                 <TextView
+                    android:id="@+id/post_title"
+                    style="@style/detailreviewTitle"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_140sdp"
-                    style="@style/detailreviewTitle"
                     android:gravity="center"
-                    android:textSize="@dimen/_29sdp"
-                    android:id="@+id/post_title"
                     android:text="insert title here"
-                    />
+                    android:textSize="@dimen/_29sdp" />
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     style="@style/detailreviewContext"
-                    android:text="made by."
-                    android:textSize="@dimen/_11sdp"
-                    android:layout_toLeftOf="@+id/user_id"
-                    android:layout_alignParentBottom="true"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/user_id"
+                    android:text="made by."
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
                     android:id="@+id/user_id"
                     style="@style/detailreviewContext"
-                    android:text="UserId"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
                     android:onClick="goAnotheruser"
-                    android:textStyle="bold"
+                    android:text="UserId"
                     android:textColor="@color/boardBackground"
-                    android:layout_marginRight="10dp"/>
-
+                    android:textStyle="bold" />
 
 
             </RelativeLayout>
@@ -112,8 +109,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/_18sdp">
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="vertical">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/view"
@@ -121,7 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_150sdp"
                     android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"/>
+                    android:layout_centerVertical="true" />
 
                 <me.relex.circleindicator.CircleIndicator
                     android:id="@+id/indicator"
@@ -134,9 +131,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_22sdp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/_22sdp">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/detail_context"
@@ -151,46 +148,46 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="이 제품에대한 더많은 리뷰를 보고싶다면?"
                 android:layout_marginTop="@dimen/_22sdp"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:text="이 제품에대한 더많은 리뷰를 보고싶다면?" />
 
             <Button
+                android:id="@+id/more_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/more_review"
                 android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@color/emptyBackground"
+                android:fontFamily="@font/yoon_gothic340"
                 android:text="more"
                 android:textColor="@color/tab_skintype_color"
-                android:fontFamily="@font/yoon_gothic340"
-                android:textSize="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_10sdp"/>
+                android:textSize="@dimen/_20sdp" />
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginRight="@dimen/_5sdp"
                 android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_5sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/like_icon"
                     android:layout_width="@dimen/_24sdp"
                     android:layout_height="@dimen/_24sdp"
-                    android:src="@drawable/black_empty_heart"
-                    android:id="@+id/like_icon"
-                    android:padding="@dimen/_4sdp"/>
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/black_empty_heart" />
 
 
                 <TextView
+                    android:id="@+id/like_count"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="3000"
-                    android:id="@+id/like_count"
                     android:gravity="center_vertical"
-                    android:textSize="@dimen/_12sdp"/>
+                    android:text="3000"
+                    android:textSize="@dimen/_12sdp" />
 
 
             </LinearLayout>
@@ -203,66 +200,65 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_25sdp"
-                    android:orientation="horizontal"
                     android:background="@color/light_pink"
+                    android:orientation="horizontal"
                     android:padding="@dimen/_2sdp"
                     android:paddingBottom="@dimen/_3sdp"
                     android:paddingTop="@dimen/_3sdp">
 
                     <TextView
+                        android:id="@+id/good_btn"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:fontFamily="@font/bm_dohyen"
-                        android:textColor="#fff"
-                        android:textSize="@dimen/_14sdp"
                         android:background="@drawable/clicking_empty_to_lightdarker_background"
-                        android:id="@+id/good_btn"
-                        android:text="좋아요"/>
+                        android:fontFamily="@font/bm_dohyen"
+                        android:gravity="center"
+                        android:text="좋아요"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_14sdp" />
 
                     <View
                         android:layout_width="@dimen/_1sdp"
                         android:layout_height="match_parent"
-                        android:background="#fff"
-                        ></View>
+                        android:background="#fff"/>
 
                     <TextView
+                        android:id="@+id/writeComment"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:fontFamily="@font/bm_dohyen"
-                        android:textSize="@dimen/_14sdp"
-                        android:textColor="#fff"
                         android:background="@drawable/clicking_empty_to_lightdarker_background"
-                        android:id="@+id/writeComment"
+                        android:fontFamily="@font/bm_dohyen"
+                        android:gravity="center"
                         android:onClick="onShowPopup"
-                        android:text="댓글쓰기"/>
+                        android:text="댓글쓰기"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_14sdp" />
 
                 </LinearLayout>
 
 
                 <android.support.v7.widget.RecyclerView
+                    android:id="@+id/commentRecycler"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/commentRecycler"
                     android:padding="@dimen/_5sdp">
 
                 </android.support.v7.widget.RecyclerView>
 
 
                 <Button
+                    android:id="@+id/toTopButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/emptyBackground"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/emptyBackground"
                     android:text="맨 위로 가기"
                     android:textColor="@color/boardBackground"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_15sdp"
-                    android:id="@+id/toTopButton"
-                    android:textSize="@dimen/_10sdp"/>
+                    android:textSize="@dimen/_10sdp" />
 
 
             </LinearLayout>

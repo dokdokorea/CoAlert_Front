@@ -17,8 +17,11 @@ import com.example.user.coalert.Activity.ViewDetailActivity;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.OneImgTwoStringCardView;
 import com.example.user.coalert.item.TwoImgFourStringCardView;
+import com.github.vipulasri.timelineview.TimelineView;
 
 import java.util.List;
+
+import butterknife.BindView;
 
 public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRecyclerViewAdapter.ViewHolder>{
     Context context;
@@ -59,8 +62,11 @@ public class TimelineRecyclerViewAdapter extends RecyclerView.Adapter<TimelineRe
         TextView title,comment,likecount;
         CardView cardview;
         TextView username;
+        TimelineView mTimelineView;
         public ViewHolder(View itemView) {
             super(itemView);
+            mTimelineView=itemView.findViewById(R.id.time_maker);
+            mTimelineView.initLine(getItemViewType());
             ProfilePicture=(ImageView)itemView.findViewById(R.id.profile_pic);
             titleImg=(ImageView)itemView.findViewById(R.id.image);
             title=(TextView)itemView.findViewById(R.id.title);

@@ -46,6 +46,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,11 +73,13 @@ public class CosmeticInformationActivity extends AppCompatActivity{
     ArrayList<TwoImgTwoStringCardView> DetailArr;
     ArrayList<TwoImgFourStringCardView> DetailPreviewArr;
     TextView typeText;
+    TextView backHome;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cosmetic_information);
         shareBtn = findViewById(R.id.share_btn);
+
         wishbtn=(ImageButton)findViewById(R.id.wish_btn);
         matching=(TextView)findViewById(R.id.matching_percent);
         ProductImg=(ImageView)findViewById(R.id.cosmetic_photo);
@@ -107,10 +110,19 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
         final int kind = intent.getExtras().getInt("kind");
+        backHome = findViewById(R.id.backHome);
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent1);
+                finish();
+            }
+        });
+
         if (number == 0) {
             Drawable drawable = getResources().getDrawable((Integer) intent.getExtras().get("image"));
             Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
-
             ProductImg.setImageBitmap(bitmap);
             new Thread(){
                 @Override
@@ -130,9 +142,9 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 }
             }.start();
         }else{
-
+            Log.e("asdads", String.valueOf(intent.getExtras().get("rating")));
             ProductImg.setImageBitmap((Bitmap) intent.getExtras().get("image"));
-            matching.setText(String.valueOf(intent.getExtras().get("rating")));
+            matching.setText(String.valueOf(new DecimalFormat("#.##").format(intent.getExtras().get("rating"))));
         }
 
         ProductName.setText(intent.getStringExtra("cname"));
@@ -207,9 +219,12 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                     intent.putExtra("image", (Bitmap) hi.getExtras().get("image"));
                     intent.putExtra("check", 1);
                 }
+                intent.putExtra("rating", matching.getText());
+                intent.putExtra("kind", kind);
                 intent.putExtra("cname", hi.getStringExtra("cname"));
                 intent.putExtra("company",hi.getStringExtra("company"));
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -217,7 +232,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(CosmeticInformationActivity.this,CosmeticIngredientActivity.class);
+                Intent intent=new Intent(CosmeticInformationActivity.this, CosmeticIngredientActivity.class);
                 startActivity(intent);
             }
         });
@@ -314,7 +329,6 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 "단, 미백 효과를 준다는 점은 좋지만 하얗게 된다는 점 때문에 몸에 바르기에는 꺼려질 것 같다."));
         detail.setAdapter(new DetailReviewPreviewAdapter(getApplicationContext(), DetailPreviewArr, R.layout.activity_cosmetic_information));
         ViewCompat.setNestedScrollingEnabled(detail, false);
-
     }
     public void setData(JsonArray jsonArray){
         for (int i = 0; i<jsonArray.size(); i++) {

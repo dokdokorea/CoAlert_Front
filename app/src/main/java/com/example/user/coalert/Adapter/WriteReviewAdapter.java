@@ -94,7 +94,7 @@ public class WriteReviewAdapter extends RecyclerView.Adapter<WriteReviewAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.e("어댑터안에서 바꾼 후 ", String.valueOf(arrayList.get(position)));
-        holder.imageView.setImageBitmap(arrayList.get(position).getBitmapImg());
+        holder.imageView.setImageResource(R.drawable.clickedbluecamera);
     }
 
     public void cameraView(int position) {

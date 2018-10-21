@@ -41,7 +41,7 @@ public class BestReviewListActivity extends AppCompatActivity {
 
         BestReviewArr = new ArrayList<>();
 
-        BestReviewArr.add(new TwoImgTwoStringCardView(R.drawable.iu1, R.drawable.irinblack, "dlwlrma", "아이린의 화장법"));
+        BestReviewArr.add(new TwoImgTwoStringCardView(R.drawable.irin, R.drawable.irinblack, "dlwlrma", "아이린의 화장법"));
         BestReviewArr.add(new TwoImgTwoStringCardView(R.drawable.hyoshin2, R.drawable.irinpink,"dokdokorea", "남다른 핑크매력 발산법"));
         BestReviewArr.add(new TwoImgTwoStringCardView(R.drawable.irin,R.drawable.iu1, "irinlove", "아이유 메이크업"));
         BestReviewArr.add(new TwoImgTwoStringCardView(R.drawable.irin2, R.drawable.nayeon1,"dl57934", "민감성 피부여 일어나라!!"));
