@@ -64,6 +64,7 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_weight="1"
                     android:src="@drawable/cancel_pink"
+                    android:visibility="gone"
                     android:id="@+id/cancel_btn"/>
             </LinearLayout>
 

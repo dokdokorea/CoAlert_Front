@@ -92,32 +92,7 @@
                     android:textColor="@color/boardBackground"
                     android:layout_marginRight="10dp"/>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginRight="@dimen/_5sdp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:layout_alignParentRight="true">
 
-                    <ImageView
-                        android:layout_width="@dimen/_24sdp"
-                        android:layout_height="@dimen/_24sdp"
-                        android:src="@drawable/black_empty_heart"
-                        android:id="@+id/like_icon"
-                        android:padding="@dimen/_4sdp"/>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="3000"
-                        android:id="@+id/like_count"
-                        android:gravity="center_vertical"
-                        android:textSize="@dimen/_12sdp"/>
-
-
-                </LinearLayout>
 
             </RelativeLayout>
 
@@ -192,6 +167,34 @@
                 android:textSize="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/black_empty_heart"
+                    android:id="@+id/like_icon"
+                    android:padding="@dimen/_4sdp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3000"
+                    android:id="@+id/like_count"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_12sdp"/>
+
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -234,6 +237,7 @@
                         android:textColor="#fff"
                         android:background="@drawable/clicking_empty_to_lightdarker_background"
                         android:id="@+id/writeComment"
+                        android:onClick="onShowPopup"
                         android:text="댓글쓰기"/>
 
                 </LinearLayout>

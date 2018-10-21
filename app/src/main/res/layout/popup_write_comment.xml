@@ -1,69 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/first">
 
-    <LinearLayout
-        android:id="@+id/headerLayout"
-        android:layout_width="match_parent"
+
+    <Button
+        android:layout_width="@dimen/_50sdp"
         android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:gravity="center">
+        android:layout_centerVertical="true"
+        android:background="@color/first"
+        style="@style/point_font"
+        android:textColor="@color/whiteBackground"
+        android:text="확인"
+        android:id="@+id/confirmbtn"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Some One and 20 Others Like this"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/commentsListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/headerLayout"
-        android:layout_above="@+id/comment_section"
-        android:layout_marginBottom="0dp"/>
-
-    <LinearLayout
-        android:id="@+id/comment_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center"
-        >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxHeight="30dp"
-            android:minHeight="20dp"
-            android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher"
-            />
         <EditText
-            android:id="@+id/writeComment"
+            android:id="@+id/commentContext"
             android:hint="Write a Comment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:maxLines="2"
+            android:layout_height="wrap_content"
             android:focusable="true"
+            android:layout_toLeftOf="@+id/confirmbtn"
             android:layout_marginLeft="2dp"
-            android:textSize="12sp"
+            android:textSize="@dimen/_20sdp"
             android:textColor="#000"
-            android:background="#00000000"/>
-
-    </LinearLayout>
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_3sdp"
+            android:background="#fff"/>
 
 </RelativeLayout>
