@@ -85,24 +85,24 @@ public class MyProfileFragment extends Fragment {
         cosmeticList.setNestedScrollingEnabled(false);
 
 
-        List<OneImgOneStringCardView> items = new ArrayList<>();
-        OneImgOneStringCardView[] item = new OneImgOneStringCardView[5];
-        item[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
-        item[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
-        item[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
-        item[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
-        item[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
+//        List<OneImgOneStringCardView> items = new ArrayList<>();
+//        OneImgOneStringCardView[] item = new OneImgOneStringCardView[5];
+//        item[0] = new OneImgOneStringCardView(R.drawable.cardview1, "아쿠아 글로우 쿠션 파운데아션 SPF23 PA++");
+//        item[1] = new OneImgOneStringCardView(R.drawable.cardview2, "보탈필루이드 블루밍 쿠션 SPF50+ PA+++");
+//        item[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
+//        item[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
+//        item[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
 
-        for (int i = 0; i < 5; i++) items.add(item[i]);
+//        for (int i = 0; i < 5; i++) items.add(item[i]);
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[6];
-        cositem[0] = new OneImgOneStringCardView(R.drawable.cardview1, "슬기1");
-        cositem[1] = new OneImgOneStringCardView(R.drawable.cardview2, "슬기2");
-        cositem[2] = new OneImgOneStringCardView(R.drawable.cardview3, "슬기3");
-        cositem[3] = new OneImgOneStringCardView(R.drawable.cardview4, "슬기4");
-        cositem[4] = new OneImgOneStringCardView(R.drawable.cardview5, "슬기5");
-        cositem[5] = new OneImgOneStringCardView(R.drawable.irin, "irin");
+        cositem[0] = new OneImgOneStringCardView(R.drawable.used_cosmetic1, "아쿠아 글로우 쿠션 파운데아션 SPF23 PA++",3);
+        cositem[1] = new OneImgOneStringCardView(R.drawable.used_cosmetic2, "보탈필루이드 블루밍 쿠션 SPF50+ PA+++", 3);
+        cositem[2] = new OneImgOneStringCardView(R.drawable.used_cosmetic3, "라스트 벨벳 팁 틴트 4", 4);
+        cositem[3] = new OneImgOneStringCardView(R.drawable.used_cosmetic4, "버시컬러 바니쉬 크림 립 스테인", 4);
+        cositem[4] = new OneImgOneStringCardView(R.drawable.used_cosmetic5, "피스 매칭 섀도우 쉬머", 2);
+        cositem[5] = new OneImgOneStringCardView(R.drawable.used_cosmetic6, "룩 앳 마이 아이즈 카페", 2);
 
 
         for (int i = 0; i < 6; i++) cositems.add(cositem[i]);

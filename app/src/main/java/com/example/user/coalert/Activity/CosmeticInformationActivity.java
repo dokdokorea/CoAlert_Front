@@ -109,7 +109,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductImg.setTag(intent.getExtras().getInt("picture"));
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
-        final int kind = intent.getExtras().getInt("kind");
+        final int kind = Integer.parseInt((String) intent.getExtras().get("kind"));
         backHome = findViewById(R.id.backHome);
         backHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +129,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                 public void run() {
                     super.run();
                     try {
+                        Log.e("kind", String.valueOf(kind));
                         Call<oneCosmeticRecommend> call = ForRestSingleton.getInstance().oneRecommendCosmetic(kind, intent.getStringExtra("cname"), 0);
                         final oneCosmeticRecommend result = call.execute().body();
                         runOnUiThread(new Runnable() {

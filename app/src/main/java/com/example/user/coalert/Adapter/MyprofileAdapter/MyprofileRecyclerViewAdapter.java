@@ -66,6 +66,10 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
         public void onClick(View view) {
             final OneImgOneStringCardView item = list.get(getAdapterPosition());
             Intent intent = new Intent(context, CosmeticInformationActivity.class);
+            intent.putExtra("check", 0);
+            intent.putExtra("cname", list.get(getAdapterPosition()).getText());
+            intent.putExtra("image", list.get(getAdapterPosition()).getImage());
+
             context.startActivity(intent);
             Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
         }
