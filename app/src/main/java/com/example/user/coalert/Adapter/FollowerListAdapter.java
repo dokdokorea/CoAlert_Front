@@ -1,5 +1,6 @@
 package com.example.user.coalert.Adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.coalert.Activity.AnotherprofileActivity;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
@@ -40,9 +42,11 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   // Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    GlobalApplication info=new GlobalApplication();
+                    Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(v.getContext(),AnotherprofileActivity.class);
-//                    intent.putExtra("id",name.getText());
+                    intent.putExtra("id",name.getText());
+                    intent.putExtra("profile",mDataSet.get(getAdapterPosition()).getImg1());
 //                    intent.putExtra("email",id.getText());
                     v.getContext().startActivity(intent);
                 }
@@ -52,11 +56,16 @@ public class FollowerListAdapter extends RecyclerView.Adapter<FollowerListAdapte
         @Override
         public void onClick(View view) {
             j = 1 - j;
+//            GlobalApplication info=(GlobalApplication) getApplication();
 
             if (j == 0) {
                 follwerBtn.setImageResource(R.drawable.follow_btn);
+
             } else {
                 follwerBtn.setImageResource(R.drawable.following_btn);
+//                info.addFollowlist(mDataSet.get(getItemCount()).getText1());
+//                Toast.makeText(view.getContext(), getAdapterPosition(), Toast.LENGTH_SHORT).show();
+//                info.getFollowlist().get(0)
             }
 
         }

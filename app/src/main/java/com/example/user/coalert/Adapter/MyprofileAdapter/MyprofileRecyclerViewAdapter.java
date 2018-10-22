@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -45,9 +46,9 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgOneStringCardView item = list.get(position);
-//        Drawable drawable=context.getResources().getDrawable(item.getImage());
-//        holder.image.setBackground(drawable);
-        holder.image.setImageResource(item.getImage());
+        Drawable drawable=context.getResources().getDrawable(item.getImage());
+        holder.image.setBackground(drawable);
+//        holder.image.setImageResource(item.getImage());
         holder.name.setText(item.getText());
     }
 

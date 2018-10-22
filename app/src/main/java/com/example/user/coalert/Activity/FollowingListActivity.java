@@ -44,10 +44,10 @@ public class FollowingListActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         followingArr = new ArrayList<>();
-        followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        followingArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        followingArr.add(new TwoImgTwoStringCardView(R.drawable.irin, R.drawable.follow_btn, "irinlove", "irinlove@naver.com"));
+        followingArr.add(new TwoImgTwoStringCardView(R.drawable.nayeon1, R.drawable.follow_btn, "twice_nayeon", "tdungtdug@naver.com"));
+        followingArr.add(new TwoImgTwoStringCardView(R.drawable.irin3, R.drawable.follow_btn, "pink_gondyu", "vldzmrhdwb@google.com"));
+        followingArr.add(new TwoImgTwoStringCardView(R.drawable.hyoshin2, R.drawable.follow_btn, "dokdokorea", "dokdokorea@naver.com"));
 
         recyclerView.setAdapter(new FollowingListAdapter(followingArr));
 
