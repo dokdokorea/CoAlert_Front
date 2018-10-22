@@ -182,7 +182,7 @@ public class WriteReviewActivity extends AppCompatActivity {
         personalPicRecyclerview.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerArr = new ArrayList<>();
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.drawable.irin);
+                R.drawable.camera);
         recyclerArr.add(new OneImageCardView(icon));
         recyclerArr.add(new OneImageCardView(icon));
         recyclerArr.add(new OneImageCardView(icon));
@@ -226,6 +226,7 @@ public class WriteReviewActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         int position;
+        Log.e("asdasd", String.valueOf(requestCode));
         if (data != null) {
             if (requestCode == 100) {
                 position = requestCode - 100;
@@ -236,7 +237,6 @@ public class WriteReviewActivity extends AppCompatActivity {
                 case ALBUM_REQUEST: {
                     //TODO 앨범으로 요청받았을 때
                     Uri url = data.getData();
-                    Log.e("onActivityResult", String.valueOf(requestCode));
                     String path = _getRealPathFromURI(this, url);
                     Bitmap img = BitmapFactory.decodeFile(path);
                     recyclerArr.set(position, new OneImageCardView(img));
@@ -246,6 +246,7 @@ public class WriteReviewActivity extends AppCompatActivity {
                 case CAMERA_REQUEST: {
                     //TODO 카메라로 요청받았을 때
                     try {
+                        Log.e("img", "asdasd");
                         Bitmap img = MediaStore.Images.Media.getBitmap(getBaseContext().getContentResolver(), allUri);
                         recyclerArr.set(position, new OneImageCardView(img));
                         personalPicRecyclerview.setAdapter(new WriteReviewAdapter(recyclerArr));
