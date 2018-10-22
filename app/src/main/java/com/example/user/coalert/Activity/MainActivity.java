@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AHBottomNavigation bottomNavigation = findViewById(R.id.bottom_navigation);
+        final AHBottomNavigation bottomNavigation = findViewById(R.id.bottom_navigation);
         GlobalApplication info=(GlobalApplication) getApplication();
 
         AHBottomNavigationItem searchItem = new AHBottomNavigationItem(R.string.search, android.R.drawable.ic_menu_search, R.color.whiteBackground);
@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.content_fragment_layout, new HomeFragment());
                 } else if (position == 2){
                     fragmentTransaction.replace(R.id.content_fragment_layout, new TimeLineFragment());
+                    bottomNavigation.setNotification("0", 2);
                 } else if (position == 3){
                     fragmentTransaction.replace(R.id.content_fragment_layout, new MyProfileFragment());
                 }

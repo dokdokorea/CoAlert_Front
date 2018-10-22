@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,15 @@ import android.widget.Toast;
 
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.item.adCardViewItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
 
 public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> {
     ArrayList<adCardViewItem> itemList ;
@@ -41,15 +46,15 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         adCardViewItem adCardViewItem = itemList.get(position);
-        Bitmap bitmap = adCardViewItem.getBitmap();
+        int bitmap = adCardViewItem.getBitmap();
         if(itemList.get(position).getInt() == 1) {
             holder.productImage.setBorderColorResource(R.color.purpleColor);
             holder.oneCardView.setBackgroundResource(R.drawable.cardview_lines_black);
         }
         else
             holder.oneCardView.setBackgroundResource(R.drawable.cardview_lines_green);
-        holder.productImage.setImageBitmap(bitmap);
-        holder.productName.setText("코알라 화장품");
+        holder.productImage.setImageResource(bitmap);
+        holder.productName.setText(itemList.get(position).getExplain());
 
     }
 
@@ -76,15 +81,32 @@ public class AdImgAdapter extends RecyclerView.Adapter<AdImgAdapter.ViewHolder> 
             productName = itemView.findViewById(R.id.inisfreeText);
             productImage = itemView.findViewById(R.id.background_border_image);
             oneCardView = itemView.findViewById(R.id.adCardView);
-            itemView.setOnClickListener(this);
+            oneCardView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(context, CosmeticInformationActivity.class);
-//            intent.putExtra("cosmeticName", itemList.get(getAdapterPosition()).getExplain());
-//            intent.putExtra("cosmeticImage", itemList.get(getAdapterPosition()).getBitmap());
-            context.startActivity(intent);
+            new Thread() {
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(itemList.get(getAdapterPosition()).getExplain(),String.valueOf(itemList.get(getAdapterPosition()).getCosmeticType()));
+                        List<GetBadIngredientModel> result = call.execute().body();
+                        // drawable 타입을 bitmap으로 변경
+                        Intent intent = new Intent(context, CosmeticInformationActivity.class);
+                        intent.putExtra("kind", Integer.parseInt(String.valueOf(itemList.get(getAdapterPosition()).getCosmeticType())));
+                        intent.putExtra("cname", itemList.get(getAdapterPosition()).getExplain());
+                        intent.putExtra("company", "입생로랑");
+                        intent.putExtra("image", itemList.get(getAdapterPosition()).getBitmap());
+                        intent.putExtra("ingredient", result.toString());
+                        intent.putExtra("check", 0);
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
         }
     }
 }

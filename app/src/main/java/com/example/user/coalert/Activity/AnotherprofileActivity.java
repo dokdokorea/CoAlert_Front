@@ -106,10 +106,10 @@ public class AnotherprofileActivity extends AppCompatActivity {
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[5];
-        cositem[0] = new OneImgOneStringCardView(R.drawable.premiumsun, "프리미엄 선 프로텍션 크림 SPF50+ PA+++");
-        cositem[1] = new OneImgOneStringCardView(R.drawable.tint1, "라스트 벨벳 립 틴트 4");
-        cositem[2] = new OneImgOneStringCardView(R.drawable.eyecolor, "매트 아이 컬러");
-        cositem[3] = new OneImgOneStringCardView(R.drawable.poundation1, "뗑 이돌 롱라스팅 파운데이션 SPF38 PA++");
+        cositem[0] = new OneImgOneStringCardView(R.drawable.premiumsun, "A24_프리미엄 선 프로텍션 크림 SPF50+ PA+++",1);
+        cositem[1] = new OneImgOneStringCardView(R.drawable.tint1, "삐아_라스트 벨벳 립 틴트 4", 4);
+        cositem[2] = new OneImgOneStringCardView(R.drawable.eyecolor, "로라 메르시에_매트 아이 컬러", 2);
+        cositem[3] = new OneImgOneStringCardView(R.drawable.poundation1, "랑콤_뗑 이돌 롱라스팅 파운데이션 SPF38 PA++", 3);
 
         for (int i = 0; i < 4; i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(), cositems, R.layout.activity_anotherprofile));
