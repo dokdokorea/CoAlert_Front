@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.coalert.Adapter.WriteReviewAdapter;
@@ -87,6 +88,7 @@ public class WriteReviewActivity extends AppCompatActivity {
         final Intent getIntent = getIntent();
         //처음에는 한줄작성
         letsDetailReview.setText("자세히 작성");
+        editText.setLayoutParams(new LinearLayout.LayoutParams(1100, 150));
         wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
         final int number = getIntent.getExtras().getInt("check");
         if (number == 0) {
@@ -114,12 +116,14 @@ public class WriteReviewActivity extends AppCompatActivity {
                     userImageRecyclerView.setVisibility(View.VISIBLE);
                     wordsNum.setText("제한없음");
                     editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(1000000000)});
+                    editText.setLayoutParams(new LinearLayout.LayoutParams(1100, 500));
                 } else {
                     letsDetailReview.setText("자세히 작성");
                     userImageRecyclerView.setVisibility(View.GONE);
                     editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MaxLengthOfOneLineContent)});
                     //한줄평 작성 되면서 텍스트변화
                     wordsNum.setText(editText.getText().length() + "/" + MaxLengthOfOneLineContent);
+                    editText.setLayoutParams(new LinearLayout.LayoutParams(1100, 150));
                 }
             }
         });

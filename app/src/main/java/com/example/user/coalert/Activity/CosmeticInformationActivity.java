@@ -109,7 +109,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
 //        ProductImg.setTag(intent.getExtras().getInt("picture"));
 //        ProductName.setText(intent.getStringExtra("cname"));
 //        company.setText(intent.getStringExtra("company"));
-        final int kind = Integer.parseInt((String) intent.getExtras().get("kind"));
+        final int kind = (int)intent.getExtras().get("kind");
         backHome = findViewById(R.id.backHome);
         backHome.setOnClickListener(new View.OnClickListener() {
             @Override
