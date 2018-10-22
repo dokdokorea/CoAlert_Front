@@ -194,8 +194,8 @@
 
     <ImageView
         android:id="@+id/skin_type_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
         android:layout_gravity="center"
         android:visibility="gone" />
 

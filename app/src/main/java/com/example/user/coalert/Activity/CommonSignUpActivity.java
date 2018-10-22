@@ -46,7 +46,8 @@ public class CommonSignUpActivity extends AppCompatActivity {
     RadioButton anyone;
     ImageView skinImg;
     LinearLayout showQuestion;
-
+    int strNum=0;
+    String ResultList[] = {"건성피부",  "지성피부", "민감성피부"};
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,13 +64,32 @@ public class CommonSignUpActivity extends AppCompatActivity {
         email = beforePageInfo.getStringExtra("email");
         password = beforePageInfo.getStringExtra("password");
 
+        Intent intent=getIntent();
+        String result=intent.getExtras().getString("type","");
+        if(result!=null) {
+            switch(result){
+                case "건성피부":
+                    strNum=2;
+                    break;
+                case "지성피부":
+                    strNum=1;
+                    break;
+                case "민감성피부":
+                    strNum=3;
+                    break;
+                default:
+                    strNum=0;
+                    break;
+            }
 
+        }
 
         goQuestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(CommonSignUpActivity.this,TwentyQuestionActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -186,6 +206,8 @@ public class CommonSignUpActivity extends AppCompatActivity {
         skinAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         skinTypeSpinner.setAdapter(skinAdapter);
 
+        skinTypeSpinner.setSelection(strNum);
+
         skinTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -252,6 +274,8 @@ public class CommonSignUpActivity extends AppCompatActivity {
                 skinImg.setImageDrawable(img);
                 break;
             case "불확정성":
+                break;
+            default:
                 break;
         }
     }
