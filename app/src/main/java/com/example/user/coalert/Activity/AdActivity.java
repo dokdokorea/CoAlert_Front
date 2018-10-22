@@ -72,7 +72,7 @@ public class AdActivity extends AppCompatActivity {
                 break;
             case YSL:
                 adLogoImage.setImageResource(R.drawable.ad_ysl_logo);
-                setImage(1);
+                setYvessant();
                 setBorder();
                 break;
             default:
@@ -88,13 +88,13 @@ public class AdActivity extends AppCompatActivity {
 
     public void setImage(int num){
         ArrayList<adCardViewItem> list = new ArrayList<>();
-        Bitmap bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.irin);
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
-        list.add(new adCardViewItem(bitmap, "CoAlert 화장품", num));
+        int irin =  R.drawable.irin;
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
+        list.add(new adCardViewItem(irin, "CoAlert 화장품", num));
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adImgAdapter = new AdImgAdapter(this.getApplicationContext(), list);
@@ -103,18 +103,12 @@ public class AdActivity extends AppCompatActivity {
 
     public void setYvessant(){
         ArrayList<adCardViewItem> list = new ArrayList<>();
-        Bitmap bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant1);
-        list.add(new adCardViewItem(bitmap, "올아워 파운데이션 SPF20 PA++", 3));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant2);
-        list.add(new adCardViewItem(bitmap, "베르니 아 레브르 바이닐 크림", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant3);
-        list.add(new adCardViewItem(bitmap, "따뚜아쥬 꾸뛰르", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant4);
-        list.add(new adCardViewItem(bitmap, "루쥬 쀠르 꾸뛰르 베르니 아 레브르", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant5);
-        list.add(new adCardViewItem(bitmap, "루쥬 쀠르 꾸뛰르 베르니 아 레브르 레블 누드", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant6);
-        list.add(new adCardViewItem(bitmap, "볼립떼 틴트 인 오일", 4));
+        list.add(new adCardViewItem( R.drawable.yvessant1, "올아워 파운데이션 SPF20 PA++", 1,3));
+        list.add(new adCardViewItem(R.drawable.yvessant2, "베르니 아 레브르 바이닐 크림", 1,4));
+        list.add(new adCardViewItem(R.drawable.yvessant3, "따뚜아쥬 꾸뛰르", 1,4));
+        list.add(new adCardViewItem(R.drawable.yvessant4, "루쥬 쀠르 꾸뛰르 베르니 아 레브르",1, 4));
+        list.add(new adCardViewItem( R.drawable.yvessant5, "루쥬 쀠르 꾸뛰르 베르니 아 레브르 레블 누드",1, 4));
+        list.add(new adCardViewItem(R.drawable.yvessant6, "볼립떼 틴트 인 오일",1, 4));
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adImgAdapter = new AdImgAdapter(this.getApplicationContext(), list);
@@ -123,18 +117,12 @@ public class AdActivity extends AppCompatActivity {
 
     public void chanel(){       // 미완
         ArrayList<adCardViewItem> list = new ArrayList<>();
-        Bitmap bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.chanel1);
-        list.add(new adCardViewItem(bitmap, "비타뤼미에르 루스 파우더 파운데이션 SPF15", 3));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant2);
-        list.add(new adCardViewItem(bitmap, "베르니 아 레브르 바이닐 크림", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant3);
-        list.add(new adCardViewItem(bitmap, "따뚜아쥬 꾸뛰르", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant4);
-        list.add(new adCardViewItem(bitmap, "루쥬 쀠르 꾸뛰르 베르니 아 레브르", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant5);
-        list.add(new adCardViewItem(bitmap, "루쥬 쀠르 꾸뛰르 베르니 아 레브르 레블 누드", 4));
-        bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.yvessant6);
-        list.add(new adCardViewItem(bitmap, "볼립떼 틴트 인 오일", 4));
+        list.add(new adCardViewItem(R.drawable.chanel1, "비타뤼미에르 루스 파우더 파운데이션 SPF15", 3));
+        list.add(new adCardViewItem(R.drawable.yvessant2, "베르니 아 레브르 바이닐 크림", 4));
+        list.add(new adCardViewItem(R.drawable.yvessant3, "따뚜아쥬 꾸뛰르", 4));
+        list.add(new adCardViewItem(R.drawable.yvessant4, "루쥬 쀠르 꾸뛰르 베르니 아 레브르", 4));
+        list.add(new adCardViewItem(R.drawable.yvessant5, "루쥬 쀠르 꾸뛰르 베르니 아 레브르 레블 누드", 4));
+        list.add(new adCardViewItem(R.drawable.yvessant6, "볼립떼 틴트 인 오일", 4));
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adImgAdapter = new AdImgAdapter(this.getApplicationContext(), list);

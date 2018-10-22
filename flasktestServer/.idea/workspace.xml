@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/CosmeticInformationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/TimelineRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/TimelineRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/TimeLineFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Fragment/TimeLineFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_timeline.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/layout/item_timeline.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/libtintIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/libtintIngredient.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/AdActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/AdActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/AdImgAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Adapter/AdImgAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/adCardViewItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/item/adCardViewItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,16 +133,16 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="84" />
-          <entry key="Image" value="13" />
+          <entry key="CSV" value="86" />
+          <entry key="Image" value="14" />
           <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="84" />
-          <entry key="jpg" value="13" />
+          <entry key="csv" value="86" />
+          <entry key="jpg" value="14" />
           <entry key="py" value="16" />
         </counts>
       </usages-collector>
@@ -157,10 +150,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
+            <state relative-caret-position="848">
               <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="17" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
@@ -170,9 +163,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_슈퍼푸드_블루베리 리밸런싱 워터리 선크림 SPF37 PA+++.jpg">
           <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_트루케어 논나노 논코메도 무기자차 선크림 SPF48 PA+++.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="127">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -185,15 +192,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 쉬머.jpg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/foundationIngredient.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="140">
-              <caret line="66" column="11" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="11" />
+            <state relative-caret-position="15">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -210,7 +221,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="405">
               <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
             </state>
           </provider>
@@ -237,7 +248,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>적색104호의</find>
       <find>적색</find>
       <find>프리미엄</find>
       <find>UV</find>
@@ -255,9 +265,7 @@
       <find>12</find>
       <find>유브이 디펜스 미</find>
       <find>유브이 디펜스 미 블루 레이 선 플루이드</find>
-      <find>매트 아이 컬러</find>
       <find>id_2</find>
-      <find>이니스프리</find>
       <find>슈퍼푸드</find>
       <find>슈퍼푸드_블루베리</find>
       <find>슈퍼푸드 블루베리 리밸런싱 워터리 선크림 SPF37 PA+++</find>
@@ -266,7 +274,10 @@
       <find>비비드 슬림핏 틴트</find>
       <find>리얼핏</find>
       <find>비비드 오일 틴트</find>
+      <find>이니스프리</find>
       <find>마이 아이섀도우</find>
+      <find>매트 아이 컬러</find>
+      <find>뗑 이돌 롱라스팅 파운데이션</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -565,6 +576,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23199023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -688,13 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-20">
-          <caret line="41" column="282" selection-start-line="41" selection-start-column="282" selection-end-line="41" selection-end-column="282" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/libtint/맥(MAC)_버시컬러 바니쉬 크림 립 스테인.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -762,16 +767,6 @@
     <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/데메테르_돈 하이드 썬 에센스 SPF37 PA++.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_트루케어 논나노 논코메도 무기자차 선크림 SPF48 PA+++.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_리얼핏 매트 리퀴드.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -780,13 +775,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 쉬머.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="140">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
@@ -798,10 +786,44 @@
     <entry file="file://$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_비비드 슬림핏 틴트.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="140">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="11" />
+          <caret line="11703" column="20" selection-start-line="11703" selection-start-column="9" selection-end-line="11703" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_슈퍼푸드_블루베리 리밸런싱 워터리 선크림 SPF37 PA+++.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_트루케어 논나노 논코메도 무기자차 선크림 SPF48 PA+++.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="127">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
       <provider editor-type-id="text-editor">
@@ -810,23 +832,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv">
+    <entry file="file://$PROJECT_DIR$/ingredient/data/foundationIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="140">
-          <caret line="11703" column="20" selection-start-line="11703" selection-start-column="9" selection-end-line="11703" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="140">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
+        <state relative-caret-position="848">
           <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="17" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -834,9 +849,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_슈퍼푸드_블루베리 리밸런싱 워터리 선크림 SPF37 PA+++.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
