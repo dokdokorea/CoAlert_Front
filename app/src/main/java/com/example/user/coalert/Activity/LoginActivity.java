@@ -60,6 +60,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -82,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
     ImageButton fakekakao;
     SessionCallback callback;
     ImageButton emailSignUpBtn;
+    Bitmap bitmap;
     Intent itent;
     private static final String TAG = LoginActivity.class.getSimpleName();
     private CallbackManager callbackManager = CallbackManager.Factory.create();
@@ -303,7 +305,8 @@ public class LoginActivity extends AppCompatActivity {
                             setResult(RESULT_OK);
                             GlobalApplication info=(GlobalApplication) getApplication();
                             info.setId(Profile.getCurrentProfile().getId());
-//                            info.setEmail(Profile.getCurrentProfile().ge);
+
+//                            info.setEmail(Profile.getCurrentProfile());
                             info.setProfile(LoadImageFromWebOperations(Profile.getCurrentProfile().getProfilePictureUri(200,200).toString()));
                             Intent i = new Intent(LoginActivity.this, CommonSignUpActivity.class);
                             Toast.makeText(LoginActivity.this, Profile.getCurrentProfile()+"님 환영합니다!", Toast.LENGTH_SHORT).show();
@@ -449,15 +452,51 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, Loading1Activity.class);
                     intent.putExtra("name", userProfile.getNickname());
                     intent.putExtra("id", String.valueOf(userProfile.getId()));
+
                     GlobalApplication info=(GlobalApplication) getApplication();
                     info.setId(userProfile.getNickname());
-
+                    info.setEmail(userProfile.getProperty("kakao_acount.email"));
+                    info.setEmail("example@gmail.com");
+//                    info.setProfile(LoadImageFromWebOperations(Profile.getCurrentProfile().getProfilePictureUri(200,200).toString()));
+//                    info.setIprofile(getResources().getIdentifier(userProfile.getProfileImagePath(), "drawable", getPackageName()));
                     intent.putExtra("image", userProfile.getProfileImagePath());
+                    final String image=userProfile.getProfileImagePath();
+//                    info.setProfile(getResources().getDrawable(getResources().getIdentifier(userProfile.getProfileImagePath(), "drawable", getPackageName())));
+//                    info.setIprofile(Integer.parseInt(userProfile.getProfileImagePath()));
+
+                    Thread mThread=new Thread(){
+            @Override
+            public void run() {
+                try{
+                    URL url=new URL(image);
+
+                    HttpURLConnection conn=(HttpURLConnection)url.openConnection();
+                    conn.setDoInput(true);
+                    conn.connect();
+
+                    InputStream is=conn.getInputStream();
+                    bitmap= BitmapFactory.decodeStream(is);
+
+                }catch(MalformedURLException e){
+                    e.printStackTrace();
+                }catch(IOException e){
+                    e.printStackTrace();
+                }
+            }
+        };
+        mThread.start();
+        try{
+            mThread.join();
+            info.setBitmap(bitmap);
+//            profile.setImageBitmap(bitmap);
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+
+
 
                     startActivity(intent);
                     finish();
-
-
                 }
             });
 
