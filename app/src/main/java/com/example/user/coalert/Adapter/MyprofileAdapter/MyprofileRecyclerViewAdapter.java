@@ -18,9 +18,13 @@ import com.example.user.coalert.Activity.AnotherprofileActivity;
 import com.example.user.coalert.Activity.CosmeticInformationActivity;
 import com.example.user.coalert.Activity.CosmeticIngredientActivity;
 import com.example.user.coalert.R;
+import com.example.user.coalert.Singleton.ForRestSingleton;
+import com.example.user.coalert.forRestServer.GetBadIngredientModel;
 import com.example.user.coalert.item.OneImgOneStringCardView;
 
 import java.util.List;
+
+import retrofit2.Call;
 
 public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<MyprofileRecyclerViewAdapter.ViewHolder>{
     Context context;
@@ -66,10 +70,31 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
 
         @Override
         public void onClick(View view) {
-            final OneImgOneStringCardView item = list.get(getAdapterPosition());
-            Intent intent = new Intent(context, CosmeticInformationActivity.class);
-            context.startActivity(intent);
-            Toast.makeText(context,item.getText(),Toast.LENGTH_SHORT).show();
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Call<List<GetBadIngredientModel>> call = ForRestSingleton.getInstance().ingredientPerCosmetic(list.get(getAdapterPosition()).getText().split("_")[1],
+                                String.valueOf(list.get(getAdapterPosition()).getWhatKind()));
+                        List<GetBadIngredientModel> result = call.execute().body();
+                        Intent intent = new Intent(context, CosmeticInformationActivity.class);
+                        intent.putExtra("check", 0);
+                        intent.putExtra("cname", list.get(getAdapterPosition()).getText().split("_")[1]);
+                        intent.putExtra("image", list.get(getAdapterPosition()).getImage());
+                        intent.putExtra("kind", list.get(getAdapterPosition()).getWhatKind());
+                        intent.putExtra("company", list.get(getAdapterPosition()).getText().split("_")[0]);
+
+                        intent.putExtra("ingredient", result.toString());
+                        intent.putExtra("check", 0);
+
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+
         }
     }
 }

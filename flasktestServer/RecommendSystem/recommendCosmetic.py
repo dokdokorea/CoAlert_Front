@@ -36,7 +36,8 @@ def making_model(id_purify_data, skin_type):
 
 def making_predict_data(cosmetic_id, original_data):
     predict_data = original_data[['popId', 'name']]
-    predict_data = predict_data.drop_duplicates()
+    predict_data = predict_data.drop_duplicates(['popId'])
+    predict_data = predict_data.sort_values(by='popId')
     return predict_data.iloc[cosmetic_id]
 
 

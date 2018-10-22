@@ -8,7 +8,7 @@ def getIngredient(kind, cname):
     badgredient_data = pd.read_csv('ingredient/data/' + kind + 'BadIngredient.csv')
     ingredient = ingredient_data.loc[ingredient_data['제품명'] == cname, '성분구성']
     check_badgredient_data = badgredient_data.loc[:, '성분명']
-
+    print(cname)
     ingredient = ingredient.values[0].split(',')
     list = []
     print(badgredient_data)

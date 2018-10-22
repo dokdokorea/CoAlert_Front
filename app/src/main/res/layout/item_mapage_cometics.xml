@@ -33,7 +33,7 @@
                 android:gravity="center"
                 android:padding="@dimen/_7sdp"
                 android:text="ddd"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_10sdp"
                 tools:ignore="RtlHardcoded" />
 
         </LinearLayout>

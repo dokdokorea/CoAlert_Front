@@ -15,11 +15,12 @@ def requestOneCosmeticRating(user_id, kind_cosmetic, skin_type, cosmetic_name):
     cosine_sim = review_to_vector(review_data)
     name_to_id = name_2_id(id_purify_data)
     best_cosmetic_id = name_to_id.loc[cosmetic_name, :]
+
     prediction_cosmetic_id = get_similarity_prediction_cosmetic(cosine_sim, best_cosmetic_id)
+
     svd = making_model(id_purify_data, skin_type)
     prediction_data = making_predict_data(prediction_cosmetic_id, id_purify_data)
     recommend_cosmetic = predict(user_id, svd, prediction_data)
-    print('hihi',recommend_cosmetic.loc[recommend_cosmetic['name'] == cosmetic_name, 'est'].values[0])
     return recommend_cosmetic.loc[recommend_cosmetic['name'] == cosmetic_name, 'est'].values[0]
 
 
@@ -39,7 +40,8 @@ def making_model(id_purify_data, skin_type):
 
 def making_predict_data(cosmetic_id, original_data):
     predict_data = original_data[['popId', 'name']]
-    predict_data = predict_data.drop_duplicates()
+    predict_data = predict_data.drop_duplicates(['popId'])
+    predict_data = predict_data.sort_values(by='popId')
     return predict_data.iloc[cosmetic_id]
 
 

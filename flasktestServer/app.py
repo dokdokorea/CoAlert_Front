@@ -79,6 +79,7 @@ def badIngredient():
 def ingredientPerCosmetic():
     kind = request.args.get('kind')
     cname = request.args.get('cname')
+    print(kind, cname)
     cosmetic_type = kindCosmetic[int(kind)]
     result = getIngredient(cosmetic_type, cname)
     return json.dumps(result)

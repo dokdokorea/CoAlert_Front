@@ -114,6 +114,7 @@
                 android:background="@drawable/content_edge"
                 android:ems="25"
                 android:hint="100자 이내로 화장품의 평가를 적어주세요."
+                android:gravity="start"
                 android:inputType="textMultiLine" />
 
             <TextView
