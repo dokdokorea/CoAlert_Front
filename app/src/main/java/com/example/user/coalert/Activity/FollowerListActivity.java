@@ -45,11 +45,11 @@ public class FollowerListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         follwerListArr = new ArrayList<>();
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
-        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "이슬기", "nunasarang@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.irin, R.drawable.follow_btn, "irinlove", "irinlove@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.nayeon1, R.drawable.follow_btn, "twice_nayeon", "tdungtdug@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.irin3, R.drawable.follow_btn, "pink_gondyu", "vldzmrhdwb@google.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.face1, R.drawable.follow_btn, "velvet_SG", "dnflsnsk123@naver.com"));
+        follwerListArr.add(new TwoImgTwoStringCardView(R.drawable.hyoshin2, R.drawable.follow_btn, "dokdokorea", "dokdokorea@naver.com"));
 
         recyclerView.setAdapter(new FollowerListAdapter(follwerListArr));
 

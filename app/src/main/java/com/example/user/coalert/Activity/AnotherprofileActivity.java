@@ -26,6 +26,7 @@ import java.util.List;
 public class AnotherprofileActivity extends AppCompatActivity {
     List<String> list;
     TextView follow;
+    TextView email;
     ImageButton Toxic;
     ImageButton following;
     ImageButton backBtn;
@@ -45,6 +46,7 @@ public class AnotherprofileActivity extends AppCompatActivity {
         following = (ImageButton) findViewById(R.id.following);
         profile=(ImageView)findViewById(R.id.profile_pic);
         id=(TextView)findViewById(R.id.Name);
+        email=(TextView)findViewById(R.id.email);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         RecyclerView cosmeticList = (RecyclerView) findViewById(R.id.recyclerview2);
@@ -55,8 +57,29 @@ public class AnotherprofileActivity extends AppCompatActivity {
         count=73;
 
         Intent intent=getIntent();
-        //profile.setImageResource(intent.getExtras().getInt("profile"));
-//        id.setText(intent.getStringExtra("id"));
+        profile.setImageResource(intent.getExtras().getInt("profile"));
+        id.setText(intent.getStringExtra("id"));
+        if(id.getText().equals("irinlove")){
+            count=72;
+            email.setText("irinlove@naver.com");
+        }else if(id.getText().equals("twice_nayeon")){
+            count=123;
+            email.setText("tdungtdug@naver.com");
+        }else if(id.getText().equals("pink_gondyu")){
+            count=321;
+            email.setText("vldzmrhdwb@google.com");
+        }else if(id.getText().equals("velvet_SG")){
+            count=51;
+            email.setText("dnflsnsk123@naver.com");
+        }else if(id.getText().equals("dokdokorea")){
+            count=33;
+            email.setText("dokdokorea@naver.com");
+        }else{
+            count=12;
+            email.setText("helloworld@naver.com");
+        }
+        follow.setText(String.valueOf(count));
+
 
 
         recyclerView.setHasFixedSize(true);
@@ -83,13 +106,12 @@ public class AnotherprofileActivity extends AppCompatActivity {
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[5];
-        item[0] = new OneImgOneStringCardView(R.drawable.nayeon1, "twice_nayeon");
-        item[1] = new OneImgOneStringCardView(R.drawable.hyoshin5, "god_hs");
-        item[2] = new OneImgOneStringCardView(R.drawable.irin3, "irinlove");
-        item[3] = new OneImgOneStringCardView(R.drawable.hyoshin8, "hs_park");
-        item[4] = new OneImgOneStringCardView(R.drawable.irin, "iheartrin");
+        cositem[0] = new OneImgOneStringCardView(R.drawable.premiumsun, "프리미엄 선 프로텍션 크림 SPF50+ PA+++");
+        cositem[1] = new OneImgOneStringCardView(R.drawable.tint1, "라스트 벨벳 립 틴트 4");
+        cositem[2] = new OneImgOneStringCardView(R.drawable.eyecolor, "매트 아이 컬러");
+        cositem[3] = new OneImgOneStringCardView(R.drawable.poundation1, "뗑 이돌 롱라스팅 파운데이션 SPF38 PA++");
 
-        for (int i = 0; i < 5; i++) cositems.add(cositem[i]);
+        for (int i = 0; i < 4; i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(), cositems, R.layout.activity_anotherprofile));
 
 

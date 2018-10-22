@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.coalert.Activity.AnotherprofileActivity;
+import com.example.user.coalert.Autehntification.GlobalApplication;
 import com.example.user.coalert.R;
 import com.example.user.coalert.item.TwoImgTwoStringCardView;
 
@@ -42,7 +44,12 @@ public class FollowingListAdapter extends RecyclerView.Adapter<FollowingListAdap
                 @Override
                 public void onClick(View v) {
                     // Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                    GlobalApplication info=new GlobalApplication();
+                    Toast.makeText(v.getContext(), "inside viewholder position = " + getAdapterPosition(), Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(v.getContext(),AnotherprofileActivity.class);
+                    intent.putExtra("id",name.getText());
+                    intent.putExtra("profile",mDataset.get(getAdapterPosition()).getImg1());
+//                    intent.putExtra("email",id.getText());
                     v.getContext().startActivity(intent);
                 }
             });

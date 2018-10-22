@@ -43,8 +43,9 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgOneStringCardView item = list.get(position);
-        Drawable drawable = context.getResources().getDrawable(item.getImage());
-        holder.image.setImageDrawable(drawable);
+//        Drawable drawable = context.getResources().getDrawable(item.getImage());
+//        holder.image.setImageDrawable(drawable);
+        holder.image.setImageResource(item.getImage());
         holder.name.setText(item.getText());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
