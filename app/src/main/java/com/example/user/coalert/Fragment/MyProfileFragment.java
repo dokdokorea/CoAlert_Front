@@ -72,8 +72,8 @@ public class MyProfileFragment extends Fragment {
         email=v.findViewById(R.id.email);
         GlobalApplication info=(GlobalApplication) getActivity().getApplication();
 
-        if(info.getProfile()!=null){
-            myImage.setImageDrawable(info.getProfile());
+        if(info.getBitmap()!=null){
+            myImage.setImageBitmap(info.getBitmap());
         }else
             myImage.setImageResource(R.drawable.user_gray);
 

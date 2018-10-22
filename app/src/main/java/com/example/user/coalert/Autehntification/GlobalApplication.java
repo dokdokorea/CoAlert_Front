@@ -17,11 +17,28 @@ public class GlobalApplication extends Application {
 
     private String Id;
     private Drawable profile;
+    Bitmap bitmap;
+    private int iprofile;
     private static ArrayList<String> wishlist =new ArrayList<>();
     private static ArrayList<String> complist=new ArrayList<>();
     private ArrayList<Integer> cosphoto=new ArrayList<>();
     private static ArrayList<String> followlist=new ArrayList<>();
 
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
+    }
+
+    public int getIprofile() {
+        return iprofile;
+    }
+
+    public void setIprofile(int iprofile) {
+        this.iprofile = iprofile;
+    }
 
     public Drawable getProfile() {
         return profile;
