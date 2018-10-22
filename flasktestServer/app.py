@@ -65,7 +65,7 @@ def signup():
 def badIngredient():
     request_id = request.args.get('id')
     person_type = request.args.get('person_type')
-    response_data = get_bad_ingredient(person_type)
+    response_data = get_bad_ingredient(request_id, person_type, 10)
     list = []
     for i, data in response_data.iterrows():
         list.append({"ingredientName": data['성분명'], "warningRate": data['위험도']})
@@ -79,7 +79,7 @@ def badIngredient():
 def ingredientPerCosmetic():
     kind = request.args.get('kind')
     cname = request.args.get('cname')
-    print(kind, cname)
+
     cosmetic_type = kindCosmetic[int(kind)]
     result = getIngredient(cosmetic_type, cname)
     return json.dumps(result)
