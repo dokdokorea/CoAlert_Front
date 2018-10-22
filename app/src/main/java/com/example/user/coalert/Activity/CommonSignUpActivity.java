@@ -47,7 +47,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
     ImageView skinImg;
     LinearLayout showQuestion;
     int strNum=0;
-
+    String ResultList[] = {"건성피부",  "지성피부", "민감성피부"};
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +67,21 @@ public class CommonSignUpActivity extends AppCompatActivity {
         Intent intent=getIntent();
         String result=intent.getExtras().getString("type","");
         if(result!=null) {
-            setImgbySpinner(result);
+            switch(result){
+                case "건성피부":
+                    strNum=2;
+                    break;
+                case "지성피부":
+                    strNum=1;
+                    break;
+                case "민감성피부":
+                    strNum=3;
+                    break;
+                default:
+                    strNum=0;
+                    break;
+            }
+
         }
 
         goQuestionButton.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +89,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(CommonSignUpActivity.this,TwentyQuestionActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -191,7 +206,7 @@ public class CommonSignUpActivity extends AppCompatActivity {
         skinAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         skinTypeSpinner.setAdapter(skinAdapter);
 
-        skinTypeSpinner.setSelection(0);
+        skinTypeSpinner.setSelection(strNum);
 
         skinTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -239,34 +254,28 @@ public class CommonSignUpActivity extends AppCompatActivity {
                 skinImg.setImageDrawable(img);
                 skinImg.setVisibility(View.GONE);
                 showQuestion.setVisibility(View.VISIBLE);
-                strNum=0;
                 break;
             case "지성":
                 showQuestion.setVisibility(View.GONE);
                 skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.oilyskin);
                 skinImg.setImageDrawable(img);
-                strNum=1;
                 break;
             case "건성":
                 showQuestion.setVisibility(View.GONE);
                 skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.dryskin);
                 skinImg.setImageDrawable(img);
-                strNum=2;
                 break;
             case "민감성":
                 showQuestion.setVisibility(View.GONE);
                 skinImg.setVisibility(View.VISIBLE);
                 img = getResources().getDrawable(R.drawable.sensitiveskin);
                 skinImg.setImageDrawable(img);
-                strNum=3;
                 break;
             case "불확정성":
-                strNum=4;
                 break;
             default:
-                strNum=0;
                 break;
         }
     }

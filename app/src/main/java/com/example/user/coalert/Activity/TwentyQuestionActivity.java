@@ -89,6 +89,7 @@ public class TwentyQuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(TwentyQuestionActivity.this,CommonSignUpActivity.class);
+
                 intent.putExtra("type",Answer.getText().toString());
                 startActivity(intent);
                 finish();
