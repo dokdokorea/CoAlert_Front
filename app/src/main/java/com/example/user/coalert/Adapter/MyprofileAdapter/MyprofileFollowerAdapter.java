@@ -52,6 +52,8 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
             public void onClick(View v) {
                 //goes to new activity passing the item name
                 Intent intent= new Intent(context,AnotherprofileActivity.class);
+                intent.putExtra("id",item.getText());
+                intent.putExtra("profile",item.getImage());
                 context.startActivity(intent);
             }
         });

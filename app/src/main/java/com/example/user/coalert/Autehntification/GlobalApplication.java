@@ -16,10 +16,20 @@ public class GlobalApplication extends Application {
     private static volatile Activity currentActivity = null;
 
     private String Id;
+    private Drawable profile;
     private static ArrayList<String> wishlist =new ArrayList<>();
     private static ArrayList<String> complist=new ArrayList<>();
     private ArrayList<Integer> cosphoto=new ArrayList<>();
     private static ArrayList<String> followlist=new ArrayList<>();
+
+
+    public Drawable getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Drawable profile) {
+        this.profile = profile;
+    }
 
     public static ArrayList<String> getFollowlist() {
         return followlist;
