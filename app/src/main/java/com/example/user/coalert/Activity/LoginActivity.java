@@ -9,6 +9,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -301,6 +303,8 @@ public class LoginActivity extends AppCompatActivity {
                             setResult(RESULT_OK);
                             GlobalApplication info=(GlobalApplication) getApplication();
                             info.setId(Profile.getCurrentProfile().getId());
+//                            info.setEmail(Profile.getCurrentProfile().ge);
+                            info.setProfile(LoadImageFromWebOperations(Profile.getCurrentProfile().getProfilePictureUri(200,200).toString()));
                             Intent i = new Intent(LoginActivity.this, CommonSignUpActivity.class);
                             Toast.makeText(LoginActivity.this, Profile.getCurrentProfile()+"님 환영합니다!", Toast.LENGTH_SHORT).show();
                             startActivity(i);
@@ -325,6 +329,17 @@ public class LoginActivity extends AppCompatActivity {
                 //finish();
             }
         });
+    }
+
+    public static Drawable drawableFromUrl(String url) throws IOException {
+        Bitmap x;
+
+        HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+        connection.connect();
+        InputStream input = connection.getInputStream();
+
+        x = BitmapFactory.decodeStream(input);
+        return new BitmapDrawable(x);
     }
 
 
@@ -357,6 +372,20 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    private Drawable LoadImageFromWebOperations(String url)
+    {
+        try
+        {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Drawable d = Drawable.createFromStream(is, "src name");
+            return d;
+        }catch (Exception e) {
+            System.out.println("Exc="+e);
+            return null;
+        }
+    }
+
 
     private void getAppKeyHash() {
         try {
