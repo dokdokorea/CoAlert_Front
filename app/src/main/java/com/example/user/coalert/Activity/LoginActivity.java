@@ -190,7 +190,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-
+            Toast.makeText(getApplicationContext(), "서버와의 연결이 실패했습니다.", Toast.LENGTH_LONG).show();
             new Thread(new Runnable() {
                 @SuppressLint("ShowToast")
                 @Override
@@ -210,6 +210,7 @@ public class LoginActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
+
                                     GlobalApplication info=(GlobalApplication) getApplication();
                                     info.setId(loginEmail.getText().toString());
                                     Intent accessActivity = new Intent(LoginActivity.this, MainActivity.class);

@@ -51,7 +51,7 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static final Integer[] circleList = {R.drawable.sunreview1, R.drawable.sunreview2, R.drawable.sunreview3, R.drawable.sunreview4};
     private static final Integer[] irinlist ={R.drawable.irinblack,R.drawable.irin,R.drawable.irin3,R.drawable.irin4,R.drawable.irin2};
     private static final Integer[] colorlist ={R.drawable.irinpink,R.drawable.irinblack,R.drawable.irin3,R.drawable.irinyellow};
-    private static final Integer[] hyoshinlist ={R.drawable.hyoshin1,R.drawable.hyoshin2,R.drawable.hyoshin3,R.drawable.hyoshin4};
+    private static final Integer[] hyoshinlist ={R.drawable.suncream1,R.drawable.suncream2, R.drawable.sunreview3,R.drawable.sunreview4};
     private static final Integer[] seulgilist={R.drawable.used_cosmetic1,R.drawable.seul,R.drawable.seulgi1,R.drawable.seulgi2,R.drawable.seul3};
     private static final Integer[] iulist = {R.drawable.used_cosmetic2,R.drawable.iu1, R.drawable.iu2, R.drawable.iu3jpg, R.drawable.iu4};
     private static final Integer[] iirinlist = {R.drawable.used_cosmetic3,R.drawable.irin,R.drawable.irin3,R.drawable.irin4,R.drawable.irin2};
@@ -104,7 +104,14 @@ public class ViewDetailActivity extends AppCompatActivity {
         comment=(RecyclerView)findViewById(R.id.commentRecycler);
         GoodBtn=(TextView)findViewById(R.id.good_btn);
         WriteReveiw=(TextView)findViewById(R.id.writeComment);
-
+        TextView backHome = findViewById(R.id.detail_view_backhome);
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent backHomeIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(backHomeIntent);
+            }
+        });
 
 
         LikeCount.setText("3000");
@@ -250,7 +257,7 @@ public class ViewDetailActivity extends AppCompatActivity {
                 ImageArr.add(iirinlist[i]);
         }
         else{
-            context="박효신의 잘생긴 메이크업";
+            context="남자 선크림 추천! Dr.G 메디 울트라 선";
             for (int i = 0; i < hyoshinlist.length; i++)
                 ImageArr.add(hyoshinlist[i]);
         }

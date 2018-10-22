@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2843ce-b407-4402-bd07-008034a25396" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ingredient/getBadIngredient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ingredient/getBadIngredient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/ViewDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/com/example/user/coalert/Activity/ViewDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,14 +117,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="csv" value="67" />
+          <entry key="csv" value="70" />
           <entry key="dummy" value="21" />
           <entry key="py" value="9044" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSV" value="67" />
+          <entry key="CSV" value="70" />
           <entry key="PLAIN_TEXT" value="21" />
           <entry key="Python" value="9044" />
         </counts>
@@ -132,7 +132,7 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="93" />
+          <entry key="CSV" value="97" />
           <entry key="Image" value="14" />
           <entry key="Python" value="18" />
         </counts>
@@ -140,7 +140,7 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="93" />
+          <entry key="csv" value="97" />
           <entry key="jpg" value="14" />
           <entry key="py" value="18" />
         </counts>
@@ -162,11 +162,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="315">
-              <caret line="18128" column="22" selection-start-line="18128" selection-start-column="22" selection-end-line="18128" selection-end-column="22" />
+            <state relative-caret-position="285">
+              <caret line="18128" column="21" selection-start-line="18128" selection-start-column="21" selection-end-line="18128" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="375">
+              <caret line="12240" selection-start-line="12240" selection-end-line="12240" />
             </state>
           </provider>
         </entry>
@@ -198,11 +216,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="205650">
-              <caret line="13710" column="33" selection-start-line="13710" selection-start-column="7" selection-end-line="13710" selection-end-column="33" />
+            <state relative-caret-position="345">
+              <caret line="14373" lean-forward="true" selection-start-line="14373" selection-end-line="14373" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="-184020">
+              <caret line="268" column="15" selection-start-line="268" selection-start-column="6" selection-end-line="268" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -285,13 +312,13 @@
         <option value="$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv" />
         <option value="$PROJECT_DIR$/RecommendSystem/oneCosmeticRating.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/recommendCosmetic.py" />
-        <option value="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/sunblockIngredient.csv" />
         <option value="$PROJECT_DIR$/ingredient/data/libtintIngredient.csv" />
-        <option value="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/ingredient/getBadIngredient.py" />
         <option value="$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv" />
+        <option value="$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv" />
+        <option value="$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv" />
       </list>
     </option>
   </component>
@@ -661,14 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/foundationBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
@@ -722,22 +741,8 @@
     <entry file="file://$PROJECT_DIR$/cosmeticImg/eyeshadow/이니스프리_마이 아이섀도우 - 쉬머.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="140">
-          <caret line="268" column="15" selection-start-line="268" selection-start-column="6" selection-end-line="268" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/libtint/이니스프리_비비드 슬림핏 틴트.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="140">
-          <caret line="11703" column="20" selection-start-line="11703" selection-start-column="9" selection-end-line="11703" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cosmeticImg/sunblock/이니스프리_슈퍼푸드_블루베리 리밸런싱 워터리 선크림 SPF37 PA+++.jpg">
       <provider selected="true" editor-type-id="images" />
@@ -789,25 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="205650">
-          <caret line="13710" column="33" selection-start-line="13710" selection-start-column="7" selection-end-line="13710" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="157" column="34" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ingredient/data/libtintBadIngredient.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="60">
@@ -833,10 +819,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/eyeshadowBadIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newlibtint.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-184020">
+          <caret line="268" column="15" selection-start-line="268" selection-start-column="6" selection-end-line="268" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newfoundation.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="315">
-          <caret line="18128" column="22" selection-start-line="18128" selection-start-column="22" selection-end-line="18128" selection-end-column="22" />
+        <state relative-caret-position="285">
+          <caret line="18128" column="21" selection-start-line="18128" selection-start-column="21" selection-end-line="18128" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/neweyeshadow.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="375">
+          <caret line="12240" selection-start-line="12240" selection-end-line="12240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ingredient/data/libtintIngredient.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RecommendSystem/data/newsunblock.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="345">
+          <caret line="14373" lean-forward="true" selection-start-line="14373" selection-end-line="14373" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="157" column="34" selection-start-line="157" selection-start-column="6" selection-end-line="157" selection-end-column="34" />
         </state>
       </provider>
     </entry>
