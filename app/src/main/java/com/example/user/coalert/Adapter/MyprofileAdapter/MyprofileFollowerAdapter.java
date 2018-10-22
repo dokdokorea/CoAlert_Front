@@ -82,7 +82,6 @@ public class MyprofileFollowerAdapter extends RecyclerView.Adapter<MyprofileFoll
             final OneImgOneStringCardView item = list.get(getAdapterPosition());
             Intent intent = new Intent(context, AnotherprofileActivity.class);
             context.startActivity(intent);
-            Toast.makeText(context, item.getText(), Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -52,6 +52,11 @@ public class ViewDetailActivity extends AppCompatActivity {
     private static final Integer[] irinlist ={R.drawable.irinblack,R.drawable.irin,R.drawable.irin3,R.drawable.irin4,R.drawable.irin2};
     private static final Integer[] colorlist ={R.drawable.irinpink,R.drawable.irinblack,R.drawable.irin3,R.drawable.irinyellow};
     private static final Integer[] hyoshinlist ={R.drawable.hyoshin1,R.drawable.hyoshin2,R.drawable.hyoshin3,R.drawable.hyoshin4};
+    private static final Integer[] seulgilist={R.drawable.used_cosmetic1,R.drawable.seul,R.drawable.seulgi1,R.drawable.seulgi2,R.drawable.seul3};
+    private static final Integer[] iulist = {R.drawable.used_cosmetic2,R.drawable.iu1, R.drawable.iu2, R.drawable.iu3jpg, R.drawable.iu4};
+    private static final Integer[] iirinlist = {R.drawable.used_cosmetic3,R.drawable.irin,R.drawable.irin3,R.drawable.irin4,R.drawable.irin2};
+
+
     private ArrayList<Integer> ImageArr = new ArrayList<Integer>();
     TextView GoodBtn,WriteReveiw;
     ArrayList<OneImgTwoStringCardView> CommentArr;
@@ -226,7 +231,25 @@ public class ViewDetailActivity extends AppCompatActivity {
             for (int i = 0; i < circleList.length; i++)
                 ImageArr.add(circleList[i]);
 
-        }else{
+        }else if(title.equals("레드벨벨 슬기의 화장품 엿보기")){
+            context="슬기누나 짱짱 이뻐요\n완전 짱짱 이쁘다니깐요!";
+            for (int i = 0; i < seulgilist.length; i++)
+                ImageArr.add(seulgilist[i]);
+        }else if(title.equals("한 듯 안 한 듯한 화장법 실현 중..")){
+            context="안녕하세요♬ 새해에 좋은일 가득하신가요 !! *_* 전 뭐... 씁쓸하네요 ^^;;;;;; 오늘은 대세 아이유메이크업을 가져와봤어요. 아이유 해피투게더 메이크업인데 요즘 이 화장법 많이 하더라구요!\n베이스는 이니스프리 미네랄 멜팅 파운데이션을 사용할거에요. 3호로 일반적인 21호정도 사용하시는분들께 잘 맞는 색상이에요. 전 이것보다 밝으면 너무 둥둥 뜨더라구요!";
+            for (int i = 0; i < iulist.length; i++)
+                ImageArr.add(iulist[i]);
+        }else if(title.equals("눈이 2배 커지는 화장 비법 도전하기")){
+            context="아이린이니까 가능한 메이크업?\n" +
+                    "\n" +
+                    "NO!\n" +
+                    "잘만 하면\n" +
+                    "데일리 메이크업으로도\n" +
+                    "과하지 않은 아이린 메이크업";
+            for (int i = 0; i < iirinlist.length; i++)
+                ImageArr.add(iirinlist[i]);
+        }
+        else{
             context="박효신의 잘생긴 메이크업";
             for (int i = 0; i < hyoshinlist.length; i++)
                 ImageArr.add(hyoshinlist[i]);
@@ -257,7 +280,9 @@ public class ViewDetailActivity extends AppCompatActivity {
 
     public void goAnotheruser(View v) {
        Intent intent=new Intent(ViewDetailActivity.this,AnotherprofileActivity.class);
-       startActivity(intent);
+       intent.putExtra("id",CreatorId.getText());
+//       intent.putExtra("profile",CreatorPicture.getDrawable());
+        startActivity(intent);
     }
 
     public void onShowPopup(View v){
