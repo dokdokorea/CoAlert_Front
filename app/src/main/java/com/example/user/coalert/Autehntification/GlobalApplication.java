@@ -19,6 +19,23 @@ public class GlobalApplication extends Application {
     private static ArrayList<String> wishlist =new ArrayList<>();
     private static ArrayList<String> complist=new ArrayList<>();
     private ArrayList<Integer> cosphoto=new ArrayList<>();
+    private static ArrayList<String> followlist=new ArrayList<>();
+
+    public static ArrayList<String> getFollowlist() {
+        return followlist;
+    }
+
+    public void addFollowlist(String wishitem) {
+        this.followlist.add(wishitem);
+    }
+
+    public void removeFollowlist(String wishitem) {
+        this.followlist.remove(wishitem);
+    }
+
+    public static void setFollowlist(ArrayList<String> followlist) {
+        GlobalApplication.followlist = followlist;
+    }
 
     public static ArrayList<String> getComplist() {
         return complist;

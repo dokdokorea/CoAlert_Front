@@ -41,8 +41,9 @@ public class MyprofileRecyclerViewAdapter extends RecyclerView.Adapter<Myprofile
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final OneImgOneStringCardView item = list.get(position);
-        Drawable drawable=context.getResources().getDrawable(item.getImage());
-        holder.image.setBackground(drawable);
+//        Drawable drawable=context.getResources().getDrawable(item.getImage());
+//        holder.image.setBackground(drawable);
+        holder.image.setImageResource(item.getImage());
         holder.name.setText(item.getText());
     }
 

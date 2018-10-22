@@ -97,6 +97,7 @@ public class MyProfileFragment extends Fragment {
 
         List<OneImgOneStringCardView> cositems = new ArrayList<>();
         OneImgOneStringCardView[] cositem = new OneImgOneStringCardView[6];
+
         cositem[0] = new OneImgOneStringCardView(R.drawable.used_cosmetic1, "아쿠아 글로우 쿠션 파운데아션 SPF23 PA++",3);
         cositem[1] = new OneImgOneStringCardView(R.drawable.used_cosmetic2, "보탈필루이드 블루밍 쿠션 SPF50+ PA+++", 3);
         cositem[2] = new OneImgOneStringCardView(R.drawable.used_cosmetic3, "라스트 벨벳 팁 틴트 4", 4);
@@ -105,7 +106,9 @@ public class MyProfileFragment extends Fragment {
         cositem[5] = new OneImgOneStringCardView(R.drawable.used_cosmetic6, "룩 앳 마이 아이즈 카페", 2);
 
 
-        for (int i = 0; i < 6; i++) cositems.add(cositem[i]);
+
+
+        for (int i = 0; i < 4; i++) cositems.add(cositem[i]);
         cosmeticList.setAdapter(new MyprofileRecyclerViewAdapter(getApplicationContext(), cositems, R.layout.fragment_myprofile));
 
         Edit.setOnClickListener(new View.OnClickListener() {
