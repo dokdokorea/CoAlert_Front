@@ -19,6 +19,7 @@ import com.example.user.coalert.item.OneImgTwoStringCardView;
 import com.example.user.coalert.item.TwoImgFourStringCardView;
 import com.github.vipulasri.timelineview.TimelineView;
 
+
 import java.util.List;
 
 import butterknife.BindView;

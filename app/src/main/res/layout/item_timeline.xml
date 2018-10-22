@@ -88,8 +88,8 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_10sdp"
-                    android:maxHeight="@dimen/_150sdp"
-                    android:maxWidth="@dimen/_150sdp"
+                    android:maxHeight="@dimen/_100sdp"
+                    android:maxWidth="@dimen/_100sdp"
                     android:scaleType="fitCenter" />
 
                 <Space

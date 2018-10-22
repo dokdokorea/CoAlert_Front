@@ -135,7 +135,7 @@ public class CosmeticInformationActivity extends AppCompatActivity{
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                matching.setText(String.valueOf(result.getRating()*20));
+                                matching.setText(new DecimalFormat("#.##").format(result.getRating()*20));
                             }
                         });
                     }catch (Exception e){
